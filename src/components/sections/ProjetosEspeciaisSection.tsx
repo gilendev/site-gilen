@@ -9,11 +9,11 @@ const ProjetosEspeciaisSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section ref={ref} className="py-24 lg:py-32 bg-primary text-primary-foreground relative overflow-hidden">
+    <section ref={ref} className="py-16 md:py-24 lg:py-32 bg-primary text-primary-foreground relative overflow-hidden">
       <div className="absolute inset-0 grid-overlay opacity-10" />
 
       {/* Orbital decoration */}
-      <div className="absolute left-[-5%] top-1/2 -translate-y-1/2 w-[400px] h-[400px] opacity-10">
+      <div className="hidden md:block absolute left-[-5%] top-1/2 -translate-y-1/2 w-[400px] h-[400px] opacity-10">
         <div className="absolute inset-0 rounded-full border border-primary-foreground/20" />
         <div className="absolute inset-8 rounded-full border border-accent/20" />
       </div>

@@ -24,17 +24,17 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-black/60" />
 
       {/* Content */}
-      <div className="container mx-auto px-4 lg:px-8 relative z-10 pt-20">
+      <div className="container mx-auto px-4 lg:px-8 relative z-10 pt-16 md:pt-20">
         <div className="max-w-3xl">
           {/* Tag */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-sm bg-accent/10 border border-accent/20 text-accent-foreground mb-8"
+            className="inline-flex items-center gap-2 px-3 md:px-4 py-1.5 rounded-sm bg-accent/10 border border-accent/20 text-accent-foreground mb-6 md:mb-8"
           >
             <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-            <span className="text-xs font-medium uppercase tracking-wider text-accent">
+            <span className="text-[10px] md:text-xs font-medium uppercase tracking-wider text-accent">
               Engenharia Industrial Avançada
             </span>
           </motion.div>
@@ -44,7 +44,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-5xl md:text-6xl lg:text-7xl font-bold text-primary-foreground leading-[1.05] mb-6"
+            className="text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground leading-[1.05] mb-4 md:mb-6"
           >
             GILEN
             <br />
@@ -56,7 +56,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-xl md:text-2xl font-light text-primary-foreground/60 mb-4"
+            className="text-lg md:text-2xl font-light text-primary-foreground/60 mb-3 md:mb-4"
           >
             Engenharia, Precisão e Soluções Industriais
           </motion.p>
@@ -66,7 +66,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-base md:text-lg text-primary-foreground/40 max-w-xl mb-10 leading-relaxed"
+            className="text-sm md:text-lg text-primary-foreground/40 max-w-xl mb-8 md:mb-10 leading-relaxed"
           >
             Projetamos, desenvolvemos e fabricamos soluções industriais com engenharia aplicada e capacidade produtiva avançada.
           </motion.p>
@@ -76,12 +76,12 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="flex flex-col sm:flex-row gap-4"
+            className="flex flex-col sm:flex-row gap-3 md:gap-4"
           >
             <Button
               asChild
               size="lg"
-              className="bg-accent hover:bg-accent/90 text-accent-foreground px-8 h-12 text-sm uppercase tracking-wider font-semibold"
+              className="bg-accent hover:bg-accent/90 text-accent-foreground px-6 md:px-8 h-11 md:h-12 text-xs md:text-sm uppercase tracking-wider font-semibold"
             >
               <Link to="/solucoes">
                 Conheça nossas soluções
@@ -92,7 +92,7 @@ const HeroSection = () => {
               asChild
               variant="outline"
               size="lg"
-              className="bg-transparent border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10 px-8 h-12 text-sm uppercase tracking-wider font-semibold"
+              className="bg-transparent border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10 px-6 md:px-8 h-11 md:h-12 text-xs md:text-sm uppercase tracking-wider font-semibold"
             >
               <Link to="/contato">
                 <Phone className="mr-2" size={16} />
@@ -106,7 +106,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
-            className="mt-20 pt-8 border-t border-primary-foreground/10 grid grid-cols-3 gap-8"
+            className="mt-12 md:mt-20 pt-6 md:pt-8 border-t border-primary-foreground/10 grid grid-cols-3 gap-4 md:gap-8"
           >
             {[
               { value: "10+", label: "Anos de Experiência" },
@@ -114,8 +114,8 @@ const HeroSection = () => {
               { value: "4", label: "Marcas Próprias" },
             ].map((stat) => (
               <div key={stat.label}>
-                <div className="text-2xl md:text-3xl font-bold text-accent">{stat.value}</div>
-                <div className="text-xs text-primary-foreground/40 mt-1 uppercase tracking-wider">{stat.label}</div>
+                <div className="text-xl md:text-3xl font-bold text-accent">{stat.value}</div>
+                <div className="text-[10px] md:text-xs text-primary-foreground/40 mt-1 uppercase tracking-wider">{stat.label}</div>
               </div>
             ))}
           </motion.div>

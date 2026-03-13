@@ -74,14 +74,14 @@ const TecnologiaSection = () => {
   return (
     <div>
       {/* Hero Banner */}
-      <section className="relative py-28 lg:py-40 bg-graphite overflow-hidden">
+      <section className="relative py-20 md:py-28 lg:py-40 bg-graphite overflow-hidden">
         <div className="absolute inset-0 grid-overlay opacity-20" />
         <div className="container mx-auto px-4 lg:px-8 relative z-10 text-center">
           <SectionBlock>
             <span className="text-xs font-semibold uppercase tracking-[0.3em] text-accent-blue mb-4 block">
               Tecnologia
             </span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-6">
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-4 md:mb-6">
               Fabricação <span className="text-accent-blue">Avançada</span>
             </h1>
             <p className="max-w-2xl mx-auto text-primary-foreground/70 text-lg leading-relaxed">
@@ -92,7 +92,7 @@ const TecnologiaSection = () => {
       </section>
 
       {/* Capabilities Overview */}
-      <section ref={ref} className="py-24 lg:py-32 bg-background">
+      <section ref={ref} className="py-16 md:py-24 lg:py-32 bg-background">
         <div className="container mx-auto px-4 lg:px-8">
           <SectionBlock className="text-center mb-16">
             <span className="text-xs font-semibold uppercase tracking-[0.2em] text-accent-blue mb-4 block">
@@ -125,7 +125,7 @@ const TecnologiaSection = () => {
       </section>
 
       {/* Equipment Detail */}
-      <section className="py-24 lg:py-32 bg-muted">
+      <section className="py-16 md:py-24 lg:py-32 bg-muted">
         <div className="container mx-auto px-4 lg:px-8">
           <SectionBlock className="text-center mb-16">
             <span className="text-xs font-semibold uppercase tracking-[0.2em] text-accent-blue mb-4 block">
@@ -163,7 +163,7 @@ const TecnologiaSection = () => {
       </section>
 
       {/* Process Flow */}
-      <section className="py-24 lg:py-32 bg-background">
+      <section className="py-16 md:py-24 lg:py-32 bg-background">
         <div className="container mx-auto px-4 lg:px-8">
           <SectionBlock className="text-center mb-16">
             <span className="text-xs font-semibold uppercase tracking-[0.2em] text-accent-blue mb-4 block">
@@ -178,7 +178,7 @@ const TecnologiaSection = () => {
             {/* Connection line */}
             <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-px bg-border -translate-y-1/2" />
 
-            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 md:gap-8">
               {processSteps.map((step, index) => (
                 <SectionBlock key={step.number}>
                   <div className="text-center relative">
@@ -222,7 +222,7 @@ const TecnologiaSection = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-24 bg-background relative overflow-hidden">
+      <section className="py-16 md:py-24 bg-background relative overflow-hidden">
         <div className="technical-line w-full absolute top-0" />
         <div className="container mx-auto px-4 lg:px-8 relative z-10 text-center">
           <SectionBlock>

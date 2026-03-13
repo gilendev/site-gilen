@@ -107,14 +107,14 @@ const SolucoesSection = () => {
   return (
     <div>
       {/* Hero Banner */}
-      <section className="relative py-28 lg:py-40 bg-graphite overflow-hidden">
+      <section className="relative py-20 md:py-28 lg:py-40 bg-graphite overflow-hidden">
         <div className="absolute inset-0 grid-overlay opacity-20" />
         <div className="container mx-auto px-4 lg:px-8 relative z-10 text-center">
           <SectionBlock>
             <span className="text-xs font-semibold uppercase tracking-[0.3em] text-accent-blue mb-4 block">
               Soluções
             </span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-6">
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-4 md:mb-6">
               Nossas <span className="text-accent-blue">Soluções</span>
             </h1>
             <p className="max-w-2xl mx-auto text-primary-foreground/70 text-lg leading-relaxed">
@@ -125,7 +125,7 @@ const SolucoesSection = () => {
       </section>
 
       {/* Overview Cards */}
-      <section ref={ref} className="py-24 lg:py-32 bg-background">
+      <section ref={ref} className="py-16 md:py-24 lg:py-32 bg-background">
         <div className="container mx-auto px-4 lg:px-8">
           <SectionBlock className="text-center mb-16">
             <span className="text-xs font-semibold uppercase tracking-[0.2em] text-accent-blue mb-4 block">
@@ -161,14 +161,14 @@ const SolucoesSection = () => {
       {solutionDetails.map((detail, index) => (
         <section
           key={detail.title}
-          className={`py-24 lg:py-32 ${index % 2 === 0 ? "bg-muted" : "bg-background"}`}
+          className={`py-16 md:py-24 lg:py-32 ${index % 2 === 0 ? "bg-muted" : "bg-background"}`}
         >
           <div className="container mx-auto px-4 lg:px-8">
-            <div className={`flex flex-col lg:flex-row items-center gap-12 lg:gap-20 ${index % 2 !== 0 ? "lg:flex-row-reverse" : ""}`}>
+            <div className={`flex flex-col lg:flex-row items-center gap-8 md:gap-12 lg:gap-20 ${index % 2 !== 0 ? "lg:flex-row-reverse" : ""}`}>
               {/* Icon Side */}
               <SectionBlock className="lg:w-1/3 flex justify-center">
-                <div className="w-32 h-32 rounded-full bg-graphite flex items-center justify-center">
-                  <detail.icon className="text-accent-blue" size={56} />
+                <div className="w-20 h-20 md:w-32 md:h-32 rounded-full bg-graphite flex items-center justify-center">
+                  <detail.icon className="text-accent-blue" size={40} />
                 </div>
               </SectionBlock>
 
@@ -198,7 +198,7 @@ const SolucoesSection = () => {
       ))}
 
       {/* Differentials */}
-      <section className="py-24 lg:py-32 bg-graphite">
+      <section className="py-16 md:py-24 lg:py-32 bg-graphite">
         <div className="container mx-auto px-4 lg:px-8">
           <SectionBlock className="text-center mb-16">
             <span className="text-xs font-semibold uppercase tracking-[0.2em] text-accent-blue mb-4 block">
@@ -209,7 +209,7 @@ const SolucoesSection = () => {
             </h2>
           </SectionBlock>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             {differentials.map((diff) => (
               <SectionBlock key={diff.title}>
                 <div className="text-center">

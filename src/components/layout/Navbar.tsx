@@ -38,12 +38,12 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto px-4 lg:px-8">
-        <div className="flex items-center justify-between h-16 lg:h-20">
+         <div className="flex items-center justify-between h-14 md:h-16 lg:h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center">
             <img
               alt="GILEN Industrial"
-              className="h-20 lg:h-28 w-auto"
+              className="h-14 md:h-20 lg:h-28 w-auto"
               src="/lovable-uploads/ba64c10e-131c-48be-9806-e216873226af.png"
             />
           </Link>

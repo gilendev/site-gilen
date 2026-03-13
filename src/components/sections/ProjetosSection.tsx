@@ -30,7 +30,7 @@ const ProjetosSection = () => {
     : projects.filter((p) => p.category === activeCategory);
 
   return (
-    <section ref={ref} className="py-24 lg:py-32 bg-background">
+    <section ref={ref} className="py-16 md:py-24 lg:py-32 bg-background">
       <div className="container mx-auto px-4 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -69,7 +69,7 @@ const ProjetosSection = () => {
         </motion.div>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4">
           {filtered.map((project, index) => (
             <motion.div
               key={project.title}

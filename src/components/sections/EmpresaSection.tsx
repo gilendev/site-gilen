@@ -51,14 +51,14 @@ const EmpresaSection = () => {
   return (
     <div>
       {/* Hero Banner */}
-      <section className="relative py-28 lg:py-40 bg-graphite overflow-hidden">
+      <section className="relative py-20 md:py-28 lg:py-40 bg-graphite overflow-hidden">
         <div className="absolute inset-0 grid-overlay opacity-20" />
         <div className="container mx-auto px-4 lg:px-8 relative z-10 text-center">
           <SectionBlock>
             <span className="text-xs font-semibold uppercase tracking-[0.3em] text-accent-blue mb-4 block">
               Sobre a Empresa
             </span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-6">
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-4 md:mb-6">
               Nossa <span className="text-accent-blue">História</span>
             </h1>
             <p className="max-w-2xl mx-auto text-primary-foreground/70 text-lg leading-relaxed">
@@ -69,11 +69,11 @@ const EmpresaSection = () => {
       </section>
 
       {/* Timeline */}
-      <section className="py-24 lg:py-32 bg-background">
+      <section className="py-16 md:py-24 lg:py-32 bg-background">
         <div className="container mx-auto px-4 lg:px-8">
-          <SectionBlock className="text-center mb-16">
+          <SectionBlock className="text-center mb-10 md:mb-16">
             <span className="text-xs font-semibold uppercase tracking-[0.2em] text-accent-blue mb-4 block">Trajetória</span>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+            <h2 className="text-2xl md:text-4xl font-bold text-foreground">
               Evolução <span className="text-steel">Industrial</span>
             </h2>
           </SectionBlock>
@@ -110,11 +110,11 @@ const EmpresaSection = () => {
       </section>
 
       {/* Mission, Vision & Values */}
-      <section className="py-24 lg:py-32 bg-background">
+      <section className="py-16 md:py-24 lg:py-32 bg-background">
         <div className="container mx-auto px-4 lg:px-8">
-          <SectionBlock className="text-center mb-16">
+          <SectionBlock className="text-center mb-10 md:mb-16">
             <span className="text-xs font-semibold uppercase tracking-[0.2em] text-accent-blue mb-4 block">Pilares</span>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+            <h2 className="text-2xl md:text-4xl font-bold text-foreground">
               Missão, Visão & <span className="text-steel">Valores</span>
             </h2>
           </SectionBlock>
@@ -134,7 +134,7 @@ const EmpresaSection = () => {
       </section>
 
       {/* Infrastructure */}
-      <section className="py-24 lg:py-32 bg-muted">
+      <section className="py-16 md:py-24 lg:py-32 bg-muted">
         <div className="container mx-auto px-4 lg:px-8">
           <SectionBlock className="text-center mb-16">
             <span className="text-xs font-semibold uppercase tracking-[0.2em] text-accent-blue mb-4 block">Estrutura</span>
