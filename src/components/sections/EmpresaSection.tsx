@@ -110,11 +110,11 @@ const EmpresaSection = () => {
       </section>
 
       {/* Mission, Vision & Values */}
-      <section className="py-24 lg:py-32 bg-background">
+      <section className="py-16 md:py-24 lg:py-32 bg-background">
         <div className="container mx-auto px-4 lg:px-8">
-          <SectionBlock className="text-center mb-16">
+          <SectionBlock className="text-center mb-10 md:mb-16">
             <span className="text-xs font-semibold uppercase tracking-[0.2em] text-accent-blue mb-4 block">Pilares</span>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+            <h2 className="text-2xl md:text-4xl font-bold text-foreground">
               Missão, Visão & <span className="text-steel">Valores</span>
             </h2>
           </SectionBlock>
