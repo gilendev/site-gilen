@@ -3,8 +3,15 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import Index from "./pages/Index.tsx";
-import NotFound from "./pages/NotFound.tsx";
+import Index from "./pages/Index";
+import EmpresaPage from "./pages/EmpresaPage";
+import SolucoesPage from "./pages/SolucoesPage";
+import ProjetosPage from "./pages/ProjetosPage";
+import TecnologiaPage from "./pages/TecnologiaPage";
+import MarcasPage from "./pages/MarcasPage";
+import ProjetosEspeciaisPage from "./pages/ProjetosEspeciaisPage";
+import ContatoPage from "./pages/ContatoPage";
+import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
@@ -16,7 +23,13 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          <Route path="/empresa" element={<EmpresaPage />} />
+          <Route path="/solucoes" element={<SolucoesPage />} />
+          <Route path="/projetos" element={<ProjetosPage />} />
+          <Route path="/tecnologia" element={<TecnologiaPage />} />
+          <Route path="/marcas" element={<MarcasPage />} />
+          <Route path="/projetos-especiais" element={<ProjetosEspeciaisPage />} />
+          <Route path="/contato" element={<ContatoPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
