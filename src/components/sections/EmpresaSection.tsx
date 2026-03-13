@@ -134,7 +134,7 @@ const EmpresaSection = () => {
       </section>
 
       {/* Infrastructure */}
-      <section className="py-24 lg:py-32 bg-muted">
+      <section className="py-16 md:py-24 lg:py-32 bg-muted">
         <div className="container mx-auto px-4 lg:px-8">
           <SectionBlock className="text-center mb-16">
             <span className="text-xs font-semibold uppercase tracking-[0.2em] text-accent-blue mb-4 block">Estrutura</span>

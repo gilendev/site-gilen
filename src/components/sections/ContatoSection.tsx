@@ -26,7 +26,7 @@ const ContatoSection = () => {
   return (
     <section ref={ref} className="py-16 md:py-24 lg:py-32 bg-background">
       <div className="container mx-auto px-4 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16">
           {/* Info */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}

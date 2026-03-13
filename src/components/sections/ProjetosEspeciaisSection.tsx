@@ -13,7 +13,7 @@ const ProjetosEspeciaisSection = () => {
       <div className="absolute inset-0 grid-overlay opacity-10" />
 
       {/* Orbital decoration */}
-      <div className="absolute left-[-5%] top-1/2 -translate-y-1/2 w-[400px] h-[400px] opacity-10">
+      <div className="hidden md:block absolute left-[-5%] top-1/2 -translate-y-1/2 w-[400px] h-[400px] opacity-10">
         <div className="absolute inset-0 rounded-full border border-primary-foreground/20" />
         <div className="absolute inset-8 rounded-full border border-accent/20" />
       </div>

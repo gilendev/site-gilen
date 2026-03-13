@@ -222,7 +222,7 @@ const TecnologiaSection = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-24 bg-background relative overflow-hidden">
+      <section className="py-16 md:py-24 bg-background relative overflow-hidden">
         <div className="technical-line w-full absolute top-0" />
         <div className="container mx-auto px-4 lg:px-8 relative z-10 text-center">
           <SectionBlock>
