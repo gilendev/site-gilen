@@ -92,7 +92,7 @@ const HeroSection = () => {
               asChild
               variant="outline"
               size="lg"
-              className="border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10 px-8 h-12 text-sm uppercase tracking-wider font-semibold"
+              className="bg-transparent border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10 px-8 h-12 text-sm uppercase tracking-wider font-semibold"
             >
               <Link to="/contato">
                 <Phone className="mr-2" size={16} />
