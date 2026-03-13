@@ -14,12 +14,13 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/90 to-transparent" />
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-primary to-transparent" />
 
-      {/* Orbital decorative element */}
-      <div className="absolute right-[-10%] top-1/2 -translate-y-1/2 w-[600px] h-[600px] lg:w-[800px] lg:h-[800px] opacity-10">
-        <div className="absolute inset-0 rounded-full border border-primary-foreground/20" />
-        <div className="absolute inset-8 rounded-full border border-primary-foreground/15" />
-        <div className="absolute inset-16 rounded-full border border-primary-foreground/10" />
-        <div className="absolute inset-24 rounded-full border border-accent/20" />
+      {/* Orbital decorative elements - inspired by logo ellipses */}
+      <div className="absolute right-[-10%] top-1/2 -translate-y-1/2 w-[600px] h-[600px] lg:w-[800px] lg:h-[800px]">
+        <div className="absolute inset-0 rounded-full border border-accent/10 rotate-12" style={{ borderRadius: '50% / 40%' }} />
+        <div className="absolute inset-6 rounded-full border border-accent-green/10 -rotate-6" style={{ borderRadius: '45% / 50%' }} />
+        <div className="absolute inset-12 rounded-full border border-accent-blue/10 rotate-3" style={{ borderRadius: '50% / 45%' }} />
+        <div className="absolute inset-20 rounded-full border border-primary-foreground/5" style={{ borderRadius: '48% / 42%' }} />
+        <div className="absolute inset-28 rounded-full border border-primary-foreground/5 rotate-6" />
       </div>
 
       {/* Content */}

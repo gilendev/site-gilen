@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import logoGilen from "@/assets/logo-gilen.jpeg";
 
 const Footer = () => {
   return (
@@ -11,8 +12,7 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <div className="mb-4">
-              <span className="text-2xl font-bold tracking-tight">GILEN</span>
-              <span className="text-2xl font-light text-primary-foreground/70 ml-1">Industrial</span>
+              <img src={logoGilen} alt="GILEN Industrial" className="h-12 w-auto brightness-0 invert" />
             </div>
             <p className="text-sm text-primary-foreground/60 leading-relaxed">
               Engenharia, precisão e soluções industriais sob medida.
