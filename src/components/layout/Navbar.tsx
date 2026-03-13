@@ -86,7 +86,7 @@ const Navbar = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden bg-primary/98 backdrop-blur-md border-t border-primary-foreground/10"
+            className="lg:hidden bg-background/98 backdrop-blur-md border-t border-border"
           >
             <div className="container mx-auto px-4 py-4 flex flex-col gap-1">
               {navItems.map((item) => (
@@ -95,8 +95,8 @@ const Navbar = () => {
                   to={item.href}
                   className={`px-4 py-3 text-sm font-medium rounded transition-colors ${
                     location.pathname === item.href
-                      ? "text-primary-foreground bg-primary-foreground/10"
-                      : "text-primary-foreground/70 hover:text-primary-foreground hover:bg-primary-foreground/5"
+                      ? "text-foreground bg-muted"
+                      : "text-muted-foreground hover:text-foreground hover:bg-muted"
                   }`}
                 >
                   {item.label}
