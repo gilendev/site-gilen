@@ -34,7 +34,7 @@ const MarcasSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section ref={ref} className="py-24 lg:py-32 bg-muted relative">
+    <section ref={ref} className="py-16 md:py-24 lg:py-32 bg-muted relative">
       <div className="technical-line w-full absolute top-0" />
 
       <div className="container mx-auto px-4 lg:px-8">
