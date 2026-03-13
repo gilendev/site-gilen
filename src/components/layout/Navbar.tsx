@@ -34,15 +34,15 @@ const Navbar = () => {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-primary/95 backdrop-blur-md shadow-lg"
-          : "bg-transparent"
+          ? "bg-background/95 backdrop-blur-md shadow-lg"
+          : "bg-background"
       }`}
     >
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <img src={logoGilen} alt="GILEN Industrial" className="h-10 lg:h-14 w-auto brightness-0 invert" />
+            <img src={logoGilen} alt="GILEN Industrial" className="h-10 lg:h-14 w-auto" />
           </Link>
 
           {/* Desktop Nav */}
@@ -53,8 +53,8 @@ const Navbar = () => {
                 to={item.href}
                 className={`px-3 py-2 text-sm font-medium transition-colors relative group ${
                   location.pathname === item.href
-                    ? "text-primary-foreground"
-                    : "text-primary-foreground/70 hover:text-primary-foreground"
+                    ? "text-foreground"
+                    : "text-muted-foreground hover:text-foreground"
                 }`}
               >
                 {item.label}
@@ -72,7 +72,7 @@ const Navbar = () => {
           {/* Mobile Toggle */}
           <button
             onClick={() => setIsMobileOpen(!isMobileOpen)}
-            className="lg:hidden text-primary-foreground p-2"
+            className="lg:hidden text-foreground p-2"
           >
             {isMobileOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -86,7 +86,7 @@ const Navbar = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden bg-primary/98 backdrop-blur-md border-t border-primary-foreground/10"
+            className="lg:hidden bg-background/98 backdrop-blur-md border-t border-border"
           >
             <div className="container mx-auto px-4 py-4 flex flex-col gap-1">
               {navItems.map((item) => (
@@ -95,8 +95,8 @@ const Navbar = () => {
                   to={item.href}
                   className={`px-4 py-3 text-sm font-medium rounded transition-colors ${
                     location.pathname === item.href
-                      ? "text-primary-foreground bg-primary-foreground/10"
-                      : "text-primary-foreground/70 hover:text-primary-foreground hover:bg-primary-foreground/5"
+                      ? "text-foreground bg-muted"
+                      : "text-muted-foreground hover:text-foreground hover:bg-muted"
                   }`}
                 >
                   {item.label}
