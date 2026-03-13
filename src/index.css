@@ -59,42 +59,42 @@
   }
 
   .dark {
-    --background: 220 20% 6%;
+    --background: 215 25% 6%;
     --foreground: 0 0% 95%;
 
-    --card: 220 18% 10%;
+    --card: 215 22% 10%;
     --card-foreground: 0 0% 95%;
 
-    --popover: 220 18% 10%;
+    --popover: 215 22% 10%;
     --popover-foreground: 0 0% 95%;
 
-    --primary: 210 80% 50%;
+    --primary: 215 85% 45%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 220 14% 16%;
+    --secondary: 215 14% 16%;
     --secondary-foreground: 0 0% 95%;
 
-    --muted: 220 14% 16%;
-    --muted-foreground: 220 10% 60%;
+    --muted: 215 14% 16%;
+    --muted-foreground: 215 10% 60%;
 
-    --accent: 0 75% 50%;
+    --accent: 0 80% 48%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 14% 18%;
-    --input: 220 14% 18%;
-    --ring: 210 80% 50%;
+    --border: 215 14% 18%;
+    --input: 215 14% 18%;
+    --ring: 215 85% 45%;
 
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-background: 215 25% 8%;
+    --sidebar-foreground: 215 10% 90%;
+    --sidebar-primary: 215 76% 48%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-accent: 215 14% 15%;
+    --sidebar-accent-foreground: 215 10% 90%;
+    --sidebar-border: 215 14% 15%;
+    --sidebar-ring: 215 85% 45%;
   }
 }
 
@@ -119,8 +119,8 @@
 
   .grid-overlay {
     background-image: 
-      linear-gradient(to right, hsl(220 13% 91% / 0.3) 1px, transparent 1px),
-      linear-gradient(to bottom, hsl(220 13% 91% / 0.3) 1px, transparent 1px);
+      linear-gradient(to right, hsl(215 13% 90% / 0.3) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(215 13% 90% / 0.3) 1px, transparent 1px);
     background-size: 60px 60px;
   }
 
