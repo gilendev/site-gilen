@@ -107,7 +107,7 @@ const SolucoesSection = () => {
   return (
     <div>
       {/* Hero Banner */}
-      <section className="relative py-28 lg:py-40 bg-graphite overflow-hidden">
+      <section className="relative py-20 md:py-28 lg:py-40 bg-graphite overflow-hidden">
         <div className="absolute inset-0 grid-overlay opacity-20" />
         <div className="container mx-auto px-4 lg:px-8 relative z-10 text-center">
           <SectionBlock>
