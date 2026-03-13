@@ -43,7 +43,7 @@ const Navbar = () => {
           <Link to="/" className="flex items-center">
             <img
               alt="GILEN Industrial"
-              className="h-10 lg:h-14 w-auto"
+              className="h-20 lg:h-28 w-auto"
               src="/lovable-uploads/ba64c10e-131c-48be-9806-e216873226af.png"
             />
           </Link>
