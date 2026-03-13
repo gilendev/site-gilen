@@ -164,7 +164,7 @@ const SolucoesSection = () => {
           className={`py-16 md:py-24 lg:py-32 ${index % 2 === 0 ? "bg-muted" : "bg-background"}`}
         >
           <div className="container mx-auto px-4 lg:px-8">
-            <div className={`flex flex-col lg:flex-row items-center gap-12 lg:gap-20 ${index % 2 !== 0 ? "lg:flex-row-reverse" : ""}`}>
+            <div className={`flex flex-col lg:flex-row items-center gap-8 md:gap-12 lg:gap-20 ${index % 2 !== 0 ? "lg:flex-row-reverse" : ""}`}>
               {/* Icon Side */}
               <SectionBlock className="lg:w-1/3 flex justify-center">
                 <div className="w-32 h-32 rounded-full bg-graphite flex items-center justify-center">
