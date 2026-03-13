@@ -114,7 +114,7 @@ const SolucoesSection = () => {
             <span className="text-xs font-semibold uppercase tracking-[0.3em] text-accent-blue mb-4 block">
               Soluções
             </span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-6">
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-4 md:mb-6">
               Nossas <span className="text-accent-blue">Soluções</span>
             </h1>
             <p className="max-w-2xl mx-auto text-primary-foreground/70 text-lg leading-relaxed">
