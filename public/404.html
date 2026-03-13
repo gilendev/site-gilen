@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Redirecionando...</title>
+  <script>
+    // SPA redirect for hosts that serve 404.html
+    sessionStorage.redirect = location.href;
+    location.replace('/');
+  </script>
+</head>
+<body></body>
+</html>
