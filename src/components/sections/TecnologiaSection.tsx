@@ -57,7 +57,7 @@ const TecnologiaSection = () => {
               <br />
               <span className="text-graphite-foreground/50">Avançada</span>
             </h2>
-            <p className="text-graphite-foreground/60 leading-relaxed mb-6 text-justify">
+            <p className="text-graphite-foreground/60 leading-relaxed mb-6 text-left">
               A GILEN Industrial utiliza tecnologia de fabricação avançada, incluindo processos CNC de alta precisão, modelagem computacional e desenvolvimento técnico especializado.
             </p>
             <p className="text-graphite-foreground/60 leading-relaxed text-justify">
