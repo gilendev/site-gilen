@@ -6,22 +6,23 @@ import { Button } from "@/components/ui/button";
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0 bg-primary" />
-      <div className="absolute inset-0 grid-overlay opacity-20" />
-      
-      {/* Gradient overlays */}
-      <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/90 to-transparent" />
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-primary to-transparent" />
+      {/* Background Video */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
+        poster="https://images.pexels.com/videos/3129671/free-video-3129671.jpg?auto=compress&cs=tinysrgb&w=1920"
+      >
+        <source
+          src="https://videos.pexels.com/video-files/3129671/3129671-uhd_2560_1440_30fps.mp4"
+          type="video/mp4"
+        />
+      </video>
 
-      {/* Orbital decorative elements - inspired by logo ellipses */}
-      <div className="absolute right-[-10%] top-1/2 -translate-y-1/2 w-[600px] h-[600px] lg:w-[800px] lg:h-[800px]">
-        <div className="absolute inset-0 rounded-full border border-accent/10 rotate-12" style={{ borderRadius: '50% / 40%' }} />
-        <div className="absolute inset-6 rounded-full border border-accent-green/10 -rotate-6" style={{ borderRadius: '45% / 50%' }} />
-        <div className="absolute inset-12 rounded-full border border-accent-blue/10 rotate-3" style={{ borderRadius: '50% / 45%' }} />
-        <div className="absolute inset-20 rounded-full border border-primary-foreground/5" style={{ borderRadius: '48% / 42%' }} />
-        <div className="absolute inset-28 rounded-full border border-primary-foreground/5 rotate-6" />
-      </div>
+      {/* Dark overlay for text legibility */}
+      <div className="absolute inset-0 bg-black/60" />
 
       {/* Content */}
       <div className="container mx-auto px-4 lg:px-8 relative z-10 pt-20">
