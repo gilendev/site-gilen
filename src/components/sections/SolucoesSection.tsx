@@ -5,25 +5,25 @@ import { Cpu, Factory, Boxes, Wrench } from "lucide-react";
 const solutions = [
 {
   icon: Cpu,
-  title: "Engineering",
+  title: "Engenharia",
   description: "Desenvolvimento técnico de soluções industriais e estruturas especializadas.",
   color: "accent-blue"
 },
 {
   icon: Factory,
-  title: "Industrial Production",
+  title: "Produção Industrial",
   description: "Capacidade produtiva com processos CNC e fabricação de alta precisão.",
   color: "accent-green"
 },
 {
   icon: Boxes,
-  title: "Custom Structures",
+  title: "Estruturas Personalizadas",
   description: "Projetos estruturais personalizados para aplicações técnicas.",
   color: "accent"
 },
 {
   icon: Wrench,
-  title: "Special Projects",
+  title: "Projetos Especiais",
   description: "Soluções desenvolvidas sob medida para demandas complexas.",
   color: "steel"
 }];
