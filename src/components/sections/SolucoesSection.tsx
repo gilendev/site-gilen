@@ -161,7 +161,7 @@ const SolucoesSection = () => {
       {solutionDetails.map((detail, index) => (
         <section
           key={detail.title}
-          className={`py-24 lg:py-32 ${index % 2 === 0 ? "bg-muted" : "bg-background"}`}
+          className={`py-16 md:py-24 lg:py-32 ${index % 2 === 0 ? "bg-muted" : "bg-background"}`}
         >
           <div className="container mx-auto px-4 lg:px-8">
             <div className={`flex flex-col lg:flex-row items-center gap-12 lg:gap-20 ${index % 2 !== 0 ? "lg:flex-row-reverse" : ""}`}>
