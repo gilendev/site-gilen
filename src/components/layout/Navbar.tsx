@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import logoGilen from "@/assets/logo-gilen.jpeg";
 
 const navItems = [
   { label: "Home", href: "/" },
@@ -40,15 +41,8 @@ const Navbar = () => {
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2">
-            <div className="flex items-center">
-              <span className="text-xl lg:text-2xl font-bold tracking-tight text-primary-foreground">
-                GILEN
-              </span>
-              <span className="text-xl lg:text-2xl font-light text-primary-foreground/70 ml-1">
-                Industrial
-              </span>
-            </div>
+          <Link to="/" className="flex items-center">
+            <img src={logoGilen} alt="GILEN Industrial" className="h-10 lg:h-14 w-auto brightness-0 invert" />
           </Link>
 
           {/* Desktop Nav */}
