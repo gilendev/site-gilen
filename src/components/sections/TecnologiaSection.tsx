@@ -3,11 +3,11 @@ import { useRef } from "react";
 import { Gauge, ScanLine, Cog, Monitor } from "lucide-react";
 
 const capabilities = [
-  { icon: ScanLine, label: "CNC de Alta Precisão" },
-  { icon: Monitor, label: "Modelagem Computacional" },
-  { icon: Cog, label: "Processos Industriais" },
-  { icon: Gauge, label: "Controle de Qualidade" },
-];
+{ icon: ScanLine, label: "CNC de Alta Precisão" },
+{ icon: Monitor, label: "Modelagem Computacional" },
+{ icon: Cog, label: "Processos Industriais" },
+{ icon: Gauge, label: "Controle de Qualidade" }];
+
 
 const TecnologiaSection = () => {
   const ref = useRef(null);
@@ -24,21 +24,21 @@ const TecnologiaSection = () => {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={isInView ? { opacity: 1, scale: 1 } : {}}
             transition={{ duration: 0.7 }}
-            className="order-2 lg:order-1"
-          >
+            className="order-2 lg:order-1">
+            
             <div className="grid grid-cols-2 gap-4">
-              {capabilities.map((cap, i) => (
-                <motion.div
-                  key={cap.label}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={isInView ? { opacity: 1, y: 0 } : {}}
-                  transition={{ duration: 0.5, delay: 0.3 + i * 0.1 }}
-                  className="bg-graphite-foreground/5 border border-graphite-foreground/10 p-6 rounded-sm hover:bg-graphite-foreground/10 transition-colors"
-                >
+              {capabilities.map((cap, i) =>
+              <motion.div
+                key={cap.label}
+                initial={{ opacity: 0, y: 20 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.5, delay: 0.3 + i * 0.1 }}
+                className="bg-graphite-foreground/5 border border-graphite-foreground/10 p-6 rounded-sm hover:bg-graphite-foreground/10 transition-colors">
+                
                   <cap.icon className="text-accent-blue mb-3" size={28} />
                   <span className="text-sm font-medium text-graphite-foreground/80">{cap.label}</span>
                 </motion.div>
-              ))}
+              )}
             </div>
           </motion.div>
 
@@ -47,8 +47,8 @@ const TecnologiaSection = () => {
             initial={{ opacity: 0, x: 40 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.7 }}
-            className="order-1 lg:order-2"
-          >
+            className="order-1 lg:order-2">
+            
             <span className="text-xs font-semibold uppercase tracking-[0.2em] text-accent-blue mb-4 block">
               Tecnologia
             </span>
@@ -57,17 +57,17 @@ const TecnologiaSection = () => {
               <br />
               <span className="text-graphite-foreground/50">Avançada</span>
             </h2>
-            <p className="text-graphite-foreground/60 leading-relaxed mb-6">
+            <p className="text-graphite-foreground/60 leading-relaxed mb-6 text-justify">
               A GILEN Industrial utiliza tecnologia de fabricação avançada, incluindo processos CNC de alta precisão, modelagem computacional e desenvolvimento técnico especializado.
             </p>
-            <p className="text-graphite-foreground/60 leading-relaxed">
+            <p className="text-graphite-foreground/60 leading-relaxed text-justify">
               Nossa estrutura permite transformar projetos complexos em soluções industriais reais.
             </p>
           </motion.div>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default TecnologiaSection;

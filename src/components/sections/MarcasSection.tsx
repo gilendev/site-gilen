@@ -3,31 +3,31 @@ import { useRef } from "react";
 import { Shapes, Flame, PawPrint, Baby } from "lucide-react";
 
 const brands = [
-  {
-    icon: Shapes,
-    name: "PARAMETRIZZE",
-    description: "Linha especializada em design paramétrico aplicado a arquitetura, mobiliário e soluções industriais fabricadas com tecnologia CNC.",
-    accent: "accent-blue",
-  },
-  {
-    icon: Flame,
-    name: "GOURMETIZZE",
-    description: "Linha de produtos para o setor gourmet fabricados em corte a laser em metal, incluindo churrasqueiras modulares, utensílios e estruturas para áreas externas.",
-    accent: "accent",
-  },
-  {
-    icon: PawPrint,
-    name: "COMICPETS",
-    description: "Linha de produtos criativos e funcionais para o mercado pet.",
-    accent: "accent-green",
-  },
-  {
-    icon: Baby,
-    name: "DESIGN KIDS",
-    description: "Linha de mobiliário e objetos infantis com design criativo e seguro.",
-    accent: "steel",
-  },
-];
+{
+  icon: Shapes,
+  name: "PARAMETRIZZE",
+  description: "Linha especializada em design paramétrico aplicado a arquitetura, mobiliário e soluções industriais fabricadas com tecnologia CNC.",
+  accent: "accent-blue"
+},
+{
+  icon: Flame,
+  name: "GOURMETIZZE",
+  description: "Linha de produtos para o setor gourmet fabricados em corte a laser em metal, incluindo churrasqueiras modulares, utensílios e estruturas para áreas externas.",
+  accent: "accent"
+},
+{
+  icon: PawPrint,
+  name: "COMICPETS",
+  description: "Linha de produtos criativos e funcionais para o mercado pet.",
+  accent: "accent-green"
+},
+{
+  icon: Baby,
+  name: "DESIGN KIDS",
+  description: "Linha de mobiliário e objetos infantis com design criativo e seguro.",
+  accent: "steel"
+}];
+
 
 const MarcasSection = () => {
   const ref = useRef(null);
@@ -42,8 +42,8 @@ const MarcasSection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-6"
-        >
+          className="text-center mb-6">
+          
           <span className="text-xs font-semibold uppercase tracking-[0.2em] text-accent-blue mb-4 block">
             Ecossistema
           </span>
@@ -56,29 +56,29 @@ const MarcasSection = () => {
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
-          {brands.map((brand, index) => (
-            <motion.div
-              key={brand.name}
-              initial={{ opacity: 0, y: 30 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group bg-card p-8 lg:p-10 rounded-sm border border-border hover:border-accent-blue/20 transition-all duration-300 hover:shadow-lg"
-            >
+          {brands.map((brand, index) =>
+          <motion.div
+            key={brand.name}
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
+            className="group bg-card p-8 lg:p-10 rounded-sm border border-border hover:border-accent-blue/20 transition-all duration-300 hover:shadow-lg">
+            
               <div className="flex items-start gap-5">
                 <div className={`w-14 h-14 rounded-sm bg-${brand.accent}/10 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform`}>
                   <brand.icon className={`text-${brand.accent}`} size={28} />
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-foreground mb-2">{brand.name}</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{brand.description}</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed text-justify">{brand.description}</p>
                 </div>
               </div>
             </motion.div>
-          ))}
+          )}
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default MarcasSection;
