@@ -72,7 +72,7 @@ const Navbar = () => {
           {/* Mobile Toggle */}
           <button
             onClick={() => setIsMobileOpen(!isMobileOpen)}
-            className="lg:hidden text-primary-foreground p-2"
+            className="lg:hidden text-foreground p-2"
           >
             {isMobileOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
