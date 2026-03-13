@@ -119,8 +119,8 @@
 
   .grid-overlay {
     background-image: 
-      linear-gradient(to right, hsl(220 13% 91% / 0.3) 1px, transparent 1px),
-      linear-gradient(to bottom, hsl(220 13% 91% / 0.3) 1px, transparent 1px);
+      linear-gradient(to right, hsl(215 13% 90% / 0.3) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(215 13% 90% / 0.3) 1px, transparent 1px);
     background-size: 60px 60px;
   }
 
