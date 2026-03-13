@@ -178,7 +178,7 @@ const TecnologiaSection = () => {
             {/* Connection line */}
             <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-px bg-border -translate-y-1/2" />
 
-            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 md:gap-8">
               {processSteps.map((step, index) => (
                 <SectionBlock key={step.number}>
                   <div className="text-center relative">
