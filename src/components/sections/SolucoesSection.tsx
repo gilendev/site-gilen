@@ -167,8 +167,8 @@ const SolucoesSection = () => {
             <div className={`flex flex-col lg:flex-row items-center gap-8 md:gap-12 lg:gap-20 ${index % 2 !== 0 ? "lg:flex-row-reverse" : ""}`}>
               {/* Icon Side */}
               <SectionBlock className="lg:w-1/3 flex justify-center">
-                <div className="w-32 h-32 rounded-full bg-graphite flex items-center justify-center">
-                  <detail.icon className="text-accent-blue" size={56} />
+                <div className="w-20 h-20 md:w-32 md:h-32 rounded-full bg-graphite flex items-center justify-center">
+                  <detail.icon className="text-accent-blue" size={40} />
                 </div>
               </SectionBlock>
 
