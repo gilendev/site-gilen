@@ -66,7 +66,7 @@ const MarcasSection = () => {
             
               <div className="flex items-start gap-5">
                 <div className={`w-14 h-14 rounded-sm bg-${brand.accent}/10 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform`}>
-                  <brand.icon className={`text-${brand.accent}`} size={28} />
+                  
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-foreground mb-2">{brand.name}</h3>
