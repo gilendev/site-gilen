@@ -1,28 +1,31 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Shapes, Flame, PawPrint, Baby } from "lucide-react";
+import logoParametrizze from "@/assets/logo-parametrizze.png";
+import logoGourmetizze from "@/assets/logo-gourmetizze.png";
+import logoComicpets from "@/assets/logo-comicpets.png";
+import logoDesignkids from "@/assets/logo-designkids.png";
 
 const brands = [
 {
-  icon: Shapes,
+  logo: logoParametrizze,
   name: "PARAMETRIZZE",
   description: "Linha especializada em design paramétrico aplicado a arquitetura, mobiliário e soluções industriais fabricadas com tecnologia CNC.",
   accent: "accent-blue"
 },
 {
-  icon: Flame,
+  logo: logoGourmetizze,
   name: "GOURMETIZZE",
   description: "Linha de produtos para o setor gourmet fabricados em corte a laser em metal, incluindo churrasqueiras modulares, utensílios e estruturas para áreas externas.",
   accent: "accent"
 },
 {
-  icon: PawPrint,
+  logo: logoComicpets,
   name: "COMICPETS",
   description: "Linha de produtos criativos e funcionais para o mercado pet.",
   accent: "accent-green"
 },
 {
-  icon: Baby,
+  logo: logoDesignkids,
   name: "DESIGN KIDS",
   description: "Linha de mobiliário e objetos infantis com design criativo e seguro.",
   accent: "steel"
@@ -65,8 +68,8 @@ const MarcasSection = () => {
             className="group bg-card p-5 md:p-8 lg:p-10 rounded-sm border border-border hover:border-accent-blue/20 transition-all duration-300 hover:shadow-lg">
             
               <div className="flex items-start gap-5">
-              <div className={`w-14 h-14 rounded-sm bg-${brand.accent}/10 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform`}>
-                <brand.icon className={`w-7 h-7 text-${brand.accent}`} />
+              <div className={`w-14 h-14 rounded-sm bg-${brand.accent}/10 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform overflow-hidden`}>
+                <img src={brand.logo} alt={brand.name} className="w-full h-full object-contain" />
               </div>
                 <div>
                   <h3 className="text-xl font-bold text-foreground mb-2">{brand.name}</h3>
