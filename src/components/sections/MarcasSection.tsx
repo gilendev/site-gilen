@@ -1,28 +1,31 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Shapes, Flame, PawPrint, Baby } from "lucide-react";
+import logoParametrizze from "@/assets/logo-parametrizze.png";
+import logoGourmetizze from "@/assets/logo-gourmetizze.png";
+import logoComicpets from "@/assets/logo-comicpets.png";
+import logoDesignkids from "@/assets/logo-designkids.png";
 
 const brands = [
 {
-  icon: Shapes,
+  logo: logoParametrizze,
   name: "PARAMETRIZZE",
   description: "Linha especializada em design paramétrico aplicado a arquitetura, mobiliário e soluções industriais fabricadas com tecnologia CNC.",
   accent: "accent-blue"
 },
 {
-  icon: Flame,
+  logo: logoGourmetizze,
   name: "GOURMETIZZE",
   description: "Linha de produtos para o setor gourmet fabricados em corte a laser em metal, incluindo churrasqueiras modulares, utensílios e estruturas para áreas externas.",
   accent: "accent"
 },
 {
-  icon: PawPrint,
+  logo: logoComicpets,
   name: "COMICPETS",
   description: "Linha de produtos criativos e funcionais para o mercado pet.",
   accent: "accent-green"
 },
 {
-  icon: Baby,
+  logo: logoDesignkids,
   name: "DESIGN KIDS",
   description: "Linha de mobiliário e objetos infantis com design criativo e seguro.",
   accent: "steel"
