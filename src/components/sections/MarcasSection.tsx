@@ -68,7 +68,7 @@ const MarcasSection = () => {
             className="group bg-card p-5 md:p-8 lg:p-10 rounded-sm border border-border hover:border-accent-blue/20 transition-all duration-300 hover:shadow-lg">
             
               <div className="flex items-start gap-5">
-              <div className={`w-14 h-14 rounded-sm bg-${brand.accent}/10 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform overflow-hidden`}>
+              <div className={`w-28 h-28 rounded-sm bg-${brand.accent}/10 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform overflow-hidden`}>
                 <img src={brand.logo} alt={brand.name} className="w-full h-full object-contain" />
               </div>
                 <div>
