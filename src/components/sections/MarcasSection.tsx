@@ -65,9 +65,9 @@ const MarcasSection = () => {
             className="group bg-card p-5 md:p-8 lg:p-10 rounded-sm border border-border hover:border-accent-blue/20 transition-all duration-300 hover:shadow-lg">
             
               <div className="flex items-start gap-5">
-                <div className={`w-14 h-14 rounded-sm bg-${brand.accent}/10 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform`}>
-                  
-                </div>
+              <div className={`w-14 h-14 rounded-sm bg-${brand.accent}/10 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform`}>
+                <brand.icon className={`w-7 h-7 text-${brand.accent}`} />
+              </div>
                 <div>
                   <h3 className="text-xl font-bold text-foreground mb-2">{brand.name}</h3>
                   <p className="text-sm text-muted-foreground leading-relaxed text-justify">{brand.description}</p>
