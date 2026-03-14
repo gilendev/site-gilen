@@ -1,7 +1,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-const logoParametrizze = "/lovable-uploads/80b5f84e-f8be-4758-85cf-20db01520af6.png";
-import logoGourmetizze from "@/assets/logo-gourmetizze.png";
+const logoParametrizze = "/lovable-uploads/ea1780e5-8545-48a9-aaa9-051f623724db.png";
+const logoGourmetizze = "/lovable-uploads/a3c34dec-c61a-4fd8-b69f-58f2508355f0.png";
 import logoComicpets from "@/assets/logo-comicpets.png";
 import logoDesignkids from "@/assets/logo-designkids.png";
 
