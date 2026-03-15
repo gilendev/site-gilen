@@ -6,10 +6,10 @@ import { motion, AnimatePresence } from "framer-motion";
 const navItems = [
   { label: "Home", href: "/" },
   { label: "Empresa", href: "/empresa" },
-  { label: "Soluções", href: "/solucoes" },
+  { label: "Nossas Marcas", href: "/marcas" },
   { label: "Projetos", href: "/projetos" },
   { label: "Tecnologia", href: "/tecnologia" },
-  { label: "Nossas Marcas", href: "/marcas" },
+  { label: "Soluções", href: "/solucoes" },
   { label: "Projetos Especiais", href: "/projetos-especiais" },
   { label: "Contato", href: "/contato" },
 ];
