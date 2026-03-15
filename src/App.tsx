@@ -35,6 +35,9 @@ const App = () => (
           <Route path="/projetos-especiais" element={<ProjetosEspeciaisPage />} />
           <Route path="/contato" element={<ContatoPage />} />
           <Route path="/parametrizze" element={<ParametrizzePage />} />
+          <Route path="/gourmetizze" element={<GourmetizzePage />} />
+          <Route path="/comicpets" element={<ComicpetsPage />} />
+          <Route path="/design-kids" element={<DesignKidsPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
