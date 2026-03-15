@@ -99,7 +99,6 @@ const MarcasSection = () => {
             );
           })}
         </div>
-        </div>
       </div>
     </section>);
 
