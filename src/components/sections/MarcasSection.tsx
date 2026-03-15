@@ -19,21 +19,21 @@ const brands = [
   name: "GOURMETIZZE",
   description: "Linha de produtos para o setor gourmet fabricados em corte a laser em metal, incluindo churrasqueiras modulares, utensílios e estruturas para áreas externas.",
   accent: "accent",
-  href: undefined as string | undefined
+  href: "/gourmetizze"
 },
 {
   logo: logoComicpets,
   name: "COMICPETS",
   description: "Linha de produtos criativos e funcionais para o mercado pet.",
   accent: "accent-green",
-  href: undefined as string | undefined
+  href: "/comicpets"
 },
 {
   logo: logoDesignkids,
   name: "DESIGN KIDS",
   description: "Linha de mobiliário e objetos infantis com design criativo e seguro.",
   accent: "steel",
-  href: undefined as string | undefined
+  href: "/design-kids"
 }];
 
 

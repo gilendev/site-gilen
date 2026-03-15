@@ -12,6 +12,9 @@ import MarcasPage from "./pages/MarcasPage";
 import ProjetosEspeciaisPage from "./pages/ProjetosEspeciaisPage";
 import ContatoPage from "./pages/ContatoPage";
 import ParametrizzePage from "./pages/ParametrizzePage";
+import GourmetizzePage from "./pages/GourmetizzePage";
+import ComicpetsPage from "./pages/ComicpetsPage";
+import DesignKidsPage from "./pages/DesignKidsPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -32,6 +35,9 @@ const App = () => (
           <Route path="/projetos-especiais" element={<ProjetosEspeciaisPage />} />
           <Route path="/contato" element={<ContatoPage />} />
           <Route path="/parametrizze" element={<ParametrizzePage />} />
+          <Route path="/gourmetizze" element={<GourmetizzePage />} />
+          <Route path="/comicpets" element={<ComicpetsPage />} />
+          <Route path="/design-kids" element={<DesignKidsPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
