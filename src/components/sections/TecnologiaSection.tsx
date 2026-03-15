@@ -2,6 +2,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Gauge, ScanLine, Cog, Monitor, ArrowRight, Cpu, Wrench, Paintbrush, Scissors, Ruler, CheckCircle, Factory, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
+import imgTecnologia from "@/assets/img-tecnologia.jpg";
 
 const technologies = [
   { icon: ScanLine, title: "CNC de Alta Precisão", description: "Usinagem computadorizada com tolerâncias rigorosas para peças e componentes técnicos." },
