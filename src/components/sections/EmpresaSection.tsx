@@ -2,6 +2,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { ArrowRight, Target, Eye, Shield, Users, Factory, Cog, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
+import imgEmpresa from "@/assets/img-empresa.jpg";
 
 const timeline = [
 { year: "2010", title: "Fundação", desc: "Nasce a GIL Case e Suporte, focada em estruturas técnicas e cases sob medida." },
@@ -10,13 +11,11 @@ const timeline = [
 { year: "2020", title: "Rebranding GILEN", desc: "Evolução da marca para GILEN Industrial, refletindo o novo posicionamento." },
 { year: "2024", title: "Consolidação", desc: "Consolidação como referência em soluções industriais sob medida." }];
 
-
 const numbers = [
 { value: "10+", label: "Anos de Mercado" },
 { value: "500+", label: "Projetos Realizados" },
 { value: "1000m²", label: "Planta Industrial" },
 { value: "50+", label: "Clientes Ativos" }];
-
 
 const pillars = [
 { icon: Target, title: "Missão", desc: "Desenvolver soluções industriais sob medida com excelência técnica, atendendo às necessidades específicas de cada cliente." },
@@ -24,12 +23,10 @@ const pillars = [
 { icon: Shield, title: "Qualidade", desc: "Compromisso com processos rigorosos de controle de qualidade em todas as etapas de produção." },
 { icon: Users, title: "Pessoas", desc: "Valorizamos nossa equipe técnica especializada, investindo em capacitação e desenvolvimento contínuo." }];
 
-
 const infrastructure = [
 { icon: Factory, title: "Planta Industrial", desc: "Mais de 1000m² de área produtiva equipada para atender demandas complexas." },
 { icon: Cog, title: "CNC & Usinagem", desc: "Máquinas CNC de última geração para cortes e acabamentos de alta precisão." },
 { icon: Zap, title: "Soldagem & Pintura", desc: "Processos certificados de soldagem e pintura eletrostática industrial." }];
-
 
 const SectionBlock = ({ children, className = "" }: {children: React.ReactNode;className?: string;}) => {
   const ref = useRef(null);
@@ -41,18 +38,17 @@ const SectionBlock = ({ children, className = "" }: {children: React.ReactNode;c
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.6 }}
       className={className}>
-      
       {children}
     </motion.div>);
-
 };
 
 const EmpresaSection = () => {
   return (
     <div>
-      {/* Hero Banner */}
+      {/* Hero Banner with Image */}
       <section className="relative py-20 md:py-28 lg:py-40 bg-graphite overflow-hidden">
-        <div className="absolute inset-0 grid-overlay opacity-20" />
+        <img src={imgEmpresa} alt="Fabricação industrial GILEN" className="absolute inset-0 w-full h-full object-cover opacity-30" />
+        <div className="absolute inset-0 bg-gradient-to-b from-graphite/60 to-graphite/90" />
         <div className="container mx-auto px-4 lg:px-8 relative z-10 text-center">
           <SectionBlock>
             <span className="text-xs font-semibold uppercase tracking-[0.3em] text-accent-blue mb-4 block">
@@ -173,7 +169,6 @@ const EmpresaSection = () => {
             <Link
               to="/contato"
               className="inline-flex items-center gap-2 px-8 py-3 bg-accent-blue text-accent-blue-foreground font-semibold text-sm uppercase tracking-wider rounded-sm hover:bg-accent-blue/90 transition-colors">
-              
               Fale Conosco
               <ArrowRight size={16} />
             </Link>
@@ -181,7 +176,6 @@ const EmpresaSection = () => {
         </div>
       </section>
     </div>);
-
 };
 
 export default EmpresaSection;

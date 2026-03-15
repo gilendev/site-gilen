@@ -2,6 +2,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Gauge, ScanLine, Cog, Monitor, ArrowRight, Cpu, Wrench, Paintbrush, Scissors, Ruler, CheckCircle, Factory, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
+import imgTecnologia from "@/assets/img-tecnologia.jpg";
 
 const technologies = [
   { icon: ScanLine, title: "CNC de Alta Precisão", description: "Usinagem computadorizada com tolerâncias rigorosas para peças e componentes técnicos." },
@@ -75,7 +76,8 @@ const TecnologiaSection = () => {
     <div>
       {/* Hero Banner */}
       <section className="relative py-20 md:py-28 lg:py-40 bg-graphite overflow-hidden">
-        <div className="absolute inset-0 grid-overlay opacity-20" />
+        <img src={imgTecnologia} alt="Usinagem CNC de precisão" className="absolute inset-0 w-full h-full object-cover opacity-25" />
+        <div className="absolute inset-0 bg-gradient-to-b from-graphite/50 to-graphite/90" />
         <div className="container mx-auto px-4 lg:px-8 relative z-10 text-center">
           <SectionBlock>
             <span className="text-xs font-semibold uppercase tracking-[0.3em] text-accent-blue mb-4 block">

@@ -1,5 +1,9 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
+import imgProjeto1 from "@/assets/img-projeto1.jpg";
+import imgProjeto2 from "@/assets/img-projeto2.jpg";
+import imgProjeto3 from "@/assets/img-projeto3.jpg";
+import imgProjeto4 from "@/assets/img-projeto4.jpg";
 
 const categories = [
   "Todos",
@@ -8,6 +12,13 @@ const categories = [
   "Projetos Paramétricos",
   "Projetos Especiais",
 ];
+
+const projectImages: Record<string, string> = {
+  "Estruturas Técnicas": imgProjeto1,
+  "Cases Industriais": imgProjeto2,
+  "Projetos Paramétricos": imgProjeto3,
+  "Projetos Especiais": imgProjeto4,
+};
 
 const projects = [
   { title: "Estrutura Modular CNC", category: "Estruturas Técnicas", year: "2024" },
@@ -77,10 +88,14 @@ const ProjetosSection = () => {
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.4, delay: index * 0.05 }}
               layout
-              className="group relative aspect-[4/3] bg-gradient-to-br from-graphite to-primary rounded-sm overflow-hidden cursor-pointer"
+              className="group relative aspect-[4/3] rounded-sm overflow-hidden cursor-pointer"
             >
-              <div className="absolute inset-0 grid-overlay opacity-20" />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-transparent to-transparent" />
+              <img
+                src={projectImages[project.category]}
+                alt={project.title}
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-5">
                 <span className="text-xs text-primary-foreground/40 uppercase tracking-wider">{project.year} · {project.category}</span>
                 <h3 className="text-sm font-semibold text-primary-foreground mt-1 group-hover:text-accent transition-colors">
