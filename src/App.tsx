@@ -12,6 +12,9 @@ import MarcasPage from "./pages/MarcasPage";
 import ProjetosEspeciaisPage from "./pages/ProjetosEspeciaisPage";
 import ContatoPage from "./pages/ContatoPage";
 import ParametrizzePage from "./pages/ParametrizzePage";
+import GourmetizzePage from "./pages/GourmetizzePage";
+import ComicpetsPage from "./pages/ComicpetsPage";
+import DesignKidsPage from "./pages/DesignKidsPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
