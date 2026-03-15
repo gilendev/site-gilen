@@ -64,25 +64,41 @@ const MarcasSection = () => {
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
-          {brands.map((brand, index) =>
-          <motion.div
-            key={brand.name}
-            initial={{ opacity: 0, y: 30 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
-            className="group bg-card p-5 md:p-8 lg:p-10 rounded-sm border border-border hover:border-accent-blue/20 transition-all duration-300 hover:shadow-lg">
-            
+          {brands.map((brand, index) => {
+            const CardContent = (
               <div className="flex items-start gap-5">
-              <div className="w-28 h-28 rounded-sm flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform overflow-hidden" style={{ backgroundColor: '#8B7355' }}>
-                <img src={brand.logo} alt={brand.name} className="w-full h-full object-cover" />
-              </div>
+                <div className="w-28 h-28 rounded-sm flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform overflow-hidden" style={{ backgroundColor: '#8B7355' }}>
+                  <img src={brand.logo} alt={brand.name} className="w-full h-full object-cover" />
+                </div>
                 <div>
-                  <h3 className="text-xl font-bold text-foreground mb-2">{brand.name}</h3>
+                  <h3 className="text-xl font-bold text-foreground mb-2">
+                    {brand.name}
+                    {brand.href && <span className="ml-2 text-xs text-accent-blue font-normal">→ Ver mais</span>}
+                  </h3>
                   <p className="text-sm text-muted-foreground leading-relaxed text-justify">{brand.description}</p>
                 </div>
               </div>
-            </motion.div>
-          )}
+            );
+
+            return (
+              <motion.div
+                key={brand.name}
+                initial={{ opacity: 0, y: 30 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className={`group bg-card p-5 md:p-8 lg:p-10 rounded-sm border border-border hover:border-accent-blue/20 transition-all duration-300 hover:shadow-lg ${brand.href ? "cursor-pointer" : ""}`}
+              >
+                {brand.href ? (
+                  <Link to={brand.href} className="block">
+                    {CardContent}
+                  </Link>
+                ) : (
+                  CardContent
+                )}
+              </motion.div>
+            );
+          })}
+        </div>
         </div>
       </div>
     </section>);
