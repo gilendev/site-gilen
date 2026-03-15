@@ -11,6 +11,7 @@ import TecnologiaPage from "./pages/TecnologiaPage";
 import MarcasPage from "./pages/MarcasPage";
 import ProjetosEspeciaisPage from "./pages/ProjetosEspeciaisPage";
 import ContatoPage from "./pages/ContatoPage";
+import ParametrizzePage from "./pages/ParametrizzePage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
