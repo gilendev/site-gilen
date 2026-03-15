@@ -2,6 +2,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Cpu, Factory, Boxes, Wrench, CheckCircle, Clock, Ruler, Headphones, ArrowRight, Pencil, Box, Cog, Paintbrush, Scissors, FlaskConical } from "lucide-react";
 import { Link } from "react-router-dom";
+import imgSolucoes from "@/assets/img-solucoes.jpg";
 
 const solutions = [
   {
