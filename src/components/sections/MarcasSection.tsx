@@ -11,25 +11,29 @@ const brands = [
   logo: logoParametrizze,
   name: "PARAMETRIZZE",
   description: "Linha especializada em design paramétrico aplicado a arquitetura, mobiliário e soluções industriais fabricadas com tecnologia CNC.",
-  accent: "accent-blue"
+  accent: "accent-blue",
+  href: "/parametrizze"
 },
 {
   logo: logoGourmetizze,
   name: "GOURMETIZZE",
   description: "Linha de produtos para o setor gourmet fabricados em corte a laser em metal, incluindo churrasqueiras modulares, utensílios e estruturas para áreas externas.",
-  accent: "accent"
+  accent: "accent",
+  href: undefined as string | undefined
 },
 {
   logo: logoComicpets,
   name: "COMICPETS",
   description: "Linha de produtos criativos e funcionais para o mercado pet.",
-  accent: "accent-green"
+  accent: "accent-green",
+  href: undefined as string | undefined
 },
 {
   logo: logoDesignkids,
   name: "DESIGN KIDS",
   description: "Linha de mobiliário e objetos infantis com design criativo e seguro.",
-  accent: "steel"
+  accent: "steel",
+  href: undefined as string | undefined
 }];
 
 
