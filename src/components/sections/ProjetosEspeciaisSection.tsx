@@ -3,14 +3,21 @@ import { useRef } from "react";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import imgProjetosEspeciais from "@/assets/img-projetos-especiais.jpg";
 
 const ProjetosEspeciaisSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section ref={ref} className="py-16 md:py-24 lg:py-32 bg-primary text-primary-foreground relative overflow-hidden">
-      <div className="absolute inset-0 grid-overlay opacity-10" />
+    <section ref={ref} className="relative py-16 md:py-24 lg:py-32 text-primary-foreground overflow-hidden">
+      {/* Background Image */}
+      <img
+        src={imgProjetosEspeciais}
+        alt="Projetos especiais - soldagem industrial"
+        className="absolute inset-0 w-full h-full object-cover"
+      />
+      <div className="absolute inset-0 bg-primary/80" />
 
       {/* Orbital decoration */}
       <div className="hidden md:block absolute left-[-5%] top-1/2 -translate-y-1/2 w-[400px] h-[400px] opacity-10">
