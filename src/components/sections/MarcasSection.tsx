@@ -77,8 +77,8 @@ const MarcasSection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
-          className="group bg-card p-5 md:p-8 lg:p-10 rounded-sm border border-border hover:border-accent-blue/20 transition-all duration-300 hover:shadow-lg cursor-pointer mt-12"
-        >
+          className="group bg-card p-5 md:p-8 lg:p-10 rounded-sm border border-border hover:border-accent-blue/20 transition-all duration-300 hover:shadow-lg cursor-pointer mt-12 text-center">
+          
           <Link to={gilCases.href} className="block">
             <div className="flex items-start gap-5">
               <div className="w-28 h-28 rounded-sm flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform overflow-hidden" style={{ backgroundColor: '#8B7355' }}>
@@ -98,8 +98,8 @@ const MarcasSection = () => {
         {/* 2x2 Grid of other brands */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
           {brands.map((brand, index) => {
-            const CardContent = (
-              <div className="flex items-start gap-5">
+            const CardContent =
+            <div className="flex items-start gap-5">
                 <div className="w-28 h-28 rounded-sm flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform overflow-hidden" style={{ backgroundColor: '#8B7355' }}>
                   <img src={brand.logo} alt={brand.name} className="w-full h-full object-cover" />
                 </div>
@@ -110,8 +110,8 @@ const MarcasSection = () => {
                   </h3>
                   <p className="text-sm text-muted-foreground leading-relaxed text-justify">{brand.description}</p>
                 </div>
-              </div>
-            );
+              </div>;
+
 
             return (
               <motion.div
@@ -119,17 +119,17 @@ const MarcasSection = () => {
                 initial={{ opacity: 0, y: 30 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: (index + 1) * 0.1 }}
-                className={`group bg-card p-5 md:p-8 lg:p-10 rounded-sm border border-border hover:border-accent-blue/20 transition-all duration-300 hover:shadow-lg ${brand.href ? "cursor-pointer" : ""}`}
-              >
-                {brand.href ? (
-                  <Link to={brand.href} className="block">
+                className={`group bg-card p-5 md:p-8 lg:p-10 rounded-sm border border-border hover:border-accent-blue/20 transition-all duration-300 hover:shadow-lg ${brand.href ? "cursor-pointer" : ""}`}>
+                
+                {brand.href ?
+                <Link to={brand.href} className="block">
                     {CardContent}
-                  </Link>
-                ) : (
-                  CardContent
-                )}
-              </motion.div>
-            );
+                  </Link> :
+
+                CardContent
+                }
+              </motion.div>);
+
           })}
         </div>
       </div>
