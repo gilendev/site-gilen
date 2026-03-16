@@ -5,6 +5,15 @@ const logoParametrizze = "/lovable-uploads/ea1780e5-8545-48a9-aaa9-051f623724db.
 const logoGourmetizze = "/lovable-uploads/40176074-eed2-4555-94a3-940b9c014213.png";
 const logoComicpets = "/lovable-uploads/868a8eaf-cc9a-4482-9f91-ff11d7873809.png";
 const logoDesignkids = "/lovable-uploads/16ad92e4-d27b-4d97-a111-5d128e486b17.png";
+const logoGilen = "/lovable-uploads/80b5f84e-f8be-4758-85cf-20db01520af6.png";
+
+const gilCases = {
+  logo: logoGilen,
+  name: "GIL CASES E SUPORTES",
+  description: "Linha de cases, suportes e soluções em proteção e transporte para equipamentos, instrumentos e ferramentas profissionais.",
+  accent: "accent-blue",
+  href: "/gil-cases"
+};
 
 const brands = [
 {
@@ -63,7 +72,31 @@ const MarcasSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
+        {/* Gil Cases - Full width centered above grid */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.5 }}
+          className="group bg-card p-5 md:p-8 lg:p-10 rounded-sm border border-border hover:border-accent-blue/20 transition-all duration-300 hover:shadow-lg cursor-pointer mt-12"
+        >
+          <Link to={gilCases.href} className="block">
+            <div className="flex items-start gap-5">
+              <div className="w-28 h-28 rounded-sm flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform overflow-hidden" style={{ backgroundColor: '#8B7355' }}>
+                <img src={gilCases.logo} alt={gilCases.name} className="w-full h-full object-cover" />
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-foreground mb-2">
+                  {gilCases.name}
+                  <span className="ml-2 text-xs text-accent-blue font-normal">→ Ver mais</span>
+                </h3>
+                <p className="text-sm text-muted-foreground leading-relaxed text-justify">{gilCases.description}</p>
+              </div>
+            </div>
+          </Link>
+        </motion.div>
+
+        {/* 2x2 Grid of other brands */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
           {brands.map((brand, index) => {
             const CardContent = (
               <div className="flex items-start gap-5">
@@ -85,7 +118,7 @@ const MarcasSection = () => {
                 key={brand.name}
                 initial={{ opacity: 0, y: 30 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                transition={{ duration: 0.5, delay: (index + 1) * 0.1 }}
                 className={`group bg-card p-5 md:p-8 lg:p-10 rounded-sm border border-border hover:border-accent-blue/20 transition-all duration-300 hover:shadow-lg ${brand.href ? "cursor-pointer" : ""}`}
               >
                 {brand.href ? (
