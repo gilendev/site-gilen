@@ -15,6 +15,7 @@ import ParametrizzePage from "./pages/ParametrizzePage";
 import GourmetizzePage from "./pages/GourmetizzePage";
 import ComicpetsPage from "./pages/ComicpetsPage";
 import DesignKidsPage from "./pages/DesignKidsPage";
+import GilCasesPage from "./pages/GilCasesPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
