@@ -66,6 +66,8 @@ const ContatoSection = () => {
       });
 
       const data = await res.json();
+
+      if (data?.success) {
         toast({
           title: "Mensagem enviada!",
           description: "Entraremos em contato em breve.",
