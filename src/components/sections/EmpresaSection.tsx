@@ -4,6 +4,7 @@ import { ArrowRight, Target, Eye, Shield, Users, Factory, Cog, Zap } from "lucid
 import { Link } from "react-router-dom";
 import imgEmpresa from "@/assets/img-empresa.jpg";
 import imgStatsBg from "@/assets/img-stats-bg.jpg";
+import imgCtaBg from "@/assets/img-cta-bg.jpg";
 
 const timeline = [
 { year: "2010", title: "Fundação", desc: "Nasce a GIL Case e Suporte, focada em estruturas técnicas e cases sob medida." },
