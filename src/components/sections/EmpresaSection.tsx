@@ -93,8 +93,10 @@ const EmpresaSection = () => {
       </section>
 
       {/* Stats Bar */}
-      <section className="py-16 bg-graphite">
-        <div className="container mx-auto px-4 lg:px-8">
+      <section className="py-16 bg-graphite relative overflow-hidden">
+        <img src={imgStatsBg} alt="" className="absolute inset-0 w-full h-full object-cover opacity-30" />
+        <div className="absolute inset-0 bg-graphite/70" />
+        <div className="container mx-auto px-4 lg:px-8 relative z-10">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {numbers.map((stat) =>
             <SectionBlock key={stat.label} className="text-center">
