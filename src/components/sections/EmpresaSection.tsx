@@ -4,6 +4,7 @@ import { ArrowRight, Target, Eye, Shield, Users, Factory, Cog, Zap } from "lucid
 import { Link } from "react-router-dom";
 import imgEmpresa from "@/assets/img-empresa.jpg";
 import imgStatsBg from "@/assets/img-stats-bg.jpg";
+import imgCtaBg from "@/assets/img-cta-bg.jpg";
 
 const timeline = [
 { year: "2010", title: "Fundação", desc: "Nasce a GIL Case e Suporte, focada em estruturas técnicas e cases sob medida." },
@@ -160,7 +161,8 @@ const EmpresaSection = () => {
 
       {/* CTA */}
       <section className="py-24 bg-graphite relative overflow-hidden">
-        <div className="absolute inset-0 grid-overlay opacity-10" />
+        <img src={imgCtaBg} alt="" className="absolute inset-0 w-full h-full object-cover opacity-25" />
+        <div className="absolute inset-0 bg-graphite/70" />
         <div className="container mx-auto px-4 lg:px-8 relative z-10 text-center">
           <SectionBlock>
             <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-6">
