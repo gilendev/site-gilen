@@ -189,7 +189,7 @@ const ContatoSection = () => {
                   <Facebook className="w-5 h-5" />
                 </a>
                 <a
-                  href="https://www.instagram.com/GilCaseeSuportes/"
+                  href="https://www.instagram.com/gilcaseesuportes?igsh=N3huZWJucjBqejk1"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-foreground transition-colors"
