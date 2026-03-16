@@ -65,7 +65,13 @@ const Footer = () => {
               <Link to="/contato" className="hover:text-primary-foreground transition-colors">
                 Fale Conosco
               </Link>
+              <a href="tel:01122413047" className="hover:text-primary-foreground transition-colors">(11) 2241-3047</a>
+              <a href="tel:01121437721" className="hover:text-primary-foreground transition-colors">(11) 2143-7721</a>
+              <a href="https://wa.me/5511968756430?text=Falar%20com%20a%20Gilen%20Industrial" target="_blank" rel="noopener noreferrer" className="hover:text-primary-foreground transition-colors">(11) 96875-6430 (WhatsApp)</a>
               <span>contato@gilenindustrial.com.br</span>
+              <span>gil@gilcase.com.br</span>
+              <p className="mt-2 text-primary-foreground/40 text-xs">R. Flor de Ouro, 335 - Vila Nova Galvão, São Paulo - SP</p>
+              <p className="text-primary-foreground/40 text-xs">Seg. à Sex. 8h às 18h</p>
             </div>
           </div>
         </div>
