@@ -180,7 +180,7 @@ const ContatoSection = () => {
               {/* Social */}
               <div className="flex items-center gap-4 pt-2">
                 <a
-                  href="https://www.facebook.com/GilCaseeSuportes"
+                  href="https://www.facebook.com/share/1J3gRPgThT/?mibextid=wwXIfr"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-foreground transition-colors"
