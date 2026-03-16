@@ -60,7 +60,7 @@ const EmpresaSection = () => {
               Nossa <span className="text-accent-blue">História</span>
             </h1>
             <p className="max-w-2xl mx-auto text-primary-foreground/70 text-lg leading-relaxed">
-              Da GIL Case e Suporte à GILEN Industrial — uma trajetória de evolução, tecnologia e compromisso com a excelência.
+              Da <span className="text-red-600">GIL Case e Suporte</span> à GILEN Industrial — uma trajetória de evolução, tecnologia e compromisso com a excelência.
             </p>
           </SectionBlock>
         </div>
