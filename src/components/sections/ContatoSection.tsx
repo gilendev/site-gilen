@@ -92,12 +92,12 @@ const ContatoSection = () => {
                 <div>
                   <p className="font-semibold text-foreground mb-1">Localização</p>
                   <a
-                    href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x94cef5b5af7743b7:0x44ce65bb59315a8"
+                    href="https://www.google.com/maps/search/R.+Cirene+de+Oliveira+Laet,+815+-+Vila+Nilo,+São+Paulo+-+SP,+02279-010"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-muted-foreground hover:text-foreground transition-colors"
                   >
-                    R. Flor de Ouro, 335 - Vila Nova Galvão, São Paulo - SP, 02281-010
+                    R. Cirene de Oliveira Laet, 815 - Vila Nilo, São Paulo - SP, 02279-010
                   </a>
                 </div>
               </div>

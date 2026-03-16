@@ -70,7 +70,7 @@ const Footer = () => {
               <a href="https://wa.me/5511968756430?text=Falar%20com%20a%20Gilen%20Industrial" target="_blank" rel="noopener noreferrer" className="hover:text-primary-foreground transition-colors">(11) 96875-6430 (WhatsApp)</a>
               <span>contato@gilenindustrial.com.br</span>
               <span>gil@gilcase.com.br</span>
-              <p className="mt-2 text-primary-foreground/40 text-xs">R. Flor de Ouro, 335 - Vila Nova Galvão, São Paulo - SP</p>
+              <p className="mt-2 text-primary-foreground/40 text-xs">R. Cirene de Oliveira Laet, 815 - Vila Nilo, São Paulo - SP, 02279-010</p>
               <p className="text-primary-foreground/40 text-xs">Seg. à Sex. 8h às 18h</p>
             </div>
           </div>
