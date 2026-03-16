@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowRight, Phone } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
@@ -92,10 +93,10 @@ const HeroSection = () => {
               asChild
               variant="outline"
               size="lg"
-              className="bg-transparent border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10 px-6 md:px-8 h-11 md:h-12 text-xs md:text-sm uppercase tracking-wider font-semibold"
+              className="bg-transparent border-primary-foreground/20 text-primary-foreground hover:bg-[#25D366] hover:border-[#25D366] hover:text-white px-6 md:px-8 h-11 md:h-12 text-xs md:text-sm uppercase tracking-wider font-semibold transition-colors duration-300"
             >
               <Link to="/contato">
-                <Phone className="mr-2" size={16} />
+                <FaWhatsapp className="mr-2" size={18} />
                 Fale com nossa engenharia
               </Link>
             </Button>
