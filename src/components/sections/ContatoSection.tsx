@@ -3,24 +3,86 @@ import { useRef, useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-import { Send, Phone, Mail, MapPin, Clock, Facebook, Instagram } from "lucide-react";
+import { Send, Phone, Mail, MapPin, Clock, Facebook, Instagram, Paperclip, X, Loader2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
+
+const MAX_FILE_SIZE = 10 * 1024 * 1024; // 10MB
 
 const ContatoSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [arquivo, setArquivo] = useState<File | null>(null);
+  const fileInputRef = useRef<HTMLInputElement>(null);
   const [formData, setFormData] = useState({
     nome: "", empresa: "", email: "", telefone: "", mensagem: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      if (file.size > MAX_FILE_SIZE) {
+        toast({
+          title: "Arquivo muito grande",
+          description: "O tamanho máximo é 10MB.",
+          variant: "destructive",
+        });
+        return;
+      }
+      setArquivo(file);
+    }
+  };
+
+  const removeFile = () => {
+    setArquivo(null);
+    if (fileInputRef.current) {
+      fileInputRef.current.value = "";
+    }
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Mensagem enviada",
-      description: "Entraremos em contato em breve.",
-    });
-    setFormData({ nome: "", empresa: "", email: "", telefone: "", mensagem: "" });
+    setIsSubmitting(true);
+
+    try {
+      const body = new FormData();
+      body.append("nome", formData.nome.trim());
+      body.append("empresa", formData.empresa.trim());
+      body.append("email", formData.email.trim());
+      body.append("telefone", formData.telefone.trim());
+      body.append("mensagem", formData.mensagem.trim());
+      if (arquivo) {
+        body.append("arquivo", arquivo);
+      }
+
+      const { data, error } = await supabase.functions.invoke("send-contact-email", {
+        body,
+      });
+
+      if (error) throw error;
+
+      if (data?.success) {
+        toast({
+          title: "Mensagem enviada!",
+          description: "Entraremos em contato em breve.",
+        });
+        setFormData({ nome: "", empresa: "", email: "", telefone: "", mensagem: "" });
+        removeFile();
+      } else {
+        throw new Error(data?.error || "Erro ao enviar mensagem");
+      }
+    } catch (err: unknown) {
+      console.error("Erro ao enviar formulário:", err);
+      toast({
+        title: "Erro ao enviar",
+        description: err instanceof Error ? err.message : "Tente novamente mais tarde.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -181,13 +243,60 @@ const ContatoSection = () => {
                 rows={5}
                 className="bg-muted border-border"
               />
+
+              {/* File Upload */}
+              <div>
+                <input
+                  ref={fileInputRef}
+                  type="file"
+                  onChange={handleFileChange}
+                  className="hidden"
+                  accept=".pdf,.doc,.docx,.xls,.xlsx,.png,.jpg,.jpeg,.zip,.rar,.dwg,.dxf,.stp,.step"
+                />
+                {arquivo ? (
+                  <div className="flex items-center gap-3 p-3 bg-muted rounded-md border border-border">
+                    <Paperclip className="w-4 h-4 text-muted-foreground shrink-0" />
+                    <span className="text-sm text-foreground truncate flex-1">{arquivo.name}</span>
+                    <span className="text-xs text-muted-foreground shrink-0">
+                      {(arquivo.size / 1024).toFixed(0)} KB
+                    </span>
+                    <button
+                      type="button"
+                      onClick={removeFile}
+                      className="text-muted-foreground hover:text-foreground transition-colors shrink-0"
+                    >
+                      <X className="w-4 h-4" />
+                    </button>
+                  </div>
+                ) : (
+                  <button
+                    type="button"
+                    onClick={() => fileInputRef.current?.click()}
+                    className="flex items-center gap-2 px-4 py-3 w-full text-sm text-muted-foreground bg-muted border border-dashed border-border rounded-md hover:border-primary/50 hover:text-foreground transition-colors"
+                  >
+                    <Paperclip className="w-4 h-4" />
+                    Anexar documento ou arquivo (máx. 10MB)
+                  </button>
+                )}
+              </div>
+
               <Button
                 type="submit"
                 size="lg"
+                disabled={isSubmitting}
                 className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 h-12 text-sm uppercase tracking-wider font-semibold w-full sm:w-auto"
               >
-                <Send className="mr-2" size={16} />
-                Enviar mensagem
+                {isSubmitting ? (
+                  <>
+                    <Loader2 className="mr-2 animate-spin" size={16} />
+                    Enviando...
+                  </>
+                ) : (
+                  <>
+                    <Send className="mr-2" size={16} />
+                    Enviar mensagem
+                  </>
+                )}
               </Button>
             </form>
           </motion.div>
