@@ -56,13 +56,16 @@ const ContatoSection = () => {
         body.append("arquivo", arquivo);
       }
 
-      const { data, error } = await supabase.functions.invoke("send-contact-email", {
+      const projectId = import.meta.env.VITE_SUPABASE_PROJECT_ID;
+      const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+      const functionUrl = `${supabaseUrl}/functions/v1/send-contact-email`;
+
+      const res = await fetch(functionUrl, {
+        method: "POST",
         body,
       });
 
-      if (error) throw error;
-
-      if (data?.success) {
+      const data = await res.json();
         toast({
           title: "Mensagem enviada!",
           description: "Entraremos em contato em breve.",
