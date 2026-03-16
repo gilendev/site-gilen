@@ -5,7 +5,6 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Send, Phone, Mail, MapPin, Clock, Facebook, Instagram, Paperclip, X, Loader2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
-import { supabase } from "@/integrations/supabase/client";
 
 const MAX_FILE_SIZE = 10 * 1024 * 1024; // 10MB
 
