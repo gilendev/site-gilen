@@ -5,7 +5,6 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Send, Phone, Mail, MapPin, Clock, Facebook, Instagram, Paperclip, X, Loader2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
-import { supabase } from "@/integrations/supabase/client";
 
 const MAX_FILE_SIZE = 10 * 1024 * 1024; // 10MB
 
@@ -57,11 +56,16 @@ const ContatoSection = () => {
         body.append("arquivo", arquivo);
       }
 
-      const { data, error } = await supabase.functions.invoke("send-contact-email", {
+      const projectId = import.meta.env.VITE_SUPABASE_PROJECT_ID;
+      const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+      const functionUrl = `${supabaseUrl}/functions/v1/send-contact-email`;
+
+      const res = await fetch(functionUrl, {
+        method: "POST",
         body,
       });
 
-      if (error) throw error;
+      const data = await res.json();
 
       if (data?.success) {
         toast({
