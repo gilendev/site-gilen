@@ -95,7 +95,7 @@ const HeroSection = () => {
               size="lg"
               className="bg-transparent border-primary-foreground/20 text-primary-foreground hover:bg-[#25D366] hover:border-[#25D366] hover:text-white px-6 md:px-8 h-11 md:h-12 text-xs md:text-sm uppercase tracking-wider font-semibold transition-colors duration-300"
             >
-              <a href="https://wa.me/5511968756430?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20as%20soluções%20da%20Gilen." target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/5511968756430?text=Falar%20com%20a%20Gilen%20Industrial" target="_blank" rel="noopener noreferrer">
                 <FaWhatsapp className="mr-2" size={18} />
                 Fale com nossa engenharia
               </a>
