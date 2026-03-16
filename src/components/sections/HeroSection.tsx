@@ -110,7 +110,7 @@ const HeroSection = () => {
             className="mt-12 md:mt-20 pt-6 md:pt-8 border-t border-primary-foreground/10 grid grid-cols-3 gap-4 md:gap-8"
           >
             {[
-              { value: "10+", label: "Anos de Experiência" },
+              { value: "13+", label: "Anos de Experiência" },
               { value: "500+", label: "Projetos Realizados" },
               { value: "4", label: "Marcas Próprias" },
             ].map((stat) => (
