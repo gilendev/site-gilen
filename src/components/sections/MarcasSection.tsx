@@ -10,7 +10,7 @@ const logoGilen = "/lovable-uploads/logo-gilcase.jpeg";
 const gilCases = {
   logo: logoGilen,
   name: "GIL CASES E SUPORTES",
-  description: "Linha de cases, suportes e soluções em proteção e transporte para equipamentos, instrumentos e ferramentas profissionais.",
+  description: "Com mais de 13 anos de experiência, fabricamos cases personalizados sob medida para transporte e proteção de equipamentos de áudio, vídeo, iluminação, instrumentos musicais, ferramentas, drones e muito mais. Suportes, totens interativos e estruturas para todos os segmentos profissionais.",
   accent: "accent-blue",
   href: "/gil-cases"
 };
