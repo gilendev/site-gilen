@@ -14,7 +14,7 @@ const timeline = [
 { year: "2024", title: "Consolidação", desc: "Consolidação como referência em soluções industriais sob medida." }];
 
 const numbers = [
-{ value: "10+", label: "Anos de Mercado" },
+{ value: "13+", label: "Anos de Mercado" },
 { value: "500+", label: "Projetos Realizados" },
 { value: "1000m²", label: "Planta Industrial" },
 { value: "50+", label: "Clientes Ativos" }];
