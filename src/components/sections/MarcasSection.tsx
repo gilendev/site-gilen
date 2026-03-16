@@ -6,6 +6,14 @@ const logoGourmetizze = "/lovable-uploads/40176074-eed2-4555-94a3-940b9c014213.p
 const logoComicpets = "/lovable-uploads/868a8eaf-cc9a-4482-9f91-ff11d7873809.png";
 const logoDesignkids = "/lovable-uploads/16ad92e4-d27b-4d97-a111-5d128e486b17.png";
 
+const gilCases = {
+  logo: logoGilen,
+  name: "GIL CASES E SUPORTES",
+  description: "Linha de cases, suportes e soluções em proteção e transporte para equipamentos, instrumentos e ferramentas profissionais.",
+  accent: "accent-blue",
+  href: "/gil-cases"
+};
+
 const brands = [
 {
   logo: logoParametrizze,
