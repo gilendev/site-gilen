@@ -1,5 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import SEOHead from "@/components/SEOHead";
 import { Link } from "react-router-dom";
 import { ArrowRight, ArrowLeft, Heart, PawPrint, Sparkles, Shield, Palette, Box } from "lucide-react";
 import { Button } from "@/components/ui/button";
