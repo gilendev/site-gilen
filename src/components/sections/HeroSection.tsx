@@ -111,7 +111,7 @@ const HeroSection = () => {
           >
             {[
               { value: "13+", label: "Anos de Experiência" },
-              { value: "10000+", label: "Projetos Realizados" },
+              { value: "9000+", label: "Projetos Realizados" },
               { value: "5+", label: "Marcas Próprias" },
             ].map((stat) => (
               <div key={stat.label}>
