@@ -112,13 +112,13 @@ const TecnologiaSection = () => {
                 initial={{ opacity: 0, y: 40 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group bg-card p-8 rounded-sm border border-border hover:border-accent-blue/30 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+                className="group bg-card p-8 rounded-sm border border-border hover:border-accent-blue/30 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 flex flex-col"
               >
                 <div className="w-12 h-12 rounded-sm bg-accent-blue/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                   <tech.icon className="text-accent-blue" size={24} />
                 </div>
                 <h3 className="text-lg font-semibold text-foreground mb-3">{tech.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{tech.description}</p>
+                <p className="text-sm text-muted-foreground leading-relaxed mt-auto">{tech.description}</p>
                 <div className="mt-6 w-8 h-0.5 bg-border group-hover:w-16 group-hover:bg-accent-blue transition-all duration-300" />
               </motion.div>
             ))}
