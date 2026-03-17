@@ -1,5 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import SEOHead from "@/components/SEOHead";
 import { Link } from "react-router-dom";
 import { ArrowRight, ArrowLeft, Flame, Utensils, Home, Wrench, Scissors, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -59,6 +60,7 @@ const GourmetizzePage = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead title="Gourmetizze" description="Churrasqueiras modulares, utensílios gourmet e estruturas metálicas para áreas externas. Corte a laser em aço inox." path="/gourmetizze" />
       {/* Top bar */}
       <div className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
         <div className="container mx-auto px-4 lg:px-8 flex items-center justify-between h-16">
