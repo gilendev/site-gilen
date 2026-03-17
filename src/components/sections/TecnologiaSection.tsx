@@ -118,7 +118,7 @@ const TecnologiaSection = () => {
                   <tech.icon className="text-accent-blue" size={24} />
                 </div>
                 <h3 className="text-lg font-semibold text-foreground mb-3">{tech.title}</h3>
-                <div className="flex-1 flex items-end"><p className="text-sm text-muted-foreground leading-relaxed">{tech.description}</p></div>
+                <div className="flex-1 flex items-end"><p className="text-sm text-muted-foreground leading-relaxed text-justify">{tech.description}</p></div>
                 <div className="mt-6 w-8 h-0.5 bg-border group-hover:w-16 group-hover:bg-accent-blue transition-all duration-300" />
               </motion.div>
             ))}
