@@ -24,31 +24,32 @@ const queryClient = new QueryClient();
 
 const App = () => (
   <ThemeProvider attribute="class" defaultTheme="light" storageKey="gilen-theme">
-  <HelmetProvider>
-      <TooltipProvider>
-        <Toaster />
-        <Sonner />
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/empresa" element={<EmpresaPage />} />
-            <Route path="/solucoes" element={<SolucoesPage />} />
-            <Route path="/projetos" element={<ProjetosPage />} />
-            <Route path="/tecnologia" element={<TecnologiaPage />} />
-            <Route path="/marcas" element={<MarcasPage />} />
-            <Route path="/projetos-especiais" element={<ProjetosEspeciaisPage />} />
-            <Route path="/contato" element={<ContatoPage />} />
-            <Route path="/parametrizze" element={<ParametrizzePage />} />
-            <Route path="/gourmetizze" element={<GourmetizzePage />} />
-            <Route path="/comicpets" element={<ComicpetsPage />} />
-            <Route path="/design-kids" element={<DesignKidsPage />} />
-            <Route path="/gil-cases" element={<GilCasesPage />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </BrowserRouter>
-      </TooltipProvider>
-    </QueryClientProvider>
-  </HelmetProvider>
+    <HelmetProvider>
+      <QueryClientProvider client={queryClient}>
+        <TooltipProvider>
+          <Toaster />
+          <Sonner />
+          <BrowserRouter>
+            <Routes>
+              <Route path="/" element={<Index />} />
+              <Route path="/empresa" element={<EmpresaPage />} />
+              <Route path="/solucoes" element={<SolucoesPage />} />
+              <Route path="/projetos" element={<ProjetosPage />} />
+              <Route path="/tecnologia" element={<TecnologiaPage />} />
+              <Route path="/marcas" element={<MarcasPage />} />
+              <Route path="/projetos-especiais" element={<ProjetosEspeciaisPage />} />
+              <Route path="/contato" element={<ContatoPage />} />
+              <Route path="/parametrizze" element={<ParametrizzePage />} />
+              <Route path="/gourmetizze" element={<GourmetizzePage />} />
+              <Route path="/comicpets" element={<ComicpetsPage />} />
+              <Route path="/design-kids" element={<DesignKidsPage />} />
+              <Route path="/gil-cases" element={<GilCasesPage />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </BrowserRouter>
+        </TooltipProvider>
+      </QueryClientProvider>
+    </HelmetProvider>
   </ThemeProvider>
 );
 
