@@ -73,12 +73,15 @@ const Navbar = () => {
             ))}
             <ThemeToggle />
           </div>
-          <button
-            onClick={() => setIsMobileOpen(!isMobileOpen)}
-            className="lg:hidden text-foreground p-2"
-          >
-            {isMobileOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          <div className="lg:hidden flex items-center gap-1">
+            <ThemeToggle />
+            <button
+              onClick={() => setIsMobileOpen(!isMobileOpen)}
+              className="text-foreground p-2"
+            >
+              {isMobileOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
       </div>
 
