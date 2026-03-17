@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 const navItems = [
   { label: "Home", href: "/" },
@@ -70,15 +71,17 @@ const Navbar = () => {
                 />
               </Link>
             ))}
+            <ThemeToggle />
           </div>
-
-          {/* Mobile Toggle */}
-          <button
-            onClick={() => setIsMobileOpen(!isMobileOpen)}
-            className="lg:hidden text-foreground p-2"
-          >
-            {isMobileOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          <div className="lg:hidden flex items-center gap-1">
+            <ThemeToggle />
+            <button
+              onClick={() => setIsMobileOpen(!isMobileOpen)}
+              className="text-foreground p-2"
+            >
+              {isMobileOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
       </div>
 
