@@ -1,5 +1,6 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -21,30 +22,32 @@ import NotFound from "./pages/NotFound";
 const queryClient = new QueryClient();
 
 const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/empresa" element={<EmpresaPage />} />
-          <Route path="/solucoes" element={<SolucoesPage />} />
-          <Route path="/projetos" element={<ProjetosPage />} />
-          <Route path="/tecnologia" element={<TecnologiaPage />} />
-          <Route path="/marcas" element={<MarcasPage />} />
-          <Route path="/projetos-especiais" element={<ProjetosEspeciaisPage />} />
-          <Route path="/contato" element={<ContatoPage />} />
-          <Route path="/parametrizze" element={<ParametrizzePage />} />
-          <Route path="/gourmetizze" element={<GourmetizzePage />} />
-          <Route path="/comicpets" element={<ComicpetsPage />} />
-          <Route path="/design-kids" element={<DesignKidsPage />} />
-          <Route path="/gil-cases" element={<GilCasesPage />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
+  <HelmetProvider>
+    <QueryClientProvider client={queryClient}>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/empresa" element={<EmpresaPage />} />
+            <Route path="/solucoes" element={<SolucoesPage />} />
+            <Route path="/projetos" element={<ProjetosPage />} />
+            <Route path="/tecnologia" element={<TecnologiaPage />} />
+            <Route path="/marcas" element={<MarcasPage />} />
+            <Route path="/projetos-especiais" element={<ProjetosEspeciaisPage />} />
+            <Route path="/contato" element={<ContatoPage />} />
+            <Route path="/parametrizze" element={<ParametrizzePage />} />
+            <Route path="/gourmetizze" element={<GourmetizzePage />} />
+            <Route path="/comicpets" element={<ComicpetsPage />} />
+            <Route path="/design-kids" element={<DesignKidsPage />} />
+            <Route path="/gil-cases" element={<GilCasesPage />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </BrowserRouter>
+      </TooltipProvider>
+    </QueryClientProvider>
+  </HelmetProvider>
 );
 
 export default App;
