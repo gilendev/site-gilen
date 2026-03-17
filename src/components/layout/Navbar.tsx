@@ -71,9 +71,8 @@ const Navbar = () => {
                 />
               </Link>
             ))}
+            <ThemeToggle />
           </div>
-
-          {/* Mobile Toggle */}
           <button
             onClick={() => setIsMobileOpen(!isMobileOpen)}
             className="lg:hidden text-foreground p-2"
