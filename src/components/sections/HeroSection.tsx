@@ -3,25 +3,25 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import { Button } from "@/components/ui/button";
-import { ParallaxBg, StaggerContainer, StaggerItem, CountUp } from "@/components/animations/ScrollAnimations";
 
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Parallax Background Video */}
-      <ParallaxBg speed={0.3} className="absolute inset-0">
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="w-full h-[130%] object-cover"
-        >
-          <source src="/video-gilen.mp4" type="video/mp4" />
-        </video>
-      </ParallaxBg>
+      {/* Background Video */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
+      >
+        <source
+          src="/video-gilen.mp4"
+          type="video/mp4"
+        />
+      </video>
 
-      {/* Dark overlay */}
+      {/* Dark overlay for text legibility */}
       <div className="absolute inset-0 bg-black/60" />
 
       {/* Content */}
@@ -29,9 +29,9 @@ const HeroSection = () => {
         <div className="max-w-3xl">
           {/* Tag */}
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
             className="inline-flex items-center gap-2 px-3 md:px-4 py-1.5 rounded-sm bg-accent/10 border border-accent/20 text-accent-foreground mb-6 md:mb-8"
           >
             <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
@@ -42,9 +42,9 @@ const HeroSection = () => {
 
           {/* Headline */}
           <motion.h1
-            initial={{ opacity: 0, y: 40, clipPath: "inset(0 0 100% 0)" }}
-            animate={{ opacity: 1, y: 0, clipPath: "inset(0 0 0% 0)" }}
-            transition={{ duration: 0.8, delay: 0.15, ease: [0.25, 0.46, 0.45, 0.94] }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
             className="text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground leading-[1.05] mb-4 md:mb-6"
           >
             GILEN
@@ -56,7 +56,7 @@ const HeroSection = () => {
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
+            transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg md:text-2xl font-light text-primary-foreground/60 mb-3 md:mb-4"
           >
             Engenharia, Precisão e Soluções Industriais
@@ -66,7 +66,7 @@ const HeroSection = () => {
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
+            transition={{ duration: 0.6, delay: 0.3 }}
             className="text-sm md:text-lg text-primary-foreground/40 max-w-xl mb-8 md:mb-10 leading-relaxed"
           >
             Projetamos, desenvolvemos e fabricamos soluções industriais com engenharia aplicada e capacidade produtiva avançada.
@@ -76,7 +76,7 @@ const HeroSection = () => {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
+            transition={{ duration: 0.6, delay: 0.4 }}
             className="flex flex-col sm:flex-row gap-3 md:gap-4"
           >
             <Button
@@ -103,20 +103,23 @@ const HeroSection = () => {
           </motion.div>
 
           {/* Stats bar */}
-          <StaggerContainer staggerDelay={0.15} className="mt-12 md:mt-20 pt-6 md:pt-8 border-t border-primary-foreground/10 grid grid-cols-3 gap-4 md:gap-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+            className="mt-12 md:mt-20 pt-6 md:pt-8 border-t border-primary-foreground/10 grid grid-cols-3 gap-4 md:gap-8"
+          >
             {[
               { value: "13+", label: "Anos de Experiência" },
               { value: "500+", label: "Projetos Realizados" },
               { value: "4", label: "Marcas Próprias" },
             ].map((stat) => (
-              <StaggerItem key={stat.label}>
-                <div>
-                  <CountUp value={stat.value} className="text-xl md:text-3xl font-bold text-accent block" />
-                  <div className="text-[10px] md:text-xs text-primary-foreground/40 mt-1 uppercase tracking-wider">{stat.label}</div>
-                </div>
-              </StaggerItem>
+              <div key={stat.label}>
+                <div className="text-xl md:text-3xl font-bold text-accent">{stat.value}</div>
+                <div className="text-[10px] md:text-xs text-primary-foreground/40 mt-1 uppercase tracking-wider">{stat.label}</div>
+              </div>
             ))}
-          </StaggerContainer>
+          </motion.div>
         </div>
       </div>
     </section>

@@ -4,7 +4,6 @@ import imgProjeto1 from "@/assets/img-projeto1.jpg";
 import imgProjeto2 from "@/assets/img-projeto2.jpg";
 import imgProjeto3 from "@/assets/img-projeto3.jpg";
 import imgProjeto4 from "@/assets/img-projeto4.jpg";
-import { ScrollReveal, StaggerContainer, StaggerItem } from "@/components/animations/ScrollAnimations";
 
 const categories = [
   "Todos",
@@ -33,6 +32,8 @@ const projects = [
 ];
 
 const ProjetosSection = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
   const [activeCategory, setActiveCategory] = useState("Todos");
 
   const filtered = activeCategory === "Todos"
@@ -40,59 +41,72 @@ const ProjetosSection = () => {
     : projects.filter((p) => p.category === activeCategory);
 
   return (
-    <section className="py-16 md:py-24 lg:py-32 bg-background">
+    <section ref={ref} className="py-16 md:py-24 lg:py-32 bg-background">
       <div className="container mx-auto px-4 lg:px-8">
-        <ScrollReveal className="text-center mb-12">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-12"
+        >
           <span className="text-xs font-semibold uppercase tracking-[0.2em] text-accent-blue mb-4 block">
             Portfólio
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
             Projetos
           </h2>
-        </ScrollReveal>
+        </motion.div>
 
         {/* Filter */}
-        <ScrollReveal delay={0.15} className="flex flex-wrap justify-center gap-2 mb-12">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={isInView ? { opacity: 1 } : {}}
+          transition={{ delay: 0.2 }}
+          className="flex flex-wrap justify-center gap-2 mb-12"
+        >
           {categories.map((cat) => (
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
-              className={`px-4 py-2 text-xs font-medium uppercase tracking-wider rounded-sm transition-all duration-300 ${
+              className={`px-4 py-2 text-xs font-medium uppercase tracking-wider rounded-sm transition-colors ${
                 activeCategory === cat
-                  ? "bg-primary text-primary-foreground scale-105"
+                  ? "bg-primary text-primary-foreground"
                   : "bg-muted text-muted-foreground hover:bg-border"
               }`}
             >
               {cat}
             </button>
           ))}
-        </ScrollReveal>
+        </motion.div>
 
         {/* Grid */}
-        <StaggerContainer staggerDelay={0.08} className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4">
-          {filtered.map((project) => (
-            <StaggerItem key={project.title}>
-              <motion.div
-                layout
-                className="group relative aspect-[4/3] rounded-sm overflow-hidden cursor-pointer"
-              >
-                <img
-                  src={projectImages[project.category]}
-                  alt={project.title}
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-5">
-                  <span className="text-xs text-primary-foreground/40 uppercase tracking-wider">{project.year} · {project.category}</span>
-                  <h3 className="text-sm font-semibold text-primary-foreground mt-1 group-hover:text-accent transition-colors">
-                    {project.title}
-                  </h3>
-                </div>
-                <div className="absolute top-0 left-0 w-0 h-1 bg-accent group-hover:w-full transition-all duration-500" />
-              </motion.div>
-            </StaggerItem>
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4">
+          {filtered.map((project, index) => (
+            <motion.div
+              key={project.title}
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.4, delay: index * 0.05 }}
+              layout
+              className="group relative aspect-[4/3] rounded-sm overflow-hidden cursor-pointer"
+            >
+              <img
+                src={projectImages[project.category]}
+                alt={project.title}
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-5">
+                <span className="text-xs text-primary-foreground/40 uppercase tracking-wider">{project.year} · {project.category}</span>
+                <h3 className="text-sm font-semibold text-primary-foreground mt-1 group-hover:text-accent transition-colors">
+                  {project.title}
+                </h3>
+              </div>
+              {/* Hover accent */}
+              <div className="absolute top-0 left-0 w-0 h-1 bg-accent group-hover:w-full transition-all duration-500" />
+            </motion.div>
           ))}
-        </StaggerContainer>
+        </div>
       </div>
     </section>
   );
