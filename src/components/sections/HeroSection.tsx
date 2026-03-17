@@ -111,8 +111,8 @@ const HeroSection = () => {
           >
             {[
               { value: "13+", label: "Anos de Experiência" },
-              { value: "8000+", label: "Projetos Realizados" },
-              { value: "4", label: "Marcas Próprias" },
+              { value: "10000+", label: "Projetos Realizados" },
+              { value: "5+", label: "Marcas Próprias" },
             ].map((stat) => (
               <div key={stat.label}>
                 <div className="text-xl md:text-3xl font-bold text-accent">{stat.value}</div>
