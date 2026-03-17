@@ -171,7 +171,7 @@ const GilCasesPage = () => {
               <div className="grid grid-cols-3 gap-6">
                 {[
                   { value: "13+", label: "Anos" },
-                  { value: "500+", label: "Projetos" },
+                  { value: "10000+", label: "Projetos" },
                   { value: "100%", label: "Sob Medida" },
                 ].map((stat) => (
                   <div key={stat.label}>
