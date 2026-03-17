@@ -64,7 +64,7 @@ Deno.serve(async (req) => {
 
     // Send via Resend
     const resendPayload: Record<string, unknown> = {
-      from: 'GILEN Industrial <onboarding@resend.dev>',
+      from: 'GILEN Industrial <contato@gilenindustrial.com.br>',
       to: ['contato@gilenindustrial.com.br'],
       reply_to: email,
       subject: `Contato via Site - ${nome}${empresa ? ` (${empresa})` : ''}`,
