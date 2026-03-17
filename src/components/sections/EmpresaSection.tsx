@@ -15,7 +15,7 @@ const timeline = [
 
 const numbers = [
 { value: "13+", label: "Anos de Mercado" },
-{ value: "500+", label: "Projetos Realizados" },
+{ value: "10000+", label: "Projetos Realizados" },
 { value: "1000m²", label: "Planta Industrial" },
 { value: "50+", label: "Clientes Ativos" }];
 
