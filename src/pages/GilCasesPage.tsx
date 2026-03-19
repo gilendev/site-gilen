@@ -217,8 +217,11 @@ const GilCasesPage = () => {
                 initial={{ opacity: 0, y: 30 }}
                 animate={galleryInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group relative rounded-sm overflow-hidden cursor-pointer"
+                className={`group relative rounded-sm overflow-hidden ${product.link ? '' : 'cursor-pointer'}`}
               >
+                {product.link && (
+                  <Link to={product.link} className="absolute inset-0 z-20" />
+                )}
                 <img
                   src={product.image}
                   alt={product.title}
