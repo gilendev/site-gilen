@@ -18,6 +18,7 @@ import GourmetizzePage from "./pages/GourmetizzePage";
 import ComicpetsPage from "./pages/ComicpetsPage";
 import DesignKidsPage from "./pages/DesignKidsPage";
 import GilCasesPage from "./pages/GilCasesPage";
+import TotensInterativosPage from "./pages/TotensInterativosPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -44,6 +45,7 @@ const App = () => (
               <Route path="/comicpets" element={<ComicpetsPage />} />
               <Route path="/design-kids" element={<DesignKidsPage />} />
               <Route path="/gil-cases" element={<GilCasesPage />} />
+              <Route path="/totens-interativos" element={<TotensInterativosPage />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </BrowserRouter>
