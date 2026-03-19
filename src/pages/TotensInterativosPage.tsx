@@ -15,6 +15,8 @@ import imgLed from "@/assets/img-totem-led.png";
 import imgHoroscopo from "@/assets/img-totem-horoscopo.png";
 import imgPainel from "@/assets/img-totem-painel.png";
 import imgLoja from "@/assets/img-totem-loja.png";
+import imgLed2 from "@/assets/img-totem-led2.png";
+import imgNissan from "@/assets/img-totem-nissan.png";
 
 const logoGilCase = "/lovable-uploads/logo-gilcase.jpeg";
 
@@ -29,6 +31,8 @@ const gallery = [
   { image: imgHoroscopo, title: "Totem Digital Vertical", desc: "Totem digital de piso com tela vertical para conteúdo interativo." },
   { image: imgPainel, title: "Totem Painel Iluminado", desc: "Totem com painel iluminado e base em madeira para ambientes premium." },
   { image: imgLoja, title: "Totem Vitrine Digital", desc: "Totem de vitrine digital para campanhas de varejo e moda." },
+  { image: imgLed2, title: "Painel LED Vertical", desc: "Painel LED vertical de alta definição com estrutura slim para ambientes internos." },
+  { image: imgNissan, title: "Totem Nissan", desc: "Totem personalizado com tela e logotipo para concessionárias e showrooms." },
 ];
 
 const features = [
