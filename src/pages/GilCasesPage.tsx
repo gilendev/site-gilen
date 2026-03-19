@@ -27,6 +27,7 @@ const products = [
     image: imgTotens,
     title: "Totens Interativos",
     description: "Estruturas para totens interativos com design profissional para pontos de venda, recepções, feiras e eventos corporativos.",
+    link: "/totens-interativos",
   },
   {
     image: imgFabricacao,
