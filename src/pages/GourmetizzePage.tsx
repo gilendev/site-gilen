@@ -147,6 +147,17 @@ const GourmetizzePage = () => {
         </div>
       </section>
 
+      {/* Carousel */}
+      <BrandCarousel
+        accentColor="bg-accent"
+        images={[
+          { src: imgChurrasqueira, alt: "Churrasqueira modular" },
+          { src: imgUtensilios, alt: "Utensílios gourmet" },
+          { src: imgEstrutura, alt: "Estruturas externas" },
+          { src: imgFabricacao, alt: "Corte a laser" },
+        ]}
+      />
+
       {/* Products */}
       <section id="produtos" ref={galleryRef} className="py-16 md:py-24 lg:py-32 bg-muted">
         <div className="container mx-auto px-4 lg:px-8">

@@ -191,6 +191,17 @@ const ParametrizzePage = () => {
         </div>
       </section>
 
+      {/* Carousel */}
+      <BrandCarousel
+        accentColor="bg-accent-blue"
+        images={[
+          { src: imgFachada, alt: "Fachada paramétrica" },
+          { src: imgMobiliario, alt: "Mobiliário paramétrico" },
+          { src: imgDivisoria, alt: "Painéis e divisórias" },
+          { src: imgCnc, alt: "Fabricação CNC" },
+        ]}
+      />
+
       {/* Products */}
       <section id="produtos" ref={galleryRef} className="py-16 md:py-24 lg:py-32 bg-muted">
         <div className="container mx-auto px-4 lg:px-8">

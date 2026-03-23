@@ -195,6 +195,17 @@ const GilCasesPage = () => {
         </div>
       </section>
 
+      {/* Carousel */}
+      <BrandCarousel
+        accentColor="bg-accent-blue"
+        images={[
+          { src: imgCases, alt: "Cases profissionais" },
+          { src: imgSuportes, alt: "Suportes para TV" },
+          { src: imgTotens, alt: "Totens interativos" },
+          { src: imgFabricacao, alt: "Fabricação" },
+        ]}
+      />
+
       {/* Products */}
       <section id="produtos" ref={galleryRef} className="py-16 md:py-24 lg:py-32 bg-muted">
         <div className="container mx-auto px-4 lg:px-8">

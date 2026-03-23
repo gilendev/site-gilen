@@ -147,6 +147,17 @@ const ComicpetsPage = () => {
         </div>
       </section>
 
+      {/* Carousel */}
+      <BrandCarousel
+        accentColor="bg-accent-green"
+        images={[
+          { src: imgGato, alt: "Arranhadores e torres" },
+          { src: imgComedouro, alt: "Comedouros pet" },
+          { src: imgBrinquedo, alt: "Brinquedos pet" },
+          { src: imgCasinha, alt: "Casinhas pet" },
+        ]}
+      />
+
       {/* Products */}
       <section id="produtos" ref={galleryRef} className="py-16 md:py-24 lg:py-32 bg-muted">
         <div className="container mx-auto px-4 lg:px-8">

@@ -147,6 +147,17 @@ const DesignKidsPage = () => {
         </div>
       </section>
 
+      {/* Carousel */}
+      <BrandCarousel
+        accentColor="bg-steel"
+        images={[
+          { src: imgMesa, alt: "Mesa infantil" },
+          { src: imgEstante, alt: "Estante infantil" },
+          { src: imgBrinquedo, alt: "Brinquedo educativo" },
+          { src: imgDecoracao, alt: "Decoração infantil" },
+        ]}
+      />
+
       {/* Products */}
       <section id="produtos" ref={galleryRef} className="py-16 md:py-24 lg:py-32 bg-muted">
         <div className="container mx-auto px-4 lg:px-8">
