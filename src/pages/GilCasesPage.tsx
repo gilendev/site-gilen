@@ -10,6 +10,16 @@ import imgSuportes from "@/assets/img-gilcase-suportes.jpg";
 import imgTotens from "@/assets/img-gilcase-totens.jpg";
 import imgFabricacao from "@/assets/img-gilcase-fabricacao.jpg";
 import BrandCarousel from "@/components/BrandCarousel";
+import imgCarousel1 from "@/assets/gilcase-carousel-1.png";
+import imgCarousel2 from "@/assets/gilcase-carousel-2.png";
+import imgCarousel3 from "@/assets/gilcase-carousel-3.png";
+import imgCarousel4 from "@/assets/gilcase-carousel-4.png";
+import imgCarousel5 from "@/assets/gilcase-carousel-5.png";
+import imgCarousel6 from "@/assets/gilcase-carousel-6.png";
+import imgCarousel7 from "@/assets/gilcase-carousel-7.png";
+import imgCarousel8 from "@/assets/gilcase-carousel-8.png";
+import imgCarousel9 from "@/assets/gilcase-carousel-9.png";
+import imgCarousel10 from "@/assets/gilcase-carousel-10.png";
 
 const logoGilCase = "/lovable-uploads/logo-gilcase.jpeg";
 
