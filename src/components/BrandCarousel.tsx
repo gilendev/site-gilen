@@ -7,9 +7,12 @@ import { cn } from "@/lib/utils";
 interface BrandCarouselProps {
   images: { src: string; alt: string }[];
   accentColor?: string;
+  subtitle?: string;
+  title?: string;
+  titleAccent?: string;
 }
 
-const BrandCarousel = ({ images, accentColor = "bg-accent-blue" }: BrandCarouselProps) => {
+const BrandCarousel = ({ images, accentColor = "bg-accent-blue", subtitle = "Galeria", title = "Nossos", titleAccent = "Trabalhos" }: BrandCarouselProps) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-80px" });
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: "start", slidesToScroll: 1, dragFree: true });
@@ -61,10 +64,10 @@ const BrandCarousel = ({ images, accentColor = "bg-accent-blue" }: BrandCarousel
           transition={{ duration: 0.6 }}
         >
           <span className={cn("text-xs font-semibold uppercase tracking-[0.2em] mb-4 block text-center", accentColor.replace("bg-", "text-"))}>
-            Galeria
+            {subtitle}
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center mb-10">
-            Nossos <span className="text-steel">Trabalhos</span>
+            {title} <span className="text-steel">{titleAccent}</span>
           </h2>
 
           <div className="relative group">

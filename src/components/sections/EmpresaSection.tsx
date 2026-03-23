@@ -5,6 +5,19 @@ import { Link } from "react-router-dom";
 import imgEmpresa from "@/assets/img-empresa.jpg";
 import imgStatsBg from "@/assets/img-stats-bg.jpg";
 import imgCtaBg from "@/assets/img-cta-bg.jpg";
+import BrandCarousel from "@/components/BrandCarousel";
+import imgParametrizzeCnc from "@/assets/img-parametrizze-cnc.jpg";
+import imgParametrizzeFachada from "@/assets/img-parametrizze-fachada.jpg";
+import imgParametrizzeMobiliario from "@/assets/img-parametrizze-mobiliario.jpg";
+import imgGourmetizzeChurrasqueira from "@/assets/img-gourmetizze-churrasqueira.jpg";
+import imgGourmetizzeUtensilios from "@/assets/img-gourmetizze-utensilios.jpg";
+import imgGourmetizzeEstrutura from "@/assets/img-gourmetizze-estrutura.jpg";
+import imgComicpetsGato from "@/assets/img-comicpets-gato.jpg";
+import imgComicpetsComedouro from "@/assets/img-comicpets-comedouro.jpg";
+import imgDesignkidsMesa from "@/assets/img-designkids-mesa.jpg";
+import imgDesignkidsEstante from "@/assets/img-designkids-estante.jpg";
+import imgGilcaseCases from "@/assets/img-gilcase-cases.jpg";
+import imgGilcaseSuportes from "@/assets/img-gilcase-suportes.jpg";
 
 const timeline = [
 { year: "2010", title: "Fundação", desc: "Nasce a GIL Case e Suporte, focada em estruturas técnicas e cases sob medida." },
@@ -132,6 +145,28 @@ const EmpresaSection = () => {
           </div>
         </div>
       </section>
+
+      {/* Marcas & Produtos Carousel */}
+      <BrandCarousel
+        subtitle="Nossas Marcas"
+        title="Marcas &"
+        titleAccent="Produtos"
+        images={[
+          { src: imgParametrizzeCnc, alt: "Parametrizze - CNC e design paramétrico" },
+          { src: imgGourmetizzeChurrasqueira, alt: "Gourmetizze - Churrasqueira artesanal" },
+          { src: imgComicpetsGato, alt: "Comicpets - Produtos para gatos" },
+          { src: imgDesignkidsMesa, alt: "Design Kids - Mesa infantil" },
+          { src: imgGilcaseCases, alt: "Gil Cases - Cases sob medida" },
+          { src: imgParametrizzeFachada, alt: "Parametrizze - Fachada paramétrica" },
+          { src: imgGourmetizzeUtensilios, alt: "Gourmetizze - Utensílios gourmet" },
+          { src: imgComicpetsComedouro, alt: "Comicpets - Comedouro personalizado" },
+          { src: imgDesignkidsEstante, alt: "Design Kids - Estante infantil" },
+          { src: imgGilcaseSuportes, alt: "Gil Cases - Suportes técnicos" },
+          { src: imgParametrizzeMobiliario, alt: "Parametrizze - Mobiliário paramétrico" },
+          { src: imgGourmetizzeEstrutura, alt: "Gourmetizze - Estrutura gourmet" },
+        ]}
+        accentColor="bg-accent-blue"
+      />
 
       {/* Infrastructure */}
       <section className="py-16 md:py-24 lg:py-32 bg-muted">
