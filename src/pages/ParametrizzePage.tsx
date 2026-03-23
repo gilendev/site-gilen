@@ -9,6 +9,7 @@ import imgCnc from "@/assets/img-parametrizze-cnc.jpg";
 import imgFachada from "@/assets/img-parametrizze-fachada.jpg";
 import imgMobiliario from "@/assets/img-parametrizze-mobiliario.jpg";
 import imgDivisoria from "@/assets/img-parametrizze-divisoria.jpg";
+import BrandCarousel from "@/components/BrandCarousel";
 
 const logoParametrizze = "/lovable-uploads/ea1780e5-8545-48a9-aaa9-051f623724db.png";
 
@@ -190,6 +191,17 @@ const ParametrizzePage = () => {
           </div>
         </div>
       </section>
+
+      {/* Carousel */}
+      <BrandCarousel
+        accentColor="bg-accent-blue"
+        images={[
+          { src: imgFachada, alt: "Fachada paramétrica" },
+          { src: imgMobiliario, alt: "Mobiliário paramétrico" },
+          { src: imgDivisoria, alt: "Painéis e divisórias" },
+          { src: imgCnc, alt: "Fabricação CNC" },
+        ]}
+      />
 
       {/* Products */}
       <section id="produtos" ref={galleryRef} className="py-16 md:py-24 lg:py-32 bg-muted">

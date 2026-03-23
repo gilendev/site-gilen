@@ -9,6 +9,7 @@ import imgGato from "@/assets/img-comicpets-gato.jpg";
 import imgComedouro from "@/assets/img-comicpets-comedouro.jpg";
 import imgBrinquedo from "@/assets/img-comicpets-brinquedo.jpg";
 import imgCasinha from "@/assets/img-comicpets-casinha.jpg";
+import BrandCarousel from "@/components/BrandCarousel";
 
 const logoComicpets = "/lovable-uploads/868a8eaf-cc9a-4482-9f91-ff11d7873809.png";
 
@@ -146,6 +147,17 @@ const ComicpetsPage = () => {
           </div>
         </div>
       </section>
+
+      {/* Carousel */}
+      <BrandCarousel
+        accentColor="bg-accent-green"
+        images={[
+          { src: imgGato, alt: "Arranhadores e torres" },
+          { src: imgComedouro, alt: "Comedouros pet" },
+          { src: imgBrinquedo, alt: "Brinquedos pet" },
+          { src: imgCasinha, alt: "Casinhas pet" },
+        ]}
+      />
 
       {/* Products */}
       <section id="produtos" ref={galleryRef} className="py-16 md:py-24 lg:py-32 bg-muted">

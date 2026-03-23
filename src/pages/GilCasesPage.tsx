@@ -9,6 +9,7 @@ import imgCases from "@/assets/img-gilcase-cases.jpg";
 import imgSuportes from "@/assets/img-gilcase-suportes.jpg";
 import imgTotens from "@/assets/img-gilcase-totens.jpg";
 import imgFabricacao from "@/assets/img-gilcase-fabricacao.jpg";
+import BrandCarousel from "@/components/BrandCarousel";
 
 const logoGilCase = "/lovable-uploads/logo-gilcase.jpeg";
 
@@ -194,6 +195,17 @@ const GilCasesPage = () => {
           </div>
         </div>
       </section>
+
+      {/* Carousel */}
+      <BrandCarousel
+        accentColor="bg-accent-blue"
+        images={[
+          { src: imgCases, alt: "Cases profissionais" },
+          { src: imgSuportes, alt: "Suportes para TV" },
+          { src: imgTotens, alt: "Totens interativos" },
+          { src: imgFabricacao, alt: "Fabricação" },
+        ]}
+      />
 
       {/* Products */}
       <section id="produtos" ref={galleryRef} className="py-16 md:py-24 lg:py-32 bg-muted">
