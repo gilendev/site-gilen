@@ -5,6 +5,19 @@ import { Link } from "react-router-dom";
 import imgEmpresa from "@/assets/img-empresa.jpg";
 import imgStatsBg from "@/assets/img-stats-bg.jpg";
 import imgCtaBg from "@/assets/img-cta-bg.jpg";
+import BrandCarousel from "@/components/BrandCarousel";
+import imgParametrizzeCnc from "@/assets/img-parametrizze-cnc.jpg";
+import imgParametrizzeFachada from "@/assets/img-parametrizze-fachada.jpg";
+import imgParametrizzeMobiliario from "@/assets/img-parametrizze-mobiliario.jpg";
+import imgGourmetizzeChurrasqueira from "@/assets/img-gourmetizze-churrasqueira.jpg";
+import imgGourmetizzeUtensilios from "@/assets/img-gourmetizze-utensilios.jpg";
+import imgGourmetizzeEstrutura from "@/assets/img-gourmetizze-estrutura.jpg";
+import imgComicpetsGato from "@/assets/img-comicpets-gato.jpg";
+import imgComicpetsComedouro from "@/assets/img-comicpets-comedouro.jpg";
+import imgDesignkidsMesa from "@/assets/img-designkids-mesa.jpg";
+import imgDesignkidsEstante from "@/assets/img-designkids-estante.jpg";
+import imgGilcaseCases from "@/assets/img-gilcase-cases.jpg";
+import imgGilcaseSuportes from "@/assets/img-gilcase-suportes.jpg";
 
 const timeline = [
 { year: "2010", title: "Fundação", desc: "Nasce a GIL Case e Suporte, focada em estruturas técnicas e cases sob medida." },
