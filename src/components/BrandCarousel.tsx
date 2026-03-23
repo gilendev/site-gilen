@@ -7,6 +7,9 @@ import { cn } from "@/lib/utils";
 interface BrandCarouselProps {
   images: { src: string; alt: string }[];
   accentColor?: string;
+  subtitle?: string;
+  title?: string;
+  titleAccent?: string;
 }
 
 const BrandCarousel = ({ images, accentColor = "bg-accent-blue" }: BrandCarouselProps) => {
