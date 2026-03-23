@@ -9,6 +9,7 @@ import imgCases from "@/assets/img-gilcase-cases.jpg";
 import imgSuportes from "@/assets/img-gilcase-suportes.jpg";
 import imgTotens from "@/assets/img-gilcase-totens.jpg";
 import imgFabricacao from "@/assets/img-gilcase-fabricacao.jpg";
+import BrandCarousel from "@/components/BrandCarousel";
 
 const logoGilCase = "/lovable-uploads/logo-gilcase.jpeg";
 

@@ -9,6 +9,7 @@ import imgChurrasqueira from "@/assets/img-gourmetizze-churrasqueira.jpg";
 import imgUtensilios from "@/assets/img-gourmetizze-utensilios.jpg";
 import imgEstrutura from "@/assets/img-gourmetizze-estrutura.jpg";
 import imgFabricacao from "@/assets/img-gourmetizze-fabricacao.jpg";
+import BrandCarousel from "@/components/BrandCarousel";
 
 const logoGourmetizze = "/lovable-uploads/40176074-eed2-4555-94a3-940b9c014213.png";
 
