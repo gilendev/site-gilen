@@ -156,6 +156,12 @@ const DesignKidsPage = () => {
           { src: imgEstante, alt: "Estante infantil" },
           { src: imgBrinquedo, alt: "Brinquedo educativo" },
           { src: imgDecoracao, alt: "Decoração infantil" },
+          { src: imgHero, alt: "Design Kids produtos" },
+          { src: imgMesa, alt: "Conjunto mesa e cadeira" },
+          { src: imgEstante, alt: "Organizador infantil" },
+          { src: imgBrinquedo, alt: "Quebra-cabeça de madeira" },
+          { src: imgDecoracao, alt: "Decoração quarto infantil" },
+          { src: imgHero, alt: "Linha infantil" },
         ]}
       />
 

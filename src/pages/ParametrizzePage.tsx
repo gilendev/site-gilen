@@ -200,6 +200,12 @@ const ParametrizzePage = () => {
           { src: imgMobiliario, alt: "Mobiliário paramétrico" },
           { src: imgDivisoria, alt: "Painéis e divisórias" },
           { src: imgCnc, alt: "Fabricação CNC" },
+          { src: imgHero, alt: "Parametrizze design" },
+          { src: imgFachada, alt: "Revestimento paramétrico" },
+          { src: imgMobiliario, alt: "Peça de mobiliário" },
+          { src: imgDivisoria, alt: "Divisória decorativa" },
+          { src: imgCnc, alt: "Usinagem CNC" },
+          { src: imgHero, alt: "Projeto paramétrico" },
         ]}
       />
 

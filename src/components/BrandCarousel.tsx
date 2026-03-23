@@ -12,7 +12,7 @@ interface BrandCarouselProps {
 const BrandCarousel = ({ images, accentColor = "bg-accent-blue" }: BrandCarouselProps) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-80px" });
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: "start", slidesToScroll: 1 });
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: "start", slidesToScroll: 1, dragFree: true });
   const [canScrollPrev, setCanScrollPrev] = useState(false);
   const [canScrollNext, setCanScrollNext] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -36,6 +36,19 @@ const BrandCarousel = ({ images, accentColor = "bg-accent-blue" }: BrandCarousel
 
   const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
   const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
+
+  // Mouse wheel scroll support
+  useEffect(() => {
+    if (!emblaApi) return;
+    const rootNode = emblaApi.rootNode();
+    const onWheel = (e: WheelEvent) => {
+      e.preventDefault();
+      if (e.deltaY > 0) emblaApi.scrollNext();
+      else emblaApi.scrollPrev();
+    };
+    rootNode.addEventListener("wheel", onWheel, { passive: false });
+    return () => rootNode.removeEventListener("wheel", onWheel);
+  }, [emblaApi]);
 
   if (images.length === 0) return null;
 
