@@ -204,6 +204,12 @@ const GilCasesPage = () => {
           { src: imgSuportes, alt: "Suportes para TV" },
           { src: imgTotens, alt: "Totens interativos" },
           { src: imgFabricacao, alt: "Fabricação" },
+          { src: imgHero, alt: "Gil Cases produtos" },
+          { src: imgCases, alt: "Case de equipamento" },
+          { src: imgSuportes, alt: "Pedestal para monitor" },
+          { src: imgTotens, alt: "Totem de autoatendimento" },
+          { src: imgFabricacao, alt: "Produção industrial" },
+          { src: imgHero, alt: "Linha Gil Cases" },
         ]}
       />
 

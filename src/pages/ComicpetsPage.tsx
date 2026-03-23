@@ -156,6 +156,12 @@ const ComicpetsPage = () => {
           { src: imgComedouro, alt: "Comedouros pet" },
           { src: imgBrinquedo, alt: "Brinquedos pet" },
           { src: imgCasinha, alt: "Casinhas pet" },
+          { src: imgHero, alt: "Comicpets produtos" },
+          { src: imgGato, alt: "Torre para gatos" },
+          { src: imgComedouro, alt: "Bebedouro elevado" },
+          { src: imgBrinquedo, alt: "Acessório pet" },
+          { src: imgCasinha, alt: "Casinha de madeira" },
+          { src: imgHero, alt: "Linha pet" },
         ]}
       />
 

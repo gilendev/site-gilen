@@ -156,6 +156,12 @@ const GourmetizzePage = () => {
           { src: imgUtensilios, alt: "Utensílios gourmet" },
           { src: imgEstrutura, alt: "Estruturas externas" },
           { src: imgFabricacao, alt: "Corte a laser" },
+          { src: imgHero, alt: "Gourmetizze produtos" },
+          { src: imgChurrasqueira, alt: "Estação de churrasco" },
+          { src: imgUtensilios, alt: "Acessórios gourmet" },
+          { src: imgEstrutura, alt: "Pergolado metálico" },
+          { src: imgFabricacao, alt: "Fabricação em metal" },
+          { src: imgHero, alt: "Linha gourmet" },
         ]}
       />
 
