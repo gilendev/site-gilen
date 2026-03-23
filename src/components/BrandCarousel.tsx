@@ -12,7 +12,7 @@ interface BrandCarouselProps {
   titleAccent?: string;
 }
 
-const BrandCarousel = ({ images, accentColor = "bg-accent-blue" }: BrandCarouselProps) => {
+const BrandCarousel = ({ images, accentColor = "bg-accent-blue", subtitle = "Galeria", title = "Nossos", titleAccent = "Trabalhos" }: BrandCarouselProps) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-80px" });
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: "start", slidesToScroll: 1, dragFree: true });
