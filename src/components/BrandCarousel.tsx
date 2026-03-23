@@ -37,6 +37,19 @@ const BrandCarousel = ({ images, accentColor = "bg-accent-blue" }: BrandCarousel
   const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
   const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
 
+  // Mouse wheel scroll support
+  useEffect(() => {
+    if (!emblaApi) return;
+    const rootNode = emblaApi.rootNode();
+    const onWheel = (e: WheelEvent) => {
+      e.preventDefault();
+      if (e.deltaY > 0) emblaApi.scrollNext();
+      else emblaApi.scrollPrev();
+    };
+    rootNode.addEventListener("wheel", onWheel, { passive: false });
+    return () => rootNode.removeEventListener("wheel", onWheel);
+  }, [emblaApi]);
+
   if (images.length === 0) return null;
 
   return (
