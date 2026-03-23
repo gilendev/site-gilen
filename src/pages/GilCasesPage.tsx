@@ -10,6 +10,16 @@ import imgSuportes from "@/assets/img-gilcase-suportes.jpg";
 import imgTotens from "@/assets/img-gilcase-totens.jpg";
 import imgFabricacao from "@/assets/img-gilcase-fabricacao.jpg";
 import BrandCarousel from "@/components/BrandCarousel";
+import imgCarousel1 from "@/assets/gilcase-carousel-1.png";
+import imgCarousel2 from "@/assets/gilcase-carousel-2.png";
+import imgCarousel3 from "@/assets/gilcase-carousel-3.png";
+import imgCarousel4 from "@/assets/gilcase-carousel-4.png";
+import imgCarousel5 from "@/assets/gilcase-carousel-5.png";
+import imgCarousel6 from "@/assets/gilcase-carousel-6.png";
+import imgCarousel7 from "@/assets/gilcase-carousel-7.png";
+import imgCarousel8 from "@/assets/gilcase-carousel-8.png";
+import imgCarousel9 from "@/assets/gilcase-carousel-9.png";
+import imgCarousel10 from "@/assets/gilcase-carousel-10.png";
 
 const logoGilCase = "/lovable-uploads/logo-gilcase.jpeg";
 
@@ -200,16 +210,16 @@ const GilCasesPage = () => {
       <BrandCarousel
         accentColor="bg-accent-blue"
         images={[
-          { src: imgCases, alt: "Cases profissionais" },
-          { src: imgSuportes, alt: "Suportes para TV" },
-          { src: imgTotens, alt: "Totens interativos" },
-          { src: imgFabricacao, alt: "Fabricação" },
-          { src: imgHero, alt: "Gil Cases produtos" },
-          { src: imgCases, alt: "Case de equipamento" },
-          { src: imgSuportes, alt: "Pedestal para monitor" },
-          { src: imgTotens, alt: "Totem de autoatendimento" },
-          { src: imgFabricacao, alt: "Produção industrial" },
-          { src: imgHero, alt: "Linha Gil Cases" },
+          { src: imgCarousel1, alt: "Cases amarelos profissionais" },
+          { src: imgCarousel2, alt: "Case para painel vertical" },
+          { src: imgCarousel3, alt: "Case para TV com rodízios" },
+          { src: imgCarousel4, alt: "Cases azuis empilhados" },
+          { src: imgCarousel5, alt: "Case aberto com espuma" },
+          { src: imgCarousel6, alt: "Case aberto para equipamentos" },
+          { src: imgCarousel7, alt: "Case para suporte de LED" },
+          { src: imgCarousel8, alt: "Case com compartimentos internos" },
+          { src: imgCarousel9, alt: "Cases com divisórias" },
+          { src: imgCarousel10, alt: "Case aberto preto profissional" },
         ]}
       />
 
