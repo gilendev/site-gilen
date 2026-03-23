@@ -146,6 +146,25 @@ const EmpresaSection = () => {
         </div>
       </section>
 
+      {/* Marcas & Produtos Carousel */}
+      <BrandCarousel
+        images={[
+          { src: imgParametrizzeCnc, alt: "Parametrizze - CNC e design paramétrico" },
+          { src: imgGourmetizzeChurrasqueira, alt: "Gourmetizze - Churrasqueira artesanal" },
+          { src: imgComicpetsGato, alt: "Comicpets - Produtos para gatos" },
+          { src: imgDesignkidsMesa, alt: "Design Kids - Mesa infantil" },
+          { src: imgGilcaseCases, alt: "Gil Cases - Cases sob medida" },
+          { src: imgParametrizzeFachada, alt: "Parametrizze - Fachada paramétrica" },
+          { src: imgGourmetizzeUtensilios, alt: "Gourmetizze - Utensílios gourmet" },
+          { src: imgComicpetsComedouro, alt: "Comicpets - Comedouro personalizado" },
+          { src: imgDesignkidsEstante, alt: "Design Kids - Estante infantil" },
+          { src: imgGilcaseSuportes, alt: "Gil Cases - Suportes técnicos" },
+          { src: imgParametrizzeMobiliario, alt: "Parametrizze - Mobiliário paramétrico" },
+          { src: imgGourmetizzeEstrutura, alt: "Gourmetizze - Estrutura gourmet" },
+        ]}
+        accentColor="bg-accent-blue"
+      />
+
       {/* Infrastructure */}
       <section className="py-16 md:py-24 lg:py-32 bg-muted">
         <div className="container mx-auto px-4 lg:px-8">
