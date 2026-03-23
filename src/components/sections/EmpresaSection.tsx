@@ -148,6 +148,9 @@ const EmpresaSection = () => {
 
       {/* Marcas & Produtos Carousel */}
       <BrandCarousel
+        subtitle="Nossas Marcas"
+        title="Marcas &"
+        titleAccent="Produtos"
         images={[
           { src: imgParametrizzeCnc, alt: "Parametrizze - CNC e design paramétrico" },
           { src: imgGourmetizzeChurrasqueira, alt: "Gourmetizze - Churrasqueira artesanal" },
