@@ -205,6 +205,7 @@ const ParametrizzePage = () => {
           { src: imgHero, alt: "Projeto paramétrico" },
         ]}
       />
+      </div>
 
       {/* Products */}
       <section id="produtos" ref={galleryRef} className="py-16 md:py-24 lg:py-32 bg-muted">
