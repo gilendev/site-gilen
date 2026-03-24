@@ -3,6 +3,7 @@ import { useRef } from "react";
 import SEOHead from "@/components/SEOHead";
 import { Link } from "react-router-dom";
 import { ArrowRight, ArrowLeft, Baby, Shield, Palette, Star, Smile, Box } from "lucide-react";
+import BrandNavbar from "@/components/layout/BrandNavbar";
 import { Button } from "@/components/ui/button";
 import imgHero from "@/assets/img-designkids-hero.jpg";
 import imgMesa from "@/assets/img-designkids-mesa.jpg";
@@ -62,26 +63,25 @@ const DesignKidsPage = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead title="Design Kids" description="Mobiliário e brinquedos infantis com design lúdico e seguro. Mesas, estantes e decoração para quartos infantis." path="/design-kids" />
-      {/* Top bar */}
-      <div className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
-        <div className="container mx-auto px-4 lg:px-8 flex items-center justify-between h-16">
-          <Link to="/marcas" className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors text-sm">
-            <ArrowLeft size={16} /> Voltar para GILEN
-          </Link>
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-sm overflow-hidden" style={{ backgroundColor: '#8B7355' }}>
-              <img src={logoDesignkids} alt="Design Kids" className="w-full h-full object-cover" />
-            </div>
-            <span className="font-bold text-foreground tracking-wider text-sm">DESIGN KIDS</span>
-          </div>
-          <Link to="/contato" className="hidden sm:inline-flex items-center gap-2 px-4 py-2 bg-steel text-steel-foreground text-xs font-semibold uppercase tracking-wider rounded-sm hover:bg-steel/90 transition-colors">
-            Orçamento
-          </Link>
-        </div>
-      </div>
+      <BrandNavbar
+        brandName="DESIGN KIDS"
+        logoSrc={logoDesignkids}
+        logoBgColor="#8B7355"
+        backTo="/marcas"
+        backLabel="Voltar para GILEN"
+        sections={[
+          { id: "hero", label: "Início" },
+          { id: "sobre", label: "Sobre" },
+          { id: "galeria", label: "Galeria" },
+          { id: "produtos", label: "Produtos" },
+          { id: "diferenciais", label: "Diferenciais" },
+          { id: "processo", label: "Processo" },
+          { id: "contato-cta", label: "Contato" },
+        ]}
+      />
 
       {/* Hero */}
-      <section className="relative min-h-[90vh] flex items-center overflow-hidden pt-16">
+      <section id="hero" className="relative min-h-[90vh] flex items-center overflow-hidden pt-24">
         <img src={imgHero} alt="Mobiliário infantil Design Kids" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
         <div className="container mx-auto px-4 lg:px-8 relative z-10">
@@ -108,7 +108,7 @@ const DesignKidsPage = () => {
       </section>
 
       {/* About */}
-      <section className="py-16 md:py-24 lg:py-32 bg-background">
+      <section id="sobre" className="py-16 md:py-24 lg:py-32 bg-background">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <SectionBlock>
@@ -149,6 +149,7 @@ const DesignKidsPage = () => {
       </section>
 
       {/* Carousel */}
+      <div id="galeria">
       <BrandCarousel
         accentColor="bg-steel"
         images={[
@@ -164,6 +165,7 @@ const DesignKidsPage = () => {
           { src: imgHero, alt: "Linha infantil" },
         ]}
       />
+      </div>
 
       {/* Products */}
       <section id="produtos" ref={galleryRef} className="py-16 md:py-24 lg:py-32 bg-muted">
@@ -190,7 +192,7 @@ const DesignKidsPage = () => {
       </section>
 
       {/* Features */}
-      <section className="py-16 md:py-24 lg:py-32 bg-background">
+      <section id="diferenciais" className="py-16 md:py-24 lg:py-32 bg-background">
         <div className="container mx-auto px-4 lg:px-8">
           <SectionBlock className="text-center mb-16">
             <span className="text-xs font-semibold uppercase tracking-[0.2em] text-steel mb-4 block">Diferenciais</span>
@@ -213,7 +215,7 @@ const DesignKidsPage = () => {
       </section>
 
       {/* Process */}
-      <section className="py-16 md:py-24 lg:py-32 bg-graphite">
+      <section id="processo" className="py-16 md:py-24 lg:py-32 bg-graphite">
         <div className="container mx-auto px-4 lg:px-8">
           <SectionBlock className="text-center mb-16">
             <span className="text-xs font-semibold uppercase tracking-[0.2em] text-steel mb-4 block">Processo</span>
@@ -241,7 +243,7 @@ const DesignKidsPage = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-24 bg-background relative overflow-hidden">
+      <section id="contato-cta" className="py-24 bg-background relative overflow-hidden">
         <div className="technical-line w-full absolute top-0" />
         <div className="container mx-auto px-4 lg:px-8 relative z-10 text-center">
           <SectionBlock>
