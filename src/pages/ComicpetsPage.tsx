@@ -73,7 +73,7 @@ const ComicpetsPage = () => {
           { id: "hero", label: "Início" },
           { id: "sobre", label: "Sobre" },
           { id: "galeria", label: "Galeria" },
-          { id: "produtos", label: "Produtos" },
+          { id: "produtos", label: "Produtos", href: "/comicpets/produtos" },
           { id: "diferenciais", label: "Diferenciais" },
           { id: "processo", label: "Processo" },
           { id: "contato-cta", label: "Contato" },
@@ -152,6 +152,7 @@ const ComicpetsPage = () => {
       <div id="galeria">
       <BrandCarousel
         accentColor="bg-accent-green"
+        linkTo="/comicpets/produtos"
         images={[
           { src: imgGato, alt: "Arranhadores e torres" },
           { src: imgComedouro, alt: "Comedouros pet" },

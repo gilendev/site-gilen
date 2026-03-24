@@ -3,6 +3,7 @@ import { motion, useInView } from "framer-motion";
 import useEmblaCarousel from "embla-carousel-react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useNavigate } from "react-router-dom";
 
 interface BrandCarouselProps {
   images: { src: string; alt: string }[];
@@ -10,15 +11,17 @@ interface BrandCarouselProps {
   subtitle?: string;
   title?: string;
   titleAccent?: string;
+  linkTo?: string; // clicking images navigates here
 }
 
-const BrandCarousel = ({ images, accentColor = "bg-accent-blue", subtitle = "Galeria", title = "Nossos", titleAccent = "Trabalhos" }: BrandCarouselProps) => {
+const BrandCarousel = ({ images, accentColor = "bg-accent-blue", subtitle = "Galeria", title = "Nossos", titleAccent = "Trabalhos", linkTo }: BrandCarouselProps) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-80px" });
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: "start", slidesToScroll: 1, dragFree: true });
   const [canScrollPrev, setCanScrollPrev] = useState(false);
   const [canScrollNext, setCanScrollNext] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(0);
+  const navigate = useNavigate();
 
   const onSelect = useCallback(() => {
     if (!emblaApi) return;
@@ -40,7 +43,6 @@ const BrandCarousel = ({ images, accentColor = "bg-accent-blue", subtitle = "Gal
   const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
   const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
 
-  // Mouse wheel scroll support
   useEffect(() => {
     if (!emblaApi) return;
     const rootNode = emblaApi.rootNode();
@@ -54,6 +56,10 @@ const BrandCarousel = ({ images, accentColor = "bg-accent-blue", subtitle = "Gal
   }, [emblaApi]);
 
   if (images.length === 0) return null;
+
+  const handleImageClick = () => {
+    if (linkTo) navigate(linkTo);
+  };
 
   return (
     <section ref={ref} className="py-16 md:py-24 bg-background">
@@ -76,7 +82,8 @@ const BrandCarousel = ({ images, accentColor = "bg-accent-blue", subtitle = "Gal
                 {images.map((image, index) => (
                   <div
                     key={index}
-                    className="flex-[0_0_100%] min-w-0 sm:flex-[0_0_50%] lg:flex-[0_0_33.333%] pl-4 first:pl-0"
+                    className={cn("flex-[0_0_100%] min-w-0 sm:flex-[0_0_50%] lg:flex-[0_0_33.333%] pl-4 first:pl-0", linkTo && "cursor-pointer")}
+                    onClick={handleImageClick}
                   >
                     <div className="aspect-[4/3] rounded-sm overflow-hidden">
                       <img
@@ -90,7 +97,6 @@ const BrandCarousel = ({ images, accentColor = "bg-accent-blue", subtitle = "Gal
               </div>
             </div>
 
-            {/* Navigation Arrows */}
             <button
               onClick={scrollPrev}
               className={cn(
@@ -111,7 +117,6 @@ const BrandCarousel = ({ images, accentColor = "bg-accent-blue", subtitle = "Gal
             </button>
           </div>
 
-          {/* Dots */}
           <div className="flex justify-center gap-2 mt-6">
             {images.map((_, index) => (
               <button

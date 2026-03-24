@@ -73,7 +73,7 @@ const GourmetizzePage = () => {
           { id: "hero", label: "Início" },
           { id: "sobre", label: "Sobre" },
           { id: "galeria", label: "Galeria" },
-          { id: "produtos", label: "Produtos" },
+          { id: "produtos", label: "Produtos", href: "/gourmetizze/produtos" },
           { id: "diferenciais", label: "Diferenciais" },
           { id: "processo", label: "Processo" },
           { id: "contato-cta", label: "Contato" },
@@ -152,6 +152,7 @@ const GourmetizzePage = () => {
       <div id="galeria">
       <BrandCarousel
         accentColor="bg-accent"
+        linkTo="/gourmetizze/produtos"
         images={[
           { src: imgChurrasqueira, alt: "Churrasqueira modular" },
           { src: imgUtensilios, alt: "Utensílios gourmet" },
