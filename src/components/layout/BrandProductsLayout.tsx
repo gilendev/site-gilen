@@ -51,6 +51,8 @@ const BrandProductsLayout = ({
   products,
   navSections,
 }: BrandProductsLayoutProps) => {
+  // Derive color token from accentColorClass (e.g. "bg-accent-blue" -> "accent-blue")
+  const colorToken = accentColorClass.replace("bg-", "");
   const [activeCategory, setActiveCategory] = useState<string>("todos");
   const [searchQuery, setSearchQuery] = useState("");
   const [searchOpen, setSearchOpen] = useState(false);
