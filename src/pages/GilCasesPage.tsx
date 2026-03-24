@@ -22,6 +22,16 @@ import imgCarousel7 from "@/assets/gilcase-carousel-7.png";
 import imgCarousel8 from "@/assets/gilcase-carousel-8.png";
 import imgCarousel9 from "@/assets/gilcase-carousel-9.png";
 import imgCarousel10 from "@/assets/gilcase-carousel-10.png";
+import imgNew1 from "@/assets/gilcase-new-1.png";
+import imgNew2 from "@/assets/gilcase-new-2.png";
+import imgNew3 from "@/assets/gilcase-new-3.png";
+import imgNew4 from "@/assets/gilcase-new-4.png";
+import imgNew5 from "@/assets/gilcase-new-5.png";
+import imgNew6 from "@/assets/gilcase-new-6.png";
+import imgNew7 from "@/assets/gilcase-new-7.png";
+import imgNew8 from "@/assets/gilcase-new-8.png";
+import imgNew9 from "@/assets/gilcase-new-9.png";
+import imgNew10 from "@/assets/gilcase-new-10.png";
 
 const logoGilCase = "/lovable-uploads/logo-gilcase.jpeg";
 
@@ -218,6 +228,16 @@ const GilCasesPage = () => {
           { src: imgCarousel8, alt: "Case com compartimentos internos" },
           { src: imgCarousel9, alt: "Cases com divisórias" },
           { src: imgCarousel10, alt: "Case aberto preto profissional" },
+          { src: imgNew1, alt: "Cases azuis com cantoneiras" },
+          { src: imgNew2, alt: "Case personalizado com logotipo" },
+          { src: imgNew3, alt: "Kit de bags e cases para equipamentos" },
+          { src: imgNew4, alt: "Case para painel WorldSkills" },
+          { src: imgNew5, alt: "Case para teclado e periféricos" },
+          { src: imgNew6, alt: "Case aberto com espuma interna" },
+          { src: imgNew7, alt: "Case para projetor profissional" },
+          { src: imgNew8, alt: "Cases LED & CIA personalizados" },
+          { src: imgNew9, alt: "Case rack preto profissional" },
+          { src: imgNew10, alt: "Cases azuis Crialec empilhados" },
         ]}
       />
       </div>
