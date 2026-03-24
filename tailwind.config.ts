@@ -50,6 +50,10 @@ export default {
           DEFAULT: "hsl(var(--accent-blue))",
           foreground: "hsl(var(--accent-blue-foreground))",
         },
+        "gilcase-red": {
+          DEFAULT: "hsl(var(--gilcase-red))",
+          foreground: "hsl(var(--gilcase-red-foreground))",
+        },
         graphite: {
           DEFAULT: "hsl(var(--graphite))",
           foreground: "hsl(var(--graphite-foreground))",
