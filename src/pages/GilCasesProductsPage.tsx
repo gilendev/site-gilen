@@ -22,6 +22,16 @@ import imgNew10 from "@/assets/gilcase-new-10.png";
 import imgSuportes from "@/assets/img-gilcase-suportes.jpg";
 import imgTotens from "@/assets/img-gilcase-totens.jpg";
 import imgFabricacao from "@/assets/img-gilcase-fabricacao.jpg";
+import imgExtra1 from "@/assets/gilcase-extra-1.png";
+import imgExtra2 from "@/assets/gilcase-extra-2.png";
+import imgExtra3 from "@/assets/gilcase-extra-3.png";
+import imgExtra4 from "@/assets/gilcase-extra-4.png";
+import imgExtra5 from "@/assets/gilcase-extra-5.png";
+import imgExtra6 from "@/assets/gilcase-extra-6.png";
+import imgExtra7 from "@/assets/gilcase-extra-7.png";
+import imgExtra8 from "@/assets/gilcase-extra-8.png";
+import imgExtra9 from "@/assets/gilcase-extra-9.png";
+import imgExtra10 from "@/assets/gilcase-extra-10.png";
 
 const logoGilCase = "/lovable-uploads/logo-gilcase.jpeg";
 
@@ -63,6 +73,16 @@ const products = [
   { id: "projeto-especial", name: "Projeto Especial", image: imgFabricacao, description: "Cases e estruturas especiais sob medida com engenharia dedicada.", category: "sob-medida" },
   { id: "prototipo", name: "Prototipagem 3D", image: imgFabricacao, description: "Projeto 3D e prototipagem antes da fabricação em série.", category: "sob-medida" },
   { id: "producao-serie", name: "Produção em Série", image: imgFabricacao, description: "Fabricação em série com padrão de qualidade e acabamento premium.", category: "sob-medida" },
+  { id: "case-compensado-branco", name: "Case Compensado Branco", image: imgExtra1, description: "Case em compensado branco com cantoneiras em alumínio, tampa articulada e divisória interna.", category: "cases" },
+  { id: "case-teclado-musical", name: "Case para Teclado Musical", image: imgExtra2, description: "Case profissional para teclado com interior acolchoado e fechos reforçados.", category: "cases" },
+  { id: "case-empilhavel-grande", name: "Cases Empilháveis Grande Porte", image: imgExtra3, description: "Conjunto de cases empilháveis para transporte de painéis e equipamentos de grande formato.", category: "cases" },
+  { id: "case-rodizio-serralheria", name: "Case com Rodízio Serralheria", image: imgExtra4, description: "Case com rodízio retrátil e logo GilCase, ideal para transporte de ferramentas de serralheria.", category: "cases" },
+  { id: "case-phygital", name: "Case para Painel Phygital", image: imgExtra5, description: "Case sob medida para painéis Phygital Solutions com rodízios e proteção reforçada.", category: "cases" },
+  { id: "case-tv-grande", name: "Case para TV Grande Formato", image: imgExtra6, description: "Case para TVs de 55\" a 85\" com estrutura reforçada e barra central de proteção.", category: "cases" },
+  { id: "case-modular-espuma", name: "Cases Modulares com Espuma", image: imgExtra7, description: "Cases modulares com espuma personalizada para kits de equipamentos diversos.", category: "cases" },
+  { id: "case-firma-prop", name: "Case Firma Prop", image: imgExtra8, description: "Case personalizado para a empresa Firma Prop com acabamento premium em compensado preto.", category: "cases" },
+  { id: "case-rack-gavetas", name: "Case Rack com Gavetas", image: imgExtra9, description: "Case formato rack com sistema de gavetas deslizantes para organização de equipamentos.", category: "cases" },
+  { id: "case-logo-personalizado", name: "Case com Logo Personalizado", image: imgExtra10, description: "Case com impressão de logo do cliente em compensado preto com cantoneiras cromadas.", category: "cases" },
 ];
 
 const GilCasesProductsPage = () => (

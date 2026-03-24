@@ -32,6 +32,16 @@ import imgNew7 from "@/assets/gilcase-new-7.png";
 import imgNew8 from "@/assets/gilcase-new-8.png";
 import imgNew9 from "@/assets/gilcase-new-9.png";
 import imgNew10 from "@/assets/gilcase-new-10.png";
+import imgExtra1 from "@/assets/gilcase-extra-1.png";
+import imgExtra2 from "@/assets/gilcase-extra-2.png";
+import imgExtra3 from "@/assets/gilcase-extra-3.png";
+import imgExtra4 from "@/assets/gilcase-extra-4.png";
+import imgExtra5 from "@/assets/gilcase-extra-5.png";
+import imgExtra6 from "@/assets/gilcase-extra-6.png";
+import imgExtra7 from "@/assets/gilcase-extra-7.png";
+import imgExtra8 from "@/assets/gilcase-extra-8.png";
+import imgExtra9 from "@/assets/gilcase-extra-9.png";
+import imgExtra10 from "@/assets/gilcase-extra-10.png";
 
 const logoGilCase = "/lovable-uploads/logo-gilcase.jpeg";
 
@@ -238,6 +248,16 @@ const GilCasesPage = () => {
           { src: imgNew8, alt: "Cases LED & CIA personalizados" },
           { src: imgNew9, alt: "Case rack preto profissional" },
           { src: imgNew10, alt: "Cases azuis Crialec empilhados" },
+          { src: imgExtra1, alt: "Case aberto compensado branco" },
+          { src: imgExtra2, alt: "Case para teclado musical" },
+          { src: imgExtra3, alt: "Cases empilháveis grande porte" },
+          { src: imgExtra4, alt: "Case com rodízio GilCase Serralheria" },
+          { src: imgExtra5, alt: "Case para painel Phygital Solutions" },
+          { src: imgExtra6, alt: "Case para TV grande formato" },
+          { src: imgExtra7, alt: "Cases modulares com espuma" },
+          { src: imgExtra8, alt: "Case personalizado Firma Prop" },
+          { src: imgExtra9, alt: "Case rack com gavetas" },
+          { src: imgExtra10, alt: "Case personalizado com logo V" },
         ]}
       />
       </div>
