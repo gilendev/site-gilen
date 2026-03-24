@@ -71,7 +71,7 @@ const BrandProductsLayout = ({
   const whatsappUrl = `https://wa.me/5511968756430?text=${encodeURIComponent(whatsappMessage)}`;
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className={cn("min-h-screen bg-background", wrapperClassName)}>
       <SEOHead title={seoTitle} description={seoDescription} path={seoPath} />
 
       <BrandNavbar
