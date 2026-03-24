@@ -127,7 +127,7 @@ const GilCasesPage = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="text-xs font-semibold uppercase tracking-[0.3em] text-accent-blue mb-4 block"
+              className="text-xs font-semibold uppercase tracking-[0.3em] text-gilcase-red mb-4 block"
             >
               By GILEN Industrial
             </motion.span>
@@ -156,7 +156,7 @@ const GilCasesPage = () => {
               <Button
                 asChild
                 size="lg"
-                className="bg-accent-blue hover:bg-accent-blue/90 text-accent-blue-foreground px-8 h-12 text-sm uppercase tracking-wider font-semibold"
+                className="bg-gilcase-red hover:bg-gilcase-red/90 text-gilcase-red-foreground px-8 h-12 text-sm uppercase tracking-wider font-semibold"
               >
                 <Link to="/contato">
                   Solicitar Orçamento
@@ -181,7 +181,7 @@ const GilCasesPage = () => {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <SectionBlock>
-              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-accent-blue mb-4 block">
+              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gilcase-red mb-4 block">
                 Sobre a Marca
               </span>
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
@@ -203,7 +203,7 @@ const GilCasesPage = () => {
                   { value: "100%", label: "Sob Medida" },
                 ].map((stat) => (
                   <div key={stat.label}>
-                    <div className="text-2xl font-bold text-accent-blue">{stat.value}</div>
+                    <div className="text-2xl font-bold text-gilcase-red">{stat.value}</div>
                     <div className="text-xs text-muted-foreground mt-1 uppercase tracking-wider">{stat.label}</div>
                   </div>
                 ))}
@@ -225,7 +225,7 @@ const GilCasesPage = () => {
       {/* Carousel */}
       <div id="galeria">
       <BrandCarousel
-        accentColor="bg-accent-blue"
+        accentColor="bg-gilcase-red"
         linkTo="/gil-cases/produtos"
         images={[
           { src: imgCarousel1, alt: "Cases amarelos profissionais" },
@@ -266,7 +266,7 @@ const GilCasesPage = () => {
       <section id="produtos" ref={galleryRef} className="py-16 md:py-24 lg:py-32 bg-muted">
         <div className="container mx-auto px-4 lg:px-8">
           <SectionBlock className="text-center mb-16">
-            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-accent-blue mb-4 block">
+            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gilcase-red mb-4 block">
               Produtos
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground">
@@ -299,12 +299,12 @@ const GilCasesPage = () => {
                   <h3 className="text-xl font-bold text-white mb-2">{product.title}</h3>
                   <p className="text-white/60 text-sm leading-relaxed">{product.description}</p>
                 </div>
-                <div className="absolute top-0 left-0 w-0 h-1 bg-accent-blue group-hover:w-full transition-all duration-500" />
+                <div className="absolute top-0 left-0 w-0 h-1 bg-gilcase-red group-hover:w-full transition-all duration-500" />
               </motion.div>
             ))}
           </div>
           <div className="text-center mt-10">
-            <Link to="/gil-cases/produtos" className="inline-flex items-center gap-2 px-8 py-3 bg-accent-blue text-accent-blue-foreground font-semibold text-sm uppercase tracking-wider rounded-sm hover:bg-accent-blue/90 transition-colors">
+            <Link to="/gil-cases/produtos" className="inline-flex items-center gap-2 px-8 py-3 bg-gilcase-red text-gilcase-red-foreground font-semibold text-sm uppercase tracking-wider rounded-sm hover:bg-gilcase-red/90 transition-colors">
               Ver Todos os Produtos <ArrowRight size={16} />
             </Link>
           </div>
@@ -315,7 +315,7 @@ const GilCasesPage = () => {
       <section id="diferenciais" className="py-16 md:py-24 lg:py-32 bg-background">
         <div className="container mx-auto px-4 lg:px-8">
           <SectionBlock className="text-center mb-16">
-            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-accent-blue mb-4 block">
+            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gilcase-red mb-4 block">
               Diferenciais
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground">
@@ -326,9 +326,9 @@ const GilCasesPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {features.map((feature) => (
               <SectionBlock key={feature.title}>
-                <div className="p-6 md:p-8 rounded-sm border border-border bg-card hover:border-accent-blue/30 transition-colors h-full">
-                  <div className="w-12 h-12 rounded-sm bg-accent-blue/10 flex items-center justify-center mb-6">
-                    <feature.icon className="text-accent-blue" size={24} />
+                <div className="p-6 md:p-8 rounded-sm border border-border bg-card hover:border-gilcase-red/30 transition-colors h-full">
+                  <div className="w-12 h-12 rounded-sm bg-gilcase-red/10 flex items-center justify-center mb-6">
+                    <feature.icon className="text-gilcase-red" size={24} />
                   </div>
                   <h3 className="text-lg font-semibold text-foreground mb-3">{feature.title}</h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">{feature.desc}</p>
@@ -343,11 +343,11 @@ const GilCasesPage = () => {
       <section id="processo" className="py-16 md:py-24 lg:py-32 bg-graphite">
         <div className="container mx-auto px-4 lg:px-8">
           <SectionBlock className="text-center mb-16">
-            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-accent-blue mb-4 block">
+            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gilcase-red mb-4 block">
               Processo
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground">
-              Como <span className="text-accent-blue">funciona</span>
+              Como <span className="text-gilcase-red">funciona</span>
             </h2>
           </SectionBlock>
 
@@ -360,8 +360,8 @@ const GilCasesPage = () => {
             ].map((item) => (
               <SectionBlock key={item.step}>
                 <div className="text-center">
-                  <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-accent-blue/10 flex items-center justify-center">
-                    <span className="text-accent-blue font-bold text-lg">{item.step}</span>
+                  <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-gilcase-red/10 flex items-center justify-center">
+                    <span className="text-gilcase-red font-bold text-lg">{item.step}</span>
                   </div>
                   <h3 className="text-lg font-semibold text-primary-foreground mb-3">{item.title}</h3>
                   <p className="text-primary-foreground/60 text-sm leading-relaxed">{item.desc}</p>
@@ -386,7 +386,7 @@ const GilCasesPage = () => {
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Link
                 to="/contato"
-                className="inline-flex items-center gap-2 px-8 py-3 bg-accent-blue text-accent-blue-foreground font-semibold text-sm uppercase tracking-wider rounded-sm hover:bg-accent-blue/90 transition-colors"
+                className="inline-flex items-center gap-2 px-8 py-3 bg-gilcase-red text-gilcase-red-foreground font-semibold text-sm uppercase tracking-wider rounded-sm hover:bg-gilcase-red/90 transition-colors"
               >
                 Solicitar Orçamento
                 <ArrowRight size={16} />
@@ -407,7 +407,7 @@ const GilCasesPage = () => {
       <footer className="py-8 bg-graphite border-t border-border">
         <div className="container mx-auto px-4 lg:px-8 text-center">
           <p className="text-primary-foreground/40 text-sm">
-            GIL CASES E SUPORTES — Uma marca <Link to="/" className="text-accent-blue hover:underline">GILEN Industrial</Link>
+            GIL CASES E SUPORTES — Uma marca <Link to="/" className="text-gilcase-red hover:underline">GILEN Industrial</Link>
           </p>
         </div>
       </footer>
