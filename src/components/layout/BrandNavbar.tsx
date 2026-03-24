@@ -1,4 +1,4 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
@@ -56,9 +56,8 @@ const BrandNavbar = ({ brandName, logoSrc, logoBgColor, backTo, backLabel, secti
         </Link>
         <div className="flex items-center gap-3">
           <div
-            className="w-8 h-8 rounded-sm overflow-hidden shrink-0"
+            className={cn("w-8 h-8 rounded-sm overflow-hidden shrink-0", !logoBgColor && "bg-white")}
             style={logoBgColor ? { backgroundColor: logoBgColor } : undefined}
-            {...(!logoBgColor ? { className: "w-8 h-8 rounded-sm overflow-hidden shrink-0 bg-white" } : {})}
           >
             <img src={logoSrc} alt={brandName} className="w-full h-full object-contain" />
           </div>
