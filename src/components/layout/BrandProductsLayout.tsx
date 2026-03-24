@@ -32,6 +32,7 @@ interface BrandProductsLayoutProps {
   seoDescription: string;
   seoPath: string;
   accentColorClass: string;
+  wrapperClassName?: string;
   categories: ProductCategory[];
   products: ProductItem[];
   navSections: BrandNavSection[];
