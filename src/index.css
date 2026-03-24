@@ -133,6 +133,12 @@
   }
 }
 
+/* Gil Cases brand override — remap accent-blue to gilcase-red */
+.gilcase-brand {
+  --accent-blue: var(--gilcase-red);
+  --accent-blue-foreground: var(--gilcase-red-foreground);
+}
+
 @layer utilities {
   .scrollbar-hide {
     -ms-overflow-style: none;
