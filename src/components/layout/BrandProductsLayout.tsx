@@ -72,77 +72,45 @@ const BrandProductsLayout = ({
     <div className="min-h-screen bg-background">
       <SEOHead title={seoTitle} description={seoDescription} path={seoPath} />
 
-      {/* Premium Top Navigation */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-graphite/95 backdrop-blur-xl border-b border-white/5 h-16">
-        <div className="container mx-auto px-4 lg:px-8 flex items-center justify-between h-full">
-          <Link to={backTo} className="flex items-center gap-2 text-primary-foreground/60 hover:text-primary-foreground transition-colors text-sm group">
-            <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" />
-            <span className="hidden sm:inline">{backLabel}</span>
-          </Link>
+      <BrandNavbar
+        brandName={brandName}
+        logoSrc={logoSrc}
+        logoBgColor={logoBgColor}
+        backTo={backTo}
+        backLabel={backLabel}
+        sections={navSections}
+      />
 
-          <div className="flex items-center gap-3">
-            <div className={cn("w-9 h-9 rounded-lg overflow-hidden shrink-0 ring-1 ring-white/10", !logoBgColor && "bg-white")}
-              style={logoBgColor ? { backgroundColor: logoBgColor } : undefined}>
-              <img src={logoSrc} alt={brandName} className="w-full h-full object-contain p-0.5" />
-            </div>
-            <div className="hidden sm:block">
-              <span className="font-bold text-primary-foreground tracking-wider text-sm">{brandName}</span>
-              <span className="text-primary-foreground/30 text-xs block">Catálogo de Produtos</span>
-            </div>
+      {/* Search Bar */}
+      <div className="fixed top-[96px] left-0 right-0 z-40 bg-background/95 backdrop-blur-md border-b border-border">
+        <div className="container mx-auto px-4 lg:px-8 py-2 flex items-center gap-3">
+          <div className="relative flex-1 max-w-xl">
+            <Search size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground" />
+            <input
+              type="text"
+              placeholder="Buscar produtos por nome ou descrição..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="w-full pl-10 pr-10 py-2 bg-muted border border-border rounded-sm text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent-blue/50 focus:border-transparent transition-all"
+            />
+            {searchQuery && (
+              <button onClick={() => setSearchQuery("")} className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground">
+                <X size={14} />
+              </button>
+            )}
           </div>
-
-          <div className="flex items-center gap-3">
-            <button
-              onClick={() => setSearchOpen(!searchOpen)}
-              className="w-9 h-9 flex items-center justify-center rounded-lg text-primary-foreground/60 hover:text-primary-foreground hover:bg-white/5 transition-all"
-            >
-              <Search size={16} />
+          <div className="flex items-center gap-2">
+            <button onClick={() => setViewMode("grid")} className={cn("w-8 h-8 flex items-center justify-center rounded-sm transition-colors", viewMode === "grid" ? "bg-accent-blue text-accent-blue-foreground" : "text-muted-foreground hover:text-foreground hover:bg-muted")}>
+              <Grid3X3 size={14} />
             </button>
-            <a
-              href={whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 bg-[#25D366] text-white text-xs font-semibold uppercase tracking-wider rounded-lg hover:bg-[#20bd5a] transition-all hover:shadow-lg hover:shadow-[#25D366]/20"
-            >
-              <FaWhatsapp size={14} />
-              Orçamento
-            </a>
+            <button onClick={() => setViewMode("large")} className={cn("w-8 h-8 flex items-center justify-center rounded-sm transition-colors", viewMode === "large" ? "bg-accent-blue text-accent-blue-foreground" : "text-muted-foreground hover:text-foreground hover:bg-muted")}>
+              <LayoutGrid size={14} />
+            </button>
           </div>
         </div>
+      </div>
 
-        {/* Expandable Search */}
-        <AnimatePresence>
-          {searchOpen && (
-            <motion.div
-              initial={{ height: 0, opacity: 0 }}
-              animate={{ height: "auto", opacity: 1 }}
-              exit={{ height: 0, opacity: 0 }}
-              className="bg-graphite border-t border-white/5 overflow-hidden"
-            >
-              <div className="container mx-auto px-4 lg:px-8 py-3">
-                <div className="relative max-w-xl mx-auto">
-                  <Search size={16} className="absolute left-4 top-1/2 -translate-y-1/2 text-primary-foreground/30" />
-                  <input
-                    type="text"
-                    placeholder="Buscar produtos por nome ou descrição..."
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                    autoFocus
-                    className="w-full pl-11 pr-10 py-3 bg-white/5 border border-white/10 rounded-xl text-sm text-primary-foreground placeholder:text-primary-foreground/30 focus:outline-none focus:ring-2 focus:ring-accent-blue/50 focus:border-transparent transition-all"
-                  />
-                  {searchQuery && (
-                    <button onClick={() => setSearchQuery("")} className="absolute right-4 top-1/2 -translate-y-1/2 text-primary-foreground/40 hover:text-primary-foreground">
-                      <X size={14} />
-                    </button>
-                  )}
-                </div>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </header>
-
-      <div className="pt-16 flex min-h-[calc(100vh-4rem)]">
+      <div className="pt-[140px] flex min-h-[calc(100vh-140px)]">
         {/* Premium Sidebar */}
         <aside className="hidden lg:flex w-72 shrink-0 sticky top-16 h-[calc(100vh-4rem)] border-r border-border/50 bg-gradient-to-b from-muted/50 to-background flex-col overflow-y-auto">
           <div className="p-6">
