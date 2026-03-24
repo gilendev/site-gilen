@@ -42,6 +42,15 @@ const DesignKidsProductsPage = () => (
     accentColorClass="bg-accent-blue"
     categories={categories}
     products={products}
+    navSections={[
+      { id: "hero", label: "Início", href: "/design-kids" },
+      { id: "sobre", label: "Sobre", href: "/design-kids" },
+      { id: "galeria", label: "Galeria", href: "/design-kids" },
+      { id: "produtos", label: "Produtos", href: "/design-kids/produtos" },
+      { id: "diferenciais", label: "Diferenciais", href: "/design-kids" },
+      { id: "processo", label: "Processo", href: "/design-kids" },
+      { id: "contato-cta", label: "Contato", href: "/design-kids" },
+    ]}
   />
 );
 
