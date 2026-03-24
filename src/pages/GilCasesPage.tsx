@@ -52,6 +52,10 @@ import imgExtra17 from "@/assets/gilcase-extra-17.png";
 import imgExtra18 from "@/assets/gilcase-extra-18.png";
 import imgExtra19 from "@/assets/gilcase-extra-19.png";
 import imgExtra20 from "@/assets/gilcase-extra-20.png";
+import imgExtra21 from "@/assets/gilcase-extra-21.png";
+import imgExtra22 from "@/assets/gilcase-extra-22.png";
+import imgExtra23 from "@/assets/gilcase-extra-23.png";
+import imgExtra24 from "@/assets/gilcase-extra-24.png";
 
 const logoGilCase = "/lovable-uploads/logo-gilcase.jpeg";
 
@@ -278,6 +282,10 @@ const GilCasesPage = () => {
           { src: imgExtra18, alt: "Cases grandes formato letra BIS" },
           { src: imgExtra19, alt: "Case com alça retrátil e prateleiras" },
           { src: imgExtra20, alt: "Case para equipamento Daston" },
+          { src: imgExtra21, alt: "Cases Firma Prod personalizados" },
+          { src: imgExtra22, alt: "Kit cases International School" },
+          { src: imgExtra23, alt: "Case gaveteiro vertical com rodízios" },
+          { src: imgExtra24, alt: "Cases empilháveis pretos profissionais" },
         ]}
       />
       </div>
