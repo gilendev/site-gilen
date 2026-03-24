@@ -79,7 +79,7 @@ const ParametrizzePage = () => {
           { id: "hero", label: "Início" },
           { id: "sobre", label: "Sobre" },
           { id: "galeria", label: "Galeria" },
-          { id: "produtos", label: "Produtos" },
+          { id: "produtos", label: "Produtos", href: "/parametrizze/produtos" },
           { id: "diferenciais", label: "Diferenciais" },
           { id: "processo", label: "Processo" },
           { id: "contato-cta", label: "Contato" },
@@ -192,6 +192,7 @@ const ParametrizzePage = () => {
       <div id="galeria">
       <BrandCarousel
         accentColor="bg-accent-blue"
+        linkTo="/parametrizze/produtos"
         images={[
           { src: imgFachada, alt: "Fachada paramétrica" },
           { src: imgMobiliario, alt: "Mobiliário paramétrico" },

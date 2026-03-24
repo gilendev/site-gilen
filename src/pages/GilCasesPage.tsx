@@ -89,7 +89,7 @@ const GilCasesPage = () => {
           { id: "hero", label: "Início" },
           { id: "sobre", label: "Sobre" },
           { id: "galeria", label: "Galeria" },
-          { id: "produtos", label: "Produtos" },
+          { id: "produtos", label: "Produtos", href: "/gil-cases/produtos" },
           { id: "diferenciais", label: "Diferenciais" },
           { id: "processo", label: "Processo" },
           { id: "contato-cta", label: "Contato" },
@@ -205,6 +205,7 @@ const GilCasesPage = () => {
       <div id="galeria">
       <BrandCarousel
         accentColor="bg-accent-blue"
+        linkTo="/gil-cases/produtos"
         images={[
           { src: imgCarousel1, alt: "Cases amarelos profissionais" },
           { src: imgCarousel2, alt: "Case para painel vertical" },
