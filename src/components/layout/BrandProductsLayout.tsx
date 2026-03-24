@@ -32,6 +32,7 @@ interface BrandProductsLayoutProps {
   seoDescription: string;
   seoPath: string;
   accentColorClass: string;
+  wrapperClassName?: string;
   categories: ProductCategory[];
   products: ProductItem[];
   navSections: BrandNavSection[];
@@ -100,10 +101,10 @@ const BrandProductsLayout = ({
             )}
           </div>
           <div className="flex items-center gap-2">
-            <button onClick={() => setViewMode("grid")} className={cn("w-8 h-8 flex items-center justify-center rounded-sm transition-colors", viewMode === "grid" ? "bg-accent-blue text-accent-blue-foreground" : "text-muted-foreground hover:text-foreground hover:bg-muted")}>
+            <button onClick={() => setViewMode("grid")} className={cn("w-8 h-8 flex items-center justify-center rounded-sm transition-colors", viewMode === "grid" ? `bg-accent-blue text-accent-blue-foreground` : "text-muted-foreground hover:text-foreground hover:bg-muted")}>
               <Grid3X3 size={14} />
             </button>
-            <button onClick={() => setViewMode("large")} className={cn("w-8 h-8 flex items-center justify-center rounded-sm transition-colors", viewMode === "large" ? "bg-accent-blue text-accent-blue-foreground" : "text-muted-foreground hover:text-foreground hover:bg-muted")}>
+            <button onClick={() => setViewMode("large")} className={cn("w-8 h-8 flex items-center justify-center rounded-sm transition-colors", viewMode === "large" ? `bg-accent-blue text-accent-blue-foreground` : "text-muted-foreground hover:text-foreground hover:bg-muted")}>
               <LayoutGrid size={14} />
             </button>
           </div>

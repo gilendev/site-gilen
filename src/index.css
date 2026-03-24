@@ -33,6 +33,9 @@
     --accent-blue: 215 85% 45%;
     --accent-blue-foreground: 0 0% 100%;
 
+    --gilcase-red: 0 85% 45%;
+    --gilcase-red-foreground: 0 0% 100%;
+
     --graphite: 215 15% 20%;
     --graphite-foreground: 0 0% 100%;
 
@@ -128,6 +131,12 @@
     background: linear-gradient(90deg, transparent, hsl(var(--accent-blue) / 0.3), transparent);
     height: 1px;
   }
+}
+
+/* Gil Cases brand override — remap accent-blue to gilcase-red */
+.gilcase-brand {
+  --accent-blue: var(--gilcase-red);
+  --accent-blue-foreground: var(--gilcase-red-foreground);
 }
 
 @layer utilities {

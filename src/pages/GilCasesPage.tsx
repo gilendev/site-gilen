@@ -99,7 +99,7 @@ const GilCasesPage = () => {
   const galleryInView = useInView(galleryRef, { once: true, margin: "-100px" });
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background gilcase-brand">
       <SEOHead title="Gil Cases & Suportes" description="Cases personalizados e suportes profissionais para equipamentos de áudio, vídeo, iluminação e instrumentos musicais. 13+ anos de experiência." path="/gil-cases" />
       <BrandNavbar
         brandName="GIL CASES"
