@@ -51,15 +51,6 @@ const BrandProductsLayout = ({
   products,
   navSections,
 }: BrandProductsLayoutProps) => {
-  // Map accentColorClass to CSS variable name
-  const cssVarMap: Record<string, string> = {
-    "bg-accent-blue": "--accent-blue",
-    "bg-gilcase-red": "--gilcase-red",
-    "bg-accent-green": "--accent-green",
-    "bg-accent": "--accent",
-  };
-  const accentVar = cssVarMap[accentColorClass] || "--accent-blue";
-  const accentStyle = { "--brand-accent": `var(${accentVar})` } as React.CSSProperties;
   const [activeCategory, setActiveCategory] = useState<string>("todos");
   const [searchQuery, setSearchQuery] = useState("");
   const [searchOpen, setSearchOpen] = useState(false);
