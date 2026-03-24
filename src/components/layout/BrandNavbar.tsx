@@ -116,7 +116,7 @@ const BrandNavbar = ({ brandName, logoSrc, logoBgColor, backTo, backLabel, secti
       {mobileMenuOpen && (
         <div className="fixed inset-0 z-[45] bg-black/50 md:hidden" onClick={() => setMobileMenuOpen(false)}>
           <div
-            className="absolute top-[88px] left-0 right-0 bg-background border-b border-border shadow-xl"
+            className="absolute top-[56px] left-0 right-0 bg-background border-b border-border shadow-xl"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="py-2 px-4 space-y-1">
