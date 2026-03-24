@@ -238,6 +238,16 @@ const GilCasesPage = () => {
           { src: imgNew8, alt: "Cases LED & CIA personalizados" },
           { src: imgNew9, alt: "Case rack preto profissional" },
           { src: imgNew10, alt: "Cases azuis Crialec empilhados" },
+          { src: imgExtra1, alt: "Case aberto compensado branco" },
+          { src: imgExtra2, alt: "Case para teclado musical" },
+          { src: imgExtra3, alt: "Cases empilháveis grande porte" },
+          { src: imgExtra4, alt: "Case com rodízio GilCase Serralheria" },
+          { src: imgExtra5, alt: "Case para painel Phygital Solutions" },
+          { src: imgExtra6, alt: "Case para TV grande formato" },
+          { src: imgExtra7, alt: "Cases modulares com espuma" },
+          { src: imgExtra8, alt: "Case personalizado Firma Prop" },
+          { src: imgExtra9, alt: "Case rack com gavetas" },
+          { src: imgExtra10, alt: "Case personalizado com logo V" },
         ]}
       />
       </div>
