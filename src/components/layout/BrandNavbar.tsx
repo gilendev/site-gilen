@@ -74,7 +74,7 @@ const BrandNavbar = ({ brandName, logoSrc, logoBgColor, backTo, backLabel, secti
 
       {/* Section nav */}
       <div className="border-t border-border/50 overflow-x-auto scrollbar-hide">
-        <div className="container mx-auto px-4 lg:px-8 flex items-center gap-1 h-10">
+        <div className="container mx-auto px-4 lg:px-8 flex items-center justify-center gap-1 h-10">
           {sections.map((section) => (
             <button
               key={section.id}
