@@ -110,25 +110,6 @@ const BrandNavbar = ({ brandName, logoSrc, logoBgColor, backTo, backLabel, secti
           </div>
         </div>
 
-        {/* Mobile section nav - horizontal scroll */}
-        <div className="md:hidden border-t border-border/50 overflow-x-auto scrollbar-hide">
-          <div className="flex items-center gap-0.5 px-3 h-10 min-w-max">
-            {sections.map((section) => (
-              <button
-                key={section.id}
-                onClick={() => handleClick(section)}
-                className={cn(
-                  "px-3 py-1.5 text-[11px] font-medium whitespace-nowrap rounded-sm transition-all",
-                  activeSection === section.id
-                    ? "text-accent-blue bg-accent-blue/10"
-                    : "text-muted-foreground"
-                )}
-              >
-                {section.label}
-              </button>
-            ))}
-          </div>
-        </div>
       </div>
 
       {/* Mobile dropdown menu overlay */}
