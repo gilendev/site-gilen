@@ -225,41 +225,17 @@ const BrandProductsLayout = ({
         </div>
 
         {/* Main content */}
-        <main className="flex-1 min-w-0 pt-14 lg:pt-0">
+        <main className="flex-1 min-w-0">
           {/* Results header */}
           <div className="px-4 lg:px-8 py-5 border-b border-border/50 bg-background sticky top-[140px] z-30">
-            <div className="flex items-center justify-between">
-              <div>
-                <h1 className="text-lg font-bold text-foreground flex items-center gap-2">
-                  {activeCategory === "todos"
-                    ? "Todos os Produtos"
-                    : categories.find(c => c.id === activeCategory)?.title || "Produtos"}
-                  <span className="text-xs font-normal text-muted-foreground bg-muted px-2 py-0.5 rounded-full">
-                    {filteredProducts.length}
-                  </span>
-                </h1>
-              </div>
-              <div className="flex items-center gap-2">
-                <button
-                  onClick={() => setViewMode("grid")}
-                  className={cn(
-                    "w-8 h-8 flex items-center justify-center rounded-lg transition-colors",
-                    viewMode === "grid" ? "bg-muted text-foreground" : "text-muted-foreground hover:text-foreground"
-                  )}
-                >
-                  <Grid3X3 size={14} />
-                </button>
-                <button
-                  onClick={() => setViewMode("large")}
-                  className={cn(
-                    "w-8 h-8 flex items-center justify-center rounded-lg transition-colors",
-                    viewMode === "large" ? "bg-muted text-foreground" : "text-muted-foreground hover:text-foreground"
-                  )}
-                >
-                  <LayoutGrid size={14} />
-                </button>
-              </div>
-            </div>
+            <h1 className="text-lg font-bold text-foreground flex items-center gap-2">
+              {activeCategory === "todos"
+                ? "Todos os Produtos"
+                : categories.find(c => c.id === activeCategory)?.title || "Produtos"}
+              <span className="text-xs font-normal text-muted-foreground bg-muted px-2 py-0.5 rounded-full">
+                {filteredProducts.length}
+              </span>
+            </h1>
           </div>
 
           {/* Product Grid */}
