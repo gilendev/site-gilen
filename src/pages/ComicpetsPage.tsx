@@ -63,26 +63,25 @@ const ComicpetsPage = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead title="Comicpets" description="Produtos criativos para pets: arranhadores, comedouros, brinquedos e casinhas com design moderno e materiais seguros." path="/comicpets" />
-      {/* Top bar */}
-      <div className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
-        <div className="container mx-auto px-4 lg:px-8 flex items-center justify-between h-16">
-          <Link to="/marcas" className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors text-sm">
-            <ArrowLeft size={16} /> Voltar para GILEN
-          </Link>
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-sm overflow-hidden" style={{ backgroundColor: '#8B7355' }}>
-              <img src={logoComicpets} alt="Comicpets" className="w-full h-full object-cover" />
-            </div>
-            <span className="font-bold text-foreground tracking-wider text-sm">COMICPETS</span>
-          </div>
-          <Link to="/contato" className="hidden sm:inline-flex items-center gap-2 px-4 py-2 bg-accent-green text-accent-green-foreground text-xs font-semibold uppercase tracking-wider rounded-sm hover:bg-accent-green/90 transition-colors">
-            Orçamento
-          </Link>
-        </div>
-      </div>
+      <BrandNavbar
+        brandName="COMICPETS"
+        logoSrc={logoComicpets}
+        logoBgColor="#8B7355"
+        backTo="/marcas"
+        backLabel="Voltar para GILEN"
+        sections={[
+          { id: "hero", label: "Início" },
+          { id: "sobre", label: "Sobre" },
+          { id: "galeria", label: "Galeria" },
+          { id: "produtos", label: "Produtos" },
+          { id: "diferenciais", label: "Diferenciais" },
+          { id: "processo", label: "Processo" },
+          { id: "contato-cta", label: "Contato" },
+        ]}
+      />
 
       {/* Hero */}
-      <section className="relative min-h-[90vh] flex items-center overflow-hidden pt-16">
+      <section id="hero" className="relative min-h-[90vh] flex items-center overflow-hidden pt-24">
         <img src={imgHero} alt="Produtos pet Comicpets" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
         <div className="container mx-auto px-4 lg:px-8 relative z-10">
@@ -109,7 +108,7 @@ const ComicpetsPage = () => {
       </section>
 
       {/* About */}
-      <section className="py-16 md:py-24 lg:py-32 bg-background">
+      <section id="sobre" className="py-16 md:py-24 lg:py-32 bg-background">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <SectionBlock>
@@ -150,6 +149,7 @@ const ComicpetsPage = () => {
       </section>
 
       {/* Carousel */}
+      <div id="galeria">
       <BrandCarousel
         accentColor="bg-accent-green"
         images={[
@@ -165,6 +165,7 @@ const ComicpetsPage = () => {
           { src: imgHero, alt: "Linha pet" },
         ]}
       />
+      </div>
 
       {/* Products */}
       <section id="produtos" ref={galleryRef} className="py-16 md:py-24 lg:py-32 bg-muted">
@@ -191,7 +192,7 @@ const ComicpetsPage = () => {
       </section>
 
       {/* Features */}
-      <section className="py-16 md:py-24 lg:py-32 bg-background">
+      <section id="diferenciais" className="py-16 md:py-24 lg:py-32 bg-background">
         <div className="container mx-auto px-4 lg:px-8">
           <SectionBlock className="text-center mb-16">
             <span className="text-xs font-semibold uppercase tracking-[0.2em] text-accent-green mb-4 block">Diferenciais</span>
@@ -214,7 +215,7 @@ const ComicpetsPage = () => {
       </section>
 
       {/* Process */}
-      <section className="py-16 md:py-24 lg:py-32 bg-graphite">
+      <section id="processo" className="py-16 md:py-24 lg:py-32 bg-graphite">
         <div className="container mx-auto px-4 lg:px-8">
           <SectionBlock className="text-center mb-16">
             <span className="text-xs font-semibold uppercase tracking-[0.2em] text-accent-green mb-4 block">Processo</span>
@@ -242,7 +243,7 @@ const ComicpetsPage = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-24 bg-background relative overflow-hidden">
+      <section id="contato-cta" className="py-24 bg-background relative overflow-hidden">
         <div className="technical-line w-full absolute top-0" />
         <div className="container mx-auto px-4 lg:px-8 relative z-10 text-center">
           <SectionBlock>
