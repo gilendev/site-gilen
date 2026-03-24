@@ -267,7 +267,6 @@ const TotensInterativosPage = () => {
           </p>
         </div>
       </footer>
-      </footer>
       <WhatsAppButton />
     </div>
   );
