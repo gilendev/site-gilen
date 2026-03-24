@@ -112,7 +112,7 @@ const BrandProductsLayout = ({
 
       <div className="pt-[140px] flex min-h-[calc(100vh-140px)]">
         {/* Premium Sidebar */}
-        <aside className="hidden lg:flex w-72 shrink-0 sticky top-16 h-[calc(100vh-4rem)] border-r border-border/50 bg-gradient-to-b from-muted/50 to-background flex-col overflow-y-auto">
+        <aside className="hidden lg:flex w-72 shrink-0 sticky top-[140px] h-[calc(100vh-140px)] border-r border-border/50 bg-gradient-to-b from-muted/50 to-background flex-col overflow-y-auto">
           <div className="p-6">
             {/* Brand Hero in Sidebar */}
             <div className="mb-6 p-4 rounded-xl bg-gradient-to-br from-graphite to-graphite/80 relative overflow-hidden">
@@ -227,7 +227,7 @@ const BrandProductsLayout = ({
         {/* Main content */}
         <main className="flex-1 min-w-0 pt-14 lg:pt-0">
           {/* Results header */}
-          <div className="px-4 lg:px-8 py-5 border-b border-border/50 bg-background sticky top-16 lg:top-16 z-30">
+          <div className="px-4 lg:px-8 py-5 border-b border-border/50 bg-background sticky top-[140px] z-30">
             <div className="flex items-center justify-between">
               <div>
                 <h1 className="text-lg font-bold text-foreground flex items-center gap-2">
