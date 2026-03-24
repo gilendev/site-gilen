@@ -11,6 +11,7 @@ import imgEstante from "@/assets/img-designkids-estante.jpg";
 import imgBrinquedo from "@/assets/img-designkids-brinquedo.jpg";
 import imgDecoracao from "@/assets/img-designkids-decoracao.jpg";
 import BrandCarousel from "@/components/BrandCarousel";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const logoDesignkids = "/lovable-uploads/16ad92e4-d27b-4d97-a111-5d128e486b17.png";
 
@@ -272,6 +273,7 @@ const DesignKidsPage = () => {
           <p className="text-primary-foreground/40 text-sm">DESIGN KIDS — Uma marca <Link to="/" className="text-steel hover:underline">GILEN Industrial</Link></p>
         </div>
       </footer>
+      <WhatsAppButton />
     </div>
   );
 };

@@ -7,62 +7,25 @@ import imgFabricacao from "@/assets/img-gourmetizze-fabricacao.jpg";
 const logoGourmetizze = "/lovable-uploads/40176074-eed2-4555-94a3-940b9c014213.png";
 
 const categories = [
-  {
-    id: "churrasqueiras",
-    title: "Churrasqueiras Modulares",
-    image: imgChurrasqueira,
-    description: "Estações de churrasco em aço inox com design modular, adaptáveis a qualquer espaço externo. Projetadas para alta performance e durabilidade.",
-    details: [
-      "Aço inox 304 de alta resistência",
-      "Design modular expansível",
-      "Grelhas removíveis e reguláveis",
-      "Compartimentos para carvão e lenha",
-      "Opções com defumador integrado",
-      "Personalização de tamanho e acabamento",
-    ],
-  },
-  {
-    id: "utensilios",
-    title: "Utensílios Gourmet",
-    image: imgUtensilios,
-    description: "Ferramentas e acessórios em metal cortados a laser, com design funcional e acabamento premium. Kits completos para o churrasco perfeito.",
-    details: [
-      "Espetos, garfos e facas em aço inox",
-      "Corte a laser de alta precisão",
-      "Cabos em madeira nobre ou polímero",
-      "Kits personalizados com gravação",
-      "Suportes e organizadores inclusos",
-      "Embalagem para presente disponível",
-    ],
-  },
-  {
-    id: "estruturas",
-    title: "Estruturas para Áreas Externas",
-    image: imgEstrutura,
-    description: "Pergolados, suportes e estruturas metálicas para espaços gourmet ao ar livre. Projetos sob medida para varandas, jardins e áreas de lazer.",
-    details: [
-      "Pergolados em aço e madeira",
-      "Bancadas e balcões para área gourmet",
-      "Suportes para coifas e exaustores",
-      "Estruturas para coberturas retráteis",
-      "Pintura eletrostática anticorrosiva",
-      "Projeto sob medida para cada espaço",
-    ],
-  },
-  {
-    id: "corte-laser",
-    title: "Corte a Laser em Metal",
-    image: imgFabricacao,
-    description: "Fabricação de peças e painéis decorativos em metal com corte a laser de alta precisão. Ideal para personalização e projetos exclusivos.",
-    details: [
-      "Corte a laser em chapas de aço, inox e alumínio",
-      "Painéis decorativos para áreas gourmet",
-      "Letreiros e logotipos personalizados",
-      "Peças de reposição sob medida",
-      "Espessuras de 0.5mm a 20mm",
-      "Acabamento com pintura ou polimento",
-    ],
-  },
+  { id: "churrasqueiras", title: "Churrasqueiras Modulares" },
+  { id: "utensilios", title: "Utensílios Gourmet" },
+  { id: "estruturas", title: "Estruturas Externas" },
+  { id: "corte-laser", title: "Corte a Laser" },
+];
+
+const products = [
+  { id: "churr-modular", name: "Churrasqueira Modular Inox", image: imgChurrasqueira, description: "Estação de churrasco em aço inox 304 com design modular e grelhas removíveis.", category: "churrasqueiras" },
+  { id: "churr-compacta", name: "Churrasqueira Compacta", image: imgChurrasqueira, description: "Modelo compacto para varandas e espaços reduzidos com a mesma qualidade.", category: "churrasqueiras" },
+  { id: "churr-defumador", name: "Churrasqueira com Defumador", image: imgChurrasqueira, description: "Churrasqueira com defumador integrado para carnes defumadas artesanais.", category: "churrasqueiras" },
+  { id: "kit-espetos", name: "Kit de Espetos Inox", image: imgUtensilios, description: "Conjunto de espetos em aço inox com cabos em madeira nobre.", category: "utensilios" },
+  { id: "kit-churrasco", name: "Kit Churrasco Completo", image: imgUtensilios, description: "Kit completo com faca, garfo, pegador e espátula em aço inox.", category: "utensilios" },
+  { id: "suporte-utens", name: "Suporte para Utensílios", image: imgUtensilios, description: "Suporte organizador em metal cortado a laser para utensílios gourmet.", category: "utensilios" },
+  { id: "pergolado", name: "Pergolado Metálico", image: imgEstrutura, description: "Pergolado em aço com pintura eletrostática para áreas gourmet.", category: "estruturas" },
+  { id: "bancada-ext", name: "Bancada Externa", image: imgEstrutura, description: "Bancada em aço inox para preparo e apoio em áreas externas.", category: "estruturas" },
+  { id: "cobertura", name: "Estrutura para Cobertura", image: imgEstrutura, description: "Estruturas metálicas para coberturas retráteis em áreas gourmet.", category: "estruturas" },
+  { id: "painel-metal", name: "Painel Decorativo Metal", image: imgFabricacao, description: "Painéis em metal com corte a laser para decoração de áreas gourmet.", category: "corte-laser" },
+  { id: "letreiro", name: "Letreiro Personalizado", image: imgFabricacao, description: "Letreiros e logotipos cortados a laser em aço ou inox.", category: "corte-laser" },
+  { id: "peca-reposicao", name: "Peças Sob Medida", image: imgFabricacao, description: "Peças de reposição e componentes cortados a laser sob encomenda.", category: "corte-laser" },
 ];
 
 const GourmetizzeProductsPage = () => (
@@ -73,10 +36,11 @@ const GourmetizzeProductsPage = () => (
     backTo="/gourmetizze"
     backLabel="Voltar para Gourmetizze"
     seoTitle="Produtos Gourmetizze"
-    seoDescription="Churrasqueiras modulares, utensílios gourmet, estruturas para áreas externas e corte a laser — conheça os produtos Gourmetizze."
+    seoDescription="Churrasqueiras modulares, utensílios gourmet, estruturas externas e corte a laser."
     seoPath="/gourmetizze/produtos"
     accentColorClass="bg-accent-blue"
     categories={categories}
+    products={products}
   />
 );
 

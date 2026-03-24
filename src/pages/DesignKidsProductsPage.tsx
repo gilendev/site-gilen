@@ -7,62 +7,26 @@ import imgDecoracao from "@/assets/img-designkids-decoracao.jpg";
 const logoDesignkids = "/lovable-uploads/16ad92e4-d27b-4d97-a111-5d128e486b17.png";
 
 const categories = [
-  {
-    id: "mesas-cadeiras",
-    title: "Mesas & Cadeiras",
-    image: imgMesa,
-    description: "Conjuntos de mesa e cadeira infantil com design lúdico, bordas arredondadas e cores vibrantes. Mobiliário ergonômico projetado para a faixa etária de 2 a 10 anos.",
-    details: [
-      "Bordas arredondadas para segurança",
-      "Alturas adequadas para cada faixa etária",
-      "Pintura com tintas ecológicas e atóxicas",
-      "Cores vibrantes e personalizáveis",
-      "MDF reforçado de alta durabilidade",
-      "Conjuntos de 2 a 6 cadeiras",
-    ],
-  },
-  {
-    id: "estantes",
-    title: "Estantes & Organizadores",
-    image: imgEstante,
-    description: "Estantes com formas criativas para organizar livros, brinquedos e objetos do quarto infantil. Design que estimula a autonomia e organização das crianças.",
-    details: [
-      "Formatos lúdicos: casinha, árvore, nuvem",
-      "Alturas acessíveis para crianças",
-      "Fixação segura na parede",
-      "Nichos e prateleiras removíveis",
-      "Cores personalizáveis",
-      "Ideal para método Montessori",
-    ],
-  },
-  {
-    id: "brinquedos",
-    title: "Brinquedos Educativos",
-    image: imgBrinquedo,
-    description: "Quebra-cabeças e brinquedos de encaixe em madeira, estimulando coordenação motora e criatividade. Produtos que unem diversão e aprendizado.",
-    details: [
-      "Quebra-cabeças temáticos em madeira",
-      "Jogos de encaixe e empilhamento",
-      "Letras e números para alfabetização",
-      "Materiais 100% atóxicos e certificados",
-      "Estimulam coordenação motora fina",
-      "Embalagem para presente disponível",
-    ],
-  },
-  {
-    id: "decoracao",
-    title: "Decoração Infantil",
-    image: imgDecoracao,
-    description: "Cabideiros, prateleiras e objetos decorativos com temas lúdicos para quartos infantis. Peças que transformam o ambiente em um espaço mágico.",
-    details: [
-      "Cabideiros com formatos divertidos",
-      "Prateleiras decorativas temáticas",
-      "Letras e nomes personalizados em MDF",
-      "Régua de crescimento decorativa",
-      "Luminárias em corte a laser",
-      "Personalização com nome da criança",
-    ],
-  },
+  { id: "mesas-cadeiras", title: "Mesas & Cadeiras" },
+  { id: "estantes", title: "Estantes & Organizadores" },
+  { id: "brinquedos", title: "Brinquedos Educativos" },
+  { id: "decoracao", title: "Decoração Infantil" },
+];
+
+const products = [
+  { id: "mesa-infantil", name: "Mesa Infantil Lúdica", image: imgMesa, description: "Mesa infantil com bordas arredondadas e pintura ecológica colorida.", category: "mesas-cadeiras" },
+  { id: "cadeira-infantil", name: "Cadeira Infantil", image: imgMesa, description: "Cadeira ergonômica infantil com encosto e assento acolchoado.", category: "mesas-cadeiras" },
+  { id: "conjunto-mesa", name: "Conjunto Mesa + 4 Cadeiras", image: imgMesa, description: "Kit completo com mesa e quatro cadeiras infantis em cores vibrantes.", category: "mesas-cadeiras" },
+  { id: "estante-casinha", name: "Estante Casinha", image: imgEstante, description: "Estante em formato de casinha para livros e brinquedos.", category: "estantes" },
+  { id: "estante-arvore", name: "Estante Árvore", image: imgEstante, description: "Estante criativa em formato de árvore com prateleiras e nichos.", category: "estantes" },
+  { id: "organizador-brinquedos", name: "Organizador de Brinquedos", image: imgEstante, description: "Organizador com caixas coloridas para brinquedos e materiais.", category: "estantes" },
+  { id: "quebra-cabeca", name: "Quebra-Cabeça em Madeira", image: imgBrinquedo, description: "Quebra-cabeça temático em MDF com peças grandes e coloridas.", category: "brinquedos" },
+  { id: "encaixe-formas", name: "Encaixe de Formas", image: imgBrinquedo, description: "Brinquedo de encaixe geométrico para coordenação motora.", category: "brinquedos" },
+  { id: "letras-numeros", name: "Kit Letras e Números", image: imgBrinquedo, description: "Kit de letras e números em MDF para alfabetização lúdica.", category: "brinquedos" },
+  { id: "cabideiro-infantil", name: "Cabideiro Infantil", image: imgDecoracao, description: "Cabideiro de parede com formatos divertidos para quarto infantil.", category: "decoracao" },
+  { id: "prateleira-nuvem", name: "Prateleira Nuvem", image: imgDecoracao, description: "Prateleira decorativa em formato de nuvem para objetos e livros.", category: "decoracao" },
+  { id: "nome-mdf", name: "Nome em MDF Personalizado", image: imgDecoracao, description: "Nome da criança em MDF cortado a laser com pintura personalizada.", category: "decoracao" },
+  { id: "regua-crescimento", name: "Régua de Crescimento", image: imgDecoracao, description: "Régua decorativa de parede para acompanhar o crescimento da criança.", category: "decoracao" },
 ];
 
 const DesignKidsProductsPage = () => (
@@ -73,10 +37,11 @@ const DesignKidsProductsPage = () => (
     backTo="/design-kids"
     backLabel="Voltar para Design Kids"
     seoTitle="Produtos Design Kids"
-    seoDescription="Mesas, estantes, brinquedos educativos e decoração infantil — conheça os produtos Design Kids."
+    seoDescription="Mesas, estantes, brinquedos educativos e decoração infantil."
     seoPath="/design-kids/produtos"
     accentColorClass="bg-accent-blue"
     categories={categories}
+    products={products}
   />
 );
 

@@ -7,62 +7,26 @@ import imgCasinha from "@/assets/img-comicpets-casinha.jpg";
 const logoComicpets = "/lovable-uploads/868a8eaf-cc9a-4482-9f91-ff11d7873809.png";
 
 const categories = [
-  {
-    id: "arranhadores",
-    title: "Arranhadores & Torres",
-    image: imgGato,
-    description: "Torres e arranhadores em madeira com design moderno, funcionais e elegantes para gatos. Estruturas que estimulam o instinto natural de escalar e arranhar.",
-    details: [
-      "Torres de 1 a 3 andares",
-      "Sisal natural de alta durabilidade",
-      "Plataformas acolchoadas removíveis",
-      "Design moderno que combina com a decoração",
-      "Estrutura em MDF reforçado",
-      "Personalização de cores e tamanhos",
-    ],
-  },
-  {
-    id: "comedouros",
-    title: "Comedouros & Bebedouros",
-    image: imgComedouro,
-    description: "Suportes elevados com design em corte a laser, ergonômicos e estilosos para cães e gatos. Projetados para a altura ideal de alimentação.",
-    details: [
-      "Suportes elevados em MDF ou metal",
-      "Design em corte a laser personalizado",
-      "Potes em inox ou cerâmica inclusos",
-      "Alturas adequadas para cada porte",
-      "Base antiderrapante",
-      "Fácil limpeza e manutenção",
-    ],
-  },
-  {
-    id: "brinquedos",
-    title: "Brinquedos & Acessórios",
-    image: imgBrinquedo,
-    description: "Brinquedos interativos e acessórios criativos fabricados com materiais seguros e duráveis. Produtos que estimulam a atividade física e mental dos pets.",
-    details: [
-      "Brinquedos de encaixe e desafio",
-      "Circuitos e trilhas para bolinhas",
-      "Materiais 100% atóxicos",
-      "Design lúdico e colorido",
-      "Resistentes a mordidas",
-      "Opções para cães e gatos",
-    ],
-  },
-  {
-    id: "casinhas",
-    title: "Casinhas & Abrigos",
-    image: imgCasinha,
-    description: "Casinhas com design contemporâneo em madeira e metal, confortáveis e resistentes. Abrigos que combinam estética moderna com o conforto do seu pet.",
-    details: [
-      "Casinhas em MDF com isolamento térmico",
-      "Design contemporâneo e minimalista",
-      "Tamanhos para cães e gatos de todos os portes",
-      "Telhado removível para limpeza",
-      "Pintura atóxica e impermeabilizada",
-      "Opções para ambientes internos e externos",
-    ],
-  },
+  { id: "arranhadores", title: "Arranhadores & Torres" },
+  { id: "comedouros", title: "Comedouros & Bebedouros" },
+  { id: "brinquedos", title: "Brinquedos & Acessórios" },
+  { id: "casinhas", title: "Casinhas & Abrigos" },
+];
+
+const products = [
+  { id: "torre-1andar", name: "Torre 1 Andar", image: imgGato, description: "Torre compacta com arranhador em sisal e plataforma acolchoada.", category: "arranhadores" },
+  { id: "torre-2andares", name: "Torre 2 Andares", image: imgGato, description: "Torre com dois níveis, tocas e arranhadores em sisal natural.", category: "arranhadores" },
+  { id: "torre-3andares", name: "Torre 3 Andares", image: imgGato, description: "Torre grande com três níveis, rede e múltiplos arranhadores.", category: "arranhadores" },
+  { id: "arranhador-parede", name: "Arranhador de Parede", image: imgGato, description: "Prateleiras e passarelas para gatos com arranhador integrado.", category: "arranhadores" },
+  { id: "comedouro-simples", name: "Comedouro Elevado Simples", image: imgComedouro, description: "Suporte elevado para um pote com design em corte a laser.", category: "comedouros" },
+  { id: "comedouro-duplo", name: "Comedouro Elevado Duplo", image: imgComedouro, description: "Suporte para dois potes (água e ração) com altura ergonômica.", category: "comedouros" },
+  { id: "bebedouro-fonte", name: "Suporte Bebedouro Fonte", image: imgComedouro, description: "Suporte para bebedouro tipo fonte com design moderno.", category: "comedouros" },
+  { id: "brinquedo-circuito", name: "Circuito de Bolinhas", image: imgBrinquedo, description: "Circuito interativo com trilhas para bolinhas em MDF.", category: "brinquedos" },
+  { id: "brinquedo-encaixe", name: "Brinquedo de Encaixe", image: imgBrinquedo, description: "Brinquedo de encaixe e desafio para estimulação mental.", category: "brinquedos" },
+  { id: "brinquedo-vareta", name: "Varetas Interativas", image: imgBrinquedo, description: "Kit de varetas com penduricalhos para brincadeiras ativas.", category: "brinquedos" },
+  { id: "casinha-mdf", name: "Casinha MDF Moderna", image: imgCasinha, description: "Casinha em MDF com design contemporâneo e telhado removível.", category: "casinhas" },
+  { id: "casinha-externa", name: "Casinha para Área Externa", image: imgCasinha, description: "Casinha impermeabilizada para uso externo com isolamento térmico.", category: "casinhas" },
+  { id: "cama-suspensa", name: "Cama Suspensa", image: imgCasinha, description: "Cama suspensa de parede para gatos com almofada removível.", category: "casinhas" },
 ];
 
 const ComicpetsProductsPage = () => (
@@ -73,10 +37,11 @@ const ComicpetsProductsPage = () => (
     backTo="/comicpets"
     backLabel="Voltar para Comicpets"
     seoTitle="Produtos Comicpets"
-    seoDescription="Arranhadores, comedouros, brinquedos e casinhas para pets — conheça os produtos Comicpets."
+    seoDescription="Arranhadores, comedouros, brinquedos e casinhas para pets."
     seoPath="/comicpets/produtos"
     accentColorClass="bg-accent-blue"
     categories={categories}
+    products={products}
   />
 );
 

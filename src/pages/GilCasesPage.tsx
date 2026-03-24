@@ -11,6 +11,7 @@ import imgSuportes from "@/assets/img-gilcase-suportes.jpg";
 import imgTotens from "@/assets/img-gilcase-totens.jpg";
 import imgFabricacao from "@/assets/img-gilcase-fabricacao.jpg";
 import BrandCarousel from "@/components/BrandCarousel";
+import WhatsAppButton from "@/components/WhatsAppButton";
 import imgCarousel1 from "@/assets/gilcase-carousel-1.png";
 import imgCarousel2 from "@/assets/gilcase-carousel-2.png";
 import imgCarousel3 from "@/assets/gilcase-carousel-3.png";
@@ -370,6 +371,7 @@ const GilCasesPage = () => {
           </p>
         </div>
       </footer>
+      <WhatsAppButton />
     </div>
   );
 };

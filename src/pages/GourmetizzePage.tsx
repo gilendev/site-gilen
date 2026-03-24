@@ -11,6 +11,7 @@ import imgUtensilios from "@/assets/img-gourmetizze-utensilios.jpg";
 import imgEstrutura from "@/assets/img-gourmetizze-estrutura.jpg";
 import imgFabricacao from "@/assets/img-gourmetizze-fabricacao.jpg";
 import BrandCarousel from "@/components/BrandCarousel";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const logoGourmetizze = "/lovable-uploads/40176074-eed2-4555-94a3-940b9c014213.png";
 
@@ -272,6 +273,7 @@ const GourmetizzePage = () => {
           <p className="text-primary-foreground/40 text-sm">GOURMETIZZE — Uma marca <Link to="/" className="text-accent hover:underline">GILEN Industrial</Link></p>
         </div>
       </footer>
+      <WhatsAppButton />
     </div>
   );
 };
