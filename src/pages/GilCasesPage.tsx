@@ -42,6 +42,16 @@ import imgExtra7 from "@/assets/gilcase-extra-7.png";
 import imgExtra8 from "@/assets/gilcase-extra-8.png";
 import imgExtra9 from "@/assets/gilcase-extra-9.png";
 import imgExtra10 from "@/assets/gilcase-extra-10.png";
+import imgExtra11 from "@/assets/gilcase-extra-11.png";
+import imgExtra12 from "@/assets/gilcase-extra-12.png";
+import imgExtra13 from "@/assets/gilcase-extra-13.png";
+import imgExtra14 from "@/assets/gilcase-extra-14.png";
+import imgExtra15 from "@/assets/gilcase-extra-15.png";
+import imgExtra16 from "@/assets/gilcase-extra-16.png";
+import imgExtra17 from "@/assets/gilcase-extra-17.png";
+import imgExtra18 from "@/assets/gilcase-extra-18.png";
+import imgExtra19 from "@/assets/gilcase-extra-19.png";
+import imgExtra20 from "@/assets/gilcase-extra-20.png";
 
 const logoGilCase = "/lovable-uploads/logo-gilcase.jpeg";
 
@@ -258,6 +268,16 @@ const GilCasesPage = () => {
           { src: imgExtra8, alt: "Case personalizado Firma Prop" },
           { src: imgExtra9, alt: "Case rack com gavetas" },
           { src: imgExtra10, alt: "Case personalizado com logo V" },
+          { src: imgExtra11, alt: "Case para TV monitor profissional" },
+          { src: imgExtra12, alt: "Case rack com equipamentos de rede" },
+          { src: imgExtra13, alt: "Case armário com rodízios" },
+          { src: imgExtra14, alt: "Case grande com compartimentos internos" },
+          { src: imgExtra15, alt: "Case para ferramentas profissionais" },
+          { src: imgExtra16, alt: "Case personalizado com logo marca" },
+          { src: imgExtra17, alt: "Case rack compacto profissional" },
+          { src: imgExtra18, alt: "Cases grandes formato letra BIS" },
+          { src: imgExtra19, alt: "Case com alça retrátil e prateleiras" },
+          { src: imgExtra20, alt: "Case para equipamento Daston" },
         ]}
       />
       </div>
