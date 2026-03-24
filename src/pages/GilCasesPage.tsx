@@ -218,6 +218,16 @@ const GilCasesPage = () => {
           { src: imgCarousel8, alt: "Case com compartimentos internos" },
           { src: imgCarousel9, alt: "Cases com divisórias" },
           { src: imgCarousel10, alt: "Case aberto preto profissional" },
+          { src: imgNew1, alt: "Cases azuis com cantoneiras" },
+          { src: imgNew2, alt: "Case personalizado com logotipo" },
+          { src: imgNew3, alt: "Kit de bags e cases para equipamentos" },
+          { src: imgNew4, alt: "Case para painel WorldSkills" },
+          { src: imgNew5, alt: "Case para teclado e periféricos" },
+          { src: imgNew6, alt: "Case aberto com espuma interna" },
+          { src: imgNew7, alt: "Case para projetor profissional" },
+          { src: imgNew8, alt: "Cases LED & CIA personalizados" },
+          { src: imgNew9, alt: "Case rack preto profissional" },
+          { src: imgNew10, alt: "Cases azuis Crialec empilhados" },
         ]}
       />
       </div>
