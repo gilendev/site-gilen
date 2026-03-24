@@ -83,6 +83,16 @@ const products = [
   { id: "case-firma-prop", name: "Case Firma Prop", image: imgExtra8, description: "Case personalizado para a empresa Firma Prop com acabamento premium em compensado preto.", category: "cases" },
   { id: "case-rack-gavetas", name: "Case Rack com Gavetas", image: imgExtra9, description: "Case formato rack com sistema de gavetas deslizantes para organização de equipamentos.", category: "cases" },
   { id: "case-logo-personalizado", name: "Case com Logo Personalizado", image: imgExtra10, description: "Case com impressão de logo do cliente em compensado preto com cantoneiras cromadas.", category: "cases" },
+  { id: "case-tv-monitor", name: "Case para TV/Monitor", image: imgExtra11, description: "Case profissional com tampa articulada para TV e monitores de grande formato com proteção interna.", category: "cases" },
+  { id: "case-rack-rede", name: "Case Rack de Rede", image: imgExtra12, description: "Case rack com rodízios para equipamentos de rede, switches e nobreaks com ventilação integrada.", category: "cases" },
+  { id: "case-armario-vertical", name: "Case Armário Vertical", image: imgExtra13, description: "Case formato armário vertical com rodízios e prateleiras internas para equipamentos médicos e laboratoriais.", category: "cases" },
+  { id: "case-grande-compartimentos", name: "Case com Compartimentos", image: imgExtra14, description: "Case grande com divisórias internas removíveis, bolsos na tampa e rodízios reforçados.", category: "cases" },
+  { id: "case-ferramentas", name: "Case para Ferramentas", image: imgExtra15, description: "Case profissional para ferramentas com organizador na tampa e compartimento inferior acolchoado.", category: "cases" },
+  { id: "case-marca-personalizada", name: "Case Marca Personalizada", image: imgExtra16, description: "Case com identidade visual personalizada da marca do cliente em compensado colorido.", category: "cases" },
+  { id: "case-rack-compacto", name: "Case Rack Compacto", image: imgExtra17, description: "Case rack compacto com tampa articulada para equipamentos de áudio e mixers.", category: "cases" },
+  { id: "case-cenografico", name: "Cases Cenográficos", image: imgExtra18, description: "Cases cenográficos de grande formato para cenários, letras e peças de comunicação visual.", category: "sob-medida" },
+  { id: "case-alca-retratil", name: "Case com Alça Retrátil", image: imgExtra19, description: "Case com alça retrátil tipo mala e prateleiras internas para transporte facilitado.", category: "cases" },
+  { id: "case-equipamento-daston", name: "Case para Equipamento Daston", image: imgExtra20, description: "Case sob medida para equipamentos Daston com fixação interna em X e rodízios.", category: "cases" },
 ];
 
 const GilCasesProductsPage = () => (
