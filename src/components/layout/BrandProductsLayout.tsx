@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import SEOHead from "@/components/SEOHead";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { FaWhatsapp } from "react-icons/fa";
+import BrandNavbar, { BrandNavSection } from "@/components/layout/BrandNavbar";
 
 export interface ProductItem {
   id: string;
