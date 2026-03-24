@@ -7,62 +7,25 @@ import imgCnc from "@/assets/img-parametrizze-cnc.jpg";
 const logoParametrizze = "/lovable-uploads/ea1780e5-8545-48a9-aaa9-051f623724db.png";
 
 const categories = [
-  {
-    id: "fachadas",
-    title: "Fachadas Paramétricas",
-    image: imgFachada,
-    description: "Revestimentos arquitetônicos com padrões orgânicos e geométricos fabricados em CNC para fachadas comerciais e residenciais. Soluções que combinam estética contemporânea com funcionalidade.",
-    details: [
-      "Padrões orgânicos e geométricos personalizados",
-      "Fabricação em CNC com precisão milimétrica",
-      "Materiais: MDF, ACM, madeira e compósitos",
-      "Projetos para fachadas comerciais e residenciais",
-      "Simulação 3D antes da produção",
-      "Instalação acompanhada por equipe técnica",
-    ],
-  },
-  {
-    id: "mobiliario",
-    title: "Mobiliário Paramétrico",
-    image: imgMobiliario,
-    description: "Estantes, mesas e peças de mobiliário com design computacional e formas orgânicas, fabricados sob medida. Cada peça é única, gerada por algoritmos paramétricos.",
-    details: [
-      "Estantes com formas orgânicas",
-      "Mesas de centro e laterais paramétricas",
-      "Balcões e recepções com design exclusivo",
-      "Materiais: MDF, madeira maciça e compensado",
-      "Personalização de dimensões e acabamento",
-      "Produção unitária ou em pequenas séries",
-    ],
-  },
-  {
-    id: "paineis",
-    title: "Painéis & Divisórias",
-    image: imgDivisoria,
-    description: "Painéis decorativos e divisórias de ambientes com padrões geométricos cortados a laser ou CNC. Soluções versáteis para interiores comerciais e residenciais.",
-    details: [
-      "Painéis decorativos para paredes e tetos",
-      "Divisórias de ambientes com transparência controlada",
-      "Corte a laser ou CNC conforme o material",
-      "Padrões personalizáveis por projeto",
-      "Opções em MDF, acrílico e metal",
-      "Ideal para escritórios, restaurantes e residências",
-    ],
-  },
-  {
-    id: "cnc",
-    title: "Fabricação CNC",
-    image: imgCnc,
-    description: "Produção de peças paramétricas com precisão industrial em diversos materiais: MDF, madeira, metal e acrílico. Usinagem computadorizada com tolerâncias rigorosas.",
-    details: [
-      "Router CNC de alta precisão",
-      "Corte, fresagem e gravação",
-      "Materiais: MDF, madeira, acrílico, alumínio",
-      "Prototipagem rápida e produção em série",
-      "Tolerâncias de até 0.1mm",
-      "Acabamento com pintura e verniz",
-    ],
-  },
+  { id: "fachadas", title: "Fachadas Paramétricas" },
+  { id: "mobiliario", title: "Mobiliário Paramétrico" },
+  { id: "paineis", title: "Painéis & Divisórias" },
+  { id: "cnc", title: "Fabricação CNC" },
+];
+
+const products = [
+  { id: "fachada-comercial", name: "Fachada Comercial", image: imgFachada, description: "Revestimento paramétrico para fachadas comerciais com padrões geométricos em CNC.", category: "fachadas" },
+  { id: "fachada-residencial", name: "Fachada Residencial", image: imgFachada, description: "Fachadas paramétricas para residências com design orgânico e contemporâneo.", category: "fachadas" },
+  { id: "fachada-acm", name: "Fachada em ACM", image: imgFachada, description: "Revestimentos em ACM com corte CNC para fachadas de alto padrão.", category: "fachadas" },
+  { id: "estante-param", name: "Estante Paramétrica", image: imgMobiliario, description: "Estantes com formas orgânicas geradas por algoritmos paramétricos.", category: "mobiliario" },
+  { id: "mesa-param", name: "Mesa Paramétrica", image: imgMobiliario, description: "Mesas de centro e laterais com design computacional único.", category: "mobiliario" },
+  { id: "balcao-param", name: "Balcão de Recepção", image: imgMobiliario, description: "Balcões e recepções com design paramétrico exclusivo sob medida.", category: "mobiliario" },
+  { id: "painel-decorativo", name: "Painel Decorativo", image: imgDivisoria, description: "Painéis decorativos com padrões geométricos cortados a laser ou CNC.", category: "paineis" },
+  { id: "divisoria-ambiente", name: "Divisória de Ambientes", image: imgDivisoria, description: "Divisórias com transparência controlada para separação de ambientes.", category: "paineis" },
+  { id: "painel-teto", name: "Painel de Teto", image: imgDivisoria, description: "Painéis paramétricos para teto com design acústico e decorativo.", category: "paineis" },
+  { id: "corte-mdf", name: "Corte CNC em MDF", image: imgCnc, description: "Usinagem de peças em MDF com precisão de até 0.1mm.", category: "cnc" },
+  { id: "corte-acrilico", name: "Corte CNC em Acrílico", image: imgCnc, description: "Corte e fresagem em acrílico para peças decorativas e funcionais.", category: "cnc" },
+  { id: "prototipo-cnc", name: "Prototipagem CNC", image: imgCnc, description: "Protótipos funcionais em diversos materiais antes da produção em série.", category: "cnc" },
 ];
 
 const ParametrizzeProductsPage = () => (
@@ -73,10 +36,11 @@ const ParametrizzeProductsPage = () => (
     backTo="/parametrizze"
     backLabel="Voltar para Parametrizze"
     seoTitle="Produtos Parametrizze"
-    seoDescription="Fachadas paramétricas, mobiliário, painéis decorativos e fabricação CNC — conheça os produtos Parametrizze."
+    seoDescription="Fachadas paramétricas, mobiliário, painéis decorativos e fabricação CNC."
     seoPath="/parametrizze/produtos"
     accentColorClass="bg-accent-blue"
     categories={categories}
+    products={products}
   />
 );
 
