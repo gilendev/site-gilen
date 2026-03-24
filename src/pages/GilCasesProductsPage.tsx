@@ -95,6 +95,7 @@ const GilCasesProductsPage = () => (
     seoDescription="Conheça a linha completa de cases, suportes, totens interativos e projetos sob medida da Gil Cases."
     seoPath="/gil-cases/produtos"
     accentColorClass="bg-accent-blue"
+    wrapperClassName="gilcase-brand"
     categories={categories}
     products={products}
     navSections={[
