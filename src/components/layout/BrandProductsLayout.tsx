@@ -1,16 +1,23 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import SEOHead from "@/components/SEOHead";
+import WhatsAppButton from "@/components/WhatsAppButton";
+
+export interface ProductItem {
+  id: string;
+  name: string;
+  image: string;
+  description: string;
+  category: string;
+}
 
 export interface ProductCategory {
   id: string;
   title: string;
-  description: string;
-  image: string;
-  details?: string[];
+  icon?: string;
 }
 
 interface BrandProductsLayoutProps {
@@ -24,6 +31,7 @@ interface BrandProductsLayoutProps {
   seoPath: string;
   accentColorClass: string;
   categories: ProductCategory[];
+  products: ProductItem[];
 }
 
 const BrandProductsLayout = ({
@@ -37,34 +45,20 @@ const BrandProductsLayout = ({
   seoPath,
   accentColorClass,
   categories,
+  products,
 }: BrandProductsLayoutProps) => {
-  const [activeCategory, setActiveCategory] = useState(categories[0]?.id || "");
+  const [activeCategory, setActiveCategory] = useState<string>("todos");
+  const [searchQuery, setSearchQuery] = useState("");
 
-  useEffect(() => {
-    const handleScroll = () => {
-      let current = categories[0]?.id || "";
-      for (const cat of categories) {
-        const el = document.getElementById(cat.id);
-        if (el) {
-          const rect = el.getBoundingClientRect();
-          if (rect.top <= 160) {
-            current = cat.id;
-          }
-        }
-      }
-      setActiveCategory(current);
-    };
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    handleScroll();
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [categories]);
+  const filteredProducts = products.filter((p) => {
+    const matchesCategory = activeCategory === "todos" || p.category === activeCategory;
+    const matchesSearch = p.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      p.description.toLowerCase().includes(searchQuery.toLowerCase());
+    return matchesCategory && matchesSearch;
+  });
 
-  const scrollTo = (id: string) => {
-    const el = document.getElementById(id);
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-  };
+  const whatsappMessage = `Olá! Gostaria de saber mais sobre os produtos ${brandName}.`;
+  const whatsappUrl = `https://wa.me/5511968756430?text=${encodeURIComponent(whatsappMessage)}`;
 
   return (
     <div className="min-h-screen bg-background">
@@ -84,49 +78,93 @@ const BrandProductsLayout = ({
             </div>
             <span className="font-bold text-foreground tracking-wider text-xs sm:text-sm">{brandName} — Produtos</span>
           </div>
-          <Link to="/contato" className="hidden sm:inline-flex items-center gap-2 px-4 py-2 bg-accent-blue text-accent-blue-foreground text-xs font-semibold uppercase tracking-wider rounded-sm hover:bg-accent-blue/90 transition-colors">
+          <a
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden sm:inline-flex items-center gap-2 px-4 py-2 bg-[#25D366] text-white text-xs font-semibold uppercase tracking-wider rounded-sm hover:bg-[#20bd5a] transition-colors"
+          >
             Orçamento
-          </Link>
+          </a>
           <div className="sm:hidden w-8" />
         </div>
       </div>
 
-      <div className="pt-14 flex">
+      <div className="pt-14 flex min-h-[calc(100vh-3.5rem)]">
         {/* Sidebar */}
-        <aside className="hidden lg:block w-64 shrink-0 sticky top-14 h-[calc(100vh-3.5rem)] border-r border-border bg-muted/30 overflow-y-auto">
-          <div className="p-6">
+        <aside className="hidden lg:flex w-64 shrink-0 sticky top-14 h-[calc(100vh-3.5rem)] border-r border-border bg-muted/30 flex-col overflow-y-auto">
+          <div className="p-5">
             <h3 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-4">Categorias</h3>
-            <nav className="flex flex-col gap-1">
-              {categories.map((cat) => (
-                <button
-                  key={cat.id}
-                  onClick={() => scrollTo(cat.id)}
-                  className={cn(
-                    "text-left px-3 py-2.5 rounded-sm text-sm font-medium transition-colors",
-                    activeCategory === cat.id
-                      ? `${accentColorClass} text-white`
-                      : "text-muted-foreground hover:text-foreground hover:bg-muted"
-                  )}
-                >
-                  {cat.title}
-                </button>
-              ))}
+            <nav className="flex flex-col gap-0.5">
+              <button
+                onClick={() => setActiveCategory("todos")}
+                className={cn(
+                  "text-left px-3 py-2.5 rounded-sm text-sm font-medium transition-colors flex items-center justify-between",
+                  activeCategory === "todos"
+                    ? `${accentColorClass} text-white`
+                    : "text-muted-foreground hover:text-foreground hover:bg-muted"
+                )}
+              >
+                Todos os Produtos
+                <span className="text-xs opacity-70">{products.length}</span>
+              </button>
+              {categories.map((cat) => {
+                const count = products.filter(p => p.category === cat.id).length;
+                return (
+                  <button
+                    key={cat.id}
+                    onClick={() => setActiveCategory(cat.id)}
+                    className={cn(
+                      "text-left px-3 py-2.5 rounded-sm text-sm font-medium transition-colors flex items-center justify-between",
+                      activeCategory === cat.id
+                        ? `${accentColorClass} text-white`
+                        : "text-muted-foreground hover:text-foreground hover:bg-muted"
+                    )}
+                  >
+                    {cat.title}
+                    <span className="text-xs opacity-70">{count}</span>
+                  </button>
+                );
+              })}
             </nav>
+          </div>
+
+          {/* Sidebar CTA */}
+          <div className="mt-auto p-5 border-t border-border">
+            <a
+              href={whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={cn("block text-center px-4 py-3 text-xs font-semibold uppercase tracking-wider rounded-sm transition-colors text-white bg-[#25D366] hover:bg-[#20bd5a]")}
+            >
+              Solicitar Orçamento
+            </a>
           </div>
         </aside>
 
         {/* Mobile category bar */}
         <div className="lg:hidden fixed top-14 left-0 right-0 z-40 bg-background/95 backdrop-blur-md border-b border-border overflow-x-auto scrollbar-hide">
-          <div className="flex items-center gap-1 px-4 h-10">
+          <div className="flex items-center gap-1 px-4 h-11">
+            <button
+              onClick={() => setActiveCategory("todos")}
+              className={cn(
+                "px-3 py-1.5 text-xs font-medium whitespace-nowrap rounded-full transition-colors",
+                activeCategory === "todos"
+                  ? `${accentColorClass} text-white`
+                  : "text-muted-foreground hover:text-foreground bg-muted/50"
+              )}
+            >
+              Todos
+            </button>
             {categories.map((cat) => (
               <button
                 key={cat.id}
-                onClick={() => scrollTo(cat.id)}
+                onClick={() => setActiveCategory(cat.id)}
                 className={cn(
-                  "px-3 py-1.5 text-xs font-medium whitespace-nowrap rounded-sm transition-colors",
+                  "px-3 py-1.5 text-xs font-medium whitespace-nowrap rounded-full transition-colors",
                   activeCategory === cat.id
-                    ? "text-accent-blue bg-accent-blue/10"
-                    : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
+                    ? `${accentColorClass} text-white`
+                    : "text-muted-foreground hover:text-foreground bg-muted/50"
                 )}
               >
                 {cat.title}
@@ -136,53 +174,81 @@ const BrandProductsLayout = ({
         </div>
 
         {/* Main content */}
-        <main className="flex-1 min-w-0 lg:pt-0 pt-10">
-          {categories.map((cat, index) => (
-            <section key={cat.id} id={cat.id} className={cn("py-16 md:py-24 px-4 lg:px-12", index % 2 === 1 && "bg-muted/30")}>
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-80px" }}
-                transition={{ duration: 0.5 }}
-              >
-                <div className="max-w-4xl">
-                  <span className={cn("text-xs font-semibold uppercase tracking-[0.2em] mb-3 block", `text-accent-blue`)}>
-                    {brandName}
-                  </span>
-                  <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">{cat.title}</h2>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
-                    <div className="rounded-sm overflow-hidden">
-                      <img src={cat.image} alt={cat.title} className="w-full h-64 md:h-80 object-cover" />
+        <main className="flex-1 min-w-0 pt-12 lg:pt-0">
+          {/* Search & results header */}
+          <div className="px-4 lg:px-8 py-6 border-b border-border bg-muted/20">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+              <div>
+                <h1 className="text-xl font-bold text-foreground">
+                  {activeCategory === "todos"
+                    ? "Todos os Produtos"
+                    : categories.find(c => c.id === activeCategory)?.title || "Produtos"}
+                </h1>
+                <p className="text-sm text-muted-foreground mt-1">
+                  {filteredProducts.length} {filteredProducts.length === 1 ? "produto encontrado" : "produtos encontrados"}
+                </p>
+              </div>
+              <input
+                type="text"
+                placeholder="Buscar produtos..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full sm:w-64 px-4 py-2 text-sm rounded-sm border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-accent-blue"
+              />
+            </div>
+          </div>
+
+          {/* Product Grid */}
+          <div className="px-4 lg:px-8 py-8">
+            {filteredProducts.length === 0 ? (
+              <div className="text-center py-20">
+                <p className="text-muted-foreground">Nenhum produto encontrado.</p>
+              </div>
+            ) : (
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+                {filteredProducts.map((product, index) => (
+                  <motion.div
+                    key={product.id}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.3, delay: index * 0.05 }}
+                    className="group bg-card border border-border rounded-sm overflow-hidden hover:shadow-lg hover:border-accent-blue/30 transition-all duration-300"
+                  >
+                    <div className="aspect-square overflow-hidden bg-muted">
+                      <img
+                        src={product.image}
+                        alt={product.name}
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
                     </div>
-                    <div>
-                      <p className="text-muted-foreground leading-relaxed mb-6 text-justify">{cat.description}</p>
-                      {cat.details && cat.details.length > 0 && (
-                        <ul className="space-y-2">
-                          {cat.details.map((detail, i) => (
-                            <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
-                              <span className={cn("w-1.5 h-1.5 rounded-full mt-1.5 shrink-0", accentColorClass)} />
-                              {detail}
-                            </li>
-                          ))}
-                        </ul>
-                      )}
-                      <Link
-                        to="/contato"
+                    <div className="p-4">
+                      <span className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">
+                        {categories.find(c => c.id === product.category)?.title}
+                      </span>
+                      <h3 className="text-sm font-semibold text-foreground mt-1 line-clamp-2">{product.name}</h3>
+                      <p className="text-xs text-muted-foreground mt-2 line-clamp-3">{product.description}</p>
+                      <a
+                        href={`https://wa.me/5511968756430?text=${encodeURIComponent(`Olá! Gostaria de um orçamento para: ${product.name} (${brandName})`)}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className={cn(
-                          "inline-flex items-center gap-2 mt-6 px-6 py-2.5 text-xs font-semibold uppercase tracking-wider rounded-sm transition-colors text-white",
-                          accentColorClass, `hover:opacity-90`
+                          "inline-flex items-center gap-1.5 mt-4 px-4 py-2 text-[10px] font-semibold uppercase tracking-wider rounded-sm transition-colors text-white w-full justify-center",
+                          "bg-[#25D366] hover:bg-[#20bd5a]"
                         )}
                       >
                         Solicitar Orçamento
-                      </Link>
+                        <ArrowRight size={12} />
+                      </a>
                     </div>
-                  </div>
-                </div>
-              </motion.div>
-            </section>
-          ))}
+                  </motion.div>
+                ))}
+              </div>
+            )}
+          </div>
         </main>
       </div>
+
+      <WhatsAppButton />
     </div>
   );
 };
