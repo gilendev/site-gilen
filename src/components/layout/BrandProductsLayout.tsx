@@ -193,36 +193,8 @@ const BrandProductsLayout = ({
           </div>
         </aside>
 
-        {/* Mobile category bar */}
-        <div className="lg:hidden fixed top-16 left-0 right-0 z-40 bg-background/95 backdrop-blur-xl border-b border-border/50">
-          <div className="flex items-center gap-1.5 px-4 py-2.5 overflow-x-auto scrollbar-hide">
-            <button
-              onClick={() => setActiveCategory("todos")}
-              className={cn(
-                "px-4 py-2 text-xs font-semibold whitespace-nowrap rounded-full transition-all",
-                activeCategory === "todos"
-                  ? `${accentColorClass} text-white shadow-md`
-                  : "text-muted-foreground bg-muted/50 hover:bg-muted"
-              )}
-            >
-              Todos ({products.length})
-            </button>
-            {categories.map((cat) => (
-              <button
-                key={cat.id}
-                onClick={() => setActiveCategory(cat.id)}
-                className={cn(
-                  "px-4 py-2 text-xs font-semibold whitespace-nowrap rounded-full transition-all",
-                  activeCategory === cat.id
-                    ? `${accentColorClass} text-white shadow-md`
-                    : "text-muted-foreground bg-muted/50 hover:bg-muted"
-                )}
-              >
-                {cat.title}
-              </button>
-            ))}
-          </div>
-        </div>
+
+
 
         {/* Main content */}
         <main className="flex-1 min-w-0">
