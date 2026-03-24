@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight, ArrowLeft, Monitor, Smartphone, Zap, Store, Star, Settings } from "lucide-react";
 import BrandNavbar from "@/components/layout/BrandNavbar";
 import { Button } from "@/components/ui/button";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 import imgDrogal from "@/assets/img-totem-drogal.png";
 import imgEletroposto from "@/assets/img-totem-eletroposto.png";
@@ -266,6 +267,8 @@ const TotensInterativosPage = () => {
           </p>
         </div>
       </footer>
+      </footer>
+      <WhatsAppButton />
     </div>
   );
 };
