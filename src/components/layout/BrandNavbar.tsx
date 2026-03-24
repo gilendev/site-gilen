@@ -97,7 +97,6 @@ const BrandNavbar = ({ brandName, logoSrc, logoBgColor, backTo, backLabel, secti
         </div>
       </div>
     </div>
-    </div>
   );
 };
 
