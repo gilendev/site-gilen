@@ -100,7 +100,7 @@ const BrandProductsLayout = ({
               placeholder="Buscar produtos por nome ou descrição..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-10 pr-10 py-2 bg-muted border border-border rounded-sm text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-${colorToken}/50 focus:border-transparent transition-all"
+              className="w-full pl-10 pr-10 py-2 bg-muted border border-border rounded-sm text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent-blue/50 focus:border-transparent transition-all"
             />
             {searchQuery && (
               <button onClick={() => setSearchQuery("")} className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground">
@@ -109,10 +109,10 @@ const BrandProductsLayout = ({
             )}
           </div>
           <div className="flex items-center gap-2">
-            <button onClick={() => setViewMode("grid")} className={cn("w-8 h-8 flex items-center justify-center rounded-sm transition-colors", viewMode === "grid" ? `bg-${colorToken} text-${colorToken}-foreground` : "text-muted-foreground hover:text-foreground hover:bg-muted")}>
+            <button onClick={() => setViewMode("grid")} className={cn("w-8 h-8 flex items-center justify-center rounded-sm transition-colors", viewMode === "grid" ? `bg-accent-blue text-accent-blue-foreground` : "text-muted-foreground hover:text-foreground hover:bg-muted")}>
               <Grid3X3 size={14} />
             </button>
-            <button onClick={() => setViewMode("large")} className={cn("w-8 h-8 flex items-center justify-center rounded-sm transition-colors", viewMode === "large" ? `bg-${colorToken} text-${colorToken}-foreground` : "text-muted-foreground hover:text-foreground hover:bg-muted")}>
+            <button onClick={() => setViewMode("large")} className={cn("w-8 h-8 flex items-center justify-center rounded-sm transition-colors", viewMode === "large" ? `bg-accent-blue text-accent-blue-foreground` : "text-muted-foreground hover:text-foreground hover:bg-muted")}>
               <LayoutGrid size={14} />
             </button>
           </div>
@@ -125,7 +125,7 @@ const BrandProductsLayout = ({
           <div className="p-6">
             {/* Brand Hero in Sidebar */}
             <div className="mb-6 p-4 rounded-xl bg-gradient-to-br from-graphite to-graphite/80 relative overflow-hidden">
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_hsl(var(--${colorToken})/0.15),transparent_70%)]" />
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_hsl(var(--accent-blue)/0.15),transparent_70%)]" />
               <div className="relative z-10">
                 <div className={cn("w-12 h-12 rounded-xl overflow-hidden mb-3 ring-2 ring-white/10", !logoBgColor && "bg-white")}
                   style={logoBgColor ? { backgroundColor: logoBgColor } : undefined}>
@@ -147,7 +147,7 @@ const BrandProductsLayout = ({
                 className={cn(
                   "text-left px-4 py-3 rounded-xl text-sm font-medium transition-all flex items-center justify-between group",
                   activeCategory === "todos"
-                    ? `${accentColorClass} text-white shadow-lg shadow-${colorToken}/20`
+                    ? `${accentColorClass} text-white shadow-lg shadow-accent-blue/20`
                     : "text-muted-foreground hover:text-foreground hover:bg-muted/80"
                 )}
               >
@@ -169,7 +169,7 @@ const BrandProductsLayout = ({
                     className={cn(
                       "text-left px-4 py-3 rounded-xl text-sm font-medium transition-all flex items-center justify-between group",
                       activeCategory === cat.id
-                        ? `${accentColorClass} text-white shadow-lg shadow-${colorToken}/20`
+                        ? `${accentColorClass} text-white shadow-lg shadow-accent-blue/20`
                         : "text-muted-foreground hover:text-foreground hover:bg-muted/80"
                     )}
                   >
@@ -248,7 +248,7 @@ const BrandProductsLayout = ({
                       transition={{ duration: 0.3, delay: index * 0.03 }}
                       onMouseEnter={() => setHoveredProduct(product.id)}
                       onMouseLeave={() => setHoveredProduct(null)}
-                      className="group relative bg-card rounded-xl overflow-hidden border border-border/50 hover:border-${colorToken}/30 hover:shadow-xl hover:shadow-${colorToken}/5 transition-all duration-500"
+                      className="group relative bg-card rounded-xl overflow-hidden border border-border/50 hover:border-accent-blue/30 hover:shadow-xl hover:shadow-accent-blue/5 transition-all duration-500"
                     >
                       {/* Image */}
                       <div className={cn(
@@ -292,14 +292,14 @@ const BrandProductsLayout = ({
 
                       {/* Info */}
                       <div className="p-4">
-                        <h3 className="text-sm font-bold text-foreground line-clamp-2 group-hover:text-${colorToken} transition-colors">
+                        <h3 className="text-sm font-bold text-foreground line-clamp-2 group-hover:text-accent-blue transition-colors">
                           {product.name}
                         </h3>
                         <p className="text-xs text-muted-foreground mt-2 line-clamp-2 leading-relaxed">
                           {product.description}
                         </p>
                         <div className="mt-3 pt-3 border-t border-border/50 flex items-center justify-between">
-                          <span className="text-[10px] font-semibold text-${colorToken} uppercase tracking-wider">
+                          <span className="text-[10px] font-semibold text-accent-blue uppercase tracking-wider">
                             Sob consulta
                           </span>
                           <button
@@ -357,7 +357,7 @@ const BrandProductsLayout = ({
                 {/* Details */}
                 <div className="p-6 md:p-8 flex flex-col">
                   <div className="flex-1">
-                    <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-${colorToken}">{brandName}</span>
+                    <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-accent-blue">{brandName}</span>
                     <h2 className="text-xl md:text-2xl font-bold text-foreground mt-2 leading-tight">
                       {selectedProduct.name}
                     </h2>
@@ -367,15 +367,15 @@ const BrandProductsLayout = ({
 
                     <div className="mt-6 space-y-3">
                       <div className="flex items-center gap-3 text-sm">
-                        <div className="w-1.5 h-1.5 rounded-full bg-${colorToken} shrink-0" />
+                        <div className="w-1.5 h-1.5 rounded-full bg-accent-blue shrink-0" />
                         <span className="text-muted-foreground">Fabricação sob medida</span>
                       </div>
                       <div className="flex items-center gap-3 text-sm">
-                        <div className="w-1.5 h-1.5 rounded-full bg-${colorToken} shrink-0" />
+                        <div className="w-1.5 h-1.5 rounded-full bg-accent-blue shrink-0" />
                         <span className="text-muted-foreground">Materiais de alta qualidade</span>
                       </div>
                       <div className="flex items-center gap-3 text-sm">
-                        <div className="w-1.5 h-1.5 rounded-full bg-${colorToken} shrink-0" />
+                        <div className="w-1.5 h-1.5 rounded-full bg-accent-blue shrink-0" />
                         <span className="text-muted-foreground">Garantia de fábrica</span>
                       </div>
                     </div>
