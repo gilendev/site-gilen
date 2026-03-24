@@ -260,7 +260,7 @@ const GilCasesPage = () => {
           { src: imgNew6, alt: "Case aberto com espuma interna" },
           { src: imgNew7, alt: "Case para projetor profissional" },
           { src: imgNew8, alt: "Cases LED & CIA personalizados" },
-          { src: imgNew9, alt: "Case rack preto profissional" },
+          
           { src: imgNew10, alt: "Cases azuis Crialec empilhados" },
           { src: imgExtra1, alt: "Case aberto compensado branco" },
           { src: imgExtra2, alt: "Case para teclado musical" },
