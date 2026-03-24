@@ -261,6 +261,11 @@ const GilCasesPage = () => {
               </motion.div>
             ))}
           </div>
+          <div className="text-center mt-10">
+            <Link to="/gil-cases/produtos" className="inline-flex items-center gap-2 px-8 py-3 bg-accent-blue text-accent-blue-foreground font-semibold text-sm uppercase tracking-wider rounded-sm hover:bg-accent-blue/90 transition-colors">
+              Ver Todos os Produtos <ArrowRight size={16} />
+            </Link>
+          </div>
         </div>
       </section>
 

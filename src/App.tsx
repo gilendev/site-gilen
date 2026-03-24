@@ -19,6 +19,11 @@ import ComicpetsPage from "./pages/ComicpetsPage";
 import DesignKidsPage from "./pages/DesignKidsPage";
 import GilCasesPage from "./pages/GilCasesPage";
 import TotensInterativosPage from "./pages/TotensInterativosPage";
+import GilCasesProductsPage from "./pages/GilCasesProductsPage";
+import ParametrizzeProductsPage from "./pages/ParametrizzeProductsPage";
+import GourmetizzeProductsPage from "./pages/GourmetizzeProductsPage";
+import ComicpetsProductsPage from "./pages/ComicpetsProductsPage";
+import DesignKidsProductsPage from "./pages/DesignKidsProductsPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -46,6 +51,11 @@ const App = () => (
               <Route path="/design-kids" element={<DesignKidsPage />} />
               <Route path="/gil-cases" element={<GilCasesPage />} />
               <Route path="/totens-interativos" element={<TotensInterativosPage />} />
+              <Route path="/gil-cases/produtos" element={<GilCasesProductsPage />} />
+              <Route path="/parametrizze/produtos" element={<ParametrizzeProductsPage />} />
+              <Route path="/gourmetizze/produtos" element={<GourmetizzeProductsPage />} />
+              <Route path="/comicpets/produtos" element={<ComicpetsProductsPage />} />
+              <Route path="/design-kids/produtos" element={<DesignKidsProductsPage />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </BrowserRouter>

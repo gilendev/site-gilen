@@ -188,6 +188,11 @@ const DesignKidsPage = () => {
               </motion.div>
             ))}
           </div>
+          <div className="text-center mt-10">
+            <Link to="/design-kids/produtos" className="inline-flex items-center gap-2 px-8 py-3 bg-steel text-white font-semibold text-sm uppercase tracking-wider rounded-sm hover:bg-steel/90 transition-colors">
+              Ver Todos os Produtos <ArrowRight size={16} />
+            </Link>
+          </div>
         </div>
       </section>
 
