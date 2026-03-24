@@ -34,6 +34,7 @@ interface BrandProductsLayoutProps {
   accentColorClass: string;
   categories: ProductCategory[];
   products: ProductItem[];
+  navSections: BrandNavSection[];
 }
 
 const BrandProductsLayout = ({
