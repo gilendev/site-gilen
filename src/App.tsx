@@ -51,6 +51,11 @@ const App = () => (
               <Route path="/design-kids" element={<DesignKidsPage />} />
               <Route path="/gil-cases" element={<GilCasesPage />} />
               <Route path="/totens-interativos" element={<TotensInterativosPage />} />
+              <Route path="/gil-cases/produtos" element={<GilCasesProductsPage />} />
+              <Route path="/parametrizze/produtos" element={<ParametrizzeProductsPage />} />
+              <Route path="/gourmetizze/produtos" element={<GourmetizzeProductsPage />} />
+              <Route path="/comicpets/produtos" element={<ComicpetsProductsPage />} />
+              <Route path="/design-kids/produtos" element={<DesignKidsProductsPage />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </BrowserRouter>
