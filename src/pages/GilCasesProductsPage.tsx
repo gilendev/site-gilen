@@ -48,6 +48,15 @@ const GilCasesProductsPage = () => (
     accentColorClass="bg-accent-blue"
     categories={categories}
     products={products}
+    navSections={[
+      { id: "hero", label: "Início", href: "/gil-cases" },
+      { id: "sobre", label: "Sobre", href: "/gil-cases" },
+      { id: "galeria", label: "Galeria", href: "/gil-cases" },
+      { id: "produtos", label: "Produtos", href: "/gil-cases/produtos" },
+      { id: "diferenciais", label: "Diferenciais", href: "/gil-cases" },
+      { id: "processo", label: "Processo", href: "/gil-cases" },
+      { id: "contato-cta", label: "Contato", href: "/gil-cases" },
+    ]}
   />
 );
 

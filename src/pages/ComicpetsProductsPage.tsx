@@ -42,6 +42,15 @@ const ComicpetsProductsPage = () => (
     accentColorClass="bg-accent-blue"
     categories={categories}
     products={products}
+    navSections={[
+      { id: "hero", label: "Início", href: "/comicpets" },
+      { id: "sobre", label: "Sobre", href: "/comicpets" },
+      { id: "galeria", label: "Galeria", href: "/comicpets" },
+      { id: "produtos", label: "Produtos", href: "/comicpets/produtos" },
+      { id: "diferenciais", label: "Diferenciais", href: "/comicpets" },
+      { id: "processo", label: "Processo", href: "/comicpets" },
+      { id: "contato-cta", label: "Contato", href: "/comicpets" },
+    ]}
   />
 );
 

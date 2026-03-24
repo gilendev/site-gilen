@@ -41,6 +41,15 @@ const GourmetizzeProductsPage = () => (
     accentColorClass="bg-accent-blue"
     categories={categories}
     products={products}
+    navSections={[
+      { id: "hero", label: "Início", href: "/gourmetizze" },
+      { id: "sobre", label: "Sobre", href: "/gourmetizze" },
+      { id: "galeria", label: "Galeria", href: "/gourmetizze" },
+      { id: "produtos", label: "Produtos", href: "/gourmetizze/produtos" },
+      { id: "diferenciais", label: "Diferenciais", href: "/gourmetizze" },
+      { id: "processo", label: "Processo", href: "/gourmetizze" },
+      { id: "contato-cta", label: "Contato", href: "/gourmetizze" },
+    ]}
   />
 );
 

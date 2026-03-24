@@ -49,6 +49,7 @@ const BrandProductsLayout = ({
   accentColorClass,
   categories,
   products,
+  navSections,
 }: BrandProductsLayoutProps) => {
   const [activeCategory, setActiveCategory] = useState<string>("todos");
   const [searchQuery, setSearchQuery] = useState("");
