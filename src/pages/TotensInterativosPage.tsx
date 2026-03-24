@@ -2,7 +2,8 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import SEOHead from "@/components/SEOHead";
 import { Link } from "react-router-dom";
-import { ArrowLeft, ArrowRight, Monitor, Smartphone, Zap, Store, Star, Settings } from "lucide-react";
+import { ArrowRight, ArrowLeft, Monitor, Smartphone, Zap, Store, Star, Settings } from "lucide-react";
+import BrandNavbar from "@/components/layout/BrandNavbar";
 import { Button } from "@/components/ui/button";
 
 import imgDrogal from "@/assets/img-totem-drogal.png";
@@ -72,30 +73,21 @@ const TotensInterativosPage = () => {
         path="/totens-interativos"
       />
 
-      {/* Top bar */}
-      <div className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
-        <div className="container mx-auto px-4 lg:px-8 flex items-center justify-between h-16">
-          <Link to="/gil-cases" className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors text-sm">
-            <ArrowLeft size={16} />
-            Voltar para Gil Cases
-          </Link>
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-sm overflow-hidden bg-white">
-              <img src={logoGilCase} alt="Gil Case" className="w-full h-full object-contain" />
-            </div>
-            <span className="font-bold text-foreground tracking-wider text-sm">TOTENS INTERATIVOS</span>
-          </div>
-          <Link
-            to="/contato"
-            className="hidden sm:inline-flex items-center gap-2 px-4 py-2 bg-accent-blue text-accent-blue-foreground text-xs font-semibold uppercase tracking-wider rounded-sm hover:bg-accent-blue/90 transition-colors"
-          >
-            Orçamento
-          </Link>
-        </div>
-      </div>
+      <BrandNavbar
+        brandName="TOTENS INTERATIVOS"
+        logoSrc={logoGilCase}
+        backTo="/gil-cases"
+        backLabel="Voltar para Gil Cases"
+        sections={[
+          { id: "hero", label: "Início" },
+          { id: "galeria", label: "Galeria" },
+          { id: "diferenciais", label: "Diferenciais" },
+          { id: "contato-cta", label: "Contato" },
+        ]}
+      />
 
       {/* Hero */}
-      <section className="relative min-h-[80vh] flex items-center overflow-hidden pt-16 bg-graphite">
+      <section id="hero" className="relative min-h-[80vh] flex items-center overflow-hidden pt-24 bg-graphite">
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60" />
         <div className="container mx-auto px-4 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -208,7 +200,7 @@ const TotensInterativosPage = () => {
       </section>
 
       {/* Features */}
-      <section className="py-16 md:py-24 lg:py-32 bg-muted">
+      <section id="diferenciais" className="py-16 md:py-24 lg:py-32 bg-muted">
         <div className="container mx-auto px-4 lg:px-8">
           <SectionBlock className="text-center mb-16">
             <span className="text-xs font-semibold uppercase tracking-[0.2em] text-accent-blue mb-4 block">
@@ -236,7 +228,7 @@ const TotensInterativosPage = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-24 bg-background relative overflow-hidden">
+      <section id="contato-cta" className="py-24 bg-background relative overflow-hidden">
         <div className="technical-line w-full absolute top-0" />
         <div className="container mx-auto px-4 lg:px-8 relative z-10 text-center">
           <SectionBlock>
