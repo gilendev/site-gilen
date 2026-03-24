@@ -81,7 +81,7 @@ const products = [
   { id: "case-mesa-som", name: "Case para Mesa de Som", image: imgNew6, description: "Case com tampa articulada e espuma interna para mesas de som profissionais.", category: "cases" },
   { id: "case-projetor", name: "Case para Projetor", image: imgNew7, description: "Case robusto para projetores profissionais de grande porte com berço sob medida.", category: "cases" },
   { id: "case-led-cia", name: "Case para Iluminação LED", image: imgNew8, description: "Cases personalizados para equipamentos de LED com espuma ondulada interna.", category: "cases" },
-  { id: "case-rack", name: "Case Rack", image: imgNew9, description: "Case formato rack para equipamentos de som e amplificadores com ventilação.", category: "cases" },
+  
   { id: "case-empilhavel", name: "Case Empilhável", image: imgNew10, description: "Cases com sistema de empilhamento seguro e rodízios para transporte facilitado.", category: "cases" },
   { id: "case-azul", name: "Cases Linha Azul", image: imgNew1, description: "Linha de cases em compensado azul com cantoneiras reforçadas em alumínio.", category: "cases" },
   { id: "projeto-especial", name: "Projeto Especial", image: imgFabricacao, description: "Cases e estruturas especiais sob medida com engenharia dedicada.", category: "sob-medida" },
