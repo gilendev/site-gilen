@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import ChatBot from "@/components/ChatBot";
 import Index from "./pages/Index";
 import EmpresaPage from "./pages/EmpresaPage";
 import SolucoesPage from "./pages/SolucoesPage";
@@ -58,6 +59,7 @@ const App = () => (
               <Route path="/design-kids/produtos" element={<DesignKidsProductsPage />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
+            <ChatBot />
           </BrowserRouter>
         </TooltipProvider>
       </QueryClientProvider>

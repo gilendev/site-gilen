@@ -7,6 +7,13 @@ import ProjetosSection from "@/components/sections/ProjetosSection";
 import MarcasSection from "@/components/sections/MarcasSection";
 import ProjetosEspeciaisSection from "@/components/sections/ProjetosEspeciaisSection";
 import ContatoSection from "@/components/sections/ContatoSection";
+import AnimatedCounters from "@/components/sections/AnimatedCounters";
+import FAQSection from "@/components/sections/FAQSection";
+import TestimonialsSection from "@/components/sections/TestimonialsSection";
+import CertificationsSection from "@/components/sections/CertificationsSection";
+import BlogSection from "@/components/sections/BlogSection";
+import PortfolioSection from "@/components/sections/PortfolioSection";
+import QuoteCalculator from "@/components/sections/QuoteCalculator";
 import SEOHead from "@/components/SEOHead";
 
 const Index = () => {
@@ -19,11 +26,17 @@ const Index = () => {
       />
       <HeroSection />
       <EmpresaSection />
+      <AnimatedCounters />
       <MarcasSection />
       <TecnologiaSection />
-      <ProjetosSection />
+      <PortfolioSection />
       <SolucoesSection />
+      <TestimonialsSection />
       <ProjetosEspeciaisSection />
+      <QuoteCalculator />
+      <CertificationsSection />
+      <BlogSection />
+      <FAQSection />
       <ContatoSection />
     </Layout>
   );
