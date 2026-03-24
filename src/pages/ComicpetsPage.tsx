@@ -188,6 +188,11 @@ const ComicpetsPage = () => {
               </motion.div>
             ))}
           </div>
+          <div className="text-center mt-10">
+            <Link to="/comicpets/produtos" className="inline-flex items-center gap-2 px-8 py-3 bg-accent-green text-white font-semibold text-sm uppercase tracking-wider rounded-sm hover:bg-accent-green/90 transition-colors">
+              Ver Todos os Produtos <ArrowRight size={16} />
+            </Link>
+          </div>
         </div>
       </section>
 
