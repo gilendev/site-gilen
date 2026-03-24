@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, Search, X, ShoppingBag, Grid3X3, LayoutGrid, SlidersHorizontal, Eye } from "lucide-react";
+import { ArrowRight, Search, X, ShoppingBag, Grid3X3, LayoutGrid, SlidersHorizontal, Eye, Filter } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
 import SEOHead from "@/components/SEOHead";
@@ -55,10 +55,10 @@ const BrandProductsLayout = ({
 }: BrandProductsLayoutProps) => {
   const [activeCategory, setActiveCategory] = useState<string>("todos");
   const [searchQuery, setSearchQuery] = useState("");
-  const [searchOpen, setSearchOpen] = useState(false);
   const [viewMode, setViewMode] = useState<"grid" | "large">("grid");
   const [selectedProduct, setSelectedProduct] = useState<ProductItem | null>(null);
   const [hoveredProduct, setHoveredProduct] = useState<string | null>(null);
+  const [mobileFilterOpen, setMobileFilterOpen] = useState(false);
 
   const filteredProducts = products.filter((p) => {
     const matchesCategory = activeCategory === "todos" || p.category === activeCategory;
@@ -69,6 +69,10 @@ const BrandProductsLayout = ({
 
   const whatsappMessage = `Olá! Gostaria de saber mais sobre os produtos ${brandName}.`;
   const whatsappUrl = `https://wa.me/5511968756430?text=${encodeURIComponent(whatsappMessage)}`;
+
+  // Mobile: navbar is ~88px (h-14 + h-10), Desktop: ~128px (h-20 + h-12)
+  const topOffsetMobile = "88px";
+  const topOffsetDesktop = "128px";
 
   return (
     <div className={cn("min-h-screen bg-background", wrapperClassName)}>
@@ -84,16 +88,16 @@ const BrandProductsLayout = ({
       />
 
       {/* Search Bar */}
-      <div className="fixed top-[128px] left-0 right-0 z-40 bg-background/95 backdrop-blur-md border-b border-border">
-        <div className="container mx-auto px-4 lg:px-8 py-2 flex items-center gap-3">
-          <div className="relative flex-1 max-w-xl">
-            <Search size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground" />
+      <div className="fixed top-[88px] md:top-[128px] left-0 right-0 z-40 bg-background/95 backdrop-blur-md border-b border-border">
+        <div className="container mx-auto px-3 sm:px-4 lg:px-8 py-2 flex items-center gap-2 sm:gap-3">
+          <div className="relative flex-1">
+            <Search size={14} className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground" />
             <input
               type="text"
-              placeholder="Buscar produtos por nome ou descrição..."
+              placeholder="Buscar produtos..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-10 pr-10 py-2 bg-muted border border-border rounded-sm text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent-blue/50 focus:border-transparent transition-all"
+              className="w-full pl-9 pr-9 py-2 bg-muted border border-border rounded-sm text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent-blue/50 focus:border-transparent transition-all"
             />
             {searchQuery && (
               <button onClick={() => setSearchQuery("")} className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground">
@@ -101,19 +105,65 @@ const BrandProductsLayout = ({
               </button>
             )}
           </div>
-          <div className="flex items-center gap-2">
-            <button onClick={() => setViewMode("grid")} className={cn("w-8 h-8 flex items-center justify-center rounded-sm transition-colors", viewMode === "grid" ? `bg-accent-blue text-accent-blue-foreground` : "text-muted-foreground hover:text-foreground hover:bg-muted")}>
+          {/* Mobile filter button */}
+          <button
+            onClick={() => setMobileFilterOpen(!mobileFilterOpen)}
+            className={cn(
+              "lg:hidden w-9 h-9 flex items-center justify-center rounded-sm border transition-colors",
+              mobileFilterOpen ? "bg-accent-blue text-accent-blue-foreground border-accent-blue" : "border-border text-muted-foreground"
+            )}
+          >
+            <Filter size={14} />
+          </button>
+          <div className="hidden sm:flex items-center gap-2">
+            <button onClick={() => setViewMode("grid")} className={cn("w-8 h-8 flex items-center justify-center rounded-sm transition-colors", viewMode === "grid" ? "bg-accent-blue text-accent-blue-foreground" : "text-muted-foreground hover:text-foreground hover:bg-muted")}>
               <Grid3X3 size={14} />
             </button>
-            <button onClick={() => setViewMode("large")} className={cn("w-8 h-8 flex items-center justify-center rounded-sm transition-colors", viewMode === "large" ? `bg-accent-blue text-accent-blue-foreground` : "text-muted-foreground hover:text-foreground hover:bg-muted")}>
+            <button onClick={() => setViewMode("large")} className={cn("w-8 h-8 flex items-center justify-center rounded-sm transition-colors", viewMode === "large" ? "bg-accent-blue text-accent-blue-foreground" : "text-muted-foreground hover:text-foreground hover:bg-muted")}>
               <LayoutGrid size={14} />
             </button>
           </div>
         </div>
+
+        {/* Mobile category filter strip */}
+        {mobileFilterOpen && (
+          <div className="lg:hidden border-t border-border/50 overflow-x-auto scrollbar-hide bg-muted/50">
+            <div className="flex items-center gap-1.5 px-3 py-2 min-w-max">
+              <button
+                onClick={() => { setActiveCategory("todos"); setMobileFilterOpen(false); }}
+                className={cn(
+                  "px-3 py-1.5 text-xs font-medium whitespace-nowrap rounded-full transition-all",
+                  activeCategory === "todos"
+                    ? `${accentColorClass} text-white`
+                    : "bg-background border border-border text-muted-foreground"
+                )}
+              >
+                Todos ({products.length})
+              </button>
+              {categories.map((cat) => {
+                const count = products.filter(p => p.category === cat.id).length;
+                return (
+                  <button
+                    key={cat.id}
+                    onClick={() => { setActiveCategory(cat.id); setMobileFilterOpen(false); }}
+                    className={cn(
+                      "px-3 py-1.5 text-xs font-medium whitespace-nowrap rounded-full transition-all",
+                      activeCategory === cat.id
+                        ? `${accentColorClass} text-white`
+                        : "bg-background border border-border text-muted-foreground"
+                    )}
+                  >
+                    {cat.title} ({count})
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+        )}
       </div>
 
-      <div className="pt-[172px] flex min-h-[calc(100vh-172px)]">
-        {/* Premium Sidebar */}
+      <div className="pt-[132px] md:pt-[172px] flex min-h-[calc(100vh-132px)] md:min-h-[calc(100vh-172px)]">
+        {/* Desktop Sidebar */}
         <aside className="hidden lg:flex w-72 shrink-0 sticky top-[172px] h-[calc(100vh-172px)] border-r border-border/50 bg-gradient-to-b from-muted/50 to-background flex-col overflow-y-auto">
           <div className="p-6">
             {/* Brand Hero in Sidebar */}
@@ -195,14 +245,11 @@ const BrandProductsLayout = ({
           </div>
         </aside>
 
-
-
-
         {/* Main content */}
         <main className="flex-1 min-w-0">
           {/* Results header */}
-          <div className="px-4 lg:px-8 py-5 border-b border-border/50 bg-background sticky top-[172px] z-30">
-            <h1 className="text-lg font-bold text-foreground flex items-center gap-2">
+          <div className="px-3 sm:px-4 lg:px-8 py-3 sm:py-5 border-b border-border/50 bg-background sticky top-[132px] md:top-[172px] z-30">
+            <h1 className="text-base sm:text-lg font-bold text-foreground flex items-center gap-2">
               {activeCategory === "todos"
                 ? "Todos os Produtos"
                 : categories.find(c => c.id === activeCategory)?.title || "Produtos"}
@@ -213,21 +260,21 @@ const BrandProductsLayout = ({
           </div>
 
           {/* Product Grid */}
-          <div className="px-4 lg:px-8 py-6">
+          <div className="px-3 sm:px-4 lg:px-8 py-4 sm:py-6">
             {filteredProducts.length === 0 ? (
-              <div className="text-center py-24">
-                <ShoppingBag className="mx-auto text-muted-foreground/30 mb-4" size={48} />
-                <p className="text-muted-foreground font-medium">Nenhum produto encontrado</p>
-                <p className="text-muted-foreground/60 text-sm mt-1">Tente ajustar o filtro ou a busca</p>
+              <div className="text-center py-16 sm:py-24">
+                <ShoppingBag className="mx-auto text-muted-foreground/30 mb-4" size={40} />
+                <p className="text-muted-foreground font-medium text-sm sm:text-base">Nenhum produto encontrado</p>
+                <p className="text-muted-foreground/60 text-xs sm:text-sm mt-1">Tente ajustar o filtro ou a busca</p>
               </div>
             ) : (
               <motion.div
                 layout
                 className={cn(
-                  "grid gap-4",
+                  "grid gap-3 sm:gap-4",
                   viewMode === "grid"
-                    ? "grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
-                    : "grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3"
+                    ? "grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+                    : "grid-cols-1 sm:grid-cols-2 xl:grid-cols-3"
                 )}
               >
                 <AnimatePresence mode="popLayout">
@@ -241,7 +288,8 @@ const BrandProductsLayout = ({
                       transition={{ duration: 0.3, delay: index * 0.03 }}
                       onMouseEnter={() => setHoveredProduct(product.id)}
                       onMouseLeave={() => setHoveredProduct(null)}
-                      className="group relative bg-card rounded-xl overflow-hidden border border-border/50 hover:border-accent-blue/30 hover:shadow-xl hover:shadow-accent-blue/5 transition-all duration-500"
+                      onClick={() => setSelectedProduct(product)}
+                      className="group relative bg-card rounded-xl overflow-hidden border border-border/50 hover:border-accent-blue/30 hover:shadow-xl hover:shadow-accent-blue/5 transition-all duration-500 cursor-pointer"
                     >
                       {/* Image */}
                       <div className={cn(
@@ -256,10 +304,10 @@ const BrandProductsLayout = ({
                         {/* Overlay on hover */}
                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
-                        {/* Quick actions on hover */}
-                        <div className="absolute bottom-3 left-3 right-3 flex gap-2 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                        {/* Quick actions on hover - desktop only */}
+                        <div className="hidden sm:flex absolute bottom-3 left-3 right-3 gap-2 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
                           <button
-                            onClick={() => setSelectedProduct(product)}
+                            onClick={(e) => { e.stopPropagation(); setSelectedProduct(product); }}
                             className="flex-1 flex items-center justify-center gap-1.5 py-2.5 bg-white/95 backdrop-blur-sm text-graphite text-[11px] font-semibold uppercase tracking-wider rounded-lg hover:bg-white transition-colors"
                           >
                             <Eye size={13} />
@@ -269,6 +317,7 @@ const BrandProductsLayout = ({
                             href={`https://wa.me/5511968756430?text=${encodeURIComponent(`Olá! Gostaria de um orçamento para: ${product.name} (${brandName})`)}`}
                             target="_blank"
                             rel="noopener noreferrer"
+                            onClick={(e) => e.stopPropagation()}
                             className="flex items-center justify-center w-10 bg-[#25D366] rounded-lg hover:bg-[#20bd5a] transition-colors"
                           >
                             <FaWhatsapp size={15} className="text-white" />
@@ -276,31 +325,28 @@ const BrandProductsLayout = ({
                         </div>
 
                         {/* Category tag */}
-                        <div className="absolute top-3 left-3">
-                          <span className="px-2.5 py-1 bg-black/40 backdrop-blur-md text-white text-[10px] font-semibold uppercase tracking-wider rounded-md">
+                        <div className="absolute top-2 left-2 sm:top-3 sm:left-3">
+                          <span className="px-2 py-0.5 sm:px-2.5 sm:py-1 bg-black/40 backdrop-blur-md text-white text-[9px] sm:text-[10px] font-semibold uppercase tracking-wider rounded-md">
                             {categories.find(c => c.id === product.category)?.title}
                           </span>
                         </div>
                       </div>
 
                       {/* Info */}
-                      <div className="p-4">
-                        <h3 className="text-sm font-bold text-foreground line-clamp-2 group-hover:text-accent-blue transition-colors">
+                      <div className="p-3 sm:p-4">
+                        <h3 className="text-xs sm:text-sm font-bold text-foreground line-clamp-2 group-hover:text-accent-blue transition-colors">
                           {product.name}
                         </h3>
-                        <p className="text-xs text-muted-foreground mt-2 line-clamp-2 leading-relaxed">
+                        <p className="text-[10px] sm:text-xs text-muted-foreground mt-1 sm:mt-2 line-clamp-2 leading-relaxed hidden sm:block">
                           {product.description}
                         </p>
-                        <div className="mt-3 pt-3 border-t border-border/50 flex items-center justify-between">
-                          <span className="text-[10px] font-semibold text-accent-blue uppercase tracking-wider">
+                        <div className="mt-2 sm:mt-3 pt-2 sm:pt-3 border-t border-border/50 flex items-center justify-between">
+                          <span className="text-[9px] sm:text-[10px] font-semibold text-accent-blue uppercase tracking-wider">
                             Sob consulta
                           </span>
-                          <button
-                            onClick={() => setSelectedProduct(product)}
-                            className="text-[10px] font-semibold text-muted-foreground hover:text-foreground uppercase tracking-wider flex items-center gap-1 transition-colors"
-                          >
-                            Ver mais <ArrowRight size={10} />
-                          </button>
+                          <span className="text-[9px] sm:text-[10px] font-semibold text-muted-foreground uppercase tracking-wider flex items-center gap-1">
+                            Ver mais <ArrowRight size={9} />
+                          </span>
                         </div>
                       </div>
                     </motion.div>
@@ -319,46 +365,46 @@ const BrandProductsLayout = ({
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[60] bg-black/80 backdrop-blur-sm flex items-center justify-center p-4"
+            className="fixed inset-0 z-[60] bg-black/80 backdrop-blur-sm flex items-end sm:items-center justify-center sm:p-4"
             onClick={() => setSelectedProduct(null)}
           >
             <motion.div
-              initial={{ scale: 0.9, opacity: 0, y: 20 }}
+              initial={{ scale: 0.95, opacity: 0, y: 40 }}
               animate={{ scale: 1, opacity: 1, y: 0 }}
-              exit={{ scale: 0.9, opacity: 0, y: 20 }}
+              exit={{ scale: 0.95, opacity: 0, y: 40 }}
               transition={{ type: "spring", damping: 25, stiffness: 300 }}
-              className="bg-card max-w-3xl w-full rounded-2xl overflow-hidden shadow-2xl"
+              className="bg-card w-full sm:max-w-3xl sm:rounded-2xl rounded-t-2xl overflow-hidden shadow-2xl max-h-[90vh] sm:max-h-[85vh] overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
             >
-              <div className="grid grid-cols-1 md:grid-cols-2">
+              <div className="grid grid-cols-1 sm:grid-cols-2">
                 {/* Image */}
-                <div className="relative aspect-square md:aspect-auto bg-muted">
+                <div className="relative aspect-[4/3] sm:aspect-auto sm:min-h-[300px] bg-muted">
                   <img src={selectedProduct.image} alt={selectedProduct.name} className="w-full h-full object-cover" />
                   <button
                     onClick={() => setSelectedProduct(null)}
-                    className="absolute top-4 right-4 w-9 h-9 bg-black/50 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-black/70 transition-colors"
+                    className="absolute top-3 right-3 w-8 h-8 sm:w-9 sm:h-9 bg-black/50 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-black/70 transition-colors"
                   >
                     <X size={16} />
                   </button>
-                  <div className="absolute bottom-4 left-4">
-                    <span className="px-3 py-1.5 bg-black/40 backdrop-blur-md text-white text-[10px] font-semibold uppercase tracking-wider rounded-md">
+                  <div className="absolute bottom-3 left-3">
+                    <span className="px-2.5 py-1 bg-black/40 backdrop-blur-md text-white text-[10px] font-semibold uppercase tracking-wider rounded-md">
                       {categories.find(c => c.id === selectedProduct.category)?.title}
                     </span>
                   </div>
                 </div>
 
                 {/* Details */}
-                <div className="p-6 md:p-8 flex flex-col">
+                <div className="p-5 sm:p-6 md:p-8 flex flex-col">
                   <div className="flex-1">
                     <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-accent-blue">{brandName}</span>
-                    <h2 className="text-xl md:text-2xl font-bold text-foreground mt-2 leading-tight">
+                    <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-foreground mt-2 leading-tight">
                       {selectedProduct.name}
                     </h2>
-                    <p className="text-muted-foreground text-sm leading-relaxed mt-4">
+                    <p className="text-muted-foreground text-sm leading-relaxed mt-3 sm:mt-4">
                       {selectedProduct.description}
                     </p>
 
-                    <div className="mt-6 space-y-3">
+                    <div className="mt-4 sm:mt-6 space-y-2 sm:space-y-3">
                       <div className="flex items-center gap-3 text-sm">
                         <div className="w-1.5 h-1.5 rounded-full bg-accent-blue shrink-0" />
                         <span className="text-muted-foreground">Fabricação sob medida</span>
@@ -374,12 +420,12 @@ const BrandProductsLayout = ({
                     </div>
                   </div>
 
-                  <div className="mt-6 pt-6 border-t border-border/50 space-y-3">
+                  <div className="mt-5 sm:mt-6 pt-4 sm:pt-6 border-t border-border/50 space-y-3">
                     <a
                       href={`https://wa.me/5511968756430?text=${encodeURIComponent(`Olá! Gostaria de um orçamento para: ${selectedProduct.name} (${brandName})`)}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center justify-center gap-2 w-full py-3.5 bg-[#25D366] text-white text-xs font-semibold uppercase tracking-wider rounded-xl hover:bg-[#20bd5a] transition-all hover:shadow-lg hover:shadow-[#25D366]/20"
+                      className="flex items-center justify-center gap-2 w-full py-3 sm:py-3.5 bg-[#25D366] text-white text-xs font-semibold uppercase tracking-wider rounded-xl hover:bg-[#20bd5a] transition-all hover:shadow-lg hover:shadow-[#25D366]/20"
                     >
                       <FaWhatsapp size={16} />
                       Solicitar Orçamento via WhatsApp

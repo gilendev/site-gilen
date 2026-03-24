@@ -72,7 +72,7 @@ const BrandCarousel = ({ images, accentColor = "bg-accent-blue", subtitle = "Gal
           <span className={cn("text-xs font-semibold uppercase tracking-[0.2em] mb-4 block text-center", accentColor.replace("bg-", "text-"))}>
             {subtitle}
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center mb-10">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground text-center mb-6 sm:mb-10">
             {title} <span className="text-steel">{titleAccent}</span>
           </h2>
 
@@ -82,7 +82,7 @@ const BrandCarousel = ({ images, accentColor = "bg-accent-blue", subtitle = "Gal
                 {images.map((image, index) => (
                   <div
                     key={index}
-                    className={cn("flex-[0_0_100%] min-w-0 sm:flex-[0_0_50%] lg:flex-[0_0_33.333%] pl-4 first:pl-0", linkTo && "cursor-pointer")}
+                    className={cn("flex-[0_0_85%] min-w-0 sm:flex-[0_0_50%] lg:flex-[0_0_33.333%] pl-3 sm:pl-4 first:pl-0", linkTo && "cursor-pointer")}
                     onClick={handleImageClick}
                   >
                     <div className="aspect-[4/3] rounded-sm overflow-hidden">
