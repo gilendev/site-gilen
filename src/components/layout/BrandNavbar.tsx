@@ -110,32 +110,13 @@ const BrandNavbar = ({ brandName, logoSrc, logoBgColor, backTo, backLabel, secti
           </div>
         </div>
 
-        {/* Mobile section nav - horizontal scroll */}
-        <div className="md:hidden border-t border-border/50 overflow-x-auto scrollbar-hide">
-          <div className="flex items-center gap-0.5 px-3 h-10 min-w-max">
-            {sections.map((section) => (
-              <button
-                key={section.id}
-                onClick={() => handleClick(section)}
-                className={cn(
-                  "px-3 py-1.5 text-[11px] font-medium whitespace-nowrap rounded-sm transition-all",
-                  activeSection === section.id
-                    ? "text-accent-blue bg-accent-blue/10"
-                    : "text-muted-foreground"
-                )}
-              >
-                {section.label}
-              </button>
-            ))}
-          </div>
-        </div>
       </div>
 
       {/* Mobile dropdown menu overlay */}
       {mobileMenuOpen && (
         <div className="fixed inset-0 z-[45] bg-black/50 md:hidden" onClick={() => setMobileMenuOpen(false)}>
           <div
-            className="absolute top-[88px] left-0 right-0 bg-background border-b border-border shadow-xl"
+            className="absolute top-[56px] left-0 right-0 bg-background border-b border-border shadow-xl"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="py-2 px-4 space-y-1">
