@@ -82,7 +82,7 @@ const DesignKidsPage = () => {
       />
 
       {/* Hero */}
-      <section id="hero" className="relative min-h-[90vh] flex items-center overflow-hidden pt-24">
+      <section id="hero" className="relative min-h-[80vh] md:min-h-[90vh] flex items-center overflow-hidden pt-28 md:pt-36">
         <img src={imgHero} alt="Mobiliário infantil Design Kids" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
         <div className="container mx-auto px-4 lg:px-8 relative z-10">
