@@ -84,7 +84,7 @@ const BrandProductsLayout = ({
       />
 
       {/* Search Bar */}
-      <div className="fixed top-[96px] left-0 right-0 z-40 bg-background/95 backdrop-blur-md border-b border-border">
+      <div className="fixed top-[128px] left-0 right-0 z-40 bg-background/95 backdrop-blur-md border-b border-border">
         <div className="container mx-auto px-4 lg:px-8 py-2 flex items-center gap-3">
           <div className="relative flex-1 max-w-xl">
             <Search size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground" />
@@ -112,9 +112,9 @@ const BrandProductsLayout = ({
         </div>
       </div>
 
-      <div className="pt-[140px] flex min-h-[calc(100vh-140px)]">
+      <div className="pt-[172px] flex min-h-[calc(100vh-172px)]">
         {/* Premium Sidebar */}
-        <aside className="hidden lg:flex w-72 shrink-0 sticky top-[140px] h-[calc(100vh-140px)] border-r border-border/50 bg-gradient-to-b from-muted/50 to-background flex-col overflow-y-auto">
+        <aside className="hidden lg:flex w-72 shrink-0 sticky top-[172px] h-[calc(100vh-172px)] border-r border-border/50 bg-gradient-to-b from-muted/50 to-background flex-col overflow-y-auto">
           <div className="p-6">
             {/* Brand Hero in Sidebar */}
             <div className="mb-6 p-4 rounded-xl bg-gradient-to-br from-graphite to-graphite/80 relative overflow-hidden">
@@ -201,7 +201,7 @@ const BrandProductsLayout = ({
         {/* Main content */}
         <main className="flex-1 min-w-0">
           {/* Results header */}
-          <div className="px-4 lg:px-8 py-5 border-b border-border/50 bg-background sticky top-[140px] z-30">
+          <div className="px-4 lg:px-8 py-5 border-b border-border/50 bg-background sticky top-[172px] z-30">
             <h1 className="text-lg font-bold text-foreground flex items-center gap-2">
               {activeCategory === "todos"
                 ? "Todos os Produtos"
