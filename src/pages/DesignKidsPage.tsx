@@ -3,6 +3,7 @@ import { useRef } from "react";
 import SEOHead from "@/components/SEOHead";
 import { Link } from "react-router-dom";
 import { ArrowRight, ArrowLeft, Baby, Shield, Palette, Star, Smile, Box } from "lucide-react";
+import BrandNavbar from "@/components/layout/BrandNavbar";
 import { Button } from "@/components/ui/button";
 import imgHero from "@/assets/img-designkids-hero.jpg";
 import imgMesa from "@/assets/img-designkids-mesa.jpg";
