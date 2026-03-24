@@ -19,6 +19,11 @@ import ComicpetsPage from "./pages/ComicpetsPage";
 import DesignKidsPage from "./pages/DesignKidsPage";
 import GilCasesPage from "./pages/GilCasesPage";
 import TotensInterativosPage from "./pages/TotensInterativosPage";
+import GilCasesProductsPage from "./pages/GilCasesProductsPage";
+import ParametrizzeProductsPage from "./pages/ParametrizzeProductsPage";
+import GourmetizzeProductsPage from "./pages/GourmetizzeProductsPage";
+import ComicpetsProductsPage from "./pages/ComicpetsProductsPage";
+import DesignKidsProductsPage from "./pages/DesignKidsProductsPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
