@@ -48,6 +48,7 @@ const BrandProductsLayout = ({
   seoDescription,
   seoPath,
   accentColorClass,
+  wrapperClassName,
   categories,
   products,
   navSections,
