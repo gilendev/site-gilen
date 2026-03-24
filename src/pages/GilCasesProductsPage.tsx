@@ -42,6 +42,10 @@ import imgExtra17 from "@/assets/gilcase-extra-17.png";
 import imgExtra18 from "@/assets/gilcase-extra-18.png";
 import imgExtra19 from "@/assets/gilcase-extra-19.png";
 import imgExtra20 from "@/assets/gilcase-extra-20.png";
+import imgExtra21 from "@/assets/gilcase-extra-21.png";
+import imgExtra22 from "@/assets/gilcase-extra-22.png";
+import imgExtra23 from "@/assets/gilcase-extra-23.png";
+import imgExtra24 from "@/assets/gilcase-extra-24.png";
 
 const logoGilCase = "/lovable-uploads/logo-gilcase.jpeg";
 
@@ -103,6 +107,10 @@ const products = [
   { id: "case-cenografico", name: "Cases Cenográficos", image: imgExtra18, description: "Cases cenográficos de grande formato para cenários, letras e peças de comunicação visual.", category: "sob-medida" },
   { id: "case-alca-retratil", name: "Case com Alça Retrátil", image: imgExtra19, description: "Case com alça retrátil tipo mala e prateleiras internas para transporte facilitado.", category: "cases" },
   { id: "case-equipamento-daston", name: "Case para Equipamento Daston", image: imgExtra20, description: "Case sob medida para equipamentos Daston com fixação interna em X e rodízios.", category: "cases" },
+  { id: "case-firma-prod", name: "Cases Firma Prod", image: imgExtra21, description: "Kit de cases personalizados para a empresa Firma Prod com acabamento premium e cantoneiras cromadas.", category: "cases" },
+  { id: "case-international-school", name: "Kit Cases International School", image: imgExtra22, description: "Conjunto de cases de diversos tamanhos personalizados para International School com logo impresso.", category: "cases" },
+  { id: "case-gaveteiro", name: "Case Gaveteiro Vertical", image: imgExtra23, description: "Case vertical com sistema de gavetas deslizantes e rodízios para organização profissional.", category: "cases" },
+  { id: "case-empilhavel-pro", name: "Cases Empilháveis Pro", image: imgExtra24, description: "Conjunto de cases empilháveis profissionais com cantoneiras reforçadas e rodízios.", category: "cases" },
 ];
 
 const GilCasesProductsPage = () => (
