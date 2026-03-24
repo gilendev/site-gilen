@@ -22,6 +22,16 @@ import imgCarousel7 from "@/assets/gilcase-carousel-7.png";
 import imgCarousel8 from "@/assets/gilcase-carousel-8.png";
 import imgCarousel9 from "@/assets/gilcase-carousel-9.png";
 import imgCarousel10 from "@/assets/gilcase-carousel-10.png";
+import imgNew1 from "@/assets/gilcase-new-1.png";
+import imgNew2 from "@/assets/gilcase-new-2.png";
+import imgNew3 from "@/assets/gilcase-new-3.png";
+import imgNew4 from "@/assets/gilcase-new-4.png";
+import imgNew5 from "@/assets/gilcase-new-5.png";
+import imgNew6 from "@/assets/gilcase-new-6.png";
+import imgNew7 from "@/assets/gilcase-new-7.png";
+import imgNew8 from "@/assets/gilcase-new-8.png";
+import imgNew9 from "@/assets/gilcase-new-9.png";
+import imgNew10 from "@/assets/gilcase-new-10.png";
 
 const logoGilCase = "/lovable-uploads/logo-gilcase.jpeg";
 
