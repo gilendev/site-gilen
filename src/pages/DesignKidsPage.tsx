@@ -273,6 +273,7 @@ const DesignKidsPage = () => {
           <p className="text-primary-foreground/40 text-sm">DESIGN KIDS — Uma marca <Link to="/" className="text-steel hover:underline">GILEN Industrial</Link></p>
         </div>
       </footer>
+      <WhatsAppButton />
     </div>
   );
 };

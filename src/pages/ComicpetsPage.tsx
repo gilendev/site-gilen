@@ -273,6 +273,7 @@ const ComicpetsPage = () => {
           <p className="text-primary-foreground/40 text-sm">COMICPETS — Uma marca <Link to="/" className="text-accent-green hover:underline">GILEN Industrial</Link></p>
         </div>
       </footer>
+      <WhatsAppButton />
     </div>
   );
 };

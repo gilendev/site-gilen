@@ -355,6 +355,7 @@ const ParametrizzePage = () => {
           </p>
         </div>
       </footer>
+      <WhatsAppButton />
     </div>
   );
 };
