@@ -1,8 +1,9 @@
 import Layout from "@/components/layout/Layout";
 import HeroSection from "@/components/sections/HeroSection";
 import AnimatedCounters from "@/components/sections/AnimatedCounters";
+import HomeServicesSection from "@/components/sections/HomeServicesSection";
 import MarcasSection from "@/components/sections/MarcasSection";
-import ContatoSection from "@/components/sections/ContatoSection";
+import HomeCtaSection from "@/components/sections/HomeCtaSection";
 import SEOHead from "@/components/SEOHead";
 
 const Index = () => {
@@ -13,11 +14,11 @@ const Index = () => {
         description="13+ anos de experiência em engenharia industrial. Soluções sob medida com precisão técnica: cases, suportes, totens, mobiliário paramétrico e mais."
         path="/"
       />
-      {/* <WelcomeVideoPopup /> */}
       <HeroSection />
       <AnimatedCounters />
+      <HomeServicesSection />
       <MarcasSection />
-      <ContatoSection />
+      <HomeCtaSection />
     </Layout>
   );
 };
