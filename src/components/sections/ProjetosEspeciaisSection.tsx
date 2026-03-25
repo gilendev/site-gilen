@@ -10,7 +10,7 @@ const ProjetosEspeciaisSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section ref={ref} className="relative py-16 md:py-24 lg:py-32 text-primary-foreground overflow-hidden">
+    <section ref={ref} className="relative py-10 md:py-14 lg:py-16 text-primary-foreground overflow-hidden">
       {/* Background Image */}
       <img
         src={imgProjetosEspeciais}

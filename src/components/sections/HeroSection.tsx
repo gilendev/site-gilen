@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
+    <section className="relative min-h-[85vh] flex items-center overflow-hidden">
       {/* Background Video */}
       <video
         autoPlay
@@ -107,7 +107,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
-            className="mt-12 md:mt-20 pt-6 md:pt-8 border-t border-primary-foreground/10 grid grid-cols-3 gap-4 md:gap-8"
+            className="mt-8 md:mt-12 pt-4 md:pt-6 border-t border-primary-foreground/10 grid grid-cols-3 gap-4 md:gap-8"
           >
             {[
               { value: "13+", label: "Anos de Experiência" },

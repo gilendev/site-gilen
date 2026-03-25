@@ -37,7 +37,7 @@ const AnimatedCounters = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section ref={ref} className="py-16 bg-graphite relative overflow-hidden">
+    <section ref={ref} className="py-10 bg-graphite relative overflow-hidden">
       <img src={imgStatsBg} alt="" className="absolute inset-0 w-full h-full object-cover opacity-30" />
       <div className="absolute inset-0 bg-graphite/70" />
       <div className="container mx-auto px-4 lg:px-8 relative z-10">

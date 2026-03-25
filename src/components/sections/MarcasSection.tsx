@@ -51,7 +51,7 @@ const MarcasSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section ref={ref} className="py-16 md:py-24 lg:py-32 bg-muted relative">
+    <section ref={ref} className="py-10 md:py-14 lg:py-16 bg-muted relative">
       <div className="technical-line w-full absolute top-0" />
 
       <div className="container mx-auto px-4 lg:px-8">
@@ -77,7 +77,7 @@ const MarcasSection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
-          className="group bg-card p-5 md:p-8 lg:p-10 rounded-sm border border-border hover:border-accent-blue/20 transition-all duration-300 hover:shadow-lg cursor-pointer mt-12 text-center">
+          className="group bg-card p-4 md:p-6 lg:p-8 rounded-sm border border-border hover:border-accent-blue/20 transition-all duration-300 hover:shadow-lg cursor-pointer mt-8 text-center">
           
           <Link to={gilCases.href} className="block">
             <div className="flex items-start gap-5">
@@ -119,7 +119,7 @@ const MarcasSection = () => {
                 initial={{ opacity: 0, y: 30 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: (index + 1) * 0.1 }}
-                className={`group bg-card p-5 md:p-8 lg:p-10 rounded-sm border border-border hover:border-accent-blue/20 transition-all duration-300 hover:shadow-lg ${brand.href ? "cursor-pointer" : ""}`}>
+                className={`group bg-card p-4 md:p-6 lg:p-8 rounded-sm border border-border hover:border-accent-blue/20 transition-all duration-300 hover:shadow-lg ${brand.href ? "cursor-pointer" : ""}`}>
                 
                 {brand.href ?
                 <Link to={brand.href} className="block">

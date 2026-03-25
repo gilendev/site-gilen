@@ -18,14 +18,14 @@ const CertificationsSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section ref={ref} className="py-16 md:py-24 lg:py-32 bg-graphite relative overflow-hidden">
+    <section ref={ref} className="py-10 md:py-14 lg:py-16 bg-graphite relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-graphite to-graphite/95" />
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12"
+          className="text-center mb-8"
         >
           <span className="text-xs font-semibold uppercase tracking-[0.2em] text-accent-blue mb-4 block">
             Qualidade
@@ -36,7 +36,7 @@ const CertificationsSection = () => {
         </motion.div>
 
         {/* Certifications Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-10">
           {certifications.map((cert, i) => (
             <motion.div
               key={cert.title}
