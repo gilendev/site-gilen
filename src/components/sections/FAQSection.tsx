@@ -39,13 +39,13 @@ const FAQSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section ref={ref} className="py-16 md:py-24 lg:py-32 bg-muted">
+    <section ref={ref} className="py-10 md:py-14 lg:py-16 bg-muted">
       <div className="container mx-auto px-4 lg:px-8 max-w-3xl">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12"
+          className="text-center mb-8"
         >
           <span className="text-xs font-semibold uppercase tracking-[0.2em] text-accent-blue mb-4 block">
             Dúvidas

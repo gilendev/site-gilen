@@ -51,15 +51,15 @@ const TestimonialsSection = () => {
   const t = testimonials[current];
 
   return (
-    <section ref={ref} className="py-16 md:py-24 lg:py-32 bg-background">
+    <section ref={ref} className="py-10 md:py-14 lg:py-16 bg-background">
       <div className="container mx-auto px-4 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12"
+          className="text-center mb-8"
         >
-          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-accent-blue mb-4 block">
+          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-accent-blue mb-3 block">
             Depoimentos
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground">

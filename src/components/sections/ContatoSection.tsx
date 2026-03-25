@@ -90,7 +90,7 @@ const ContatoSection = () => {
   };
 
   return (
-    <section ref={ref} className="py-16 md:py-24 lg:py-32 bg-background">
+    <section ref={ref} className="py-10 md:py-14 lg:py-16 bg-background">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16">
           {/* Info */}
