@@ -14,6 +14,7 @@ const Index = () => {
         description="13+ anos de experiência em engenharia industrial. Soluções sob medida com precisão técnica: cases, suportes, totens, mobiliário paramétrico e mais."
         path="/"
       />
+      <WelcomeVideoPopup />
       <HeroSection />
       <AnimatedCounters />
       <MarcasSection />
