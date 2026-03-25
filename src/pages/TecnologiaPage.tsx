@@ -1,5 +1,6 @@
 import Layout from "@/components/layout/Layout";
 import TecnologiaSection from "@/components/sections/TecnologiaSection";
+import CertificationsSection from "@/components/sections/CertificationsSection";
 import SEOHead from "@/components/SEOHead";
 
 const TecnologiaPage = () => (
@@ -11,6 +12,7 @@ const TecnologiaPage = () => (
     />
     <div className="pt-20">
       <TecnologiaSection />
+      <CertificationsSection />
     </div>
   </Layout>
 );

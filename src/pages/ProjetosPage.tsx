@@ -1,5 +1,6 @@
 import Layout from "@/components/layout/Layout";
 import ProjetosSection from "@/components/sections/ProjetosSection";
+import PortfolioSection from "@/components/sections/PortfolioSection";
 import SEOHead from "@/components/SEOHead";
 
 const ProjetosPage = () => (
@@ -11,6 +12,7 @@ const ProjetosPage = () => (
     />
     <div className="pt-20">
       <ProjetosSection />
+      <PortfolioSection />
     </div>
   </Layout>
 );
