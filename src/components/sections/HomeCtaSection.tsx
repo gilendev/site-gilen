@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import { Button } from "@/components/ui/button";
+import ctaBg from "@/assets/cta-bg.jpg";
 
 const HomeCtaSection = () => {
   const ref = useRef(null);
@@ -11,14 +12,9 @@ const HomeCtaSection = () => {
 
   return (
     <section ref={ref} className="relative py-20 md:py-28 overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0 bg-primary" />
-      <div
-        className="absolute inset-0 opacity-10"
-        style={{
-          backgroundImage: `radial-gradient(circle at 20% 50%, hsl(var(--accent)) 0%, transparent 50%), radial-gradient(circle at 80% 50%, hsl(var(--accent-blue)) 0%, transparent 50%)`,
-        }}
-      />
+      {/* Background Image */}
+      <img src={ctaBg} alt="" loading="lazy" width={1920} height={800} className="absolute inset-0 w-full h-full object-cover" />
+      <div className="absolute inset-0 bg-primary/80" />
 
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <motion.div
