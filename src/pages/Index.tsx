@@ -4,6 +4,7 @@ import AnimatedCounters from "@/components/sections/AnimatedCounters";
 import MarcasSection from "@/components/sections/MarcasSection";
 import ContatoSection from "@/components/sections/ContatoSection";
 import SEOHead from "@/components/SEOHead";
+import WelcomeVideoPopup from "@/components/WelcomeVideoPopup";
 
 const Index = () => {
   return (
@@ -13,6 +14,7 @@ const Index = () => {
         description="13+ anos de experiência em engenharia industrial. Soluções sob medida com precisão técnica: cases, suportes, totens, mobiliário paramétrico e mais."
         path="/"
       />
+      <WelcomeVideoPopup />
       <HeroSection />
       <AnimatedCounters />
       <MarcasSection />
