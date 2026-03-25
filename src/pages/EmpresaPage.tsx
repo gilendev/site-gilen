@@ -1,5 +1,8 @@
 import Layout from "@/components/layout/Layout";
 import EmpresaSection from "@/components/sections/EmpresaSection";
+import CertificationsSection from "@/components/sections/CertificationsSection";
+import TestimonialsSection from "@/components/sections/TestimonialsSection";
+import BlogSection from "@/components/sections/BlogSection";
 import SEOHead from "@/components/SEOHead";
 
 const EmpresaPage = () => (
@@ -11,6 +14,9 @@ const EmpresaPage = () => (
     />
     <div className="pt-20">
       <EmpresaSection />
+      <TestimonialsSection />
+      <CertificationsSection />
+      <BlogSection />
     </div>
   </Layout>
 );

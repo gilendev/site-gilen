@@ -1,5 +1,7 @@
 import Layout from "@/components/layout/Layout";
 import ContatoSection from "@/components/sections/ContatoSection";
+import QuoteCalculator from "@/components/sections/QuoteCalculator";
+import FAQSection from "@/components/sections/FAQSection";
 import SEOHead from "@/components/SEOHead";
 
 const ContatoPage = () => (
@@ -10,7 +12,9 @@ const ContatoPage = () => (
       path="/contato"
     />
     <div className="pt-20">
+      <QuoteCalculator />
       <ContatoSection />
+      <FAQSection />
     </div>
   </Layout>
 );
