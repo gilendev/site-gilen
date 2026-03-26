@@ -2,6 +2,7 @@ import Layout from "@/components/layout/Layout";
 import HeroSection from "@/components/sections/HeroSection";
 import AnimatedCounters from "@/components/sections/AnimatedCounters";
 import HomeServicesSection from "@/components/sections/HomeServicesSection";
+import BrandShowcaseCarousel from "@/components/sections/BrandShowcaseCarousel";
 import MarcasSection from "@/components/sections/MarcasSection";
 import HomeCtaSection from "@/components/sections/HomeCtaSection";
 import SEOHead from "@/components/SEOHead";
@@ -17,6 +18,7 @@ const Index = () => {
       <HeroSection />
       <AnimatedCounters />
       <HomeServicesSection />
+      <BrandShowcaseCarousel />
       <MarcasSection />
       <HomeCtaSection />
     </Layout>
