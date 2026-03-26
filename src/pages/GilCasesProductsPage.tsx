@@ -51,6 +51,10 @@ import imgSobmedida2 from "@/assets/img-sobmedida2.jpg";
 import imgSobmedida3 from "@/assets/img-sobmedida3.jpg";
 import imgSobmedida4 from "@/assets/img-sobmedida4.jpg";
 import imgSobmedida5 from "@/assets/img-sobmedida5.jpg";
+import imgSobmedida6 from "@/assets/img-sobmedida6.jpg";
+import imgSobmedida7 from "@/assets/img-sobmedida7.jpg";
+import imgSobmedida8 from "@/assets/img-sobmedida8.jpg";
+import imgSobmedida9 from "@/assets/img-sobmedida9.jpg";
 
 const logoGilCase = "/lovable-uploads/logo-gilcase.jpeg";
 
@@ -97,6 +101,10 @@ const products = [
   { id: "montagem-trelica", name: "Montagem de Treliças para Eventos", image: imgSobmedida3, description: "Montagem de treliças e estruturas de grande porte para eventos com equipe especializada.", category: "sob-medida" },
   { id: "estrutura-videowall", name: "Estrutura para Videowall Suspenso", image: imgSobmedida4, description: "Estruturas sob medida para suporte de videowalls suspensos em feiras e convenções.", category: "sob-medida" },
   { id: "fachada-sob-medida", name: "Fachada Comercial Sob Medida", image: imgSobmedida5, description: "Projetos de fachadas comerciais com estruturas metálicas e revestimentos personalizados.", category: "sob-medida" },
+  { id: "fachada-led-comercial", name: "Fachada com Painel LED", image: imgSobmedida6, description: "Fachada comercial com painel LED integrado e revestimento em madeira ripada.", category: "sob-medida" },
+  { id: "cubo-led-evento", name: "Cubo LED para Eventos", image: imgSobmedida7, description: "Estrutura em formato de cubo com painéis LED em múltiplas faces para eventos e congressos.", category: "sob-medida" },
+  { id: "instalacao-painel-externo", name: "Instalação de Painel Externo", image: imgSobmedida8, description: "Instalação de painéis LED externos com guindaste e estrutura metálica de suporte.", category: "sob-medida" },
+  { id: "montagem-estrutura-fachada", name: "Montagem de Estrutura para Fachada", image: imgSobmedida9, description: "Montagem de estrutura metálica para suporte de painéis em fachadas comerciais.", category: "sob-medida" },
   { id: "case-compensado-branco", name: "Case Compensado Branco", image: imgExtra1, description: "Case em compensado branco com cantoneiras em alumínio, tampa articulada e divisória interna.", category: "cases" },
   { id: "case-teclado-musical", name: "Case para Teclado Musical", image: imgExtra2, description: "Case profissional para teclado com interior acolchoado e fechos reforçados.", category: "cases" },
   { id: "case-empilhavel-grande", name: "Cases Empilháveis Grande Porte", image: imgExtra3, description: "Conjunto de cases empilháveis para transporte de painéis e equipamentos de grande formato.", category: "cases" },
