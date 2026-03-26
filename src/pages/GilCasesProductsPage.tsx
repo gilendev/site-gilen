@@ -55,6 +55,11 @@ import imgSobmedida6 from "@/assets/img-sobmedida6.jpg";
 import imgSobmedida7 from "@/assets/img-sobmedida7.jpg";
 import imgSobmedida8 from "@/assets/img-sobmedida8.jpg";
 import imgSobmedida9 from "@/assets/img-sobmedida9.jpg";
+import imgSobmedida10 from "@/assets/img-sobmedida10.jpg";
+import imgSobmedida11 from "@/assets/img-sobmedida11.jpg";
+import imgSobmedida12 from "@/assets/img-sobmedida12.jpg";
+import imgSobmedida13 from "@/assets/img-sobmedida13.jpg";
+import imgSobmedida14 from "@/assets/img-sobmedida14.png";
 
 const logoGilCase = "/lovable-uploads/logo-gilcase.jpeg";
 
@@ -105,6 +110,11 @@ const products = [
   { id: "cubo-led-evento", name: "Cubo LED para Eventos", image: imgSobmedida7, description: "Estrutura em formato de cubo com painéis LED em múltiplas faces para eventos e congressos.", category: "sob-medida" },
   { id: "instalacao-painel-externo", name: "Instalação de Painel Externo", image: imgSobmedida8, description: "Instalação de painéis LED externos com guindaste e estrutura metálica de suporte.", category: "sob-medida" },
   { id: "montagem-estrutura-fachada", name: "Montagem de Estrutura para Fachada", image: imgSobmedida9, description: "Montagem de estrutura metálica para suporte de painéis em fachadas comerciais.", category: "sob-medida" },
+  { id: "estrutura-outdoor", name: "Estrutura para Outdoor com Treliças", image: imgSobmedida10, description: "Estrutura metálica com treliças para sustentação de outdoor publicitário de grande formato.", category: "sob-medida" },
+  { id: "painel-led-outdoor", name: "Painel LED Outdoor Instalado", image: imgSobmedida11, description: "Painel LED outdoor em funcionamento com estrutura metálica de suporte e alta luminosidade.", category: "sob-medida" },
+  { id: "instalacao-videowall-showroom", name: "Instalação Videowall em Showroom", image: imgSobmedida12, description: "Montagem de videowall curvo em showroom automotivo com equipe técnica especializada.", category: "sob-medida" },
+  { id: "fachada-concessionaria", name: "Fachada de Concessionária", image: imgSobmedida13, description: "Projeto de fachada iluminada para concessionária com estrutura metálica e letreiro.", category: "sob-medida" },
+  { id: "videowall-curvo-showroom", name: "Videowall Curvo em Showroom", image: imgSobmedida14, description: "Videowall curvo de alta resolução instalado em showroom automotivo premium.", category: "sob-medida" },
   { id: "case-compensado-branco", name: "Case Compensado Branco", image: imgExtra1, description: "Case em compensado branco com cantoneiras em alumínio, tampa articulada e divisória interna.", category: "cases" },
   { id: "case-teclado-musical", name: "Case para Teclado Musical", image: imgExtra2, description: "Case profissional para teclado com interior acolchoado e fechos reforçados.", category: "cases" },
   { id: "case-empilhavel-grande", name: "Cases Empilháveis Grande Porte", image: imgExtra3, description: "Conjunto de cases empilháveis para transporte de painéis e equipamentos de grande formato.", category: "cases" },
