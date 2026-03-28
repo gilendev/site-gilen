@@ -60,6 +60,10 @@ import imgSobmedida11 from "@/assets/img-sobmedida11.jpg";
 import imgSobmedida12 from "@/assets/img-sobmedida12.jpg";
 import imgSobmedida13 from "@/assets/img-sobmedida13.jpg";
 import imgSobmedida14 from "@/assets/img-sobmedida14.png";
+import imgSup1 from "@/assets/gilcase-suporte-1.png";
+import imgSup2 from "@/assets/gilcase-suporte-2.jpg";
+import imgSup3 from "@/assets/gilcase-suporte-3.jpg";
+import imgSup4 from "@/assets/gilcase-suporte-4.jpg";
 
 const logoGilCase = "/lovable-uploads/logo-gilcase.jpeg";
 
@@ -79,6 +83,10 @@ const products = [
   { id: "case-iluminacao", name: "Case para Iluminação", image: imgCarousel6, description: "Cases para transporte seguro de moving heads, refletores, mesas de luz e acessórios.", category: "cases" },
   { id: "case-instrumento", name: "Case para Instrumentos", image: imgCarousel7, description: "Cases para guitarra, baixo, teclado, bateria e instrumentos musicais diversos.", category: "cases" },
   { id: "case-drone", name: "Case para Drones", image: imgCarousel8, description: "Cases com espuma personalizada para drones e acessórios, garantindo proteção em transporte.", category: "cases" },
+  { id: "suporte-parede-pleno", name: "Suporte de Parede Pleno", image: imgSup1, description: "Suporte de parede em aço com recortes para passagem de cabos e logo Pleno, ideal para fixação de TVs e painéis em ambientes corporativos.", category: "suportes" },
+  { id: "suporte-articulado-parede", name: "Suporte Articulado de Parede", image: imgSup2, description: "Suporte articulado em aço com braços móveis e regulagem VESA, permite inclinação e rotação para TVs de 32\" a 75\".", category: "suportes" },
+  { id: "pedestal-duplo-tv-vertical", name: "Pedestal Duplo para TV Vertical", image: imgSup3, description: "Pedestal com duas colunas em aço inox e base curva, ideal para TVs em modo retrato em vitrines, recepções e eventos.", category: "suportes" },
+  { id: "pedestal-duplo-articulado", name: "Pedestal Duplo Articulado", image: imgSup4, description: "Pedestal profissional com colunas duplas em alumínio, braços articulados laterais e base quadrada em chapa de aço para TVs de grande formato.", category: "suportes" },
   { id: "totem-pdv", name: "Totem Autoatendimento", image: imgTotens, description: "Totem para autoatendimento em pontos de venda com integração para tela touch.", category: "totens" },
   { id: "totem-evento", name: "Totem para Eventos", image: imgTotens, description: "Totem portátil para feiras e eventos corporativos com acabamento premium.", category: "totens" },
   { id: "totem-smartphone", name: "Totem Formato Smartphone", image: imgTotens, description: "Design em formato de smartphone com tela touchscreen integrada.", category: "totens" },
