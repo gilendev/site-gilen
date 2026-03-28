@@ -1,4 +1,7 @@
 import BrandProductsLayout from "@/components/layout/BrandProductsLayout";
+import BrandHeroBanner from "@/components/BrandHeroBanner";
+import bannerKids1 from "@/assets/banner-designkids-1.jpg";
+import bannerKids2 from "@/assets/banner-designkids-2.jpg";
 import imgMesa from "@/assets/img-designkids-mesa.jpg";
 import imgEstante from "@/assets/img-designkids-estante.jpg";
 import imgBrinquedo from "@/assets/img-designkids-brinquedo.jpg";
@@ -40,6 +43,12 @@ const DesignKidsProductsPage = () => (
     seoDescription="Mesas, estantes, brinquedos educativos e decoração infantil."
     seoPath="/design-kids/produtos"
     accentColorClass="bg-accent-blue"
+    heroBanner={
+      <BrandHeroBanner slides={[
+        { image: bannerKids1, title: "Mobiliário Infantil", subtitle: "Mesas, cadeiras e estantes com design lúdico e seguro para crianças", tag: "MOBILIÁRIO" },
+        { image: bannerKids2, title: "Brinquedos Educativos", subtitle: "Quebra-cabeças, encaixes e jogos em MDF para aprendizado divertido", tag: "EDUCAÇÃO" },
+      ]} />
+    }
     categories={categories}
     products={products}
     navSections={[

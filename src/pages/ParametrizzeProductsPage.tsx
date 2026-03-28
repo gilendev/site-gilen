@@ -1,4 +1,8 @@
 import BrandProductsLayout from "@/components/layout/BrandProductsLayout";
+import BrandHeroBanner from "@/components/BrandHeroBanner";
+import bannerParam1 from "@/assets/banner-parametrizze-1.jpg";
+import bannerParam2 from "@/assets/banner-parametrizze-2.jpg";
+import bannerParam3 from "@/assets/banner-parametrizze-3.jpg";
 import imgFachada from "@/assets/img-parametrizze-fachada.jpg";
 import imgMobiliario from "@/assets/img-parametrizze-mobiliario.jpg";
 import imgDivisoria from "@/assets/img-parametrizze-divisoria.jpg";
@@ -39,6 +43,13 @@ const ParametrizzeProductsPage = () => (
     seoDescription="Fachadas paramétricas, mobiliário, painéis decorativos e fabricação CNC."
     seoPath="/parametrizze/produtos"
     accentColorClass="bg-accent-blue"
+    heroBanner={
+      <BrandHeroBanner slides={[
+        { image: bannerParam1, title: "Fachadas Paramétricas", subtitle: "Design computacional para fachadas comerciais e residenciais de alto padrão", tag: "ARQUITETURA" },
+        { image: bannerParam2, title: "Mobiliário & Painéis", subtitle: "Peças exclusivas com formas orgânicas geradas por algoritmos paramétricos", tag: "DESIGN" },
+        { image: bannerParam3, title: "Fabricação CNC", subtitle: "Precisão de até 0.1mm em MDF, acrílico e diversos materiais", tag: "TECNOLOGIA" },
+      ]} />
+    }
     categories={categories}
     products={products}
     navSections={[

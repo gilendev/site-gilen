@@ -1,4 +1,7 @@
 import BrandProductsLayout from "@/components/layout/BrandProductsLayout";
+import BrandHeroBanner from "@/components/BrandHeroBanner";
+import bannerPets1 from "@/assets/banner-comicpets-1.jpg";
+import bannerPets2 from "@/assets/banner-comicpets-2.jpg";
 import imgGato from "@/assets/img-comicpets-gato.jpg";
 import imgComedouro from "@/assets/img-comicpets-comedouro.jpg";
 import imgBrinquedo from "@/assets/img-comicpets-brinquedo.jpg";
@@ -40,6 +43,12 @@ const ComicpetsProductsPage = () => (
     seoDescription="Arranhadores, comedouros, brinquedos e casinhas para pets."
     seoPath="/comicpets/produtos"
     accentColorClass="bg-accent-blue"
+    heroBanner={
+      <BrandHeroBanner slides={[
+        { image: bannerPets1, title: "Torres & Arranhadores", subtitle: "Móveis para gatos com design moderno e arranhadores em sisal natural", tag: "ARRANHADORES" },
+        { image: bannerPets2, title: "Comedouros & Acessórios", subtitle: "Comedouros elevados ergonômicos e acessórios premium para pets", tag: "ACESSÓRIOS" },
+      ]} />
+    }
     categories={categories}
     products={products}
     navSections={[
