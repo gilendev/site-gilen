@@ -60,16 +60,6 @@ import imgSobmedida11 from "@/assets/img-sobmedida11.jpg";
 import imgSobmedida12 from "@/assets/img-sobmedida12.jpg";
 import imgSobmedida13 from "@/assets/img-sobmedida13.jpg";
 import imgSobmedida14 from "@/assets/img-sobmedida14.png";
-import imgSup1 from "@/assets/gilcase-suporte-1.png";
-import imgSup2 from "@/assets/gilcase-suporte-2.png";
-import imgSup3 from "@/assets/gilcase-suporte-3.png";
-import imgSup4 from "@/assets/gilcase-suporte-4.png";
-import imgSup5 from "@/assets/gilcase-suporte-5.png";
-import imgSup6 from "@/assets/gilcase-suporte-6.png";
-import imgSup7 from "@/assets/gilcase-suporte-7.png";
-import imgSup8 from "@/assets/gilcase-suporte-8.png";
-import imgSup9 from "@/assets/gilcase-suporte-9.png";
-import imgSup10 from "@/assets/gilcase-suporte-10.png";
 
 const logoGilCase = "/lovable-uploads/logo-gilcase.jpeg";
 
