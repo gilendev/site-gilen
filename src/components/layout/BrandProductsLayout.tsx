@@ -36,6 +36,7 @@ interface BrandProductsLayoutProps {
   categories: ProductCategory[];
   products: ProductItem[];
   navSections: BrandNavSection[];
+  heroBanner?: React.ReactNode;
 }
 
 const BrandProductsLayout = ({
