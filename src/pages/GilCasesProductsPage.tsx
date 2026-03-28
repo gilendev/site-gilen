@@ -81,7 +81,7 @@ const categories = [
   { id: "cases", title: "Linha de Cases" },
   { id: "suportes", title: "Linha de Suportes" },
   { id: "totens", title: "Totens Interativos" },
-  { id: "sob-medida", title: "Projetos Sob Medida" },
+  { id: "sob-medida", title: "Estruturas Metálicas" },
 ];
 
 const products = [
