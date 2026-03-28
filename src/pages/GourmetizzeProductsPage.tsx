@@ -43,6 +43,13 @@ const GourmetizzeProductsPage = () => (
     seoDescription="Churrasqueiras modulares, utensílios gourmet, estruturas externas e corte a laser."
     seoPath="/gourmetizze/produtos"
     accentColorClass="bg-accent-blue"
+    heroBanner={
+      <BrandHeroBanner slides={[
+        { image: bannerGourm1, title: "Estações Gourmet", subtitle: "Churrasqueiras modulares e áreas gourmet completas em aço inox", tag: "CHURRASQUEIRAS" },
+        { image: bannerGourm2, title: "Utensílios Premium", subtitle: "Kit completo de utensílios em aço inox para churrasco profissional", tag: "UTENSÍLIOS" },
+        { image: bannerGourm3, title: "Corte a Laser Decorativo", subtitle: "Painéis e peças decorativas em metal com corte a laser de precisão", tag: "CORTE A LASER" },
+      ]} />
+    }
     categories={categories}
     products={products}
     navSections={[
