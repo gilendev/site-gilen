@@ -53,6 +53,7 @@ const BrandProductsLayout = ({
   categories,
   products,
   navSections,
+  heroBanner,
 }: BrandProductsLayoutProps) => {
   const [activeCategory, setActiveCategory] = useState<string>("todos");
   const [searchQuery, setSearchQuery] = useState("");
