@@ -36,6 +36,7 @@ interface BrandProductsLayoutProps {
   categories: ProductCategory[];
   products: ProductItem[];
   navSections: BrandNavSection[];
+  heroBanner?: React.ReactNode;
 }
 
 const BrandProductsLayout = ({
@@ -52,6 +53,7 @@ const BrandProductsLayout = ({
   categories,
   products,
   navSections,
+  heroBanner,
 }: BrandProductsLayoutProps) => {
   const [activeCategory, setActiveCategory] = useState<string>("todos");
   const [searchQuery, setSearchQuery] = useState("");
@@ -247,6 +249,12 @@ const BrandProductsLayout = ({
 
         {/* Main content */}
         <main className="flex-1 min-w-0">
+          {/* Hero Banner */}
+          {heroBanner && (
+            <div className="px-3 sm:px-4 lg:px-8 pt-4 sm:pt-6">
+              {heroBanner}
+            </div>
+          )}
           {/* Results header */}
           <div className="px-3 sm:px-4 lg:px-8 py-3 sm:py-5 border-b border-border/50 bg-background sticky top-[100px] md:top-[172px] md:top-[172px] z-30">
             <h1 className="text-base sm:text-lg font-bold text-foreground flex items-center gap-2">
