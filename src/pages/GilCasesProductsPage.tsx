@@ -1,4 +1,5 @@
 import BrandProductsLayout from "@/components/layout/BrandProductsLayout";
+import GilCasesHeroBanner from "@/components/GilCasesHeroBanner";
 import imgCarousel1 from "@/assets/gilcase-carousel-1.png";
 import imgCarousel2 from "@/assets/gilcase-carousel-2.png";
 import imgCarousel3 from "@/assets/gilcase-carousel-3.png";
@@ -170,6 +171,7 @@ const GilCasesProductsPage = () => (
     seoDescription="Conheça a linha completa de cases, suportes, totens interativos e projetos sob medida da Gil Cases."
     seoPath="/gil-cases/produtos"
     accentColorClass="bg-accent-blue"
+    heroBanner={<GilCasesHeroBanner />}
     wrapperClassName="gilcase-brand"
     categories={categories}
     products={products}
