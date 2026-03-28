@@ -1,4 +1,7 @@
 import BrandProductsLayout from "@/components/layout/BrandProductsLayout";
+import BrandHeroBanner from "@/components/BrandHeroBanner";
+import bannerPets1 from "@/assets/banner-comicpets-1.jpg";
+import bannerPets2 from "@/assets/banner-comicpets-2.jpg";
 import imgGato from "@/assets/img-comicpets-gato.jpg";
 import imgComedouro from "@/assets/img-comicpets-comedouro.jpg";
 import imgBrinquedo from "@/assets/img-comicpets-brinquedo.jpg";

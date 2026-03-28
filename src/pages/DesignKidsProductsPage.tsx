@@ -1,4 +1,7 @@
 import BrandProductsLayout from "@/components/layout/BrandProductsLayout";
+import BrandHeroBanner from "@/components/BrandHeroBanner";
+import bannerKids1 from "@/assets/banner-designkids-1.jpg";
+import bannerKids2 from "@/assets/banner-designkids-2.jpg";
 import imgMesa from "@/assets/img-designkids-mesa.jpg";
 import imgEstante from "@/assets/img-designkids-estante.jpg";
 import imgBrinquedo from "@/assets/img-designkids-brinquedo.jpg";
