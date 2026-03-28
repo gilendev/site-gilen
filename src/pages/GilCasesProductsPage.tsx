@@ -75,6 +75,7 @@ import imgTotem8 from "@/assets/gilcase-totem-8.png";
 import imgTotem9 from "@/assets/gilcase-totem-9.png";
 import imgTotem10 from "@/assets/gilcase-totem-10.png";
 
+const logoGilCase = "/lovable-uploads/logo-gilcase.jpeg";
 
 const categories = [
   { id: "cases", title: "Linha de Cases" },
