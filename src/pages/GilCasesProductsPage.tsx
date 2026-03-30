@@ -95,6 +95,8 @@ import imgTruckLed1 from "@/assets/estruturas/truck-led-1.jpg";
 import imgTruckLed2 from "@/assets/estruturas/truck-led-2.jpg";
 import imgVideowallCurvo1 from "@/assets/estruturas/videowall-curvo-concessionaria-1.jpg";
 import imgVideowallCurvo2 from "@/assets/estruturas/videowall-curvo-concessionaria-2.jpg";
+import imgLedPontoComercial1 from "@/assets/estruturas/painel-led-pedestal-1.jpg";
+import imgLedPontoComercial2 from "@/assets/estruturas/painel-led-pedestal-2.png";
 
 const imgSuportePlaceholder = "/placeholder.svg";
 const logoGilCase = "/lovable-uploads/logo-gilcase.jpeg";
