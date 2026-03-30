@@ -242,11 +242,33 @@ const BrandProductsLayout = ({
   navSections,
   heroBanner,
 }: BrandProductsLayoutProps) => {
+  const [searchParams, setSearchParams] = useSearchParams();
   const [activeCategory, setActiveCategory] = useState<string>("todos");
   const [searchQuery, setSearchQuery] = useState("");
   const [viewMode, setViewMode] = useState<"grid" | "large">("grid");
   const [selectedProduct, setSelectedProduct] = useState<ProductItem | null>(null);
   const [mobileFilterOpen, setMobileFilterOpen] = useState(false);
+
+  // Deep link: open product from URL param on mount
+  useEffect(() => {
+    const productId = searchParams.get("produto");
+    if (productId) {
+      const found = products.find((p) => p.id === productId);
+      if (found) {
+        setSelectedProduct(found);
+      }
+    }
+  }, []);
+
+  const handleSelectProduct = useCallback((product: ProductItem) => {
+    setSelectedProduct(product);
+    setSearchParams({ produto: product.id }, { replace: true });
+  }, [setSearchParams]);
+
+  const handleCloseProduct = useCallback(() => {
+    setSelectedProduct(null);
+    setSearchParams({}, { replace: true });
+  }, [setSearchParams]);
 
   const filteredProducts = products.filter((p) => {
     const matchesCategory = activeCategory === "todos" || p.category === activeCategory;
