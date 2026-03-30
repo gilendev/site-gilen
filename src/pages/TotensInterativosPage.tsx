@@ -64,6 +64,59 @@ const SectionBlock = ({ children, className = "" }: { children: React.ReactNode;
   );
 };
 
+const GalleryCard = ({ item, index, inView }: { item: GalleryItem; index: number; inView: boolean }) => {
+  const [currentImg, setCurrentImg] = useState(0);
+  const hasMultiple = item.images.length > 1;
+
+  return (
+    <motion.div
+      key={item.title}
+      initial={{ opacity: 0, y: 30 }}
+      animate={inView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.5, delay: index * 0.08 }}
+      className="group relative bg-card rounded-sm overflow-hidden border border-border hover:border-accent-blue/30 transition-colors"
+    >
+      <div className="aspect-square overflow-hidden bg-muted relative">
+        <img
+          src={item.images[currentImg]}
+          alt={item.title}
+          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+        />
+        {hasMultiple && (
+          <>
+            <button
+              onClick={(e) => { e.stopPropagation(); setCurrentImg((prev) => (prev - 1 + item.images.length) % item.images.length); }}
+              className="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/50 hover:bg-black/70 flex items-center justify-center text-white transition-colors z-10"
+            >
+              <ChevronLeft size={18} />
+            </button>
+            <button
+              onClick={(e) => { e.stopPropagation(); setCurrentImg((prev) => (prev + 1) % item.images.length); }}
+              className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/50 hover:bg-black/70 flex items-center justify-center text-white transition-colors z-10"
+            >
+              <ChevronRight size={18} />
+            </button>
+            <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1.5 z-10">
+              {item.images.map((_, i) => (
+                <button
+                  key={i}
+                  onClick={(e) => { e.stopPropagation(); setCurrentImg(i); }}
+                  className={`w-2 h-2 rounded-full transition-colors ${i === currentImg ? "bg-accent-blue" : "bg-white/50"}`}
+                />
+              ))}
+            </div>
+          </>
+        )}
+      </div>
+      <div className="p-5">
+        <h3 className="text-base font-semibold text-foreground mb-1">{item.title}</h3>
+        <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
+      </div>
+      <div className="absolute top-0 left-0 w-0 h-1 bg-accent-blue group-hover:w-full transition-all duration-500" />
+    </motion.div>
+  );
+};
+
 const TotensInterativosPage = () => {
   const galleryRef = useRef(null);
   const galleryInView = useInView(galleryRef, { once: true, margin: "-100px" });
