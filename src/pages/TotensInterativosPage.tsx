@@ -7,18 +7,6 @@ import BrandNavbar from "@/components/layout/BrandNavbar";
 import { Button } from "@/components/ui/button";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
-import imgDrogal from "@/assets/img-totem-drogal.png";
-import imgEletroposto from "@/assets/img-totem-eletroposto.png";
-import imgSaude from "@/assets/img-totem-saude.png";
-import imgMedbeauty from "@/assets/img-totem-medbeauty.png";
-import imgSmartphone from "@/assets/img-totem-smartphone.png";
-import imgPedestais from "@/assets/img-totem-pedestais.png";
-import imgLed from "@/assets/img-totem-led.png";
-import imgHoroscopo from "@/assets/img-totem-horoscopo.png";
-import imgPainel from "@/assets/img-totem-painel.png";
-import imgLoja from "@/assets/img-totem-loja.png";
-import imgLed2 from "@/assets/img-totem-led2.png";
-import imgNissan from "@/assets/img-totem-nissan.png";
 
 const logoGilCase = "/lovable-uploads/logo-gilcase.jpeg";
 
