@@ -87,6 +87,8 @@ import imgPainelCurvo1 from "@/assets/estruturas/painel-curvo-showroom-1.jpg";
 import imgPainelCurvo2 from "@/assets/estruturas/painel-curvo-showroom-2.png";
 import imgFachadaByd1 from "@/assets/estruturas/fachada-concessionaria-byd-1.jpg";
 import imgFachadaByd2 from "@/assets/estruturas/fachada-concessionaria-byd-2.jpg";
+import imgGeodesicaLed1 from "@/assets/estruturas/geodesica-led-1.jpg";
+import imgGeodesicaLed2 from "@/assets/estruturas/geodesica-led-2.jpg";
 
 const imgSuportePlaceholder = "/placeholder.svg";
 const logoGilCase = "/lovable-uploads/logo-gilcase.jpeg";
@@ -169,6 +171,7 @@ const products = [
   { id: "midia-exterior-led", name: "Estrutura para Mídia Exterior LED", image: imgMidiaExterior1, images: [imgMidiaExterior1, imgMidiaExterior2], description: "Estrutura metálica elevada tipo outdoor para painel LED de grande formato, ideal para mídia digital externa em vias urbanas e pontos comerciais de alto tráfego.", category: "sob-medida" },
   { id: "painel-curvo-showroom", name: "Painel LED Curvo para Showroom", image: imgPainelCurvo1, images: [imgPainelCurvo1, imgPainelCurvo2], description: "Estrutura metálica curva com painel LED de alta definição para showrooms e concessionárias automotivas. Instalação com grid modular e acabamento premium para ambientes internos de alto padrão.", category: "sob-medida" },
   { id: "fachada-concessionaria-byd", name: "Fachada para Concessionária BYD", image: imgFachadaByd1, images: [imgFachadaByd1, imgFachadaByd2], description: "Estrutura metálica curva com revestimento ACM e painel LED integrado para fachada de concessionária BYD, com letreiro luminoso e comunicação visual completa.", category: "sob-medida" },
+  { id: "geodesica-led", name: "Estrutura Geodésica com LED", image: imgGeodesicaLed1, images: [imgGeodesicaLed1, imgGeodesicaLed2], description: "Estrutura metálica geodésica com revestimento em painéis e iluminação LED nas arestas, com tela integrada. Da fabricação em aço ao acabamento final premium para eventos e experiências imersivas.", category: "sob-medida" },
 ];
 
 const GilCasesProductsPage = () => (
