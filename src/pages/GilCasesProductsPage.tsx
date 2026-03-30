@@ -63,6 +63,14 @@ import imgExtra21 from "@/assets/gilcase-extra-21.png";
 import imgExtra22 from "@/assets/gilcase-extra-22.png";
 import imgExtra23 from "@/assets/gilcase-extra-23.png";
 import imgExtra24 from "@/assets/gilcase-extra-24.png";
+import imgTotemDrogal from "@/assets/totens/totem-drogal.png";
+import imgTotemEletroposto from "@/assets/totens/totem-eletroposto.png";
+import imgTotemSmartphone from "@/assets/totens/totem-smartphone.png";
+import imgTotemLed from "@/assets/totens/totem-led-portrait.png";
+import imgTotemSignage from "@/assets/totens/totem-digital-signage.png";
+import imgTotemPainel from "@/assets/totens/totem-painel-led.png";
+import imgTotemVarejo from "@/assets/totens/totem-varejo.png";
+import imgTotemNissan from "@/assets/totens/totem-nissan.png";
 
 const imgSuportePlaceholder = "/placeholder.svg";
 const logoGilCase = "/lovable-uploads/logo-gilcase.jpeg";
