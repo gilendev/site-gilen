@@ -23,6 +23,14 @@ import imgNew10 from "@/assets/gilcase-new-10.png";
 import imgSuportes from "@/assets/img-gilcase-suportes.jpg";
 import imgTotens from "@/assets/img-gilcase-totens.jpg";
 import imgFabricacao from "@/assets/img-gilcase-fabricacao.jpg";
+import imgSup1 from "@/assets/gilcase-suporte-1.png";
+import imgSup2 from "@/assets/gilcase-suporte-2.png";
+import imgSup3 from "@/assets/gilcase-suporte-3.png";
+import imgSup4 from "@/assets/gilcase-suporte-4.png";
+import imgSup5 from "@/assets/gilcase-suporte-5.png";
+import imgSup6 from "@/assets/gilcase-suporte-6.png";
+import imgSup7 from "@/assets/gilcase-suporte-7.png";
+import imgSup8 from "@/assets/gilcase-suporte-8.png";
 import imgExtra1 from "@/assets/gilcase-extra-1.png";
 import imgExtra2 from "@/assets/gilcase-extra-2.png";
 import imgExtra3 from "@/assets/gilcase-extra-3.png";
@@ -91,10 +99,14 @@ const products = [
   { id: "case-iluminacao", name: "Case para Iluminação", image: imgCarousel6, description: "Cases para transporte seguro de moving heads, refletores, mesas de luz e acessórios.", category: "cases" },
   { id: "case-instrumento", name: "Case para Instrumentos", image: imgCarousel7, description: "Cases para guitarra, baixo, teclado, bateria e instrumentos musicais diversos.", category: "cases" },
   { id: "case-drone", name: "Case para Drones", image: imgCarousel8, description: "Cases com espuma personalizada para drones e acessórios, garantindo proteção em transporte.", category: "cases" },
-  { id: "suporte-1", name: "Suporte 1", image: imgSuportePlaceholder, description: "", category: "suportes" },
-  { id: "suporte-2", name: "Suporte 2", image: imgSuportePlaceholder, description: "", category: "suportes" },
-  { id: "suporte-3", name: "Suporte 3", image: imgSuportePlaceholder, description: "", category: "suportes" },
-  { id: "suporte-4", name: "Suporte 4", image: imgSuportePlaceholder, description: "", category: "suportes" },
+  { id: "suporte-pata-pesada-rotativo", name: "Suporte Pata Pesada com Rotativo e Gaveta", image: imgSup1, description: "Suporte de pedestal com base pata pesada, cabeçote rotativo e gaveta para organização de cabos. Ideal para videowall e múltiplos monitores.", category: "suportes" },
+  { id: "suporte-pata-pesada", name: "Suporte Pata Pesada", image: imgSup2, description: "Suporte de pedestal com base pata pesada em aço e colunas duplas em alumínio, com regulagem de altura para TVs e monitores profissionais.", category: "suportes" },
+  { id: "suporte-pedestal-reforçado", name: "Suporte Pedestal Reforçado", image: imgSup3, description: "Suporte de pedestal reforçado com cabeçote VESA universal e colunas duplas em alumínio, ideal para monitores de grande formato.", category: "suportes" },
+  { id: "suporte-videowall-pedestal", name: "Suporte Videowall de Pedestal", image: imgSup4, description: "Suporte de pedestal duplo para montagem de videowall 2x2, com colunas independentes e regulagem de altura individual.", category: "suportes" },
+  { id: "suporte-pedestal-tripé", name: "Suporte Pedestal Tripé", image: imgSup5, description: "Suporte de pedestal com base tripé ergonômica e coluna central em alumínio, com regulagem de altura e inclinação.", category: "suportes" },
+  { id: "suporte-parede-pleno", name: "Suporte de Parede Pleno", image: imgSup6, description: "Suporte de parede com fixação VESA universal em aço carbono, com recortes para ventilação e passagem de cabos. Selo GilCase e Pleno.", category: "suportes" },
+  { id: "suporte-teto", name: "Suporte de Teto", image: imgSup7, description: "Suporte de teto com haste vertical em aço e cabeçote VESA universal, ideal para instalações suspensas em lojas, aeroportos e eventos.", category: "suportes" },
+  { id: "suporte-mesa-inclinado", name: "Suporte Mesa Inclinado", image: imgSup8, description: "Suporte de mesa com bandeja inclinada e base tripé ergonômica, com regulagem de altura. Ideal para totens de consulta e quiosques.", category: "suportes" },
   { id: "totem-drogal", name: "Totem Drogal", image: imgTotem1, description: "Totem digital vertical com tela LED full HD para a rede Drogal, ideal para comunicação visual em farmácias e pontos de venda.", category: "totens" },
   { id: "totem-eletroposto", name: "Totem Eletroposto", image: imgTotem2, description: "Totem para eletropostos com estrutura em aço pintado, painel de conectores e sinalização LED integrada.", category: "totens" },
   { id: "totem-consulta-saude", name: "Totem de Consulta Interativo", image: imgTotem3, description: "Totem interativo com tela touch inclinada em base curva, ideal para clínicas, hospitais e ambientes de saúde.", category: "totens" },
