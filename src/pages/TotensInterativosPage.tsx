@@ -1,12 +1,11 @@
 import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import SEOHead from "@/components/SEOHead";
 import { Link } from "react-router-dom";
-import { ArrowRight, ArrowLeft, Monitor, Smartphone, Zap, Store, Star, Settings } from "lucide-react";
+import { ArrowRight, ArrowLeft, Monitor, Smartphone, Zap, Store, Star, Settings, ChevronLeft, ChevronRight } from "lucide-react";
 import BrandNavbar from "@/components/layout/BrandNavbar";
 import { Button } from "@/components/ui/button";
 import WhatsAppButton from "@/components/WhatsAppButton";
-
 
 import imgTotemDrogal from "@/assets/totens/totem-drogal.png";
 import imgTotemEletroposto from "@/assets/totens/totem-eletroposto.png";
@@ -16,18 +15,28 @@ import imgTotemSignage from "@/assets/totens/totem-digital-signage.png";
 import imgTotemPainel from "@/assets/totens/totem-painel-led.png";
 import imgTotemVarejo from "@/assets/totens/totem-varejo.png";
 import imgTotemNissan from "@/assets/totens/totem-nissan.png";
+import imgTotemKioskMedical from "@/assets/totens/totem-kiosk-medical.png";
+import imgTotemKioskMedbeauty from "@/assets/totens/totem-kiosk-medbeauty.png";
+import imgTotemKioskLineup from "@/assets/totens/totem-kiosk-lineup.png";
 
 const logoGilCase = "/lovable-uploads/logo-gilcase.jpeg";
 
-const gallery = [
-  { image: imgTotemDrogal, title: "Totem Digital Drogal", desc: "Totem de sinalização digital vertical para redes de farmácias com tela LED de alta resolução e estrutura em aço." },
-  { image: imgTotemEletroposto, title: "Totem Eletroposto", desc: "Estrutura para estações de carregamento elétrico com painel frontal perfurado e acabamento em pintura eletrostática." },
-  { image: imgTotemSmartphone, title: "Totem Interativo Smartphone", desc: "Totem com design inspirado em smartphone, ideal para recepções, clínicas e pontos de atendimento interativo." },
-  { image: imgTotemLed, title: "Painel LED Portrait", desc: "Totem com painel LED de alta definição em formato vertical, perfeito para vitrines e ambientes de alto impacto visual." },
-  { image: imgTotemSignage, title: "Totem Digital Signage Pedestal", desc: "Totem pedestal com tela digital para conteúdos dinâmicos em lobbies, shoppings e espaços corporativos." },
-  { image: imgTotemPainel, title: "Totem Painel LED com Base", desc: "Estrutura vertical com painel LED integrado e base em madeira, ideal para lojas e ambientes de varejo." },
-  { image: imgTotemVarejo, title: "Totem LED Varejo", desc: "Totem digital para campanhas de varejo com tela LED de grande formato e base robusta em aço." },
-  { image: imgTotemNissan, title: "Totem Interativo Nissan", desc: "Totem touchscreen personalizado para concessionária Nissan com logotipo integrado e tela interativa." },
+type GalleryItem = {
+  images: string[];
+  title: string;
+  desc: string;
+};
+
+const gallery: GalleryItem[] = [
+  { images: [imgTotemDrogal], title: "Totem Digital Drogal", desc: "Totem de sinalização digital vertical para redes de farmácias com tela LED de alta resolução e estrutura em aço." },
+  { images: [imgTotemEletroposto], title: "Totem Eletroposto", desc: "Estrutura para estações de carregamento elétrico com painel frontal perfurado e acabamento em pintura eletrostática." },
+  { images: [imgTotemSmartphone], title: "Totem Interativo Smartphone", desc: "Totem com design inspirado em smartphone, ideal para recepções, clínicas e pontos de atendimento interativo." },
+  { images: [imgTotemLed], title: "Painel LED Portrait", desc: "Totem com painel LED de alta definição em formato vertical, perfeito para vitrines e ambientes de alto impacto visual." },
+  { images: [imgTotemSignage], title: "Totem Digital Signage Pedestal", desc: "Totem pedestal com tela digital para conteúdos dinâmicos em lobbies, shoppings e espaços corporativos." },
+  { images: [imgTotemPainel], title: "Totem Painel LED com Base", desc: "Estrutura vertical com painel LED integrado e base em madeira, ideal para lojas e ambientes de varejo." },
+  { images: [imgTotemVarejo], title: "Totem LED Varejo", desc: "Totem digital para campanhas de varejo com tela LED de grande formato e base robusta em aço." },
+  { images: [imgTotemNissan], title: "Totem Interativo Nissan", desc: "Totem touchscreen personalizado para concessionária Nissan com logotipo integrado e tela interativa." },
+  { images: [imgTotemKioskMedical, imgTotemKioskMedbeauty, imgTotemKioskLineup], title: "Totem Kiosk Interativo", desc: "Totem pedestal tipo kiosk com tela inclinada touchscreen, disponível em diversos tamanhos e acabamentos para clínicas, varejo e eventos." },
 ];
 
 const features = [
@@ -51,6 +60,59 @@ const SectionBlock = ({ children, className = "" }: { children: React.ReactNode;
       className={className}
     >
       {children}
+    </motion.div>
+  );
+};
+
+const GalleryCard = ({ item, index, inView }: { item: GalleryItem; index: number; inView: boolean }) => {
+  const [currentImg, setCurrentImg] = useState(0);
+  const hasMultiple = item.images.length > 1;
+
+  return (
+    <motion.div
+      key={item.title}
+      initial={{ opacity: 0, y: 30 }}
+      animate={inView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.5, delay: index * 0.08 }}
+      className="group relative bg-card rounded-sm overflow-hidden border border-border hover:border-accent-blue/30 transition-colors"
+    >
+      <div className="aspect-square overflow-hidden bg-muted relative">
+        <img
+          src={item.images[currentImg]}
+          alt={item.title}
+          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+        />
+        {hasMultiple && (
+          <>
+            <button
+              onClick={(e) => { e.stopPropagation(); setCurrentImg((prev) => (prev - 1 + item.images.length) % item.images.length); }}
+              className="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/50 hover:bg-black/70 flex items-center justify-center text-white transition-colors z-10"
+            >
+              <ChevronLeft size={18} />
+            </button>
+            <button
+              onClick={(e) => { e.stopPropagation(); setCurrentImg((prev) => (prev + 1) % item.images.length); }}
+              className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/50 hover:bg-black/70 flex items-center justify-center text-white transition-colors z-10"
+            >
+              <ChevronRight size={18} />
+            </button>
+            <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1.5 z-10">
+              {item.images.map((_, i) => (
+                <button
+                  key={i}
+                  onClick={(e) => { e.stopPropagation(); setCurrentImg(i); }}
+                  className={`w-2 h-2 rounded-full transition-colors ${i === currentImg ? "bg-accent-blue" : "bg-white/50"}`}
+                />
+              ))}
+            </div>
+          </>
+        )}
+      </div>
+      <div className="p-5">
+        <h3 className="text-base font-semibold text-foreground mb-1">{item.title}</h3>
+        <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
+      </div>
+      <div className="absolute top-0 left-0 w-0 h-1 bg-accent-blue group-hover:w-full transition-all duration-500" />
     </motion.div>
   );
 };
@@ -168,26 +230,7 @@ const TotensInterativosPage = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {gallery.map((item, index) => (
-              <motion.div
-                key={item.title}
-                initial={{ opacity: 0, y: 30 }}
-                animate={galleryInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.5, delay: index * 0.08 }}
-                className="group relative bg-card rounded-sm overflow-hidden border border-border hover:border-accent-blue/30 transition-colors"
-              >
-                <div className="aspect-square overflow-hidden bg-muted">
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                </div>
-                <div className="p-5">
-                  <h3 className="text-base font-semibold text-foreground mb-1">{item.title}</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
-                </div>
-                <div className="absolute top-0 left-0 w-0 h-1 bg-accent-blue group-hover:w-full transition-all duration-500" />
-              </motion.div>
+              <GalleryCard key={item.title} item={item} index={index} inView={galleryInView} />
             ))}
           </div>
         </div>
