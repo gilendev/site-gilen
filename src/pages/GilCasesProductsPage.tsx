@@ -73,6 +73,8 @@ import imgTotemVarejo from "@/assets/totens/totem-varejo.png";
 import imgTotemNissan from "@/assets/totens/totem-nissan.png";
 import imgEstruturaPainelLed1 from "@/assets/estruturas/estrutura-painel-led-1.jpg";
 import imgEstruturaPainelLed2 from "@/assets/estruturas/estrutura-painel-led-2.jpg";
+import imgEstruturaSuspensa1 from "@/assets/estruturas/estrutura-suspensa-painel-led-1.jpg";
+import imgEstruturaSuspensa2 from "@/assets/estruturas/estrutura-suspensa-painel-led-2.jpg";
 
 const imgSuportePlaceholder = "/placeholder.svg";
 const logoGilCase = "/lovable-uploads/logo-gilcase.jpeg";
@@ -148,6 +150,7 @@ const products = [
   { id: "case-gaveteiro", name: "Case Gaveteiro Vertical", image: imgExtra23, description: "Case vertical com sistema de gavetas deslizantes e rodízios para organização profissional.", category: "cases" },
   { id: "case-empilhavel-pro", name: "Cases Empilháveis Pro", image: imgExtra24, description: "Conjunto de cases empilháveis profissionais com cantoneiras reforçadas e rodízios.", category: "cases" },
   { id: "estrutura-painel-led-suspenso", name: "Painel LED Suspenso com Estrutura Metálica", image: imgEstruturaPainelLed1, images: [imgEstruturaPainelLed1, imgEstruturaPainelLed2], description: "Estrutura metálica suspensa em treliça de aço para fixação de painel LED de grande formato em galpões industriais e arenas de eventos. Inclui suporte estrutural com travamento cruzado para máxima estabilidade.", category: "sob-medida" },
+  { id: "estrutura-suspensa-painel-led", name: "Estrutura Suspensa para Painel LED", image: imgEstruturaSuspensa1, images: [imgEstruturaSuspensa1, imgEstruturaSuspensa2], description: "Estrutura suspensa em treliça de aço com grid de fixação para painéis LED de grande formato em feiras e eventos. Sistema modular com travamento cruzado e suporte para sonorização integrada.", category: "sob-medida" },
 ];
 
 const GilCasesProductsPage = () => (
