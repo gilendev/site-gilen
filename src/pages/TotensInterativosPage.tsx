@@ -1,12 +1,11 @@
 import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import SEOHead from "@/components/SEOHead";
 import { Link } from "react-router-dom";
-import { ArrowRight, ArrowLeft, Monitor, Smartphone, Zap, Store, Star, Settings } from "lucide-react";
+import { ArrowRight, ArrowLeft, Monitor, Smartphone, Zap, Store, Star, Settings, ChevronLeft, ChevronRight } from "lucide-react";
 import BrandNavbar from "@/components/layout/BrandNavbar";
 import { Button } from "@/components/ui/button";
 import WhatsAppButton from "@/components/WhatsAppButton";
-
 
 import imgTotemDrogal from "@/assets/totens/totem-drogal.png";
 import imgTotemEletroposto from "@/assets/totens/totem-eletroposto.png";
@@ -16,18 +15,28 @@ import imgTotemSignage from "@/assets/totens/totem-digital-signage.png";
 import imgTotemPainel from "@/assets/totens/totem-painel-led.png";
 import imgTotemVarejo from "@/assets/totens/totem-varejo.png";
 import imgTotemNissan from "@/assets/totens/totem-nissan.png";
+import imgTotemKioskMedical from "@/assets/totens/totem-kiosk-medical.png";
+import imgTotemKioskMedbeauty from "@/assets/totens/totem-kiosk-medbeauty.png";
+import imgTotemKioskLineup from "@/assets/totens/totem-kiosk-lineup.png";
 
 const logoGilCase = "/lovable-uploads/logo-gilcase.jpeg";
 
-const gallery = [
-  { image: imgTotemDrogal, title: "Totem Digital Drogal", desc: "Totem de sinalização digital vertical para redes de farmácias com tela LED de alta resolução e estrutura em aço." },
-  { image: imgTotemEletroposto, title: "Totem Eletroposto", desc: "Estrutura para estações de carregamento elétrico com painel frontal perfurado e acabamento em pintura eletrostática." },
-  { image: imgTotemSmartphone, title: "Totem Interativo Smartphone", desc: "Totem com design inspirado em smartphone, ideal para recepções, clínicas e pontos de atendimento interativo." },
-  { image: imgTotemLed, title: "Painel LED Portrait", desc: "Totem com painel LED de alta definição em formato vertical, perfeito para vitrines e ambientes de alto impacto visual." },
-  { image: imgTotemSignage, title: "Totem Digital Signage Pedestal", desc: "Totem pedestal com tela digital para conteúdos dinâmicos em lobbies, shoppings e espaços corporativos." },
-  { image: imgTotemPainel, title: "Totem Painel LED com Base", desc: "Estrutura vertical com painel LED integrado e base em madeira, ideal para lojas e ambientes de varejo." },
-  { image: imgTotemVarejo, title: "Totem LED Varejo", desc: "Totem digital para campanhas de varejo com tela LED de grande formato e base robusta em aço." },
-  { image: imgTotemNissan, title: "Totem Interativo Nissan", desc: "Totem touchscreen personalizado para concessionária Nissan com logotipo integrado e tela interativa." },
+type GalleryItem = {
+  images: string[];
+  title: string;
+  desc: string;
+};
+
+const gallery: GalleryItem[] = [
+  { images: [imgTotemDrogal], title: "Totem Digital Drogal", desc: "Totem de sinalização digital vertical para redes de farmácias com tela LED de alta resolução e estrutura em aço." },
+  { images: [imgTotemEletroposto], title: "Totem Eletroposto", desc: "Estrutura para estações de carregamento elétrico com painel frontal perfurado e acabamento em pintura eletrostática." },
+  { images: [imgTotemSmartphone], title: "Totem Interativo Smartphone", desc: "Totem com design inspirado em smartphone, ideal para recepções, clínicas e pontos de atendimento interativo." },
+  { images: [imgTotemLed], title: "Painel LED Portrait", desc: "Totem com painel LED de alta definição em formato vertical, perfeito para vitrines e ambientes de alto impacto visual." },
+  { images: [imgTotemSignage], title: "Totem Digital Signage Pedestal", desc: "Totem pedestal com tela digital para conteúdos dinâmicos em lobbies, shoppings e espaços corporativos." },
+  { images: [imgTotemPainel], title: "Totem Painel LED com Base", desc: "Estrutura vertical com painel LED integrado e base em madeira, ideal para lojas e ambientes de varejo." },
+  { images: [imgTotemVarejo], title: "Totem LED Varejo", desc: "Totem digital para campanhas de varejo com tela LED de grande formato e base robusta em aço." },
+  { images: [imgTotemNissan], title: "Totem Interativo Nissan", desc: "Totem touchscreen personalizado para concessionária Nissan com logotipo integrado e tela interativa." },
+  { images: [imgTotemKioskMedical, imgTotemKioskMedbeauty, imgTotemKioskLineup], title: "Totem Kiosk Interativo", desc: "Totem pedestal tipo kiosk com tela inclinada touchscreen, disponível em diversos tamanhos e acabamentos para clínicas, varejo e eventos." },
 ];
 
 const features = [
