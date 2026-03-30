@@ -77,6 +77,8 @@ import imgEstruturaSuspensa1 from "@/assets/estruturas/estrutura-suspensa-painel
 import imgEstruturaSuspensa2 from "@/assets/estruturas/estrutura-suspensa-painel-led-2.jpg";
 import imgFachadaLed1 from "@/assets/estruturas/fachada-painel-led-1.jpg";
 import imgFachadaLed2 from "@/assets/estruturas/fachada-painel-led-2.jpg";
+import imgCuboLed1 from "@/assets/estruturas/cubo-led-evento-1.jpg";
+import imgCuboLed2 from "@/assets/estruturas/cubo-led-evento-2.png";
 
 const imgSuportePlaceholder = "/placeholder.svg";
 const logoGilCase = "/lovable-uploads/logo-gilcase.jpeg";
