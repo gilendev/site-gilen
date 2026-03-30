@@ -33,6 +33,8 @@ import imgSup7 from "@/assets/gilcase-suporte-7.png";
 import imgSup8 from "@/assets/gilcase-suporte-8.png";
 import imgSup9 from "@/assets/gilcase-suporte-9.png";
 import imgSup9Detail from "@/assets/gilcase-suporte-9-detail.png";
+import imgSup10 from "@/assets/gilcase-suporte-10.png";
+import imgSup10Detail from "@/assets/gilcase-suporte-10-detail.png";
 import imgSup11 from "@/assets/gilcase-suporte-11.png";
 import imgSup11Detail from "@/assets/gilcase-suporte-11-detail.png";
 import imgSup12 from "@/assets/gilcase-suporte-12.png";
@@ -114,7 +116,7 @@ const products = [
   { id: "suporte-teto", name: "Suporte de Teto", image: imgSup7, description: "Suporte de teto com haste vertical em aço e cabeçote VESA universal, ideal para instalações suspensas em lojas, aeroportos e eventos corporativos.", category: "suportes" },
   { id: "suporte-mesa-inclinado", name: "Suporte Mesa Inclinado GilCase", image: imgSup8, description: "Suporte de mesa com bandeja inclinada e base tripé ergonômica em aço, com coluna em alumínio e regulagem de altura. Ideal para totens de consulta e quiosques.", category: "suportes" },
   { id: "suporte-articulado-vesa", name: "Suporte Articulado VESA", image: imgSup9, images: [imgSup9, imgSup9Detail], description: "Suporte articulado com cabeçote VESA em aço carbono e sistema de rotação com trava por manípulo. Detalhe do mecanismo de fixação com múltiplos furos para ajuste fino de posição.", category: "suportes" },
-  
+  { id: "suporte-pedestal-vertical", name: "Suporte Pedestal Vertical H2", image: imgSup10, images: [imgSup10, imgSup10Detail], description: "Suporte de pedestal vertical com colunas duplas em alumínio e base pata pesada em aço, projetado para TVs e painéis em formato retrato. Ideal para digital signage e comunicação visual em pontos de venda.", category: "suportes" },
   { id: "suporte-camera-ptz", name: "Suporte para Câmera PTZ com Teleprompter", image: imgSup11, images: [imgSup11, imgSup11Detail], description: "Suporte de pedestal com base quadrada em aço, coluna central e cabeçote para câmera PTZ robótica com teleprompter acoplado. Ideal para estúdios de TV, streaming profissional e produção audiovisual.", category: "suportes" },
   { id: "suporte-mesa-inclinado-touch", name: "Suporte Mesa Inclinado Touch", image: imgSup12, images: [imgSup12, imgSup12Detail], description: "Suporte de mesa com tela inclinada e base compacta em aço, com regulagem de ângulo e pés emborrachados. Ideal para totens de autoatendimento, consulta de preços e quiosques interativos.", category: "suportes" },
   { id: "totem-drogal", name: "Totem Drogal", image: imgTotem1, description: "Totem digital vertical com tela LED full HD para a rede Drogal, ideal para comunicação visual em farmácias e pontos de venda.", category: "totens" },
