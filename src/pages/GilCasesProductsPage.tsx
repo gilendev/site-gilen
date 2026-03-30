@@ -99,6 +99,8 @@ import imgLedPontoComercial1 from "@/assets/estruturas/painel-led-pedestal-1.jpg
 import imgLedPontoComercial2 from "@/assets/estruturas/painel-led-pedestal-2.png";
 import imgLedPiscina1 from "@/assets/estruturas/painel-led-piscina-1.jpg";
 import imgLedPiscina2 from "@/assets/estruturas/painel-led-piscina-2.png";
+import imgLedMuroPiscina1 from "@/assets/estruturas/painel-led-muro-piscina-1.png";
+import imgLedMuroPiscina2 from "@/assets/estruturas/painel-led-muro-piscina-2.png";
 
 const imgSuportePlaceholder = "/placeholder.svg";
 const logoGilCase = "/lovable-uploads/logo-gilcase.jpeg";
