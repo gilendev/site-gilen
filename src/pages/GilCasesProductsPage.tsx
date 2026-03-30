@@ -77,6 +77,8 @@ import imgEstruturaSuspensa1 from "@/assets/estruturas/estrutura-suspensa-painel
 import imgEstruturaSuspensa2 from "@/assets/estruturas/estrutura-suspensa-painel-led-2.jpg";
 import imgFachadaLed1 from "@/assets/estruturas/fachada-painel-led-1.jpg";
 import imgFachadaLed2 from "@/assets/estruturas/fachada-painel-led-2.jpg";
+import imgCuboLed1 from "@/assets/estruturas/cubo-led-evento-1.jpg";
+import imgCuboLed2 from "@/assets/estruturas/cubo-led-evento-2.png";
 
 const imgSuportePlaceholder = "/placeholder.svg";
 const logoGilCase = "/lovable-uploads/logo-gilcase.jpeg";
@@ -154,6 +156,7 @@ const products = [
   { id: "estrutura-painel-led-suspenso", name: "Painel LED Suspenso com Estrutura Metálica", image: imgEstruturaPainelLed1, images: [imgEstruturaPainelLed1, imgEstruturaPainelLed2], description: "Estrutura metálica suspensa em treliça de aço para fixação de painel LED de grande formato em galpões industriais e arenas de eventos. Inclui suporte estrutural com travamento cruzado para máxima estabilidade.", category: "sob-medida" },
   { id: "estrutura-suspensa-painel-led", name: "Estrutura Suspensa para Painel LED", image: imgEstruturaSuspensa1, images: [imgEstruturaSuspensa1, imgEstruturaSuspensa2], description: "Estrutura suspensa em treliça de aço com grid de fixação para painéis LED de grande formato em feiras e eventos. Sistema modular com travamento cruzado e suporte para sonorização integrada.", category: "sob-medida" },
   { id: "fachada-painel-led", name: "Fachada com Painel LED", image: imgFachadaLed1, images: [imgFachadaLed1, imgFachadaLed2], description: "Estrutura metálica com painel LED integrado para fachada comercial, proporcionando comunicação visual dinâmica e alto impacto em ambientes de varejo e empreendimentos imobiliários.", category: "sob-medida" },
+  { id: "cubo-led-eventos", name: "Cubo LED para Eventos", image: imgCuboLed1, images: [imgCuboLed1, imgCuboLed2], description: "Estrutura metálica em formato de cubo com painéis LED multifacetados para eventos e congressos. Inclui base iluminada e estrutura fabricada sob medida em aço com pintura eletrostática.", category: "sob-medida" },
 ];
 
 const GilCasesProductsPage = () => (
