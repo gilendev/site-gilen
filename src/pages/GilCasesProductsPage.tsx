@@ -83,6 +83,8 @@ import imgSuporteFachada1 from "@/assets/estruturas/suporte-fachada-led-1.jpg";
 import imgSuporteFachada2 from "@/assets/estruturas/suporte-fachada-led-2.jpg";
 import imgMidiaExterior1 from "@/assets/estruturas/midia-exterior-led-1.jpg";
 import imgMidiaExterior2 from "@/assets/estruturas/midia-exterior-led-2.jpg";
+import imgPainelCurvo1 from "@/assets/estruturas/painel-curvo-showroom-1.jpg";
+import imgPainelCurvo2 from "@/assets/estruturas/painel-curvo-showroom-2.png";
 
 const imgSuportePlaceholder = "/placeholder.svg";
 const logoGilCase = "/lovable-uploads/logo-gilcase.jpeg";
