@@ -73,6 +73,8 @@ import imgTotemVarejo from "@/assets/totens/totem-varejo.png";
 import imgTotemNissan from "@/assets/totens/totem-nissan.png";
 import imgEstruturaPainelLed1 from "@/assets/estruturas/estrutura-painel-led-1.jpg";
 import imgEstruturaPainelLed2 from "@/assets/estruturas/estrutura-painel-led-2.jpg";
+import imgEstruturaSuspensa1 from "@/assets/estruturas/estrutura-suspensa-painel-led-1.jpg";
+import imgEstruturaSuspensa2 from "@/assets/estruturas/estrutura-suspensa-painel-led-2.jpg";
 
 const imgSuportePlaceholder = "/placeholder.svg";
 const logoGilCase = "/lovable-uploads/logo-gilcase.jpeg";
