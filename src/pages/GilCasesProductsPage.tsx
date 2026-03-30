@@ -71,6 +71,8 @@ import imgTotemSignage from "@/assets/totens/totem-digital-signage.png";
 import imgTotemPainel from "@/assets/totens/totem-painel-led.png";
 import imgTotemVarejo from "@/assets/totens/totem-varejo.png";
 import imgTotemNissan from "@/assets/totens/totem-nissan.png";
+import imgEstruturaPainelLed1 from "@/assets/estruturas/estrutura-painel-led-1.jpg";
+import imgEstruturaPainelLed2 from "@/assets/estruturas/estrutura-painel-led-2.jpg";
 
 const imgSuportePlaceholder = "/placeholder.svg";
 const logoGilCase = "/lovable-uploads/logo-gilcase.jpeg";
