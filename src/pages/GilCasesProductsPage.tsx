@@ -33,6 +33,8 @@ import imgSup7 from "@/assets/gilcase-suporte-7.png";
 import imgSup8 from "@/assets/gilcase-suporte-8.png";
 import imgSup9 from "@/assets/gilcase-suporte-9.png";
 import imgSup9Detail from "@/assets/gilcase-suporte-9-detail.png";
+import imgSup10 from "@/assets/gilcase-suporte-10.png";
+import imgSup10Detail from "@/assets/gilcase-suporte-10-detail.png";
 import imgExtra1 from "@/assets/gilcase-extra-1.png";
 import imgExtra2 from "@/assets/gilcase-extra-2.png";
 import imgExtra3 from "@/assets/gilcase-extra-3.png";
@@ -110,6 +112,7 @@ const products = [
   { id: "suporte-teto", name: "Suporte de Teto", image: imgSup7, description: "Suporte de teto com haste vertical em aço e cabeçote VESA universal, ideal para instalações suspensas em lojas, aeroportos e eventos corporativos.", category: "suportes" },
   { id: "suporte-mesa-inclinado", name: "Suporte Mesa Inclinado GilCase", image: imgSup8, description: "Suporte de mesa com bandeja inclinada e base tripé ergonômica em aço, com coluna em alumínio e regulagem de altura. Ideal para totens de consulta e quiosques.", category: "suportes" },
   { id: "suporte-articulado-vesa", name: "Suporte Articulado VESA", image: imgSup9, images: [imgSup9, imgSup9Detail], description: "Suporte articulado com cabeçote VESA em aço carbono e sistema de rotação com trava por manípulo. Detalhe do mecanismo de fixação com múltiplos furos para ajuste fino de posição.", category: "suportes" },
+  { id: "suporte-pedestal-vertical", name: "Suporte Pedestal Vertical H2", image: imgSup10, images: [imgSup10, imgSup10Detail], description: "Suporte de pedestal vertical com colunas duplas em alumínio e base pata pesada em aço, projetado para TVs e painéis em formato retrato. Ideal para digital signage e comunicação visual em pontos de venda.", category: "suportes" },
   { id: "totem-drogal", name: "Totem Drogal", image: imgTotem1, description: "Totem digital vertical com tela LED full HD para a rede Drogal, ideal para comunicação visual em farmácias e pontos de venda.", category: "totens" },
   { id: "totem-eletroposto", name: "Totem Eletroposto", image: imgTotem2, description: "Totem para eletropostos com estrutura em aço pintado, painel de conectores e sinalização LED integrada.", category: "totens" },
   { id: "totem-consulta-saude", name: "Totem de Consulta Interativo", image: imgTotem3, description: "Totem interativo com tela touch inclinada em base curva, ideal para clínicas, hospitais e ambientes de saúde.", category: "totens" },
