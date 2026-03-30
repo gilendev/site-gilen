@@ -89,6 +89,8 @@ import imgFachadaByd1 from "@/assets/estruturas/fachada-concessionaria-byd-1.jpg
 import imgFachadaByd2 from "@/assets/estruturas/fachada-concessionaria-byd-2.jpg";
 import imgGeodesicaLed1 from "@/assets/estruturas/geodesica-led-1.jpg";
 import imgGeodesicaLed2 from "@/assets/estruturas/geodesica-led-2.jpg";
+import imgVideowallExterno1 from "@/assets/estruturas/painel-led-muro-1.jpg";
+import imgVideowallExterno2 from "@/assets/estruturas/painel-led-muro-2.jpg";
 
 const imgSuportePlaceholder = "/placeholder.svg";
 const logoGilCase = "/lovable-uploads/logo-gilcase.jpeg";
