@@ -63,16 +63,6 @@ import imgExtra21 from "@/assets/gilcase-extra-21.png";
 import imgExtra22 from "@/assets/gilcase-extra-22.png";
 import imgExtra23 from "@/assets/gilcase-extra-23.png";
 import imgExtra24 from "@/assets/gilcase-extra-24.png";
-import imgTotem1 from "@/assets/gilcase-totem-1.png";
-import imgTotem2 from "@/assets/gilcase-totem-2.png";
-import imgTotem3 from "@/assets/gilcase-totem-3.png";
-import imgTotem4 from "@/assets/gilcase-totem-4.png";
-import imgTotem5 from "@/assets/gilcase-totem-5.png";
-import imgTotem6 from "@/assets/gilcase-totem-6.png";
-import imgTotem7 from "@/assets/gilcase-totem-7.png";
-import imgTotem8 from "@/assets/gilcase-totem-8.png";
-import imgTotem9 from "@/assets/gilcase-totem-9.png";
-import imgTotem10 from "@/assets/gilcase-totem-10.png";
 
 const imgSuportePlaceholder = "/placeholder.svg";
 const logoGilCase = "/lovable-uploads/logo-gilcase.jpeg";
