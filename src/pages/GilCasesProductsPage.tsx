@@ -174,6 +174,7 @@ const products = [
   { id: "painel-curvo-showroom", name: "Painel LED Curvo para Showroom", image: imgPainelCurvo1, images: [imgPainelCurvo1, imgPainelCurvo2], description: "Estrutura metálica curva com painel LED de alta definição para showrooms e concessionárias automotivas. Instalação com grid modular e acabamento premium para ambientes internos de alto padrão.", category: "sob-medida" },
   { id: "fachada-concessionaria-byd", name: "Fachada para Concessionária BYD", image: imgFachadaByd1, images: [imgFachadaByd1, imgFachadaByd2], description: "Estrutura metálica curva com revestimento ACM e painel LED integrado para fachada de concessionária BYD, com letreiro luminoso e comunicação visual completa.", category: "sob-medida" },
   { id: "geodesica-led", name: "Estrutura Geodésica com LED", image: imgGeodesicaLed1, images: [imgGeodesicaLed1, imgGeodesicaLed2], description: "Estrutura metálica geodésica com revestimento em painéis e iluminação LED nas arestas, com tela integrada. Da fabricação em aço ao acabamento final premium para eventos e experiências imersivas.", category: "sob-medida" },
+  { id: "videowall-externo", name: "Videowall Externo", image: imgVideowallExterno1, images: [imgVideowallExterno1, imgVideowallExterno2], description: "Estrutura metálica para videowall LED de grande formato em área externa, com fixação em muro e acabamento resistente a intempéries. Da montagem estrutural ao resultado final com conteúdo digital de alto impacto.", category: "sob-medida" },
 ];
 
 const GilCasesProductsPage = () => (
