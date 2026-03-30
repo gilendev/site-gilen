@@ -168,6 +168,7 @@ const products = [
   { id: "suporte-fachada-led", name: "Suporte de Fachada para Painel LED", image: imgSuporteFachada1, images: [imgSuporteFachada1, imgSuporteFachada2], description: "Estrutura metálica para fixação de painel LED em fachada de edifício comercial, com instalação por içamento via guindaste e acabamento em pintura eletrostática.", category: "sob-medida" },
   { id: "midia-exterior-led", name: "Estrutura para Mídia Exterior LED", image: imgMidiaExterior1, images: [imgMidiaExterior1, imgMidiaExterior2], description: "Estrutura metálica elevada tipo outdoor para painel LED de grande formato, ideal para mídia digital externa em vias urbanas e pontos comerciais de alto tráfego.", category: "sob-medida" },
   { id: "painel-curvo-showroom", name: "Painel LED Curvo para Showroom", image: imgPainelCurvo1, images: [imgPainelCurvo1, imgPainelCurvo2], description: "Estrutura metálica curva com painel LED de alta definição para showrooms e concessionárias automotivas. Instalação com grid modular e acabamento premium para ambientes internos de alto padrão.", category: "sob-medida" },
+  { id: "fachada-concessionaria-byd", name: "Fachada para Concessionária BYD", image: imgFachadaByd1, images: [imgFachadaByd1, imgFachadaByd2], description: "Estrutura metálica curva com revestimento ACM e painel LED integrado para fachada de concessionária BYD, com letreiro luminoso e comunicação visual completa.", category: "sob-medida" },
 ];
 
 const GilCasesProductsPage = () => (
