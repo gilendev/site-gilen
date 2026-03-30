@@ -63,20 +63,6 @@ import imgExtra21 from "@/assets/gilcase-extra-21.png";
 import imgExtra22 from "@/assets/gilcase-extra-22.png";
 import imgExtra23 from "@/assets/gilcase-extra-23.png";
 import imgExtra24 from "@/assets/gilcase-extra-24.png";
-import imgSobmedida1 from "@/assets/img-sobmedida1.jpg";
-import imgSobmedida2 from "@/assets/img-sobmedida2.jpg";
-import imgSobmedida3 from "@/assets/img-sobmedida3.jpg";
-import imgSobmedida4 from "@/assets/img-sobmedida4.jpg";
-import imgSobmedida5 from "@/assets/img-sobmedida5.jpg";
-import imgSobmedida6 from "@/assets/img-sobmedida6.jpg";
-import imgSobmedida7 from "@/assets/img-sobmedida7.jpg";
-import imgSobmedida8 from "@/assets/img-sobmedida8.jpg";
-import imgSobmedida9 from "@/assets/img-sobmedida9.jpg";
-import imgSobmedida10 from "@/assets/img-sobmedida10.jpg";
-import imgSobmedida11 from "@/assets/img-sobmedida11.jpg";
-import imgSobmedida12 from "@/assets/img-sobmedida12.jpg";
-import imgSobmedida13 from "@/assets/img-sobmedida13.jpg";
-import imgSobmedida14 from "@/assets/img-sobmedida14.png";
 import imgTotem1 from "@/assets/gilcase-totem-1.png";
 import imgTotem2 from "@/assets/gilcase-totem-2.png";
 import imgTotem3 from "@/assets/gilcase-totem-3.png";
@@ -139,22 +125,6 @@ const products = [
   
   { id: "case-empilhavel", name: "Case Empilhável", image: imgNew10, description: "Cases com sistema de empilhamento seguro e rodízios para transporte facilitado.", category: "cases" },
   { id: "case-azul", name: "Cases Linha Azul", image: imgNew1, description: "Linha de cases em compensado azul com cantoneiras reforçadas em alumínio.", category: "cases" },
-  { id: "projeto-especial", name: "Projeto Especial", image: imgFabricacao, description: "Cases e estruturas especiais sob medida com engenharia dedicada.", category: "sob-medida" },
-  { id: "prototipo", name: "Prototipagem 3D", image: imgFabricacao, description: "Projeto 3D e prototipagem antes da fabricação em série.", category: "sob-medida" },
-  { id: "producao-serie", name: "Produção em Série", image: imgFabricacao, description: "Fabricação em série com padrão de qualidade e acabamento premium.", category: "sob-medida" },
-  { id: "estrutura-metalica", name: "Estrutura Metálica Suspensa", image: imgSobmedida1, description: "Estruturas metálicas suspensas para galpões industriais com treliças e vigas de aço.", category: "sob-medida" },
-  { id: "painel-led-suspenso", name: "Painel LED Suspenso", image: imgSobmedida2, description: "Instalação de painéis LED suspensos em estruturas metálicas para eventos e feiras.", category: "sob-medida" },
-  { id: "montagem-trelica", name: "Montagem de Treliças para Eventos", image: imgSobmedida3, description: "Montagem de treliças e estruturas de grande porte para eventos com equipe especializada.", category: "sob-medida" },
-  { id: "estrutura-videowall", name: "Estrutura para Videowall Suspenso", image: imgSobmedida4, description: "Estruturas sob medida para suporte de videowalls suspensos em feiras e convenções.", category: "sob-medida" },
-  { id: "fachada-comercial-personalizada", name: "Fachada Comercial Personalizada", image: imgSobmedida5, images: [imgSobmedida5, imgSobmedida6], description: "Projeto completo de fachadas comerciais sob medida com estruturas metálicas, revestimentos em madeira ripada e integração de painéis LED para comunicação visual de alto impacto.", category: "sob-medida" },
-  { id: "cubo-led-evento", name: "Cubo LED para Eventos", image: imgSobmedida7, description: "Estrutura em formato de cubo com painéis LED em múltiplas faces para eventos e congressos.", category: "sob-medida" },
-  { id: "instalacao-painel-externo", name: "Instalação de Painel Externo", image: imgSobmedida8, description: "Instalação de painéis LED externos com guindaste e estrutura metálica de suporte.", category: "sob-medida" },
-  { id: "montagem-estrutura-fachada", name: "Montagem de Estrutura para Fachada", image: imgSobmedida9, description: "Montagem de estrutura metálica para suporte de painéis em fachadas comerciais.", category: "sob-medida" },
-  { id: "estrutura-outdoor", name: "Estrutura para Outdoor com Treliças", image: imgSobmedida10, description: "Estrutura metálica com treliças para sustentação de outdoor publicitário de grande formato.", category: "sob-medida" },
-  { id: "painel-led-outdoor", name: "Painel LED Outdoor Instalado", image: imgSobmedida11, description: "Painel LED outdoor em funcionamento com estrutura metálica de suporte e alta luminosidade.", category: "sob-medida" },
-  { id: "instalacao-videowall-showroom", name: "Instalação Videowall em Showroom", image: imgSobmedida12, description: "Montagem de videowall curvo em showroom automotivo com equipe técnica especializada.", category: "sob-medida" },
-  { id: "fachada-concessionaria", name: "Fachada de Concessionária", image: imgSobmedida13, description: "Projeto de fachada iluminada para concessionária com estrutura metálica e letreiro.", category: "sob-medida" },
-  { id: "videowall-curvo-showroom", name: "Videowall Curvo em Showroom", image: imgSobmedida14, description: "Videowall curvo de alta resolução instalado em showroom automotivo premium.", category: "sob-medida" },
   { id: "case-compensado-branco", name: "Case Compensado Branco", image: imgExtra1, description: "Case em compensado branco com cantoneiras em alumínio, tampa articulada e divisória interna.", category: "cases" },
   { id: "case-teclado-musical", name: "Case para Teclado Musical", image: imgExtra2, description: "Case profissional para teclado com interior acolchoado e fechos reforçados.", category: "cases" },
   { id: "case-empilhavel-grande", name: "Cases Empilháveis Grande Porte", image: imgExtra3, description: "Conjunto de cases empilháveis para transporte de painéis e equipamentos de grande formato.", category: "cases" },
