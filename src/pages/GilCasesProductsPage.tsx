@@ -186,6 +186,7 @@ const products = [
   { id: "caminhao-painel-led", name: "Caminhão com Painel LED", image: imgTruckLed1, images: [imgTruckLed1, imgTruckLed2], description: "Estrutura metálica com painel LED de grande formato instalado em caminhão para mídia móvel e publicidade itinerante. Da montagem estrutural no galpão ao resultado final em operação nas ruas.", category: "sob-medida" },
   { id: "videowall-curvo-showroom", name: "Videowall Curvo para Showroom", image: imgVideowallCurvo1, images: [imgVideowallCurvo1, imgVideowallCurvo2], description: "Estrutura metálica curva com videowall LED de grande formato para showrooms e concessionárias automotivas. Da instalação do grid estrutural ao resultado final com conteúdo imersivo de alto impacto.", category: "sob-medida" },
   { id: "estrutura-led-ponto-comercial", name: "Estrutura LED Ponto Comercial", image: imgLedPontoComercial1, images: [imgLedPontoComercial1, imgLedPontoComercial2], description: "Estrutura metálica com painel LED em pedestal para comunicação visual em pontos comerciais. Da montagem da estrutura ao resultado final com conteúdo digital dinâmico em fachada.", category: "sob-medida" },
+  { id: "painel-led-residencial-piscina", name: "Painel LED Residencial Piscina", image: imgLedPiscina1, images: [imgLedPiscina1, imgLedPiscina2], description: "Estrutura metálica com painel LED para área de lazer e beira de piscina em residência de alto padrão. Da montagem estrutural ao resultado final com transmissão ao vivo em ambiente externo.", category: "sob-medida" },
 ];
 
 const GilCasesProductsPage = () => (
