@@ -173,7 +173,7 @@ const products = [
   { id: "case-ferramentas", name: "Case para Ferramentas", image: imgExtra15, description: "Case profissional para ferramentas com organizador na tampa e compartimento inferior acolchoado.", category: "cases" },
   { id: "case-marca-personalizada", name: "Case Marca Personalizada", image: imgExtra16, description: "Case com identidade visual personalizada da marca do cliente em compensado colorido.", category: "cases" },
   { id: "case-rack-compacto", name: "Case Rack Compacto", image: imgExtra17, description: "Case rack compacto com tampa articulada para equipamentos de áudio e mixers.", category: "cases" },
-  { id: "case-cenografico", name: "Cases Cenográficos", image: imgExtra18, description: "Cases cenográficos de grande formato para cenários, letras e peças de comunicação visual.", category: "sob-medida" },
+  
   { id: "case-alca-retratil", name: "Case com Alça Retrátil", image: imgExtra19, description: "Case com alça retrátil tipo mala e prateleiras internas para transporte facilitado.", category: "cases" },
   { id: "case-equipamento-daston", name: "Case para Equipamento Daston", image: imgExtra20, description: "Case sob medida para equipamentos Daston com fixação interna em X e rodízios.", category: "cases" },
   { id: "case-firma-prod", name: "Cases Firma Prod", image: imgExtra21, description: "Kit de cases personalizados para a empresa Firma Prod com acabamento premium e cantoneiras cromadas.", category: "cases" },
