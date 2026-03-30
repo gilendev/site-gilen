@@ -246,7 +246,6 @@ const BrandProductsLayout = ({
   const [searchQuery, setSearchQuery] = useState("");
   const [viewMode, setViewMode] = useState<"grid" | "large">("grid");
   const [selectedProduct, setSelectedProduct] = useState<ProductItem | null>(null);
-  const [hoveredProduct, setHoveredProduct] = useState<string | null>(null);
   const [mobileFilterOpen, setMobileFilterOpen] = useState(false);
 
   const filteredProducts = products.filter((p) => {
