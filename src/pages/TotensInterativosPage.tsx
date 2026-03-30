@@ -8,9 +8,27 @@ import { Button } from "@/components/ui/button";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
 
+import imgDrogal from "@/assets/totens/totem-drogal.png";
+import imgEletroposto from "@/assets/totens/totem-eletroposto.png";
+import imgSmartphone from "@/assets/totens/totem-smartphone.png";
+import imgLedPortrait from "@/assets/totens/totem-led-portrait.png";
+import imgDigitalSignage from "@/assets/totens/totem-digital-signage.png";
+import imgPainelLed from "@/assets/totens/totem-painel-led.png";
+import imgVarejo from "@/assets/totens/totem-varejo.png";
+import imgNissan from "@/assets/totens/totem-nissan.png";
+
 const logoGilCase = "/lovable-uploads/logo-gilcase.jpeg";
 
-const gallery: { image: string; title: string; desc: string }[] = [];
+const gallery = [
+  { image: imgDrogal, title: "Totem Digital Signage Drogal", desc: "Totem de sinalização digital vertical para redes de farmácias com tela de alta resolução e estrutura em aço." },
+  { image: imgEletroposto, title: "Totem Eletroposto", desc: "Estrutura para estações de carregamento elétrico com painel frontal perfurado e acabamento em pintura eletrostática." },
+  { image: imgSmartphone, title: "Totem Interativo Smartphone", desc: "Totem com design inspirado em smartphone, ideal para recepções, clínicas e pontos de atendimento interativo." },
+  { image: imgLedPortrait, title: "Painel LED Portrait", desc: "Totem com painel LED de alta definição em formato vertical, perfeito para vitrines e ambientes de alto impacto visual." },
+  { image: imgDigitalSignage, title: "Totem Digital Signage Pedestal", desc: "Totem pedestal com tela digital para conteúdos dinâmicos em lobbies, shoppings e espaços corporativos." },
+  { image: imgPainelLed, title: "Totem Painel LED com Base", desc: "Estrutura vertical com painel LED integrado e base em madeira, ideal para lojas e ambientes de varejo." },
+  { image: imgVarejo, title: "Totem LED Varejo", desc: "Totem digital para campanhas de varejo com tela LED de grande formato e base robusta em aço." },
+  { image: imgNissan, title: "Totem Interativo Nissan", desc: "Totem touchscreen personalizado para concessionária Nissan com logotipo integrado e tela interativa." },
+];
 
 const features = [
   { icon: Monitor, title: "Telas HD & 4K", desc: "Suporte para telas de alta resolução em diversos tamanhos e formatos." },
