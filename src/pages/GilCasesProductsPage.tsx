@@ -63,16 +63,6 @@ import imgExtra21 from "@/assets/gilcase-extra-21.png";
 import imgExtra22 from "@/assets/gilcase-extra-22.png";
 import imgExtra23 from "@/assets/gilcase-extra-23.png";
 import imgExtra24 from "@/assets/gilcase-extra-24.png";
-import imgTotem1 from "@/assets/gilcase-totem-1.png";
-import imgTotem2 from "@/assets/gilcase-totem-2.png";
-import imgTotem3 from "@/assets/gilcase-totem-3.png";
-import imgTotem4 from "@/assets/gilcase-totem-4.png";
-import imgTotem5 from "@/assets/gilcase-totem-5.png";
-import imgTotem6 from "@/assets/gilcase-totem-6.png";
-import imgTotem7 from "@/assets/gilcase-totem-7.png";
-import imgTotem8 from "@/assets/gilcase-totem-8.png";
-import imgTotem9 from "@/assets/gilcase-totem-9.png";
-import imgTotem10 from "@/assets/gilcase-totem-10.png";
 
 const imgSuportePlaceholder = "/placeholder.svg";
 const logoGilCase = "/lovable-uploads/logo-gilcase.jpeg";
@@ -105,16 +95,6 @@ const products = [
   { id: "suporte-pedestal-vertical", name: "Suporte Pedestal Vertical H2", image: imgSup10, images: [imgSup10, imgSup10Detail], description: "Suporte de pedestal vertical com colunas duplas em alumínio e base pata pesada em aço, projetado para TVs e painéis em formato retrato. Ideal para digital signage e comunicação visual em pontos de venda.", category: "suportes" },
   { id: "suporte-camera-ptz", name: "Suporte para Câmera PTZ com Teleprompter", image: imgSup11, images: [imgSup11, imgSup11Detail], description: "Suporte de pedestal com base quadrada em aço, coluna central e cabeçote para câmera PTZ robótica com teleprompter acoplado. Ideal para estúdios de TV, streaming profissional e produção audiovisual.", category: "suportes" },
   { id: "suporte-mesa-inclinado-touch", name: "Suporte Mesa Inclinado Touch", image: imgSup12, images: [imgSup12, imgSup12Detail], description: "Suporte de mesa com tela inclinada e base compacta em aço, com regulagem de ângulo e pés emborrachados. Ideal para totens de autoatendimento, consulta de preços e quiosques interativos.", category: "suportes" },
-  { id: "totem-drogal", name: "Totem Drogal", image: imgTotem1, description: "Totem digital vertical com tela LED full HD para a rede Drogal, ideal para comunicação visual em farmácias e pontos de venda.", category: "totens" },
-  { id: "totem-eletroposto", name: "Totem Eletroposto", image: imgTotem2, description: "Totem para eletropostos com estrutura em aço pintado, painel de conectores e sinalização LED integrada.", category: "totens" },
-  { id: "totem-consulta-saude", name: "Totem de Consulta Interativo", image: imgTotem3, description: "Totem interativo com tela touch inclinada em base curva, ideal para clínicas, hospitais e ambientes de saúde.", category: "totens" },
-  { id: "totem-mesa-medbeauty", name: "Mesa Interativa MedBeauty", image: imgTotem4, description: "Mesa interativa com tela widescreen inclinada e base em acabamento dourado, perfeita para clínicas de estética e showrooms.", category: "totens" },
-  { id: "totem-smartphone", name: "Totem Formato Smartphone", image: imgTotem5, description: "Totem em formato de smartphone com tela touchscreen vertical, design moderno com borda arredondada e base em preto fosco.", category: "totens" },
-  { id: "totem-linha-mesas", name: "Linha de Mesas Interativas", image: imgTotem6, description: "Família de mesas interativas em três tamanhos com tela inclinada e base curvada, para feiras, eventos e pontos de atendimento.", category: "totens" },
-  { id: "totem-painel-led-vertical", name: "Painel LED Vertical", image: imgTotem7, description: "Totem com painel LED de alta resolução em formato vertical slim, ideal para vitrines, galerias e ambientes de alto impacto visual.", category: "totens" },
-  { id: "totem-digital-signage", name: "Totem Digital Signage", image: imgTotem8, description: "Totem de sinalização digital vertical com tela de 55\" em moldura prata, para conteúdos dinâmicos em shoppings e aeroportos.", category: "totens" },
-  { id: "totem-led-decorativo", name: "Totem LED Decorativo", image: imgTotem9, description: "Totem decorativo com painel LED frontal e base em madeira, combinando tecnologia e design para ambientes sofisticados.", category: "totens" },
-  { id: "totem-led-varejo", name: "Totem LED para Varejo", image: imgTotem10, description: "Totem LED vertical de alto brilho com base robusta em preto, projetado para campanhas de varejo e comunicação de loja.", category: "totens" },
   { id: "case-personalizado", name: "Case Personalizado com Logo", image: imgNew2, description: "Case com impressão personalizada da marca do cliente, acabamento premium em compensado revestido.", category: "cases" },
   { id: "case-bags", name: "Kit Bags e Cases", image: imgNew3, description: "Conjunto de bags e cases para transporte completo de equipamentos audiovisuais.", category: "cases" },
   { id: "case-painel", name: "Case para Painel", image: imgNew4, description: "Case sob medida para painéis de grande formato com estrutura reforçada.", category: "cases" },
