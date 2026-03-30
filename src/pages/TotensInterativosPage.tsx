@@ -7,35 +7,10 @@ import BrandNavbar from "@/components/layout/BrandNavbar";
 import { Button } from "@/components/ui/button";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
-import imgDrogal from "@/assets/img-totem-drogal.png";
-import imgEletroposto from "@/assets/img-totem-eletroposto.png";
-import imgSaude from "@/assets/img-totem-saude.png";
-import imgMedbeauty from "@/assets/img-totem-medbeauty.png";
-import imgSmartphone from "@/assets/img-totem-smartphone.png";
-import imgPedestais from "@/assets/img-totem-pedestais.png";
-import imgLed from "@/assets/img-totem-led.png";
-import imgHoroscopo from "@/assets/img-totem-horoscopo.png";
-import imgPainel from "@/assets/img-totem-painel.png";
-import imgLoja from "@/assets/img-totem-loja.png";
-import imgLed2 from "@/assets/img-totem-led2.png";
-import imgNissan from "@/assets/img-totem-nissan.png";
 
 const logoGilCase = "/lovable-uploads/logo-gilcase.jpeg";
 
-const gallery = [
-  { image: imgDrogal, title: "Totem Farmácia Drogal", desc: "Totem vertical com tela LED para comunicação em ponto de venda." },
-  { image: imgEletroposto, title: "Totem Eletroposto", desc: "Estrutura robusta para estações de recarga de veículos elétricos." },
-  { image: imgSaude, title: "Totem Saúde", desc: "Totem interativo com tela inclinada para clínicas e hospitais." },
-  { image: imgMedbeauty, title: "Totem Mesa Interativa", desc: "Mesa interativa com tela widescreen para experiências imersivas." },
-  { image: imgSmartphone, title: "Totem Smartphone", desc: "Design em formato de smartphone com tela touchscreen integrada." },
-  { image: imgPedestais, title: "Pedestais Interativos", desc: "Linha de pedestais em diferentes tamanhos para eventos e pontos de venda." },
-  { image: imgLed, title: "Totem Painel LED", desc: "Painel vertical de LED com alta resolução para conteúdo dinâmico." },
-  { image: imgHoroscopo, title: "Totem Digital Vertical", desc: "Totem digital de piso com tela vertical para conteúdo interativo." },
-  { image: imgPainel, title: "Totem Painel Iluminado", desc: "Totem com painel iluminado e base em madeira para ambientes premium." },
-  { image: imgLoja, title: "Totem Vitrine Digital", desc: "Totem de vitrine digital para campanhas de varejo e moda." },
-  { image: imgLed2, title: "Painel LED Vertical", desc: "Painel LED vertical de alta definição com estrutura slim para ambientes internos." },
-  { image: imgNissan, title: "Totem Nissan", desc: "Totem personalizado com tela e logotipo para concessionárias e showrooms." },
-];
+const gallery: { image: string; title: string; desc: string }[] = [];
 
 const features = [
   { icon: Monitor, title: "Telas HD & 4K", desc: "Suporte para telas de alta resolução em diversos tamanhos e formatos." },
@@ -148,11 +123,11 @@ const TotensInterativosPage = () => {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="hidden lg:flex justify-center items-end gap-6"
+              className="hidden lg:flex justify-center items-center"
             >
-              <img src={imgDrogal} alt="Totem Drogal" className="w-40 h-auto rounded-sm shadow-2xl" />
-              <img src={imgSaude} alt="Totem Saúde" className="w-48 h-auto rounded-sm shadow-2xl -mt-8" />
-              <img src={imgHoroscopo} alt="Totem Digital" className="w-40 h-auto rounded-sm shadow-2xl" />
+              <div className="w-64 h-64 rounded-sm border border-border/30 bg-white/5 flex items-center justify-center">
+                <p className="text-white/30 text-sm text-center px-4">Novas imagens em breve</p>
+              </div>
             </motion.div>
           </div>
         </div>
