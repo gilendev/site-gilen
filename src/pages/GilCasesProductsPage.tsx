@@ -99,6 +99,8 @@ import imgLedPontoComercial1 from "@/assets/estruturas/painel-led-pedestal-1.jpg
 import imgLedPontoComercial2 from "@/assets/estruturas/painel-led-pedestal-2.png";
 import imgLedPiscina1 from "@/assets/estruturas/painel-led-piscina-1.jpg";
 import imgLedPiscina2 from "@/assets/estruturas/painel-led-piscina-2.png";
+import imgLedMuroPiscina1 from "@/assets/estruturas/painel-led-muro-piscina-1.png";
+import imgLedMuroPiscina2 from "@/assets/estruturas/painel-led-muro-piscina-2.png";
 
 const imgSuportePlaceholder = "/placeholder.svg";
 const logoGilCase = "/lovable-uploads/logo-gilcase.jpeg";
@@ -187,6 +189,7 @@ const products = [
   { id: "videowall-curvo-showroom", name: "Videowall Curvo para Showroom", image: imgVideowallCurvo1, images: [imgVideowallCurvo1, imgVideowallCurvo2], description: "Estrutura metálica curva com videowall LED de grande formato para showrooms e concessionárias automotivas. Da instalação do grid estrutural ao resultado final com conteúdo imersivo de alto impacto.", category: "sob-medida" },
   { id: "estrutura-led-ponto-comercial", name: "Estrutura LED Ponto Comercial", image: imgLedPontoComercial1, images: [imgLedPontoComercial1, imgLedPontoComercial2], description: "Estrutura metálica com painel LED em pedestal para comunicação visual em pontos comerciais. Da montagem da estrutura ao resultado final com conteúdo digital dinâmico em fachada.", category: "sob-medida" },
   { id: "painel-led-residencial-piscina", name: "Painel LED Residencial Piscina", image: imgLedPiscina1, images: [imgLedPiscina1, imgLedPiscina2], description: "Estrutura metálica com painel LED para área de lazer e beira de piscina em residência de alto padrão. Da montagem estrutural ao resultado final com transmissão ao vivo em ambiente externo.", category: "sob-medida" },
+  { id: "painel-led-muro-piscina", name: "Painel LED Muro de Piscina", image: imgLedMuroPiscina1, images: [imgLedMuroPiscina1, imgLedMuroPiscina2], description: "Estrutura metálica com painel LED fixado em muro de área de piscina residencial. Da instalação do suporte estrutural ao resultado final com conteúdo multimídia em ambiente externo.", category: "sob-medida" },
 ];
 
 const GilCasesProductsPage = () => (
