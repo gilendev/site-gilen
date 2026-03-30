@@ -378,7 +378,7 @@ const BrandProductsLayout = ({
             onClose={() => setSelectedProduct(null)}
           />
         )}
-
+      </AnimatePresence>
 
       <WhatsAppButton />
     </div>
