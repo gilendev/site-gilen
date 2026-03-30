@@ -520,7 +520,7 @@ const BrandProductsLayout = ({
             brandName={brandName}
             categories={categories}
             whatsappUrl={`https://wa.me/5511968756430?text=${encodeURIComponent(`Olá! Gostaria de um orçamento para: ${selectedProduct.name} (${brandName})`)}`}
-            onClose={() => setSelectedProduct(null)}
+            onClose={handleCloseProduct}
           />
         )}
       </AnimatePresence>
