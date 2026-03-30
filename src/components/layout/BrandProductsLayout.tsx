@@ -370,38 +370,15 @@ const BrandProductsLayout = ({
       {/* Product Detail Modal */}
       <AnimatePresence>
         {selectedProduct && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[60] bg-black/80 backdrop-blur-sm flex items-end sm:items-center justify-center sm:p-4"
-            onClick={() => setSelectedProduct(null)}
-          >
-            <motion.div
-              initial={{ scale: 0.95, opacity: 0, y: 40 }}
-              animate={{ scale: 1, opacity: 1, y: 0 }}
-              exit={{ scale: 0.95, opacity: 0, y: 40 }}
-              transition={{ type: "spring", damping: 25, stiffness: 300 }}
-              className="bg-card w-full sm:max-w-3xl sm:rounded-2xl rounded-t-2xl overflow-hidden shadow-2xl max-h-[90vh] sm:max-h-[85vh] overflow-y-auto"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <div className="grid grid-cols-1 sm:grid-cols-2">
-                {/* Image */}
-                <div className="relative aspect-[4/3] sm:aspect-auto sm:min-h-[300px] bg-muted">
-                  <img src={selectedProduct.image} alt={selectedProduct.name} className="w-full h-full object-cover" />
-                  <button
-                    onClick={() => setSelectedProduct(null)}
-                    className="absolute top-3 right-3 w-8 h-8 sm:w-9 sm:h-9 bg-black/50 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-black/70 transition-colors"
-                  >
-                    <X size={16} />
-                  </button>
-                  <div className="absolute bottom-3 left-3">
-                    <span className="px-2.5 py-1 bg-black/40 backdrop-blur-md text-white text-[10px] font-semibold uppercase tracking-wider rounded-md">
-                      {categories.find(c => c.id === selectedProduct.category)?.title}
-                    </span>
-                  </div>
-                </div>
-
+          <ModalGallery
+            product={selectedProduct}
+            brandName={brandName}
+            categories={categories}
+            whatsappUrl={`https://wa.me/5511968756430?text=${encodeURIComponent(`Olá! Gostaria de um orçamento para: ${selectedProduct.name} (${brandName})`)}`}
+            onClose={() => setSelectedProduct(null)}
+          />
+        )}
+      </AnimatePresence>
                 {/* Details */}
                 <div className="p-5 sm:p-6 md:p-8 flex flex-col">
                   <div className="flex-1">
