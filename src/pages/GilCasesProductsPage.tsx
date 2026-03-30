@@ -95,6 +95,8 @@ import imgTruckLed1 from "@/assets/estruturas/truck-led-1.jpg";
 import imgTruckLed2 from "@/assets/estruturas/truck-led-2.jpg";
 import imgVideowallCurvo1 from "@/assets/estruturas/videowall-curvo-concessionaria-1.jpg";
 import imgVideowallCurvo2 from "@/assets/estruturas/videowall-curvo-concessionaria-2.jpg";
+import imgLedPontoComercial1 from "@/assets/estruturas/painel-led-pedestal-1.jpg";
+import imgLedPontoComercial2 from "@/assets/estruturas/painel-led-pedestal-2.png";
 
 const imgSuportePlaceholder = "/placeholder.svg";
 const logoGilCase = "/lovable-uploads/logo-gilcase.jpeg";
@@ -181,6 +183,7 @@ const products = [
   { id: "videowall-externo", name: "Videowall Externo", image: imgVideowallExterno1, images: [imgVideowallExterno1, imgVideowallExterno2], description: "Estrutura metálica para videowall LED de grande formato em área externa, com fixação em muro e acabamento resistente a intempéries. Da montagem estrutural ao resultado final com conteúdo digital de alto impacto.", category: "sob-medida" },
   { id: "caminhao-painel-led", name: "Caminhão com Painel LED", image: imgTruckLed1, images: [imgTruckLed1, imgTruckLed2], description: "Estrutura metálica com painel LED de grande formato instalado em caminhão para mídia móvel e publicidade itinerante. Da montagem estrutural no galpão ao resultado final em operação nas ruas.", category: "sob-medida" },
   { id: "videowall-curvo-showroom", name: "Videowall Curvo para Showroom", image: imgVideowallCurvo1, images: [imgVideowallCurvo1, imgVideowallCurvo2], description: "Estrutura metálica curva com videowall LED de grande formato para showrooms e concessionárias automotivas. Da instalação do grid estrutural ao resultado final com conteúdo imersivo de alto impacto.", category: "sob-medida" },
+  { id: "estrutura-led-ponto-comercial", name: "Estrutura LED Ponto Comercial", image: imgLedPontoComercial1, images: [imgLedPontoComercial1, imgLedPontoComercial2], description: "Estrutura metálica com painel LED em pedestal para comunicação visual em pontos comerciais. Da montagem da estrutura ao resultado final com conteúdo digital dinâmico em fachada.", category: "sob-medida" },
 ];
 
 const GilCasesProductsPage = () => (
