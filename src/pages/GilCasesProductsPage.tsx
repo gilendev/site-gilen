@@ -83,6 +83,8 @@ import imgSuporteFachada1 from "@/assets/estruturas/suporte-fachada-led-1.jpg";
 import imgSuporteFachada2 from "@/assets/estruturas/suporte-fachada-led-2.jpg";
 import imgMidiaExterior1 from "@/assets/estruturas/midia-exterior-led-1.jpg";
 import imgMidiaExterior2 from "@/assets/estruturas/midia-exterior-led-2.jpg";
+import imgPainelCurvo1 from "@/assets/estruturas/painel-curvo-showroom-1.jpg";
+import imgPainelCurvo2 from "@/assets/estruturas/painel-curvo-showroom-2.png";
 
 const imgSuportePlaceholder = "/placeholder.svg";
 const logoGilCase = "/lovable-uploads/logo-gilcase.jpeg";
@@ -163,6 +165,7 @@ const products = [
   { id: "cubo-led-eventos", name: "Cubo LED para Eventos", image: imgCuboLed1, images: [imgCuboLed1, imgCuboLed2], description: "Estrutura metálica em formato de cubo com painéis LED multifacetados para eventos e congressos. Inclui base iluminada e estrutura fabricada sob medida em aço com pintura eletrostática.", category: "sob-medida" },
   { id: "suporte-fachada-led", name: "Suporte de Fachada para Painel LED", image: imgSuporteFachada1, images: [imgSuporteFachada1, imgSuporteFachada2], description: "Estrutura metálica para fixação de painel LED em fachada de edifício comercial, com instalação por içamento via guindaste e acabamento em pintura eletrostática.", category: "sob-medida" },
   { id: "midia-exterior-led", name: "Estrutura para Mídia Exterior LED", image: imgMidiaExterior1, images: [imgMidiaExterior1, imgMidiaExterior2], description: "Estrutura metálica elevada tipo outdoor para painel LED de grande formato, ideal para mídia digital externa em vias urbanas e pontos comerciais de alto tráfego.", category: "sob-medida" },
+  { id: "painel-curvo-showroom", name: "Painel LED Curvo para Showroom", image: imgPainelCurvo1, images: [imgPainelCurvo1, imgPainelCurvo2], description: "Estrutura metálica curva com painel LED de alta definição para showrooms e concessionárias automotivas. Instalação com grid modular e acabamento premium para ambientes internos de alto padrão.", category: "sob-medida" },
 ];
 
 const GilCasesProductsPage = () => (
