@@ -31,6 +31,8 @@ import imgSup5 from "@/assets/gilcase-suporte-5.png";
 import imgSup6 from "@/assets/gilcase-suporte-6.png";
 import imgSup7 from "@/assets/gilcase-suporte-7.png";
 import imgSup8 from "@/assets/gilcase-suporte-8.png";
+import imgSup9 from "@/assets/gilcase-suporte-9.png";
+import imgSup9Detail from "@/assets/gilcase-suporte-9-detail.png";
 import imgExtra1 from "@/assets/gilcase-extra-1.png";
 import imgExtra2 from "@/assets/gilcase-extra-2.png";
 import imgExtra3 from "@/assets/gilcase-extra-3.png";
@@ -107,6 +109,7 @@ const products = [
   { id: "suporte-parede-pleno", name: "Suporte de Parede Pleno", image: imgSup6, description: "Suporte de parede fixo em aço carbono com padrão VESA universal, recortes para ventilação e passagem de cabos. Selo GilCase e Pleno.", category: "suportes" },
   { id: "suporte-teto", name: "Suporte de Teto", image: imgSup7, description: "Suporte de teto com haste vertical em aço e cabeçote VESA universal, ideal para instalações suspensas em lojas, aeroportos e eventos corporativos.", category: "suportes" },
   { id: "suporte-mesa-inclinado", name: "Suporte Mesa Inclinado GilCase", image: imgSup8, description: "Suporte de mesa com bandeja inclinada e base tripé ergonômica em aço, com coluna em alumínio e regulagem de altura. Ideal para totens de consulta e quiosques.", category: "suportes" },
+  { id: "suporte-articulado-vesa", name: "Suporte Articulado VESA", image: imgSup9, images: [imgSup9, imgSup9Detail], description: "Suporte articulado com cabeçote VESA em aço carbono e sistema de rotação com trava por manípulo. Detalhe do mecanismo de fixação com múltiplos furos para ajuste fino de posição.", category: "suportes" },
   { id: "totem-drogal", name: "Totem Drogal", image: imgTotem1, description: "Totem digital vertical com tela LED full HD para a rede Drogal, ideal para comunicação visual em farmácias e pontos de venda.", category: "totens" },
   { id: "totem-eletroposto", name: "Totem Eletroposto", image: imgTotem2, description: "Totem para eletropostos com estrutura em aço pintado, painel de conectores e sinalização LED integrada.", category: "totens" },
   { id: "totem-consulta-saude", name: "Totem de Consulta Interativo", image: imgTotem3, description: "Totem interativo com tela touch inclinada em base curva, ideal para clínicas, hospitais e ambientes de saúde.", category: "totens" },

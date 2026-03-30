@@ -1,6 +1,6 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useMemo } from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, Search, X, ShoppingBag, Grid3X3, LayoutGrid, SlidersHorizontal, Eye, Filter } from "lucide-react";
+import { ArrowRight, Search, X, ShoppingBag, Grid3X3, LayoutGrid, SlidersHorizontal, Eye, Filter, ChevronLeft, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
 import SEOHead from "@/components/SEOHead";
@@ -12,6 +12,7 @@ export interface ProductItem {
   id: string;
   name: string;
   image: string;
+  images?: string[];
   description: string;
   category: string;
 }
@@ -38,6 +39,84 @@ interface BrandProductsLayoutProps {
   navSections: BrandNavSection[];
   heroBanner?: React.ReactNode;
 }
+
+const ModalGallery = ({ product, brandName, categories, whatsappUrl, onClose }: {
+  product: ProductItem;
+  brandName: string;
+  categories: ProductCategory[];
+  whatsappUrl: string;
+  onClose: () => void;
+}) => {
+  const allImages = product.images && product.images.length > 0 ? product.images : [product.image];
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className="fixed inset-0 z-[60] bg-black/80 backdrop-blur-sm flex items-end sm:items-center justify-center sm:p-4"
+      onClick={onClose}
+    >
+      <motion.div
+        initial={{ scale: 0.95, opacity: 0, y: 40 }}
+        animate={{ scale: 1, opacity: 1, y: 0 }}
+        exit={{ scale: 0.95, opacity: 0, y: 40 }}
+        transition={{ type: "spring", damping: 25, stiffness: 300 }}
+        className="bg-card w-full sm:max-w-3xl sm:rounded-2xl rounded-t-2xl overflow-hidden shadow-2xl max-h-[90vh] sm:max-h-[85vh] overflow-y-auto"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <div className="grid grid-cols-1 sm:grid-cols-2">
+          <div className="relative aspect-[4/3] sm:aspect-auto sm:min-h-[300px] bg-muted">
+            <img src={allImages[currentImageIndex]} alt={product.name} className="w-full h-full object-cover" />
+            <button onClick={onClose} className="absolute top-3 right-3 w-8 h-8 sm:w-9 sm:h-9 bg-black/50 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-black/70 transition-colors">
+              <X size={16} />
+            </button>
+            <div className="absolute bottom-3 left-3">
+              <span className="px-2.5 py-1 bg-black/40 backdrop-blur-md text-white text-[10px] font-semibold uppercase tracking-wider rounded-md">
+                {categories.find(c => c.id === product.category)?.title}
+              </span>
+            </div>
+            {allImages.length > 1 && (
+              <>
+                <button onClick={() => setCurrentImageIndex((prev) => (prev - 1 + allImages.length) % allImages.length)} className="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-black/50 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-black/70 transition-colors">
+                  <ChevronLeft size={16} />
+                </button>
+                <button onClick={() => setCurrentImageIndex((prev) => (prev + 1) % allImages.length)} className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-black/50 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-black/70 transition-colors">
+                  <ChevronRight size={16} />
+                </button>
+                <div className="absolute bottom-3 right-3 flex gap-1.5">
+                  {allImages.map((_, i) => (
+                    <button key={i} onClick={() => setCurrentImageIndex(i)} className={cn("w-2 h-2 rounded-full transition-all", i === currentImageIndex ? "bg-white scale-110" : "bg-white/50")} />
+                  ))}
+                </div>
+              </>
+            )}
+          </div>
+          <div className="p-5 sm:p-6 md:p-8 flex flex-col">
+            <div className="flex-1">
+              <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-accent-blue">{brandName}</span>
+              <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-foreground mt-2 leading-tight">{product.name}</h2>
+              <p className="text-muted-foreground text-sm leading-relaxed mt-3 sm:mt-4">{product.description}</p>
+              <div className="mt-4 sm:mt-6 space-y-2 sm:space-y-3">
+                <div className="flex items-center gap-3 text-sm"><div className="w-1.5 h-1.5 rounded-full bg-accent-blue shrink-0" /><span className="text-muted-foreground">Fabricação sob medida</span></div>
+                <div className="flex items-center gap-3 text-sm"><div className="w-1.5 h-1.5 rounded-full bg-accent-blue shrink-0" /><span className="text-muted-foreground">Materiais de alta qualidade</span></div>
+                <div className="flex items-center gap-3 text-sm"><div className="w-1.5 h-1.5 rounded-full bg-accent-blue shrink-0" /><span className="text-muted-foreground">Garantia de fábrica</span></div>
+              </div>
+            </div>
+            <div className="mt-5 sm:mt-6 pt-4 sm:pt-6 border-t border-border/50 space-y-3">
+              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 w-full py-3 sm:py-3.5 bg-[#25D366] text-white text-xs font-semibold uppercase tracking-wider rounded-xl hover:bg-[#20bd5a] transition-all hover:shadow-lg hover:shadow-[#25D366]/20">
+                <FaWhatsapp size={16} />
+                Solicitar Orçamento via WhatsApp
+              </a>
+              <button onClick={onClose} className="w-full py-2.5 text-xs font-semibold text-muted-foreground hover:text-foreground uppercase tracking-wider transition-colors">Voltar ao catálogo</button>
+            </div>
+          </div>
+        </div>
+      </motion.div>
+    </motion.div>
+  );
+};
 
 const BrandProductsLayout = ({
   brandName,
@@ -369,86 +448,13 @@ const BrandProductsLayout = ({
       {/* Product Detail Modal */}
       <AnimatePresence>
         {selectedProduct && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[60] bg-black/80 backdrop-blur-sm flex items-end sm:items-center justify-center sm:p-4"
-            onClick={() => setSelectedProduct(null)}
-          >
-            <motion.div
-              initial={{ scale: 0.95, opacity: 0, y: 40 }}
-              animate={{ scale: 1, opacity: 1, y: 0 }}
-              exit={{ scale: 0.95, opacity: 0, y: 40 }}
-              transition={{ type: "spring", damping: 25, stiffness: 300 }}
-              className="bg-card w-full sm:max-w-3xl sm:rounded-2xl rounded-t-2xl overflow-hidden shadow-2xl max-h-[90vh] sm:max-h-[85vh] overflow-y-auto"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <div className="grid grid-cols-1 sm:grid-cols-2">
-                {/* Image */}
-                <div className="relative aspect-[4/3] sm:aspect-auto sm:min-h-[300px] bg-muted">
-                  <img src={selectedProduct.image} alt={selectedProduct.name} className="w-full h-full object-cover" />
-                  <button
-                    onClick={() => setSelectedProduct(null)}
-                    className="absolute top-3 right-3 w-8 h-8 sm:w-9 sm:h-9 bg-black/50 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-black/70 transition-colors"
-                  >
-                    <X size={16} />
-                  </button>
-                  <div className="absolute bottom-3 left-3">
-                    <span className="px-2.5 py-1 bg-black/40 backdrop-blur-md text-white text-[10px] font-semibold uppercase tracking-wider rounded-md">
-                      {categories.find(c => c.id === selectedProduct.category)?.title}
-                    </span>
-                  </div>
-                </div>
-
-                {/* Details */}
-                <div className="p-5 sm:p-6 md:p-8 flex flex-col">
-                  <div className="flex-1">
-                    <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-accent-blue">{brandName}</span>
-                    <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-foreground mt-2 leading-tight">
-                      {selectedProduct.name}
-                    </h2>
-                    <p className="text-muted-foreground text-sm leading-relaxed mt-3 sm:mt-4">
-                      {selectedProduct.description}
-                    </p>
-
-                    <div className="mt-4 sm:mt-6 space-y-2 sm:space-y-3">
-                      <div className="flex items-center gap-3 text-sm">
-                        <div className="w-1.5 h-1.5 rounded-full bg-accent-blue shrink-0" />
-                        <span className="text-muted-foreground">Fabricação sob medida</span>
-                      </div>
-                      <div className="flex items-center gap-3 text-sm">
-                        <div className="w-1.5 h-1.5 rounded-full bg-accent-blue shrink-0" />
-                        <span className="text-muted-foreground">Materiais de alta qualidade</span>
-                      </div>
-                      <div className="flex items-center gap-3 text-sm">
-                        <div className="w-1.5 h-1.5 rounded-full bg-accent-blue shrink-0" />
-                        <span className="text-muted-foreground">Garantia de fábrica</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="mt-5 sm:mt-6 pt-4 sm:pt-6 border-t border-border/50 space-y-3">
-                    <a
-                      href={`https://wa.me/5511968756430?text=${encodeURIComponent(`Olá! Gostaria de um orçamento para: ${selectedProduct.name} (${brandName})`)}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center justify-center gap-2 w-full py-3 sm:py-3.5 bg-[#25D366] text-white text-xs font-semibold uppercase tracking-wider rounded-xl hover:bg-[#20bd5a] transition-all hover:shadow-lg hover:shadow-[#25D366]/20"
-                    >
-                      <FaWhatsapp size={16} />
-                      Solicitar Orçamento via WhatsApp
-                    </a>
-                    <button
-                      onClick={() => setSelectedProduct(null)}
-                      className="w-full py-2.5 text-xs font-semibold text-muted-foreground hover:text-foreground uppercase tracking-wider transition-colors"
-                    >
-                      Voltar ao catálogo
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          </motion.div>
+          <ModalGallery
+            product={selectedProduct}
+            brandName={brandName}
+            categories={categories}
+            whatsappUrl={`https://wa.me/5511968756430?text=${encodeURIComponent(`Olá! Gostaria de um orçamento para: ${selectedProduct.name} (${brandName})`)}`}
+            onClose={() => setSelectedProduct(null)}
+          />
         )}
       </AnimatePresence>
 
