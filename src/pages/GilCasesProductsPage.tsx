@@ -33,8 +33,6 @@ import imgSup7 from "@/assets/gilcase-suporte-7.png";
 import imgSup8 from "@/assets/gilcase-suporte-8.png";
 import imgSup9 from "@/assets/gilcase-suporte-9.png";
 import imgSup9Detail from "@/assets/gilcase-suporte-9-detail.png";
-import imgSup10 from "@/assets/gilcase-suporte-10.png";
-import imgSup10Detail from "@/assets/gilcase-suporte-10-detail.png";
 import imgSup11 from "@/assets/gilcase-suporte-11.png";
 import imgSup11Detail from "@/assets/gilcase-suporte-11-detail.png";
 import imgSup12 from "@/assets/gilcase-suporte-12.png";
