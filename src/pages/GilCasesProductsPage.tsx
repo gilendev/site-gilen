@@ -85,6 +85,8 @@ import imgMidiaExterior1 from "@/assets/estruturas/midia-exterior-led-1.jpg";
 import imgMidiaExterior2 from "@/assets/estruturas/midia-exterior-led-2.jpg";
 import imgPainelCurvo1 from "@/assets/estruturas/painel-curvo-showroom-1.jpg";
 import imgPainelCurvo2 from "@/assets/estruturas/painel-curvo-showroom-2.png";
+import imgFachadaByd1 from "@/assets/estruturas/fachada-concessionaria-byd-1.jpg";
+import imgFachadaByd2 from "@/assets/estruturas/fachada-concessionaria-byd-2.jpg";
 
 const imgSuportePlaceholder = "/placeholder.svg";
 const logoGilCase = "/lovable-uploads/logo-gilcase.jpeg";
