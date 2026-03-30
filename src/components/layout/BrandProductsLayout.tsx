@@ -378,57 +378,7 @@ const BrandProductsLayout = ({
             onClose={() => setSelectedProduct(null)}
           />
         )}
-      </AnimatePresence>
-                {/* Details */}
-                <div className="p-5 sm:p-6 md:p-8 flex flex-col">
-                  <div className="flex-1">
-                    <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-accent-blue">{brandName}</span>
-                    <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-foreground mt-2 leading-tight">
-                      {selectedProduct.name}
-                    </h2>
-                    <p className="text-muted-foreground text-sm leading-relaxed mt-3 sm:mt-4">
-                      {selectedProduct.description}
-                    </p>
 
-                    <div className="mt-4 sm:mt-6 space-y-2 sm:space-y-3">
-                      <div className="flex items-center gap-3 text-sm">
-                        <div className="w-1.5 h-1.5 rounded-full bg-accent-blue shrink-0" />
-                        <span className="text-muted-foreground">Fabricação sob medida</span>
-                      </div>
-                      <div className="flex items-center gap-3 text-sm">
-                        <div className="w-1.5 h-1.5 rounded-full bg-accent-blue shrink-0" />
-                        <span className="text-muted-foreground">Materiais de alta qualidade</span>
-                      </div>
-                      <div className="flex items-center gap-3 text-sm">
-                        <div className="w-1.5 h-1.5 rounded-full bg-accent-blue shrink-0" />
-                        <span className="text-muted-foreground">Garantia de fábrica</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="mt-5 sm:mt-6 pt-4 sm:pt-6 border-t border-border/50 space-y-3">
-                    <a
-                      href={`https://wa.me/5511968756430?text=${encodeURIComponent(`Olá! Gostaria de um orçamento para: ${selectedProduct.name} (${brandName})`)}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center justify-center gap-2 w-full py-3 sm:py-3.5 bg-[#25D366] text-white text-xs font-semibold uppercase tracking-wider rounded-xl hover:bg-[#20bd5a] transition-all hover:shadow-lg hover:shadow-[#25D366]/20"
-                    >
-                      <FaWhatsapp size={16} />
-                      Solicitar Orçamento via WhatsApp
-                    </a>
-                    <button
-                      onClick={() => setSelectedProduct(null)}
-                      className="w-full py-2.5 text-xs font-semibold text-muted-foreground hover:text-foreground uppercase tracking-wider transition-colors"
-                    >
-                      Voltar ao catálogo
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
 
       <WhatsAppButton />
     </div>
