@@ -1,5 +1,5 @@
-import { useState, useRef, useMemo } from "react";
-import { Link } from "react-router-dom";
+import { useState, useRef, useMemo, useEffect, useCallback } from "react";
+import { Link, useSearchParams } from "react-router-dom";
 import { ArrowRight, Search, X, ShoppingBag, Grid3X3, LayoutGrid, SlidersHorizontal, Eye, Filter, ChevronLeft, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
@@ -242,11 +242,33 @@ const BrandProductsLayout = ({
   navSections,
   heroBanner,
 }: BrandProductsLayoutProps) => {
+  const [searchParams, setSearchParams] = useSearchParams();
   const [activeCategory, setActiveCategory] = useState<string>("todos");
   const [searchQuery, setSearchQuery] = useState("");
   const [viewMode, setViewMode] = useState<"grid" | "large">("grid");
   const [selectedProduct, setSelectedProduct] = useState<ProductItem | null>(null);
   const [mobileFilterOpen, setMobileFilterOpen] = useState(false);
+
+  // Deep link: open product from URL param on mount
+  useEffect(() => {
+    const productId = searchParams.get("produto");
+    if (productId) {
+      const found = products.find((p) => p.id === productId);
+      if (found) {
+        setSelectedProduct(found);
+      }
+    }
+  }, []);
+
+  const handleSelectProduct = useCallback((product: ProductItem) => {
+    setSelectedProduct(product);
+    setSearchParams({ produto: product.id }, { replace: true });
+  }, [setSearchParams]);
+
+  const handleCloseProduct = useCallback(() => {
+    setSelectedProduct(null);
+    setSearchParams({}, { replace: true });
+  }, [setSearchParams]);
 
   const filteredProducts = products.filter((p) => {
     const matchesCategory = activeCategory === "todos" || p.category === activeCategory;
@@ -480,7 +502,7 @@ const BrandProductsLayout = ({
                       viewMode={viewMode}
                       brandName={brandName}
                       categories={categories}
-                      onSelect={() => setSelectedProduct(product)}
+                      onSelect={() => handleSelectProduct(product)}
                     />
                   ))}
                 </AnimatePresence>
@@ -498,7 +520,7 @@ const BrandProductsLayout = ({
             brandName={brandName}
             categories={categories}
             whatsappUrl={`https://wa.me/5511968756430?text=${encodeURIComponent(`Olá! Gostaria de um orçamento para: ${selectedProduct.name} (${brandName})`)}`}
-            onClose={() => setSelectedProduct(null)}
+            onClose={handleCloseProduct}
           />
         )}
       </AnimatePresence>
