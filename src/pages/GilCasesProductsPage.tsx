@@ -56,7 +56,7 @@ import imgExtra14 from "@/assets/gilcase-extra-14.png";
 import imgExtra15 from "@/assets/gilcase-extra-15.png";
 import imgExtra16 from "@/assets/gilcase-extra-16.png";
 import imgExtra17 from "@/assets/gilcase-extra-17.png";
-import imgExtra18 from "@/assets/gilcase-extra-18.png";
+
 import imgExtra19 from "@/assets/gilcase-extra-19.png";
 import imgExtra20 from "@/assets/gilcase-extra-20.png";
 import imgExtra21 from "@/assets/gilcase-extra-21.png";
