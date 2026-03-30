@@ -10,20 +10,7 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 
 const logoGilCase = "/lovable-uploads/logo-gilcase.jpeg";
 
-const gallery = [
-  { image: imgDrogal, title: "Totem Farmácia Drogal", desc: "Totem vertical com tela LED para comunicação em ponto de venda." },
-  { image: imgEletroposto, title: "Totem Eletroposto", desc: "Estrutura robusta para estações de recarga de veículos elétricos." },
-  { image: imgSaude, title: "Totem Saúde", desc: "Totem interativo com tela inclinada para clínicas e hospitais." },
-  { image: imgMedbeauty, title: "Totem Mesa Interativa", desc: "Mesa interativa com tela widescreen para experiências imersivas." },
-  { image: imgSmartphone, title: "Totem Smartphone", desc: "Design em formato de smartphone com tela touchscreen integrada." },
-  { image: imgPedestais, title: "Pedestais Interativos", desc: "Linha de pedestais em diferentes tamanhos para eventos e pontos de venda." },
-  { image: imgLed, title: "Totem Painel LED", desc: "Painel vertical de LED com alta resolução para conteúdo dinâmico." },
-  { image: imgHoroscopo, title: "Totem Digital Vertical", desc: "Totem digital de piso com tela vertical para conteúdo interativo." },
-  { image: imgPainel, title: "Totem Painel Iluminado", desc: "Totem com painel iluminado e base em madeira para ambientes premium." },
-  { image: imgLoja, title: "Totem Vitrine Digital", desc: "Totem de vitrine digital para campanhas de varejo e moda." },
-  { image: imgLed2, title: "Painel LED Vertical", desc: "Painel LED vertical de alta definição com estrutura slim para ambientes internos." },
-  { image: imgNissan, title: "Totem Nissan", desc: "Totem personalizado com tela e logotipo para concessionárias e showrooms." },
-];
+const gallery: { image: string; title: string; desc: string }[] = [];
 
 const features = [
   { icon: Monitor, title: "Telas HD & 4K", desc: "Suporte para telas de alta resolução em diversos tamanhos e formatos." },
