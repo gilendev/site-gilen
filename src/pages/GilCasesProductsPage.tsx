@@ -63,6 +63,14 @@ import imgExtra21 from "@/assets/gilcase-extra-21.png";
 import imgExtra22 from "@/assets/gilcase-extra-22.png";
 import imgExtra23 from "@/assets/gilcase-extra-23.png";
 import imgExtra24 from "@/assets/gilcase-extra-24.png";
+import imgTotemDrogal from "@/assets/totens/totem-drogal.png";
+import imgTotemEletroposto from "@/assets/totens/totem-eletroposto.png";
+import imgTotemSmartphone from "@/assets/totens/totem-smartphone.png";
+import imgTotemLed from "@/assets/totens/totem-led-portrait.png";
+import imgTotemSignage from "@/assets/totens/totem-digital-signage.png";
+import imgTotemPainel from "@/assets/totens/totem-painel-led.png";
+import imgTotemVarejo from "@/assets/totens/totem-varejo.png";
+import imgTotemNissan from "@/assets/totens/totem-nissan.png";
 
 const imgSuportePlaceholder = "/placeholder.svg";
 const logoGilCase = "/lovable-uploads/logo-gilcase.jpeg";
@@ -103,6 +111,14 @@ const products = [
   { id: "case-projetor", name: "Case para Projetor", image: imgNew7, description: "Case robusto para projetores profissionais de grande porte com berço sob medida.", category: "cases" },
   { id: "case-led-cia", name: "Case para Iluminação LED", image: imgNew8, description: "Cases personalizados para equipamentos de LED com espuma ondulada interna.", category: "cases" },
   
+  { id: "totem-drogal", name: "Totem Digital Drogal", image: imgTotemDrogal, description: "Totem de sinalização digital vertical para redes de farmácias com tela LED de alta resolução e estrutura em aço.", category: "totens" },
+  { id: "totem-eletroposto", name: "Totem Eletroposto", image: imgTotemEletroposto, description: "Estrutura para estações de carregamento elétrico com painel frontal perfurado e acabamento em pintura eletrostática.", category: "totens" },
+  { id: "totem-smartphone", name: "Totem Interativo Smartphone", image: imgTotemSmartphone, description: "Totem com design inspirado em smartphone, ideal para recepções, clínicas e pontos de atendimento interativo.", category: "totens" },
+  { id: "totem-led-portrait", name: "Painel LED Portrait", image: imgTotemLed, description: "Totem com painel LED de alta definição em formato vertical, perfeito para vitrines e ambientes de alto impacto visual.", category: "totens" },
+  { id: "totem-digital-signage", name: "Totem Digital Signage Pedestal", image: imgTotemSignage, description: "Totem pedestal com tela digital para conteúdos dinâmicos em lobbies, shoppings e espaços corporativos.", category: "totens" },
+  { id: "totem-painel-led", name: "Totem Painel LED com Base", image: imgTotemPainel, description: "Estrutura vertical com painel LED integrado e base em madeira, ideal para lojas e ambientes de varejo.", category: "totens" },
+  { id: "totem-varejo", name: "Totem LED Varejo", image: imgTotemVarejo, description: "Totem digital para campanhas de varejo com tela LED de grande formato e base robusta em aço.", category: "totens" },
+  { id: "totem-nissan", name: "Totem Interativo Nissan", image: imgTotemNissan, description: "Totem touchscreen personalizado para concessionária Nissan com logotipo integrado e tela interativa.", category: "totens" },
   { id: "case-empilhavel", name: "Case Empilhável", image: imgNew10, description: "Cases com sistema de empilhamento seguro e rodízios para transporte facilitado.", category: "cases" },
   { id: "case-azul", name: "Cases Linha Azul", image: imgNew1, description: "Linha de cases em compensado azul com cantoneiras reforçadas em alumínio.", category: "cases" },
   { id: "case-compensado-branco", name: "Case Compensado Branco", image: imgExtra1, description: "Case em compensado branco com cantoneiras em alumínio, tampa articulada e divisória interna.", category: "cases" },
