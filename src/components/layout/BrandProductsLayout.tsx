@@ -1,5 +1,5 @@
-import { useState, useRef, useMemo } from "react";
-import { Link } from "react-router-dom";
+import { useState, useRef, useMemo, useEffect, useCallback } from "react";
+import { Link, useSearchParams } from "react-router-dom";
 import { ArrowRight, Search, X, ShoppingBag, Grid3X3, LayoutGrid, SlidersHorizontal, Eye, Filter, ChevronLeft, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
