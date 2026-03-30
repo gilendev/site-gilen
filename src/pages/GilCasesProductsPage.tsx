@@ -180,6 +180,7 @@ const products = [
   { id: "geodesica-led", name: "Estrutura Geodésica com LED", image: imgGeodesicaLed1, images: [imgGeodesicaLed1, imgGeodesicaLed2], description: "Estrutura metálica geodésica com revestimento em painéis e iluminação LED nas arestas, com tela integrada. Da fabricação em aço ao acabamento final premium para eventos e experiências imersivas.", category: "sob-medida" },
   { id: "videowall-externo", name: "Videowall Externo", image: imgVideowallExterno1, images: [imgVideowallExterno1, imgVideowallExterno2], description: "Estrutura metálica para videowall LED de grande formato em área externa, com fixação em muro e acabamento resistente a intempéries. Da montagem estrutural ao resultado final com conteúdo digital de alto impacto.", category: "sob-medida" },
   { id: "caminhao-painel-led", name: "Caminhão com Painel LED", image: imgTruckLed1, images: [imgTruckLed1, imgTruckLed2], description: "Estrutura metálica com painel LED de grande formato instalado em caminhão para mídia móvel e publicidade itinerante. Da montagem estrutural no galpão ao resultado final em operação nas ruas.", category: "sob-medida" },
+  { id: "videowall-curvo-showroom", name: "Videowall Curvo para Showroom", image: imgVideowallCurvo1, images: [imgVideowallCurvo1, imgVideowallCurvo2], description: "Estrutura metálica curva com videowall LED de grande formato para showrooms e concessionárias automotivas. Da instalação do grid estrutural ao resultado final com conteúdo imersivo de alto impacto.", category: "sob-medida" },
 ];
 
 const GilCasesProductsPage = () => (
