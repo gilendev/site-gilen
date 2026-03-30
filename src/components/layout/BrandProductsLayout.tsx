@@ -502,7 +502,7 @@ const BrandProductsLayout = ({
                       viewMode={viewMode}
                       brandName={brandName}
                       categories={categories}
-                      onSelect={() => setSelectedProduct(product)}
+                      onSelect={() => handleSelectProduct(product)}
                     />
                   ))}
                 </AnimatePresence>
