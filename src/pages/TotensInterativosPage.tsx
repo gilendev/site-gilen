@@ -123,11 +123,11 @@ const TotensInterativosPage = () => {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="hidden lg:flex justify-center items-end gap-6"
+              className="hidden lg:flex justify-center items-center"
             >
-              <img src={imgDrogal} alt="Totem Drogal" className="w-40 h-auto rounded-sm shadow-2xl" />
-              <img src={imgSaude} alt="Totem Saúde" className="w-48 h-auto rounded-sm shadow-2xl -mt-8" />
-              <img src={imgHoroscopo} alt="Totem Digital" className="w-40 h-auto rounded-sm shadow-2xl" />
+              <div className="w-64 h-64 rounded-sm border border-border/30 bg-white/5 flex items-center justify-center">
+                <p className="text-white/30 text-sm text-center px-4">Novas imagens em breve</p>
+              </div>
             </motion.div>
           </div>
         </div>
