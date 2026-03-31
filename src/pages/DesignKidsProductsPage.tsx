@@ -53,12 +53,12 @@ const DesignKidsProductsPage = () => (
     products={products}
     navSections={[
       { id: "hero", label: "Início", href: "/design-kids" },
-      { id: "sobre", label: "Sobre", href: "/design-kids" },
-      { id: "galeria", label: "Galeria", href: "/design-kids" },
-      { id: "produtos", label: "Produtos", href: "/design-kids/produtos" },
-      { id: "diferenciais", label: "Diferenciais", href: "/design-kids" },
-      { id: "processo", label: "Processo", href: "/design-kids" },
-      { id: "contato-cta", label: "Contato", href: "/design-kids" },
+      { id: "todos", label: "Todos", href: "/design-kids/produtos" },
+      { id: "mesas-cadeiras", label: "Mesas & Cadeiras", href: "/design-kids/produtos/mesas-cadeiras" },
+      { id: "estantes", label: "Estantes", href: "/design-kids/produtos/estantes" },
+      { id: "brinquedos", label: "Brinquedos", href: "/design-kids/produtos/brinquedos" },
+      { id: "decoracao", label: "Decoração", href: "/design-kids/produtos/decoracao" },
+      { id: "contato-cta", label: "Contato", href: "/contato" },
     ]}
   />
 );

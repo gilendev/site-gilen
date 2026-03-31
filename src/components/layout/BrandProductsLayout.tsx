@@ -1,5 +1,5 @@
 import { useState, useRef, useMemo, useEffect, useCallback } from "react";
-import { Link, useSearchParams } from "react-router-dom";
+import { Link, useSearchParams, useParams } from "react-router-dom";
 import { ArrowRight, Search, X, ShoppingBag, Grid3X3, LayoutGrid, SlidersHorizontal, Eye, Filter, ChevronLeft, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
@@ -243,11 +243,24 @@ const BrandProductsLayout = ({
   heroBanner,
 }: BrandProductsLayoutProps) => {
   const [searchParams, setSearchParams] = useSearchParams();
+  const { categoria } = useParams<{ categoria?: string }>();
   const [activeCategory, setActiveCategory] = useState<string>("todos");
   const [searchQuery, setSearchQuery] = useState("");
   const [viewMode, setViewMode] = useState<"grid" | "large">("grid");
   const [selectedProduct, setSelectedProduct] = useState<ProductItem | null>(null);
   const [mobileFilterOpen, setMobileFilterOpen] = useState(false);
+
+  // Sync category from URL param
+  useEffect(() => {
+    if (categoria) {
+      const found = categories.find(c => c.id === categoria);
+      if (found) {
+        setActiveCategory(categoria);
+      }
+    } else {
+      setActiveCategory("todos");
+    }
+  }, [categoria, categories]);
 
   // Deep link: open product from URL param on mount
   useEffect(() => {

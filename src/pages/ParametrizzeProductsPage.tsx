@@ -54,12 +54,12 @@ const ParametrizzeProductsPage = () => (
     products={products}
     navSections={[
       { id: "hero", label: "Início", href: "/parametrizze" },
-      { id: "sobre", label: "Sobre", href: "/parametrizze" },
-      { id: "galeria", label: "Galeria", href: "/parametrizze" },
-      { id: "produtos", label: "Produtos", href: "/parametrizze/produtos" },
-      { id: "diferenciais", label: "Diferenciais", href: "/parametrizze" },
-      { id: "processo", label: "Processo", href: "/parametrizze" },
-      { id: "contato-cta", label: "Contato", href: "/parametrizze" },
+      { id: "todos", label: "Todos", href: "/parametrizze/produtos" },
+      { id: "fachadas", label: "Fachadas", href: "/parametrizze/produtos/fachadas" },
+      { id: "mobiliario", label: "Mobiliário", href: "/parametrizze/produtos/mobiliario" },
+      { id: "paineis", label: "Painéis", href: "/parametrizze/produtos/paineis" },
+      { id: "cnc", label: "CNC", href: "/parametrizze/produtos/cnc" },
+      { id: "contato-cta", label: "Contato", href: "/contato" },
     ]}
   />
 );

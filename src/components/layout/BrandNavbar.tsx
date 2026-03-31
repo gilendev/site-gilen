@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { ArrowLeft, Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
@@ -22,6 +22,7 @@ const BrandNavbar = ({ brandName, logoSrc, logoBgColor, backTo, backLabel, secti
   const [activeSection, setActiveSection] = useState("");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -99,7 +100,7 @@ const BrandNavbar = ({ brandName, logoSrc, logoBgColor, backTo, backLabel, secti
                 onClick={() => handleClick(section)}
                 className={cn(
                   "px-4 py-2 text-sm font-medium whitespace-nowrap rounded-sm transition-all duration-200",
-                  activeSection === section.id
+                  (section.href && location.pathname === section.href) || (!section.href && activeSection === section.id)
                     ? "text-accent-blue bg-accent-blue/10"
                     : "text-muted-foreground hover:text-accent-blue hover:bg-accent-blue/5"
                 )}
@@ -126,7 +127,7 @@ const BrandNavbar = ({ brandName, logoSrc, logoBgColor, backTo, backLabel, secti
                   onClick={() => handleClick(section)}
                   className={cn(
                     "w-full text-left px-4 py-3 text-sm font-medium rounded-lg transition-colors",
-                    activeSection === section.id
+                    (section.href && location.pathname === section.href) || (!section.href && activeSection === section.id)
                       ? "text-accent-blue bg-accent-blue/10"
                       : "text-foreground hover:bg-muted"
                   )}
