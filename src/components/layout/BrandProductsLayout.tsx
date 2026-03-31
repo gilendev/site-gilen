@@ -244,11 +244,21 @@ const BrandProductsLayout = ({
 }: BrandProductsLayoutProps) => {
   const [searchParams, setSearchParams] = useSearchParams();
   const { categoria } = useParams<{ categoria?: string }>();
+  const navigate = useNavigate();
   const [activeCategory, setActiveCategory] = useState<string>("todos");
   const [searchQuery, setSearchQuery] = useState("");
   const [viewMode, setViewMode] = useState<"grid" | "large">("grid");
   const [selectedProduct, setSelectedProduct] = useState<ProductItem | null>(null);
   const [mobileFilterOpen, setMobileFilterOpen] = useState(false);
+
+  const handleCategoryChange = useCallback((catId: string) => {
+    setActiveCategory(catId);
+    if (catId === "todos") {
+      navigate(seoPath);
+    } else {
+      navigate(`${seoPath}/${catId}`);
+    }
+  }, [navigate, seoPath]);
 
   // Sync category from URL param
   useEffect(() => {
