@@ -113,7 +113,12 @@ import imgCilindroLed1 from "@/assets/estruturas/cilindro-led-evento-1.png";
 import imgCilindroLed2 from "@/assets/estruturas/cilindro-led-evento-2.png";
 import imgLedLounge1 from "@/assets/estruturas/painel-led-restaurante-1.png";
 import imgLedLounge2 from "@/assets/estruturas/painel-led-restaurante-2.jpg";
-
+import imgFachadaVertical1 from "@/assets/estruturas/suporte-fachada-vertical-1.png";
+import imgFachadaVertical2 from "@/assets/estruturas/suporte-fachada-vertical-2.png";
+import imgCuboAcademia1 from "@/assets/estruturas/cubo-led-academia-1.png";
+import imgCuboAcademia2 from "@/assets/estruturas/cubo-led-academia-2.png";
+import imgLedLuxo1 from "@/assets/estruturas/painel-led-loja-luxo-1.jpeg";
+import imgLedLuxo2 from "@/assets/estruturas/painel-led-loja-luxo-2.jpeg";
 
 const logoGilCase = "/lovable-uploads/logo-gilcase.jpeg";
 
