@@ -119,8 +119,16 @@ import imgCuboAcademia1 from "@/assets/estruturas/cubo-led-academia-1.png";
 import imgCuboAcademia2 from "@/assets/estruturas/cubo-led-academia-2.png";
 import imgLedLuxo1 from "@/assets/estruturas/painel-led-loja-luxo-1.jpeg";
 import imgLedLuxo2 from "@/assets/estruturas/painel-led-loja-luxo-2.jpeg";
+import imgLedClube1 from "@/assets/estruturas/painel-led-clube-1.jpg";
+import imgLedClube2 from "@/assets/estruturas/painel-led-clube-2.jpg";
+import imgLedClube3 from "@/assets/estruturas/painel-led-clube-3.jpg";
+import imgLedClubeInterno1 from "@/assets/estruturas/painel-led-clube-interno-1.jpg";
+import imgLedClubeInterno2 from "@/assets/estruturas/painel-led-clube-interno-2.jpg";
+import imgLedClubeLinear1 from "@/assets/estruturas/painel-led-clube-linear-1.jpg";
+import imgLedClubeLinear2 from "@/assets/estruturas/painel-led-clube-linear-2.jpg";
+import imgLedClubeLinear3 from "@/assets/estruturas/painel-led-clube-linear-3.jpg";
 
-const logoGilCase = "/lovable-uploads/logo-gilcase.jpeg";
+
 
 const categories = [
   { id: "cases", title: "Linha de Cases" },
