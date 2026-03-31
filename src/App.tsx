@@ -1,5 +1,5 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { Toaster as Sonner } from "@/components/ui/sonner";
@@ -19,7 +19,6 @@ import GourmetizzePage from "./pages/GourmetizzePage";
 import ComicpetsPage from "./pages/ComicpetsPage";
 import DesignKidsPage from "./pages/DesignKidsPage";
 import GilCasesPage from "./pages/GilCasesPage";
-import TotensInterativosPage from "./pages/TotensInterativosPage";
 import GilCasesProductsPage from "./pages/GilCasesProductsPage";
 import ParametrizzeProductsPage from "./pages/ParametrizzeProductsPage";
 import GourmetizzeProductsPage from "./pages/GourmetizzeProductsPage";
@@ -51,12 +50,19 @@ const App = () => (
               <Route path="/comicpets" element={<ComicpetsPage />} />
               <Route path="/design-kids" element={<DesignKidsPage />} />
               <Route path="/gil-cases" element={<GilCasesPage />} />
-              <Route path="/totens-interativos" element={<TotensInterativosPage />} />
+              {/* Brand product pages with optional category param */}
               <Route path="/gil-cases/produtos" element={<GilCasesProductsPage />} />
+              <Route path="/gil-cases/produtos/:categoria" element={<GilCasesProductsPage />} />
               <Route path="/parametrizze/produtos" element={<ParametrizzeProductsPage />} />
+              <Route path="/parametrizze/produtos/:categoria" element={<ParametrizzeProductsPage />} />
               <Route path="/gourmetizze/produtos" element={<GourmetizzeProductsPage />} />
+              <Route path="/gourmetizze/produtos/:categoria" element={<GourmetizzeProductsPage />} />
               <Route path="/comicpets/produtos" element={<ComicpetsProductsPage />} />
+              <Route path="/comicpets/produtos/:categoria" element={<ComicpetsProductsPage />} />
               <Route path="/design-kids/produtos" element={<DesignKidsProductsPage />} />
+              <Route path="/design-kids/produtos/:categoria" element={<DesignKidsProductsPage />} />
+              {/* Redirect legacy /totens-interativos to /gil-cases/produtos/totens */}
+              <Route path="/totens-interativos" element={<Navigate to="/gil-cases/produtos/totens" replace />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
             <ChatBot />

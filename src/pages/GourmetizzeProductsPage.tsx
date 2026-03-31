@@ -54,12 +54,12 @@ const GourmetizzeProductsPage = () => (
     products={products}
     navSections={[
       { id: "hero", label: "Início", href: "/gourmetizze" },
-      { id: "sobre", label: "Sobre", href: "/gourmetizze" },
-      { id: "galeria", label: "Galeria", href: "/gourmetizze" },
-      { id: "produtos", label: "Produtos", href: "/gourmetizze/produtos" },
-      { id: "diferenciais", label: "Diferenciais", href: "/gourmetizze" },
-      { id: "processo", label: "Processo", href: "/gourmetizze" },
-      { id: "contato-cta", label: "Contato", href: "/gourmetizze" },
+      { id: "todos", label: "Todos", href: "/gourmetizze/produtos" },
+      { id: "churrasqueiras", label: "Churrasqueiras", href: "/gourmetizze/produtos/churrasqueiras" },
+      { id: "utensilios", label: "Utensílios", href: "/gourmetizze/produtos/utensilios" },
+      { id: "estruturas", label: "Estruturas", href: "/gourmetizze/produtos/estruturas" },
+      { id: "corte-laser", label: "Corte a Laser", href: "/gourmetizze/produtos/corte-laser" },
+      { id: "contato-cta", label: "Contato", href: "/contato" },
     ]}
   />
 );

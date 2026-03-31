@@ -246,12 +246,12 @@ const GilCasesProductsPage = () => (
     products={products}
     navSections={[
       { id: "hero", label: "Início", href: "/gil-cases" },
-      { id: "sobre", label: "Sobre", href: "/gil-cases" },
-      { id: "galeria", label: "Galeria", href: "/gil-cases" },
-      { id: "produtos", label: "Produtos", href: "/gil-cases/produtos" },
-      { id: "diferenciais", label: "Diferenciais", href: "/gil-cases" },
-      { id: "processo", label: "Processo", href: "/gil-cases" },
-      { id: "contato-cta", label: "Contato", href: "/gil-cases" },
+      { id: "todos", label: "Todos", href: "/gil-cases/produtos" },
+      { id: "cases", label: "Linha de Cases", href: "/gil-cases/produtos/cases" },
+      { id: "suportes", label: "Linha de Suportes", href: "/gil-cases/produtos/suportes" },
+      { id: "totens", label: "Totens Interativos", href: "/gil-cases/produtos/totens" },
+      { id: "sob-medida", label: "Estruturas Metálicas", href: "/gil-cases/produtos/sob-medida" },
+      { id: "contato-cta", label: "Contato", href: "/contato" },
     ]}
   />
 );

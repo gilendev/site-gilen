@@ -53,12 +53,12 @@ const ComicpetsProductsPage = () => (
     products={products}
     navSections={[
       { id: "hero", label: "Início", href: "/comicpets" },
-      { id: "sobre", label: "Sobre", href: "/comicpets" },
-      { id: "galeria", label: "Galeria", href: "/comicpets" },
-      { id: "produtos", label: "Produtos", href: "/comicpets/produtos" },
-      { id: "diferenciais", label: "Diferenciais", href: "/comicpets" },
-      { id: "processo", label: "Processo", href: "/comicpets" },
-      { id: "contato-cta", label: "Contato", href: "/comicpets" },
+      { id: "todos", label: "Todos", href: "/comicpets/produtos" },
+      { id: "arranhadores", label: "Arranhadores", href: "/comicpets/produtos/arranhadores" },
+      { id: "comedouros", label: "Comedouros", href: "/comicpets/produtos/comedouros" },
+      { id: "brinquedos", label: "Brinquedos", href: "/comicpets/produtos/brinquedos" },
+      { id: "casinhas", label: "Casinhas", href: "/comicpets/produtos/casinhas" },
+      { id: "contato-cta", label: "Contato", href: "/contato" },
     ]}
   />
 );

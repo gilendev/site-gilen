@@ -64,22 +64,25 @@ const products = [
     image: imgCases,
     title: "Linha de Cases",
     description: "Cases personalizados em compensado de 6, 10 e 15mm para transporte e proteção de equipamentos de áudio, vídeo, iluminação, instrumentos musicais, ferramentas, drones e muito mais.",
+    link: "/gil-cases/produtos/cases",
   },
   {
     image: imgSuportes,
     title: "Linha de Suportes",
     description: "Pedestais e suportes para TVs, monitores e painéis de LED. Modelos unitários, duplos, triplos e articulados para eventos, videowall e instalações permanentes.",
+    link: "/gil-cases/produtos/suportes",
   },
   {
     image: imgTotens,
     title: "Totens Interativos",
     description: "Estruturas para totens interativos com design profissional para pontos de venda, recepções, feiras e eventos corporativos.",
-    link: "/totens-interativos",
+    link: "/gil-cases/produtos/totens",
   },
   {
     image: imgFabricacao,
-    title: "Projetos Sob Medida",
+    title: "Estruturas Metálicas",
     description: "Desenvolvemos cases e estruturas especiais sob medida para necessidades específicas, com acabamento de alta qualidade e materiais nacionais e importados.",
+    link: "/gil-cases/produtos/sob-medida",
   },
 ];
 
