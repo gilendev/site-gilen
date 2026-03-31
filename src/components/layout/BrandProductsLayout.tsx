@@ -1,5 +1,5 @@
 import { useState, useRef, useMemo, useEffect, useCallback } from "react";
-import { Link, useSearchParams, useParams } from "react-router-dom";
+import { Link, useSearchParams, useParams, useNavigate } from "react-router-dom";
 import { ArrowRight, Search, X, ShoppingBag, Grid3X3, LayoutGrid, SlidersHorizontal, Eye, Filter, ChevronLeft, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
@@ -244,11 +244,21 @@ const BrandProductsLayout = ({
 }: BrandProductsLayoutProps) => {
   const [searchParams, setSearchParams] = useSearchParams();
   const { categoria } = useParams<{ categoria?: string }>();
+  const navigate = useNavigate();
   const [activeCategory, setActiveCategory] = useState<string>("todos");
   const [searchQuery, setSearchQuery] = useState("");
   const [viewMode, setViewMode] = useState<"grid" | "large">("grid");
   const [selectedProduct, setSelectedProduct] = useState<ProductItem | null>(null);
   const [mobileFilterOpen, setMobileFilterOpen] = useState(false);
+
+  const handleCategoryChange = useCallback((catId: string) => {
+    setActiveCategory(catId);
+    if (catId === "todos") {
+      navigate(seoPath);
+    } else {
+      navigate(`${seoPath}/${catId}`);
+    }
+  }, [navigate, seoPath]);
 
   // Sync category from URL param
   useEffect(() => {
@@ -353,7 +363,7 @@ const BrandProductsLayout = ({
           <div className="lg:hidden border-t border-border/50 overflow-x-auto scrollbar-hide bg-muted/50">
             <div className="flex items-center gap-1.5 px-3 py-2 min-w-max">
               <button
-                onClick={() => { setActiveCategory("todos"); setMobileFilterOpen(false); }}
+                onClick={() => { handleCategoryChange("todos"); setMobileFilterOpen(false); }}
                 className={cn(
                   "px-3 py-1.5 text-xs font-medium whitespace-nowrap rounded-full transition-all",
                   activeCategory === "todos"
@@ -368,7 +378,7 @@ const BrandProductsLayout = ({
                 return (
                   <button
                     key={cat.id}
-                    onClick={() => { setActiveCategory(cat.id); setMobileFilterOpen(false); }}
+                    onClick={() => { handleCategoryChange(cat.id); setMobileFilterOpen(false); }}
                     className={cn(
                       "px-3 py-1.5 text-xs font-medium whitespace-nowrap rounded-full transition-all",
                       activeCategory === cat.id
@@ -409,7 +419,7 @@ const BrandProductsLayout = ({
 
             <nav className="flex flex-col gap-1">
               <button
-                onClick={() => setActiveCategory("todos")}
+                onClick={() => handleCategoryChange("todos")}
                 className={cn(
                   "text-left px-4 py-3 rounded-xl text-sm font-medium transition-all flex items-center justify-between group",
                   activeCategory === "todos"
@@ -431,7 +441,7 @@ const BrandProductsLayout = ({
                 return (
                   <button
                     key={cat.id}
-                    onClick={() => setActiveCategory(cat.id)}
+                    onClick={() => handleCategoryChange(cat.id)}
                     className={cn(
                       "text-left px-4 py-3 rounded-xl text-sm font-medium transition-all flex items-center justify-between group",
                       activeCategory === cat.id
