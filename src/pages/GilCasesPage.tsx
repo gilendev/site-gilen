@@ -82,7 +82,7 @@ const products = [
     image: imgFabricacao,
     title: "Estruturas Metálicas",
     description: "Desenvolvemos cases e estruturas especiais sob medida para necessidades específicas, com acabamento de alta qualidade e materiais nacionais e importados.",
-    link: "/gil-cases/produtos/sob-medida",
+    link: "/gil-cases/produtos/estruturas-metalicas",
   },
 ];
 
