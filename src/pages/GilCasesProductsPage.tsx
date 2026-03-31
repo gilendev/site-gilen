@@ -113,7 +113,12 @@ import imgCilindroLed1 from "@/assets/estruturas/cilindro-led-evento-1.png";
 import imgCilindroLed2 from "@/assets/estruturas/cilindro-led-evento-2.png";
 import imgLedLounge1 from "@/assets/estruturas/painel-led-restaurante-1.png";
 import imgLedLounge2 from "@/assets/estruturas/painel-led-restaurante-2.jpg";
-
+import imgFachadaVertical1 from "@/assets/estruturas/suporte-fachada-vertical-1.png";
+import imgFachadaVertical2 from "@/assets/estruturas/suporte-fachada-vertical-2.png";
+import imgCuboAcademia1 from "@/assets/estruturas/cubo-led-academia-1.png";
+import imgCuboAcademia2 from "@/assets/estruturas/cubo-led-academia-2.png";
+import imgLedLuxo1 from "@/assets/estruturas/painel-led-loja-luxo-1.jpeg";
+import imgLedLuxo2 from "@/assets/estruturas/painel-led-loja-luxo-2.jpeg";
 
 const logoGilCase = "/lovable-uploads/logo-gilcase.jpeg";
 
@@ -208,6 +213,9 @@ const products = [
   { id: "painel-led-desembarque-aeroporto", name: "Painel LED Desembarque Aeroporto", image: imgLedAeroportoDesembarque2, images: [imgLedAeroportoDesembarque1, imgLedAeroportoDesembarque2], description: "Estrutura metálica com painel LED panorâmico de grande formato na área de restituição de bagagens em terminal aeroportuário. Da instalação estrutural ao resultado final com mídia digital imersiva.", category: "sob-medida" },
   { id: "painel-led-cilindrico-360", name: "Painel LED Cilíndrico 360°", image: imgCilindroLed2, images: [imgCilindroLed1, imgCilindroLed2], description: "Estrutura metálica cilíndrica com painel LED curvo 360° para feiras e congressos. Da montagem da estrutura tubular em aço ao resultado final com conteúdo digital imersivo em formato panorâmico.", category: "sob-medida" },
   { id: "painel-led-ambiente-lounge", name: "Painel LED Ambiente Lounge", image: imgLedLounge2, images: [imgLedLounge1, imgLedLounge2], description: "Estrutura metálica com painel LED decorativo para ambientes de bar, lounge e gastronomia. Da instalação do suporte estrutural ao resultado final com conteúdo visual imersivo em ambiente sofisticado.", category: "sob-medida" },
+  { id: "painel-led-vertical-fachada", name: "Painel LED Vertical de Fachada", image: imgFachadaVertical2, images: [imgFachadaVertical1, imgFachadaVertical2], description: "Estrutura metálica com suporte para painel LED vertical em fachada de edifício comercial. Da montagem do suporte estrutural ao resultado final com painel LED portrait de alto impacto.", category: "sob-medida" },
+  { id: "cubo-led-academia", name: "Cubo LED Suspenso para Academia", image: imgCuboAcademia2, images: [imgCuboAcademia1, imgCuboAcademia2], description: "Estrutura metálica suspensa com painéis LED multifacetados para academias e espaços fitness. Da montagem da estrutura aérea ao resultado final com conteúdo digital em cubo suspenso.", category: "sob-medida" },
+  { id: "painel-led-vitrine-luxo", name: "Painel LED Vitrine de Luxo", image: imgLedLuxo2, images: [imgLedLuxo1, imgLedLuxo2], description: "Estruturas metálicas com painéis LED para vitrines de lojas de alto padrão e visual merchandising. Projeto de instalação com múltiplos painéis artísticos integrados ao ambiente de varejo premium.", category: "sob-medida" },
 ];
 
 const GilCasesProductsPage = () => (
