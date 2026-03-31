@@ -105,8 +105,10 @@ import imgPainelSuspensoVarejo1 from "@/assets/estruturas/painel-led-suspenso-va
 import imgPainelSuspensoVarejo2 from "@/assets/estruturas/painel-led-suspenso-varejo-2.png";
 import imgTotemFachada1 from "@/assets/estruturas/totem-sinalizacao-externa-1.png";
 import imgTotemFachada2 from "@/assets/estruturas/totem-sinalizacao-externa-2.jpeg";
+import imgLedAeroporto1 from "@/assets/estruturas/painel-led-aeroporto-1.jpeg";
+import imgLedAeroporto2 from "@/assets/estruturas/painel-led-aeroporto-2.jpeg";
 
-const imgSuportePlaceholder = "/placeholder.svg";
+
 const logoGilCase = "/lovable-uploads/logo-gilcase.jpeg";
 
 const categories = [
