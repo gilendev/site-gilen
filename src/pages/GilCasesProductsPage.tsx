@@ -101,7 +101,17 @@ const categories = [
 ];
 
 const products = [
-  // === LINHA DE CASES === (aguardando novas imagens)
+  // === LINHA DE CASES ===
+  { id: "case-tripe", name: "Case para Tripé", image: imgCaseTripe, description: "Case vertical em compensado preto com cantoneiras em alumínio e fecho butterfly, projetado sob medida para transporte seguro de tripés profissionais.", category: "cases" },
+  { id: "case-amarelo-kit", name: "Kit Cases Personalizados Amarelo", image: imgCaseAmareloKit, description: "Conjunto de cases em compensado amarelo com cantoneiras reforçadas em alumínio e alças embutidas. Kit modular para transporte de equipamentos diversos.", category: "cases" },
+  { id: "case-azul-empilhavel", name: "Cases Empilháveis Linha Azul", image: imgCaseAzulEmpilhavel, description: "Conjunto de cases empilháveis em compensado azul com rodízios, disponíveis em múltiplos tamanhos para organização e transporte profissional.", category: "cases" },
+  { id: "case-firma-espuma", name: "Case Firma Prod com Espuma", image: imgCaseFirmaEspuma, description: "Case personalizado Firma Prod com espuma interna moldada, divisórias e rodízios para transporte seguro de equipamentos de eventos.", category: "cases" },
+  { id: "case-firma-led", name: "Case Firma Prod para LED", image: imgCaseFirmaLed, description: "Case robusto personalizado Firma Prod com tampa articulada, espuma interna e rodízios para equipamentos de iluminação LED.", category: "cases" },
+  { id: "case-firma-aberto", name: "Case Firma Prod Aberto", image: imgCaseFirmaAberto, description: "Case Firma Prod com tampa removível em compensado preto, cantoneiras em alumínio e formato alongado para equipamentos de grande porte.", category: "cases" },
+  { id: "case-equipamento-tecnico", name: "Case para Equipamento Técnico", image: imgCaseEquipTecnico, description: "Case com espuma personalizada e divisórias internas para acomodação de equipamentos técnicos, com rodízios e fechos reforçados.", category: "cases" },
+  { id: "case-divisorias", name: "Cases com Divisórias Internas", image: imgCaseDivisorias, description: "Par de cases com divisórias internas removíveis para organização de peças e acessórios, com cantoneiras em alumínio e fechos butterfly.", category: "cases" },
+  { id: "case-aberto-divisoria", name: "Case Aberto com Divisória", image: imgCaseAbertoDivisoria, description: "Case em compensado preto com tampa articulada aberta, divisória interna central e espuma de proteção para equipamentos sensíveis.", category: "cases" },
+  { id: "case-azul-conjunto", name: "Conjunto Cases Linha Azul", image: imgCaseAzulConjunto, description: "Conjunto de cases em compensado azul com diferentes formatos, incluindo case horizontal e verticais com cantoneiras reforçadas e fechos profissionais.", category: "cases" },
 
   // === LINHA DE SUPORTES ===
   { id: "suporte-pata-pesada-rotativo", name: "Suporte Pata Pesada com Rotativo e Gaveta", image: imgSup1, description: "Suporte de pedestal com base pata pesada, cabeçote rotativo para múltiplos monitores e gaveta integrada para organização de cabos e fiação.", category: "suportes" },
