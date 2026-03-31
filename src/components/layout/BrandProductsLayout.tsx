@@ -419,7 +419,7 @@ const BrandProductsLayout = ({
 
             <nav className="flex flex-col gap-1">
               <button
-                onClick={() => setActiveCategory("todos")}
+                onClick={() => handleCategoryChange("todos")}
                 className={cn(
                   "text-left px-4 py-3 rounded-xl text-sm font-medium transition-all flex items-center justify-between group",
                   activeCategory === "todos"
