@@ -107,6 +107,8 @@ import imgTotemFachada1 from "@/assets/estruturas/totem-sinalizacao-externa-1.pn
 import imgTotemFachada2 from "@/assets/estruturas/totem-sinalizacao-externa-2.jpeg";
 import imgLedAeroporto1 from "@/assets/estruturas/painel-led-aeroporto-1.jpeg";
 import imgLedAeroporto2 from "@/assets/estruturas/painel-led-aeroporto-2.jpeg";
+import imgLedAeroportoDesembarque1 from "@/assets/estruturas/painel-led-aeroporto-desembarque-1.jpeg";
+import imgLedAeroportoDesembarque2 from "@/assets/estruturas/painel-led-aeroporto-desembarque-2.jpeg";
 
 
 const logoGilCase = "/lovable-uploads/logo-gilcase.jpeg";
