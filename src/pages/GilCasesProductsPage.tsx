@@ -111,6 +111,8 @@ import imgLedAeroportoDesembarque1 from "@/assets/estruturas/painel-led-aeroport
 import imgLedAeroportoDesembarque2 from "@/assets/estruturas/painel-led-aeroporto-desembarque-2.jpeg";
 import imgCilindroLed1 from "@/assets/estruturas/cilindro-led-evento-1.png";
 import imgCilindroLed2 from "@/assets/estruturas/cilindro-led-evento-2.png";
+import imgLedLounge1 from "@/assets/estruturas/painel-led-restaurante-1.png";
+import imgLedLounge2 from "@/assets/estruturas/painel-led-restaurante-2.jpg";
 
 
 const logoGilCase = "/lovable-uploads/logo-gilcase.jpeg";
@@ -205,6 +207,7 @@ const products = [
   { id: "painel-led-aeroporto", name: "Painel LED para Aeroporto", image: imgLedAeroporto2, images: [imgLedAeroporto1, imgLedAeroporto2], description: "Estrutura metálica com painel LED de grande formato em terminal aeroportuário. Da montagem da estrutura suspensa ao resultado final com mídia digital de alto impacto na área de embarque.", category: "sob-medida" },
   { id: "painel-led-desembarque-aeroporto", name: "Painel LED Desembarque Aeroporto", image: imgLedAeroportoDesembarque2, images: [imgLedAeroportoDesembarque1, imgLedAeroportoDesembarque2], description: "Estrutura metálica com painel LED panorâmico de grande formato na área de restituição de bagagens em terminal aeroportuário. Da instalação estrutural ao resultado final com mídia digital imersiva.", category: "sob-medida" },
   { id: "painel-led-cilindrico-360", name: "Painel LED Cilíndrico 360°", image: imgCilindroLed2, images: [imgCilindroLed1, imgCilindroLed2], description: "Estrutura metálica cilíndrica com painel LED curvo 360° para feiras e congressos. Da montagem da estrutura tubular em aço ao resultado final com conteúdo digital imersivo em formato panorâmico.", category: "sob-medida" },
+  { id: "painel-led-ambiente-lounge", name: "Painel LED Ambiente Lounge", image: imgLedLounge2, images: [imgLedLounge1, imgLedLounge2], description: "Estrutura metálica com painel LED decorativo para ambientes de bar, lounge e gastronomia. Da instalação do suporte estrutural ao resultado final com conteúdo visual imersivo em ambiente sofisticado.", category: "sob-medida" },
 ];
 
 const GilCasesProductsPage = () => (
