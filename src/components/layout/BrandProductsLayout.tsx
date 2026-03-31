@@ -378,7 +378,7 @@ const BrandProductsLayout = ({
                 return (
                   <button
                     key={cat.id}
-                    onClick={() => { setActiveCategory(cat.id); setMobileFilterOpen(false); }}
+                    onClick={() => { handleCategoryChange(cat.id); setMobileFilterOpen(false); }}
                     className={cn(
                       "px-3 py-1.5 text-xs font-medium whitespace-nowrap rounded-full transition-all",
                       activeCategory === cat.id
