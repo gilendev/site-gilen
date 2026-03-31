@@ -127,7 +127,7 @@ const BrandNavbar = ({ brandName, logoSrc, logoBgColor, backTo, backLabel, secti
                   onClick={() => handleClick(section)}
                   className={cn(
                     "w-full text-left px-4 py-3 text-sm font-medium rounded-lg transition-colors",
-                    activeSection === section.id
+                    (section.href && location.pathname === section.href) || (!section.href && activeSection === section.id)
                       ? "text-accent-blue bg-accent-blue/10"
                       : "text-foreground hover:bg-muted"
                   )}
