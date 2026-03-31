@@ -119,8 +119,17 @@ import imgCuboAcademia1 from "@/assets/estruturas/cubo-led-academia-1.png";
 import imgCuboAcademia2 from "@/assets/estruturas/cubo-led-academia-2.png";
 import imgLedLuxo1 from "@/assets/estruturas/painel-led-loja-luxo-1.jpeg";
 import imgLedLuxo2 from "@/assets/estruturas/painel-led-loja-luxo-2.jpeg";
+import imgLedClube1 from "@/assets/estruturas/painel-led-clube-1.jpg";
+import imgLedClube2 from "@/assets/estruturas/painel-led-clube-2.jpg";
+import imgLedClube3 from "@/assets/estruturas/painel-led-clube-3.jpg";
+import imgLedClubeInterno1 from "@/assets/estruturas/painel-led-clube-interno-1.jpg";
+import imgLedClubeInterno2 from "@/assets/estruturas/painel-led-clube-interno-2.jpg";
+import imgLedClubeLinear1 from "@/assets/estruturas/painel-led-clube-linear-1.jpg";
+import imgLedClubeLinear2 from "@/assets/estruturas/painel-led-clube-linear-2.jpg";
+import imgLedClubeLinear3 from "@/assets/estruturas/painel-led-clube-linear-3.jpg";
 
 const logoGilCase = "/lovable-uploads/logo-gilcase.jpeg";
+
 
 const categories = [
   { id: "cases", title: "Linha de Cases" },
@@ -216,6 +225,9 @@ const products = [
   { id: "painel-led-vertical-fachada", name: "Painel LED Vertical de Fachada", image: imgFachadaVertical2, images: [imgFachadaVertical1, imgFachadaVertical2], description: "Estrutura metálica com suporte para painel LED vertical em fachada de edifício comercial. Da montagem do suporte estrutural ao resultado final com painel LED portrait de alto impacto.", category: "sob-medida" },
   { id: "cubo-led-academia", name: "Cubo LED Suspenso para Academia", image: imgCuboAcademia2, images: [imgCuboAcademia1, imgCuboAcademia2], description: "Estrutura metálica suspensa com painéis LED multifacetados para academias e espaços fitness. Da montagem da estrutura aérea ao resultado final com conteúdo digital em cubo suspenso.", category: "sob-medida" },
   { id: "painel-led-vitrine-luxo", name: "Painel LED Vitrine de Luxo", image: imgLedLuxo2, images: [imgLedLuxo1, imgLedLuxo2], description: "Estruturas metálicas com painéis LED para vitrines de lojas de alto padrão e visual merchandising. Projeto de instalação com múltiplos painéis artísticos integrados ao ambiente de varejo premium.", category: "sob-medida" },
+  { id: "painel-led-clube-externo", name: "Painel LED Externo Clube Esportivo", image: imgLedClube3, images: [imgLedClube1, imgLedClube2, imgLedClube3], description: "Estrutura metálica com painel LED externo de grande formato para sede de clube esportivo. Da fabricação da estrutura ao resultado final com comunicação digital para associados e visitantes.", category: "sob-medida" },
+  { id: "painel-led-clube-interno", name: "Painel LED Interno Clube Esportivo", image: imgLedClubeInterno1, images: [imgLedClubeInterno1, imgLedClubeInterno2], description: "Painel LED de grande formato fixado em parede interna de clube esportivo para comunicação visual, eventos e informações aos associados.", category: "sob-medida" },
+  { id: "painel-led-clube-linear", name: "Painel LED Linear Clube Esportivo", image: imgLedClubeLinear2, images: [imgLedClubeLinear1, imgLedClubeLinear2, imgLedClubeLinear3], description: "Painel LED linear suspenso em corredor de clube esportivo para comunicação digital com associados. Formato panorâmico integrado à arquitetura do ambiente.", category: "sob-medida" },
 ];
 
 const GilCasesProductsPage = () => (
