@@ -363,7 +363,7 @@ const BrandProductsLayout = ({
           <div className="lg:hidden border-t border-border/50 overflow-x-auto scrollbar-hide bg-muted/50">
             <div className="flex items-center gap-1.5 px-3 py-2 min-w-max">
               <button
-                onClick={() => { setActiveCategory("todos"); setMobileFilterOpen(false); }}
+                onClick={() => { handleCategoryChange("todos"); setMobileFilterOpen(false); }}
                 className={cn(
                   "px-3 py-1.5 text-xs font-medium whitespace-nowrap rounded-full transition-all",
                   activeCategory === "todos"
