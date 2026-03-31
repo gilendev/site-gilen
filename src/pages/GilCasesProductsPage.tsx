@@ -103,6 +103,8 @@ import imgLedMuroPiscina1 from "@/assets/estruturas/painel-led-muro-piscina-1.pn
 import imgLedMuroPiscina2 from "@/assets/estruturas/painel-led-muro-piscina-2.png";
 import imgPainelSuspensoVarejo1 from "@/assets/estruturas/painel-led-suspenso-varejo-1.png";
 import imgPainelSuspensoVarejo2 from "@/assets/estruturas/painel-led-suspenso-varejo-2.png";
+import imgTotemFachada1 from "@/assets/estruturas/totem-sinalizacao-externa-1.png";
+import imgTotemFachada2 from "@/assets/estruturas/totem-sinalizacao-externa-2.jpeg";
 
 const imgSuportePlaceholder = "/placeholder.svg";
 const logoGilCase = "/lovable-uploads/logo-gilcase.jpeg";
@@ -193,6 +195,7 @@ const products = [
   { id: "painel-led-residencial-piscina", name: "Painel LED Residencial Piscina", image: imgLedPiscina1, images: [imgLedPiscina1, imgLedPiscina2], description: "Estrutura metálica com painel LED para área de lazer e beira de piscina em residência de alto padrão. Da montagem estrutural ao resultado final com transmissão ao vivo em ambiente externo.", category: "sob-medida" },
   { id: "painel-led-muro-piscina", name: "Painel LED Muro de Piscina", image: imgLedMuroPiscina1, images: [imgLedMuroPiscina1, imgLedMuroPiscina2], description: "Estrutura metálica com painel LED fixado em muro de área de piscina residencial. Da instalação do suporte estrutural ao resultado final com conteúdo multimídia em ambiente externo.", category: "sob-medida" },
   { id: "painel-led-suspenso-varejo", name: "Painel LED Suspenso para Varejo", image: imgPainelSuspensoVarejo1, images: [imgPainelSuspensoVarejo1, imgPainelSuspensoVarejo2], description: "Estrutura metálica aérea com painel LED linear para supermercados e grandes lojas. Projeto de instalação suspensa com foco em comunicação visual de alto impacto no ponto de venda.", category: "sob-medida" },
+  { id: "estrutura-totem-fachada", name: "Estrutura para Totem de Fachada", image: imgTotemFachada2, images: [imgTotemFachada1, imgTotemFachada2], description: "Estrutura metálica para totem de fachada e sinalização externa de empreendimentos comerciais. Da fabricação da estrutura em aço ao resultado final com comunicação visual completa e acabamento premium.", category: "sob-medida" },
 ];
 
 const GilCasesProductsPage = () => (
