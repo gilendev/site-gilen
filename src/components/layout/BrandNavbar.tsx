@@ -22,6 +22,7 @@ const BrandNavbar = ({ brandName, logoSrc, logoBgColor, backTo, backLabel, secti
   const [activeSection, setActiveSection] = useState("");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
