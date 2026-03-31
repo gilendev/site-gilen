@@ -441,7 +441,7 @@ const BrandProductsLayout = ({
                 return (
                   <button
                     key={cat.id}
-                    onClick={() => setActiveCategory(cat.id)}
+                    onClick={() => handleCategoryChange(cat.id)}
                     className={cn(
                       "text-left px-4 py-3 rounded-xl text-sm font-medium transition-all flex items-center justify-between group",
                       activeCategory === cat.id
