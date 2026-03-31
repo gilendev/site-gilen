@@ -105,8 +105,10 @@ import imgPainelSuspensoVarejo1 from "@/assets/estruturas/painel-led-suspenso-va
 import imgPainelSuspensoVarejo2 from "@/assets/estruturas/painel-led-suspenso-varejo-2.png";
 import imgTotemFachada1 from "@/assets/estruturas/totem-sinalizacao-externa-1.png";
 import imgTotemFachada2 from "@/assets/estruturas/totem-sinalizacao-externa-2.jpeg";
+import imgLedAeroporto1 from "@/assets/estruturas/painel-led-aeroporto-1.jpeg";
+import imgLedAeroporto2 from "@/assets/estruturas/painel-led-aeroporto-2.jpeg";
 
-const imgSuportePlaceholder = "/placeholder.svg";
+
 const logoGilCase = "/lovable-uploads/logo-gilcase.jpeg";
 
 const categories = [
@@ -196,6 +198,7 @@ const products = [
   { id: "painel-led-muro-piscina", name: "Painel LED Muro de Piscina", image: imgLedMuroPiscina1, images: [imgLedMuroPiscina1, imgLedMuroPiscina2], description: "Estrutura metálica com painel LED fixado em muro de área de piscina residencial. Da instalação do suporte estrutural ao resultado final com conteúdo multimídia em ambiente externo.", category: "sob-medida" },
   { id: "painel-led-suspenso-varejo", name: "Painel LED Suspenso para Varejo", image: imgPainelSuspensoVarejo1, images: [imgPainelSuspensoVarejo1, imgPainelSuspensoVarejo2], description: "Estrutura metálica aérea com painel LED linear para supermercados e grandes lojas. Projeto de instalação suspensa com foco em comunicação visual de alto impacto no ponto de venda.", category: "sob-medida" },
   { id: "estrutura-totem-fachada", name: "Estrutura para Totem de Fachada", image: imgTotemFachada2, images: [imgTotemFachada1, imgTotemFachada2], description: "Estrutura metálica para totem de fachada e sinalização externa de empreendimentos comerciais. Da fabricação da estrutura em aço ao resultado final com comunicação visual completa e acabamento premium.", category: "sob-medida" },
+  { id: "painel-led-aeroporto", name: "Painel LED para Aeroporto", image: imgLedAeroporto2, images: [imgLedAeroporto1, imgLedAeroporto2], description: "Estrutura metálica com painel LED de grande formato em terminal aeroportuário. Da montagem da estrutura suspensa ao resultado final com mídia digital de alto impacto na área de embarque.", category: "sob-medida" },
 ];
 
 const GilCasesProductsPage = () => (
