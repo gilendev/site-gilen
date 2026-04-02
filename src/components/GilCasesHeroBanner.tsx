@@ -15,6 +15,9 @@ import bannerHospitalar3 from "@/assets/banner-case-hospitalar3.png";
 import bannerSuporte1 from "@/assets/banner-suporte1.png";
 import bannerSuporte2 from "@/assets/banner-suporte2.png";
 import bannerSuporte3 from "@/assets/banner-suporte3.png";
+import bannerTotem1 from "@/assets/banner-totem1.png";
+import bannerTotem2 from "@/assets/banner-totem2.png";
+import bannerTotem3 from "@/assets/banner-totem3.png";
 
 const casesSlides = [
   {
@@ -100,7 +103,28 @@ const suportesSlides = [
   },
 ];
 
-const allSlides = [...casesSlides, ...suportesSlides];
+const totensSlides = [
+  {
+    image: bannerTotem1,
+    title: "Totens Interativos para Varejo e Corporativo",
+    subtitle: "Soluções digitais de autoatendimento, informação e carregamento para pontos de venda",
+    tag: "TOTENS · VAREJO",
+  },
+  {
+    image: bannerTotem2,
+    title: "Totens LED e Digital Signage",
+    subtitle: "Painéis verticais de alta resolução para comunicação visual e mídia indoor",
+    tag: "TOTENS · LED · SIGNAGE",
+  },
+  {
+    image: bannerTotem3,
+    title: "Totens Personalizados para Grandes Marcas",
+    subtitle: "Projetos sob medida para concessionárias, redes de varejo e eventos corporativos",
+    tag: "TOTENS · SOB MEDIDA",
+  },
+];
+
+const allSlides = [...casesSlides, ...suportesSlides, ...totensSlides];
 
 const GilCasesHeroBanner = () => {
   const { categoria } = useParams<{ categoria?: string }>();
@@ -108,6 +132,7 @@ const GilCasesHeroBanner = () => {
   const slides = useMemo(() => {
     if (categoria === "cases") return casesSlides;
     if (categoria === "suportes") return suportesSlides;
+    if (categoria === "totens") return totensSlides;
     return allSlides;
   }, [categoria]);
 
