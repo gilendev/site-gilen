@@ -411,7 +411,7 @@ const GilCasesPage = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
               Tenha o melhor case. Tenha um GilCase!
             </h2>
-            <p className="text-muted-foreground max-w-xl mx-auto mb-8">
+            <p className="text-muted-foreground max-w-xl mx-auto mb-8 text-justify">
               Entre em contato e solicite um orçamento personalizado para proteger e transportar seus equipamentos com segurança.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
