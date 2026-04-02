@@ -107,7 +107,7 @@ const TotensInterativosPage = () => {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="text-lg text-white/60 leading-relaxed mb-8 max-w-lg"
+                className="text-lg text-white/60 leading-relaxed mb-8 max-w-lg text-justify"
               >
                 Estruturas para totens interativos com design profissional para pontos de venda, recepções, feiras, eventos corporativos, clínicas, hospitais e muito mais.
               </motion.p>
