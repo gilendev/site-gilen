@@ -3,6 +3,7 @@ import { useRef } from "react";
 import SEOHead from "@/components/SEOHead";
 import { Link } from "react-router-dom";
 import { ArrowRight, ArrowLeft, Monitor, Smartphone, Zap, Store, Star, Settings } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 import BrandNavbar from "@/components/layout/BrandNavbar";
 import { Button } from "@/components/ui/button";
 import WhatsAppButton from "@/components/WhatsAppButton";
