@@ -47,7 +47,7 @@ const logoGilCase = "/lovable-uploads/logo-gilcase.jpeg";
 
 const products = [
   {
-    image: imgCases,
+    image: imgCaseAzulConjunto,
     title: "Linha de Cases",
     description: "Cases personalizados em compensado de 6, 10 e 15mm para transporte e proteção de equipamentos de áudio, vídeo, iluminação, instrumentos musicais, ferramentas, drones e muito mais.",
     link: "/gil-cases/produtos/cases",
