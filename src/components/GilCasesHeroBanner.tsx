@@ -7,7 +7,6 @@ import bannerIndustrial from "@/assets/banner-case-industrial.jpg";
 
 const slides = [
   { image: bannerShow, title: "Cases para Shows e Eventos", subtitle: "Proteção profissional para equipamentos de palco, áudio e iluminação", tag: "ENTRETENIMENTO" },
-  { image: bannerHospitalar, title: "Cases Hospitalares", subtitle: "Transporte seguro de equipamentos médicos e instrumentos cirúrgicos", tag: "SAÚDE" },
   { image: bannerBelico, title: "Cases Bélicos", subtitle: "Cases táticos de alta resistência para armamentos e equipamentos de defesa", tag: "DEFESA" },
   { image: bannerCorporativo, title: "Cases Corporativos", subtitle: "Soluções para eventos corporativos, feiras e equipamentos audiovisuais", tag: "CORPORATIVO" },
   { image: bannerIndustrial, title: "Cases Industriais", subtitle: "Proteção para instrumentos científicos, eletrônicos e equipamentos sensíveis", tag: "INDUSTRIAL" },
