@@ -395,7 +395,7 @@ const GilCasesPage = () => {
                     <span className="text-accent-blue font-bold text-lg">{item.step}</span>
                   </div>
                   <h3 className="text-lg font-semibold text-primary-foreground mb-3">{item.title}</h3>
-                  <p className="text-primary-foreground/60 text-sm leading-relaxed">{item.desc}</p>
+                  <p className="text-primary-foreground/60 text-sm leading-relaxed text-justify">{item.desc}</p>
                 </div>
               </SectionBlock>
             ))}
