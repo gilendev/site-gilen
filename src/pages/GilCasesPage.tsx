@@ -191,13 +191,10 @@ const GilCasesPage = () => {
                 Especialistas em <span className="text-steel">cases e suportes</span>
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-4 text-justify">
-                Com experiência de mais de 13 anos, a GilCase vem se especializando na fabricação de cases e suportes. Todos os produtos possuem acabamento de alta qualidade.
-              </p>
-              <p className="text-muted-foreground leading-relaxed mb-4 text-justify">
-                Contamos com uma equipe de funcionários altamente treinados e qualificados para oferecer produtos com qualidade e excelente custo-benefício.
+                Empresa brasileira com mais de 13 anos de atuação no mercado de eventos e tecnologia, oferecendo soluções focadas em proteção, praticidade e segurança no transporte e uso de equipamentos. Desde sua fundação, construiu uma trajetória pautada por princípios sólidos, ética e compromisso com os seus parceiros.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-8 text-justify">
-                Pensando na praticidade e comodidade dos nossos clientes, criamos produtos exclusivos e executamos projetos sob medida e projetos especiais, com os melhores fornecedores de matérias-primas nacionais e importadas.
+                Ao longo dos anos, especializou-se no desenvolvimento de produtos personalizados, como: cases, estruturas metálicas para painéis de LED, suportes para TVs e monitores de videowall, acompanhando a evolução do mercado e investindo continuamente em qualidade e inovação. Essa atuação consolidou a Gil Case como referência em soluções sob medida, atendendo importantes empresas e grupos do setor.
               </p>
               <div className="grid grid-cols-3 gap-6">
                 {[
