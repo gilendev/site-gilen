@@ -98,8 +98,8 @@ const ComicpetsPage = () => {
               Produtos criativos e funcionais para o mercado pet. Design, conforto e segurança para cães e gatos.
             </motion.p>
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }} className="flex flex-col sm:flex-row gap-3">
-              <Button asChild size="lg" className="bg-accent-green hover:bg-accent-green/90 text-accent-green-foreground px-8 h-12 text-sm uppercase tracking-wider font-semibold">
-                <Link to="/contato">Solicitar Projeto <ArrowRight className="ml-2" size={16} /></Link>
+              <Button asChild size="lg" className="whatsapp-hover bg-accent-green hover:bg-accent-green/90 text-accent-green-foreground px-8 h-12 text-sm uppercase tracking-wider font-semibold">
+                <Link to="/contato"><FaWhatsapp className="whatsapp-icon" size={18} />Solicitar Projeto <ArrowRight className="default-icon ml-2" size={16} /></Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="bg-transparent border-white/20 text-white hover:bg-white/10 px-8 h-12 text-sm uppercase tracking-wider font-semibold">
                 <a href="#produtos">Ver Produtos</a>
