@@ -10,6 +10,14 @@ import imgCaseEquipTecnico from "@/assets/cases/case-equipamento-tecnico.png";
 import imgCaseDivisorias from "@/assets/cases/case-divisorias.png";
 import imgCaseAbertoDivisoria from "@/assets/cases/case-aberto-divisoria.png";
 import imgCaseAzulConjunto from "@/assets/cases/case-azul-conjunto.png";
+import imgCaseProjetorCinema1 from "@/assets/cases/case-projetor-cinema-1.png";
+import imgCaseProjetorCinema2 from "@/assets/cases/case-projetor-cinema-2.png";
+import imgCaseIgrejaAdventista1 from "@/assets/cases/case-igreja-adventista-1.png";
+import imgCaseIgrejaAdventista2 from "@/assets/cases/case-igreja-adventista-2.png";
+import imgCaseRackGavetas1 from "@/assets/cases/case-rack-gavetas-1.png";
+import imgCaseRackGavetas2 from "@/assets/cases/case-rack-gavetas-2.png";
+import imgCaseRackGavetas3 from "@/assets/cases/case-rack-gavetas-3.png";
+import imgCaseRackGavetas4 from "@/assets/cases/case-rack-gavetas-4.png";
 import imgSup1 from "@/assets/gilcase-suporte-1.png";
 import imgSup2 from "@/assets/gilcase-suporte-2.png";
 import imgSup3 from "@/assets/gilcase-suporte-3.png";
@@ -112,6 +120,9 @@ const products = [
   { id: "case-divisorias", name: "Cases com Divisórias Internas", image: imgCaseDivisorias, description: "Par de cases com divisórias internas removíveis para organização de peças e acessórios, com cantoneiras em alumínio e fechos butterfly.", category: "cases" },
   { id: "case-aberto-divisoria", name: "Case Aberto com Divisória", image: imgCaseAbertoDivisoria, description: "Case em compensado preto com tampa articulada aberta, divisória interna central e espuma de proteção para equipamentos sensíveis.", category: "cases" },
   { id: "case-azul-conjunto", name: "Conjunto Cases Linha Azul", image: imgCaseAzulConjunto, description: "Conjunto de cases em compensado azul com diferentes formatos, incluindo case horizontal e verticais com cantoneiras reforçadas e fechos profissionais.", category: "cases" },
+  { id: "case-projetor-cinema", name: "Case para Projetor de Cinema", image: imgCaseProjetorCinema1, images: [imgCaseProjetorCinema1, imgCaseProjetorCinema2], description: "Case profissional sob medida para projetor de cinema, com estrutura em alumínio e rodízios. Projetado para transporte seguro de equipamentos audiovisuais de grande porte.", category: "cases" },
+  { id: "case-igreja-adventista", name: "Case Personalizado Igreja Adventista", image: imgCaseIgrejaAdventista1, images: [imgCaseIgrejaAdventista1, imgCaseIgrejaAdventista2], description: "Case personalizado com logo gravado da Igreja Adventista do Sétimo Dia, estrutura em alumínio com alça retrátil e rodízios. Interior com divisórias em espuma para proteção de equipamentos.", category: "cases" },
+  { id: "case-rack-gavetas", name: "Case Rack com Gavetas", image: imgCaseRackGavetas1, images: [imgCaseRackGavetas1, imgCaseRackGavetas2, imgCaseRackGavetas3, imgCaseRackGavetas4], description: "Case rack profissional com sistema de gavetas deslizantes, estrutura reforçada em alumínio e compartimento superior tipo rack. Ideal para equipamentos técnicos que exigem organização e acesso rápido.", category: "cases" },
 
   // === LINHA DE SUPORTES ===
   { id: "suporte-pata-pesada-rotativo", name: "Suporte Pata Pesada com Rotativo e Gaveta", image: imgSup1, description: "Suporte de pedestal com base pata pesada, cabeçote rotativo para múltiplos monitores e gaveta integrada para organização de cabos e fiação.", category: "suportes" },
