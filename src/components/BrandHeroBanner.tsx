@@ -62,8 +62,8 @@ const BrandHeroBanner = ({ slides, interval = 5000 }: BrandHeroBannerProps) => {
           className="absolute inset-0"
         >
           <img
-            src={slides[current].image}
-            alt={slides[current].title}
+            src={slide.image}
+            alt={slide.title}
             className="w-full h-full object-cover"
             width={1920}
             height={800}
@@ -83,13 +83,13 @@ const BrandHeroBanner = ({ slides, interval = 5000 }: BrandHeroBannerProps) => {
             transition={{ duration: 0.4, delay: 0.15 }}
           >
             <span className="inline-block px-2.5 py-1 text-[10px] sm:text-xs font-bold tracking-[0.2em] text-white bg-accent-blue/80 backdrop-blur-sm rounded-sm mb-2 sm:mb-3">
-              {slides[current].tag}
+              {slide.tag}
             </span>
             <h2 className="text-xl sm:text-2xl md:text-4xl font-black text-white leading-tight mb-1 sm:mb-2">
-              {slides[current].title}
+              {slide.title}
             </h2>
             <p className="text-white/70 text-xs sm:text-sm md:text-base max-w-lg">
-              {slides[current].subtitle}
+              {slide.subtitle}
             </p>
           </motion.div>
         </AnimatePresence>
