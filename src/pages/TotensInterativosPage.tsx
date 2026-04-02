@@ -107,7 +107,7 @@ const TotensInterativosPage = () => {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="text-lg text-white/60 leading-relaxed mb-8 max-w-lg"
+                className="text-lg text-white/60 leading-relaxed mb-8 max-w-lg text-justify"
               >
                 Estruturas para totens interativos com design profissional para pontos de venda, recepções, feiras, eventos corporativos, clínicas, hospitais e muito mais.
               </motion.p>
@@ -161,7 +161,7 @@ const TotensInterativosPage = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-foreground">
               Nossos <span className="text-steel">Totens</span>
             </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto mt-4">
+            <p className="text-muted-foreground max-w-2xl mx-auto mt-4 text-justify">
               Conheça nossa linha de totens interativos, painéis digitais e pedestais para diversos segmentos.
             </p>
           </SectionBlock>
@@ -184,7 +184,7 @@ const TotensInterativosPage = () => {
                 </div>
                 <div className="p-5">
                   <h3 className="text-base font-semibold text-foreground mb-1">{item.title}</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed text-justify">{item.desc}</p>
                 </div>
                 <div className="absolute top-0 left-0 w-0 h-1 bg-accent-blue group-hover:w-full transition-all duration-500" />
               </motion.div>
@@ -213,7 +213,7 @@ const TotensInterativosPage = () => {
                     <feature.icon className="text-accent-blue" size={24} />
                   </div>
                   <h3 className="text-lg font-semibold text-foreground mb-3">{feature.title}</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{feature.desc}</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed text-justify">{feature.desc}</p>
                 </div>
               </SectionBlock>
             ))}
@@ -229,7 +229,7 @@ const TotensInterativosPage = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
               Transforme a experiência do seu público
             </h2>
-            <p className="text-muted-foreground max-w-xl mx-auto mb-8">
+            <p className="text-muted-foreground max-w-xl mx-auto mb-8 text-justify">
               Entre em contato e solicite um orçamento para seu totem interativo personalizado.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">

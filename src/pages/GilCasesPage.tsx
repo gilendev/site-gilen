@@ -160,7 +160,7 @@ const GilCasesPage = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-lg md:text-xl text-white/60 leading-relaxed mb-8 max-w-xl"
+              className="text-lg md:text-xl text-white/60 leading-relaxed mb-8 max-w-xl text-justify"
             >
               Fabricamos cases personalizados para soluções em transporte e segurança de todos os modelos de materiais, com matéria-prima em compensado de 6 e 10mm para materiais de leve e médio peso e de 15mm para materiais pesados.
             </motion.p>
@@ -204,13 +204,13 @@ const GilCasesPage = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
                 Especialistas em <span className="text-steel">cases e suportes</span>
               </h2>
-              <p className="text-muted-foreground leading-relaxed mb-4">
+              <p className="text-muted-foreground leading-relaxed mb-4 text-justify">
                 Com experiência de mais de 13 anos, a GilCase vem se especializando na fabricação de cases e suportes. Todos os produtos possuem acabamento de alta qualidade.
               </p>
-              <p className="text-muted-foreground leading-relaxed mb-4">
+              <p className="text-muted-foreground leading-relaxed mb-4 text-justify">
                 Contamos com uma equipe de funcionários altamente treinados e qualificados para oferecer produtos com qualidade e excelente custo-benefício.
               </p>
-              <p className="text-muted-foreground leading-relaxed mb-8">
+              <p className="text-muted-foreground leading-relaxed mb-8 text-justify">
                 Pensando na praticidade e comodidade dos nossos clientes, criamos produtos exclusivos e executamos projetos sob medida e projetos especiais, com os melhores fornecedores de matérias-primas nacionais e importadas.
               </p>
               <div className="grid grid-cols-3 gap-6">
@@ -303,7 +303,7 @@ const GilCasesPage = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-foreground">
               Linhas de <span className="text-steel">Produtos</span>
             </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto mt-4">
+            <p className="text-muted-foreground max-w-2xl mx-auto mt-4 text-justify">
               Cases, suportes, totens interativos e estruturas para todos os segmentos profissionais.
             </p>
           </SectionBlock>
@@ -328,7 +328,7 @@ const GilCasesPage = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
                   <h3 className="text-xl font-bold text-white mb-2">{product.title}</h3>
-                  <p className="text-white/60 text-sm leading-relaxed">{product.description}</p>
+                  <p className="text-white/60 text-sm leading-relaxed text-justify">{product.description}</p>
                 </div>
                 <div className="absolute top-0 left-0 w-0 h-1 bg-accent-blue group-hover:w-full transition-all duration-500" />
               </motion.div>
@@ -362,7 +362,7 @@ const GilCasesPage = () => {
                     <feature.icon className="text-accent-blue" size={24} />
                   </div>
                   <h3 className="text-lg font-semibold text-foreground mb-3">{feature.title}</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{feature.desc}</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed text-justify">{feature.desc}</p>
                 </div>
               </SectionBlock>
             ))}
@@ -395,7 +395,7 @@ const GilCasesPage = () => {
                     <span className="text-accent-blue font-bold text-lg">{item.step}</span>
                   </div>
                   <h3 className="text-lg font-semibold text-primary-foreground mb-3">{item.title}</h3>
-                  <p className="text-primary-foreground/60 text-sm leading-relaxed">{item.desc}</p>
+                  <p className="text-primary-foreground/60 text-sm leading-relaxed text-justify">{item.desc}</p>
                 </div>
               </SectionBlock>
             ))}
@@ -411,7 +411,7 @@ const GilCasesPage = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
               Tenha o melhor case. Tenha um GilCase!
             </h2>
-            <p className="text-muted-foreground max-w-xl mx-auto mb-8">
+            <p className="text-muted-foreground max-w-xl mx-auto mb-8 text-justify">
               Entre em contato e solicite um orçamento personalizado para proteger e transportar seus equipamentos com segurança.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
