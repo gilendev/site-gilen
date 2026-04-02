@@ -10,6 +10,7 @@ import imgCases from "@/assets/img-gilcase-cases.jpg";
 import imgSuportes from "@/assets/img-gilcase-suportes.jpg";
 import imgTotens from "@/assets/img-gilcase-totens.jpg";
 import imgFabricacao from "@/assets/img-gilcase-fabricacao.jpg";
+import heroVideo from "@/assets/gilcase-hero-video.mp4.asset.json";
 import BrandCarousel from "@/components/BrandCarousel";
 import WhatsAppButton from "@/components/WhatsAppButton";
 // Cases
@@ -122,7 +123,15 @@ const GilCasesPage = () => {
 
       {/* Hero */}
       <section id="hero" className="relative min-h-[80vh] md:min-h-[90vh] flex items-center overflow-hidden pt-20 md:pt-36">
-        <img src={imgHero} alt="Cases profissionais Gil Case" className="absolute inset-0 w-full h-full object-cover" />
+        <video
+          src={heroVideo.url}
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+          poster={imgHero}
+        />
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent" />
         <div className="container mx-auto px-4 lg:px-8 relative z-10">
           <div className="max-w-2xl">
