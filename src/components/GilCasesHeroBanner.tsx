@@ -7,6 +7,9 @@ import bannerBelico1 from "@/assets/banner-case-belico1.png";
 import bannerBelico2 from "@/assets/banner-case-belico2.png";
 import bannerBelico3 from "@/assets/banner-case-belico3.png";
 import bannerBelico4 from "@/assets/banner-case-belico4.png";
+import bannerHospitalar1 from "@/assets/banner-case-hospitalar1.png";
+import bannerHospitalar2 from "@/assets/banner-case-hospitalar2.png";
+import bannerHospitalar3 from "@/assets/banner-case-hospitalar3.png";
 
 const slides = [
   {
