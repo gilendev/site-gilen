@@ -123,7 +123,7 @@ const GilCasesPage = () => {
       />
 
       {/* Hero */}
-      <section id="hero" className="relative min-h-[80vh] md:min-h-[90vh] flex items-center overflow-hidden pt-20 md:pt-36">
+      <section id="hero" className="relative min-h-[60vh] md:min-h-[90vh] flex items-center overflow-hidden pt-16 md:pt-36">
         <video
           src="/gilcase-hero-video.mp4"
           autoPlay
