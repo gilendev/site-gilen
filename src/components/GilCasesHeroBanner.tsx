@@ -3,6 +3,10 @@ import BrandHeroBanner from "@/components/BrandHeroBanner";
 import bannerShow1 from "@/assets/banner-case-show1.png";
 import bannerShow2 from "@/assets/banner-case-show2.png";
 import bannerShow3 from "@/assets/banner-case-show3.png";
+import bannerBelico1 from "@/assets/banner-case-belico1.png";
+import bannerBelico2 from "@/assets/banner-case-belico2.png";
+import bannerBelico3 from "@/assets/banner-case-belico3.png";
+import bannerBelico4 from "@/assets/banner-case-belico4.png";
 
 const slides = [
   {
@@ -22,6 +26,30 @@ const slides = [
     title: "Cases para Equipamentos de Som, Luz e Imagem",
     subtitle: "Fabricação sob medida com qualidade GilCase",
     tag: "SOM · LUZ · IMAGEM",
+  },
+  {
+    image: bannerBelico1,
+    title: "Cases para Uso Militar e Bélico",
+    subtitle: "Soluções táticas para comando, controle e comunicações em campo",
+    tag: "MILITAR · BÉLICO",
+  },
+  {
+    image: bannerBelico2,
+    title: "Cases para Uso Militar e Bélico",
+    subtitle: "Armazenamento seguro e transporte de armamento pesado",
+    tag: "MILITAR · BÉLICO",
+  },
+  {
+    image: bannerBelico3,
+    title: "Cases para Uso Militar e Bélico",
+    subtitle: "Organização tática com espuma customizada de alta densidade",
+    tag: "MILITAR · BÉLICO",
+  },
+  {
+    image: bannerBelico4,
+    title: "Cases para Uso Militar e Bélico",
+    subtitle: "Proteção balística e logística para forças de segurança",
+    tag: "MILITAR · BÉLICO",
   },
 ];
 
