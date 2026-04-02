@@ -89,7 +89,7 @@ const MarcasSection = () => {
                   {gilCases.name}
                   <span className="ml-2 text-xs text-accent-blue font-normal">→ Ver mais</span>
                 </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed text-justify">{gilCases.description}</p>
+                <p className="text-xs md:text-sm text-muted-foreground leading-relaxed text-justify line-clamp-3 md:line-clamp-none">{gilCases.description}</p>
               </div>
             </div>
           </Link>
