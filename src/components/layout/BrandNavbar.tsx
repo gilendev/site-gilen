@@ -1,5 +1,6 @@
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { ArrowLeft, Menu, X } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 
@@ -77,8 +78,9 @@ const BrandNavbar = ({ brandName, logoSrc, logoBgColor, backTo, backLabel, secti
           <div className="flex items-center gap-2">
             <Link
               to="/contato"
-              className="hidden sm:inline-flex items-center gap-2 px-4 md:px-5 py-2 md:py-2.5 bg-accent-blue text-accent-blue-foreground text-xs font-semibold uppercase tracking-wider rounded-sm hover:bg-accent-blue/90 transition-colors shrink-0"
+              className="whatsapp-hover hidden sm:inline-flex items-center gap-2 px-4 md:px-5 py-2 md:py-2.5 bg-accent-blue text-accent-blue-foreground text-xs font-semibold uppercase tracking-wider rounded-sm hover:bg-accent-blue/90 transition-colors shrink-0"
             >
+              <FaWhatsapp className="whatsapp-icon" size={16} />
               Orçamento
             </Link>
             {/* Mobile menu toggle */}
@@ -137,9 +139,10 @@ const BrandNavbar = ({ brandName, logoSrc, logoBgColor, backTo, backLabel, secti
               ))}
               <Link
                 to="/contato"
-                className="flex items-center justify-center gap-2 w-full mt-2 px-4 py-3 bg-accent-blue text-accent-blue-foreground text-xs font-semibold uppercase tracking-wider rounded-lg"
+                className="whatsapp-hover flex items-center justify-center gap-2 w-full mt-2 px-4 py-3 bg-accent-blue text-accent-blue-foreground text-xs font-semibold uppercase tracking-wider rounded-lg"
                 onClick={() => setMobileMenuOpen(false)}
               >
+                <FaWhatsapp className="whatsapp-icon" size={16} />
                 Solicitar Orçamento
               </Link>
             </div>

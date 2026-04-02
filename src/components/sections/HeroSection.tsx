@@ -82,11 +82,12 @@ const HeroSection = () => {
             <Button
               asChild
               size="lg"
-              className="bg-accent hover:bg-accent/90 text-accent-foreground px-6 md:px-8 h-11 md:h-12 text-xs md:text-sm uppercase tracking-wider font-semibold"
+              className="whatsapp-hover bg-accent hover:bg-accent/90 text-accent-foreground px-6 md:px-8 h-11 md:h-12 text-xs md:text-sm uppercase tracking-wider font-semibold"
             >
               <Link to="/solucoes">
+                <FaWhatsapp className="whatsapp-icon" size={18} />
                 Conheça nossas soluções
-                <ArrowRight className="ml-2" size={16} />
+                <ArrowRight className="default-icon ml-2" size={16} />
               </Link>
             </Button>
             <Button

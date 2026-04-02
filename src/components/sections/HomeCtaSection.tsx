@@ -34,11 +34,12 @@ const HomeCtaSection = () => {
             <Button
               asChild
               size="lg"
-              className="bg-accent hover:bg-accent/90 text-accent-foreground px-8 h-12 text-xs md:text-sm uppercase tracking-wider font-semibold"
+              className="whatsapp-hover bg-accent hover:bg-accent/90 text-accent-foreground px-8 h-12 text-xs md:text-sm uppercase tracking-wider font-semibold"
             >
               <Link to="/contato">
+                <FaWhatsapp className="whatsapp-icon" size={18} />
                 Solicitar orçamento
-                <ArrowRight className="ml-2" size={16} />
+                <ArrowRight className="default-icon ml-2" size={16} />
               </Link>
             </Button>
             <Button

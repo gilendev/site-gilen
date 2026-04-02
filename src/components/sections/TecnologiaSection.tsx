@@ -1,6 +1,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Gauge, ScanLine, Cog, Monitor, ArrowRight, Cpu, Wrench, Paintbrush, Scissors, Ruler, CheckCircle, Factory, Zap } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import imgTecnologia from "@/assets/img-tecnologia.jpg";
 
@@ -236,10 +237,11 @@ const TecnologiaSection = () => {
             </p>
             <Link
               to="/contato"
-              className="inline-flex items-center gap-2 px-8 py-3 bg-accent-blue text-accent-blue-foreground font-semibold text-sm uppercase tracking-wider rounded-sm hover:bg-accent-blue/90 transition-colors"
+              className="whatsapp-hover inline-flex items-center gap-2 px-8 py-3 bg-accent-blue text-accent-blue-foreground font-semibold text-sm uppercase tracking-wider rounded-sm hover:bg-accent-blue/90 transition-colors"
             >
+              <FaWhatsapp className="whatsapp-icon" size={18} />
               Agende uma Visita
-              <ArrowRight size={16} />
+              <ArrowRight className="default-icon" size={16} />
             </Link>
           </SectionBlock>
         </div>

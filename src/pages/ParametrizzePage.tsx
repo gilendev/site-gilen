@@ -3,6 +3,7 @@ import { useRef } from "react";
 import SEOHead from "@/components/SEOHead";
 import { Link } from "react-router-dom";
 import { ArrowRight, ArrowLeft, Layers, Box, Home, Building, Cpu, Ruler, CheckCircle } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 import BrandNavbar from "@/components/layout/BrandNavbar";
 import { Button } from "@/components/ui/button";
 import imgHero from "@/assets/img-parametrizze-hero.jpg";
@@ -126,11 +127,12 @@ const ParametrizzePage = () => {
               <Button
                 asChild
                 size="lg"
-                className="bg-accent-blue hover:bg-accent-blue/90 text-accent-blue-foreground px-8 h-12 text-sm uppercase tracking-wider font-semibold"
+                className="whatsapp-hover bg-accent-blue hover:bg-accent-blue/90 text-accent-blue-foreground px-8 h-12 text-sm uppercase tracking-wider font-semibold"
               >
                 <Link to="/contato">
+                  <FaWhatsapp className="whatsapp-icon" size={18} />
                   Solicitar Projeto
-                  <ArrowRight className="ml-2" size={16} />
+                  <ArrowRight className="default-icon ml-2" size={16} />
                 </Link>
               </Button>
               <Button
@@ -330,10 +332,11 @@ const ParametrizzePage = () => {
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Link
                 to="/contato"
-                className="inline-flex items-center gap-2 px-8 py-3 bg-accent-blue text-accent-blue-foreground font-semibold text-sm uppercase tracking-wider rounded-sm hover:bg-accent-blue/90 transition-colors"
+                className="whatsapp-hover inline-flex items-center gap-2 px-8 py-3 bg-accent-blue text-accent-blue-foreground font-semibold text-sm uppercase tracking-wider rounded-sm hover:bg-accent-blue/90 transition-colors"
               >
+                <FaWhatsapp className="whatsapp-icon" size={18} />
                 Solicitar Orçamento
-                <ArrowRight size={16} />
+                <ArrowRight className="default-icon" size={16} />
               </Link>
               <Link
                 to="/marcas"

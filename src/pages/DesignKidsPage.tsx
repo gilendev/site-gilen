@@ -3,6 +3,7 @@ import { useRef } from "react";
 import SEOHead from "@/components/SEOHead";
 import { Link } from "react-router-dom";
 import { ArrowRight, ArrowLeft, Baby, Shield, Palette, Star, Smile, Box } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 import BrandNavbar from "@/components/layout/BrandNavbar";
 import { Button } from "@/components/ui/button";
 import imgHero from "@/assets/img-designkids-hero.jpg";
@@ -97,8 +98,8 @@ const DesignKidsPage = () => {
               Mobiliário e objetos infantis com design criativo e seguro. Feitos para estimular a imaginação e acompanhar o crescimento.
             </motion.p>
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }} className="flex flex-col sm:flex-row gap-3">
-              <Button asChild size="lg" className="bg-steel hover:bg-steel/90 text-steel-foreground px-8 h-12 text-sm uppercase tracking-wider font-semibold">
-                <Link to="/contato">Solicitar Projeto <ArrowRight className="ml-2" size={16} /></Link>
+              <Button asChild size="lg" className="whatsapp-hover bg-steel hover:bg-steel/90 text-steel-foreground px-8 h-12 text-sm uppercase tracking-wider font-semibold">
+                <Link to="/contato"><FaWhatsapp className="whatsapp-icon" size={18} />Solicitar Projeto <ArrowRight className="default-icon ml-2" size={16} /></Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="bg-transparent border-white/20 text-white hover:bg-white/10 px-8 h-12 text-sm uppercase tracking-wider font-semibold">
                 <a href="#produtos">Ver Produtos</a>
@@ -257,8 +258,8 @@ const DesignKidsPage = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">Crie um mundo especial para seu filho</h2>
             <p className="text-muted-foreground max-w-xl mx-auto mb-8">Entre em contato e solicite um projeto personalizado para o quarto infantil.</p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <Link to="/contato" className="inline-flex items-center gap-2 px-8 py-3 bg-steel text-steel-foreground font-semibold text-sm uppercase tracking-wider rounded-sm hover:bg-steel/90 transition-colors">
-                Solicitar Orçamento <ArrowRight size={16} />
+              <Link to="/contato" className="whatsapp-hover inline-flex items-center gap-2 px-8 py-3 bg-steel text-steel-foreground font-semibold text-sm uppercase tracking-wider rounded-sm hover:bg-steel/90 transition-colors">
+                <FaWhatsapp className="whatsapp-icon" size={18} />Solicitar Orçamento <ArrowRight className="default-icon" size={16} />
               </Link>
               <Link to="/marcas" className="inline-flex items-center gap-2 px-8 py-3 border border-border text-foreground font-semibold text-sm uppercase tracking-wider rounded-sm hover:bg-muted transition-colors">
                 <ArrowLeft size={16} /> Voltar para GILEN
