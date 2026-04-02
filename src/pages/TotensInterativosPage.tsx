@@ -184,7 +184,7 @@ const TotensInterativosPage = () => {
                 </div>
                 <div className="p-5">
                   <h3 className="text-base font-semibold text-foreground mb-1">{item.title}</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed text-justify">{item.desc}</p>
                 </div>
                 <div className="absolute top-0 left-0 w-0 h-1 bg-accent-blue group-hover:w-full transition-all duration-500" />
               </motion.div>
