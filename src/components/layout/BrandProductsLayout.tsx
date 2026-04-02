@@ -210,7 +210,7 @@ const ProductCard = ({ product, index, viewMode, brandName, categories, onSelect
         <h3 className="text-xs sm:text-sm font-bold text-foreground line-clamp-2 group-hover:text-accent-blue transition-colors">
           {product.name}
         </h3>
-        <p className="text-[10px] sm:text-xs text-muted-foreground mt-1 sm:mt-2 line-clamp-2 leading-relaxed hidden sm:block">
+        <p className="text-[10px] sm:text-xs text-muted-foreground mt-1 sm:mt-2 line-clamp-2 leading-relaxed hidden sm:block text-justify">
           {product.description}
         </p>
         <div className="mt-2 sm:mt-3 pt-2 sm:pt-3 border-t border-border/50 flex items-center justify-between">
