@@ -18,6 +18,14 @@ import imgCaseRackGavetas1 from "@/assets/cases/case-rack-gavetas-1.png";
 import imgCaseRackGavetas2 from "@/assets/cases/case-rack-gavetas-2.png";
 import imgCaseRackGavetas3 from "@/assets/cases/case-rack-gavetas-3.png";
 import imgCaseRackGavetas4 from "@/assets/cases/case-rack-gavetas-4.png";
+import imgCaseSerralheria1 from "@/assets/cases/case-serralheria-1.png";
+import imgCaseSerralheria2 from "@/assets/cases/case-serralheria-2.png";
+import imgCaseSerralheria3 from "@/assets/cases/case-serralheria-3.png";
+import imgCasePainelLed1 from "@/assets/cases/case-painel-led-1.png";
+import imgCasePainelLed2 from "@/assets/cases/case-painel-led-2.png";
+import imgCaseVerticalEquip1 from "@/assets/cases/case-vertical-equip-1.png";
+import imgCaseVerticalEquip2 from "@/assets/cases/case-vertical-equip-2.png";
+import imgCaseVerticalEquip3 from "@/assets/cases/case-vertical-equip-3.png";
 import imgSup1 from "@/assets/gilcase-suporte-1.png";
 import imgSup2 from "@/assets/gilcase-suporte-2.png";
 import imgSup3 from "@/assets/gilcase-suporte-3.png";
@@ -123,6 +131,9 @@ const products = [
   { id: "case-projetor-cinema", name: "Case para Projetor de Cinema", image: imgCaseProjetorCinema1, images: [imgCaseProjetorCinema1, imgCaseProjetorCinema2], description: "Case profissional sob medida para projetor de cinema, com estrutura em alumínio e rodízios. Projetado para transporte seguro de equipamentos audiovisuais de grande porte.", category: "cases" },
   { id: "case-igreja-adventista", name: "Case Personalizado Igreja Adventista", image: imgCaseIgrejaAdventista1, images: [imgCaseIgrejaAdventista1, imgCaseIgrejaAdventista2], description: "Case personalizado com logo gravado da Igreja Adventista do Sétimo Dia, estrutura em alumínio com alça retrátil e rodízios. Interior com divisórias em espuma para proteção de equipamentos.", category: "cases" },
   { id: "case-rack-gavetas", name: "Case Rack com Gavetas", image: imgCaseRackGavetas1, images: [imgCaseRackGavetas1, imgCaseRackGavetas2, imgCaseRackGavetas3, imgCaseRackGavetas4], description: "Case rack profissional com sistema de gavetas deslizantes, estrutura reforçada em alumínio e compartimento superior tipo rack. Ideal para equipamentos técnicos que exigem organização e acesso rápido.", category: "cases" },
+  { id: "case-serralheria", name: "Case GilCase Serralheria", image: imgCaseSerralheria1, images: [imgCaseSerralheria1, imgCaseSerralheria2, imgCaseSerralheria3], description: "Case profissional GilCase com acabamento em alumínio, alça retrátil e rodízios. Interior com divisórias e painel de ferramentas organizado para serralheria e manutenção em campo.", category: "cases" },
+  { id: "case-painel-led", name: "Case para Painel de LED", image: imgCasePainelLed1, images: [imgCasePainelLed1, imgCasePainelLed2], description: "Case de grande porte em compensado preto com cantoneiras em alumínio e rodízios industriais, projetado para transporte seguro de painéis de LED e telas de grande formato.", category: "cases" },
+  { id: "case-vertical-equipamentos", name: "Case Vertical para Equipamentos", image: imgCaseVerticalEquip1, images: [imgCaseVerticalEquip1, imgCaseVerticalEquip2, imgCaseVerticalEquip3], description: "Case vertical com rodízios e portas articuladas, interior com espuma protetora e cintas de fixação para transporte seguro de equipamentos sensíveis e totens interativos.", category: "cases" },
 
   // === LINHA DE SUPORTES ===
   { id: "suporte-pata-pesada-rotativo", name: "Suporte Pata Pesada com Rotativo e Gaveta", image: imgSup1, description: "Suporte de pedestal com base pata pesada, cabeçote rotativo para múltiplos monitores e gaveta integrada para organização de cabos e fiação.", category: "suportes" },
