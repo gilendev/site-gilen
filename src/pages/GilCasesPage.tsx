@@ -362,7 +362,7 @@ const GilCasesPage = () => {
                     <feature.icon className="text-accent-blue" size={24} />
                   </div>
                   <h3 className="text-lg font-semibold text-foreground mb-3">{feature.title}</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{feature.desc}</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed text-justify">{feature.desc}</p>
                 </div>
               </SectionBlock>
             ))}
