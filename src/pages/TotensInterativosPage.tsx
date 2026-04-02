@@ -229,7 +229,7 @@ const TotensInterativosPage = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
               Transforme a experiência do seu público
             </h2>
-            <p className="text-muted-foreground max-w-xl mx-auto mb-8">
+            <p className="text-muted-foreground max-w-xl mx-auto mb-8 text-justify">
               Entre em contato e solicite um orçamento para seu totem interativo personalizado.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">

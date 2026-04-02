@@ -88,7 +88,7 @@ const BrandHeroBanner = ({ slides, interval = 5000 }: BrandHeroBannerProps) => {
             <h2 className="text-xl sm:text-2xl md:text-4xl font-black text-white leading-tight mb-1 sm:mb-2">
               {slide.title}
             </h2>
-            <p className="text-white/70 text-xs sm:text-sm md:text-base max-w-lg">
+            <p className="text-white/70 text-xs sm:text-sm md:text-base max-w-lg text-justify">
               {slide.subtitle}
             </p>
           </motion.div>
