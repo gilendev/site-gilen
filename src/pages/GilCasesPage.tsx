@@ -123,7 +123,7 @@ const GilCasesPage = () => {
       />
 
       {/* Hero */}
-      <section id="hero" className="relative min-h-[80vh] md:min-h-[90vh] flex items-center overflow-hidden pt-20 md:pt-36">
+      <section id="hero" className="relative min-h-[60vh] md:min-h-[90vh] flex items-center overflow-hidden pt-16 md:pt-36">
         <video
           src="/gilcase-hero-video.mp4"
           autoPlay
@@ -148,7 +148,7 @@ const GilCasesPage = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.05] mb-6"
+              className="text-3xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.05] mb-4 md:mb-6"
             >
               GIL CASES <br />& SUPORTES
             </motion.h1>
@@ -156,7 +156,7 @@ const GilCasesPage = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-lg md:text-xl text-white/60 leading-relaxed mb-8 max-w-xl text-justify"
+              className="hidden md:block text-lg md:text-xl text-white/60 leading-relaxed mb-8 max-w-xl text-justify"
             >
               Fabricamos cases personalizados para soluções em transporte e segurança de todos os modelos de materiais, com matéria-prima em compensado de 6 e 10mm para materiais de leve e médio peso e de 15mm para materiais pesados.
             </motion.p>
@@ -362,7 +362,7 @@ const GilCasesPage = () => {
             </h2>
           </SectionBlock>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
             {[
               { step: "01", title: "Briefing", desc: "Entendemos suas necessidades de transporte e proteção dos equipamentos." },
               { step: "02", title: "Projeto", desc: "Desenvolvemos o case sob medida com as dimensões e compartimentos ideais." },

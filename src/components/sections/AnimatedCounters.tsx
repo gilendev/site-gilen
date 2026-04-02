@@ -50,11 +50,11 @@ const AnimatedCounters = () => {
               transition={{ duration: 0.5, delay: i * 0.15 }}
               className="text-center"
             >
-              <stat.icon className="mx-auto mb-3 text-accent-blue" size={32} />
-              <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-accent-blue">
+              <stat.icon className="mx-auto mb-2 md:mb-3 text-accent-blue" size={24} />
+              <div className="text-2xl md:text-4xl lg:text-5xl font-bold text-accent-blue">
                 <Counter value={stat.value} suffix={stat.suffix} inView={isInView} />
               </div>
-              <div className="text-primary-foreground/60 text-sm mt-2 uppercase tracking-wider">
+              <div className="text-primary-foreground/60 text-[10px] md:text-sm mt-1 md:mt-2 uppercase tracking-wider">
                 {stat.label}
               </div>
             </motion.div>

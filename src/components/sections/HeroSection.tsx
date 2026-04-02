@@ -45,7 +45,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground leading-[1.05] mb-4 md:mb-6"
+            className="text-3xl md:text-6xl lg:text-7xl font-bold text-primary-foreground leading-[1.05] mb-4 md:mb-6"
           >
             GILEN
             <br />
@@ -67,7 +67,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-sm md:text-lg text-primary-foreground/40 max-w-xl mb-8 md:mb-10 leading-relaxed"
+            className="hidden md:block text-sm md:text-lg text-primary-foreground/40 max-w-xl mb-8 md:mb-10 leading-relaxed"
           >
             Projetamos, desenvolvemos e fabricamos soluções industriais com engenharia aplicada e capacidade produtiva avançada.
           </motion.p>

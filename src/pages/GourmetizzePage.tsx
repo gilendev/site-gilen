@@ -83,7 +83,7 @@ const GourmetizzePage = () => {
       />
 
       {/* Hero */}
-      <section id="hero" className="relative min-h-[80vh] md:min-h-[90vh] flex items-center overflow-hidden pt-20 md:pt-36">
+      <section id="hero" className="relative min-h-[60vh] md:min-h-[90vh] flex items-center overflow-hidden pt-16 md:pt-36">
         <img src={imgHero} alt="Área gourmet Gourmetizze" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
         <div className="container mx-auto px-4 lg:px-8 relative z-10">
@@ -91,10 +91,10 @@ const GourmetizzePage = () => {
             <motion.span initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="text-xs font-semibold uppercase tracking-[0.3em] text-accent mb-4 block">
               By GILEN Industrial
             </motion.span>
-            <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }} className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.05] mb-6">
+            <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }} className="text-3xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.05] mb-4 md:mb-6">
               GOURMETIZZE
             </motion.h1>
-            <motion.p initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }} className="text-lg md:text-xl text-white/60 leading-relaxed mb-8 max-w-xl">
+            <motion.p initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }} className="hidden md:block text-lg md:text-xl text-white/60 leading-relaxed mb-8 max-w-xl">
               Produtos para o setor gourmet fabricados em corte a laser em metal. Churrasqueiras modulares, utensílios e estruturas para áreas externas.
             </motion.p>
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }} className="flex flex-col sm:flex-row gap-3">

@@ -89,7 +89,7 @@ const ParametrizzePage = () => {
       />
 
       {/* Hero */}
-      <section id="hero" className="relative min-h-[80vh] md:min-h-[90vh] flex items-center overflow-hidden pt-20 md:pt-36">
+      <section id="hero" className="relative min-h-[60vh] md:min-h-[90vh] flex items-center overflow-hidden pt-16 md:pt-36">
         <img src={imgHero} alt="Design paramétrico Parametrizze" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
         <div className="container mx-auto px-4 lg:px-8 relative z-10">
@@ -106,7 +106,7 @@ const ParametrizzePage = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.05] mb-6"
+              className="text-3xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.05] mb-4 md:mb-6"
             >
               PARAMETRIZZE
             </motion.h1>
@@ -114,7 +114,7 @@ const ParametrizzePage = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-lg md:text-xl text-white/60 leading-relaxed mb-8 max-w-xl"
+              className="hidden md:block text-lg md:text-xl text-white/60 leading-relaxed mb-8 max-w-xl"
             >
               Design paramétrico aplicado à arquitetura, mobiliário e soluções industriais. Cada peça é única, fabricada com tecnologia CNC de alta precisão.
             </motion.p>

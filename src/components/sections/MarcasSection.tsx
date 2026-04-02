@@ -81,15 +81,15 @@ const MarcasSection = () => {
           
           <Link to={gilCases.href} className="block">
             <div className="flex items-start gap-5">
-              <div className="w-28 h-28 rounded-sm flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform overflow-hidden" style={{ backgroundColor: '#8B7355' }}>
+              <div className="w-16 h-16 md:w-28 md:h-28 rounded-sm flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform overflow-hidden" style={{ backgroundColor: '#8B7355' }}>
                 <img src={gilCases.logo} alt={gilCases.name} className="w-full h-full object-cover" />
               </div>
               <div>
-                <h3 className="text-xl font-bold text-foreground mb-2">
+                <h3 className="text-base md:text-xl font-bold text-foreground mb-1 md:mb-2">
                   {gilCases.name}
                   <span className="ml-2 text-xs text-accent-blue font-normal">→ Ver mais</span>
                 </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed text-justify">{gilCases.description}</p>
+                <p className="text-xs md:text-sm text-muted-foreground leading-relaxed text-justify line-clamp-3 md:line-clamp-none">{gilCases.description}</p>
               </div>
             </div>
           </Link>
@@ -100,15 +100,15 @@ const MarcasSection = () => {
           {brands.map((brand, index) => {
             const CardContent =
             <div className="flex items-start gap-5">
-                <div className="w-28 h-28 rounded-sm flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform overflow-hidden" style={{ backgroundColor: '#8B7355' }}>
+                <div className="w-16 h-16 md:w-28 md:h-28 rounded-sm flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform overflow-hidden" style={{ backgroundColor: '#8B7355' }}>
                   <img src={brand.logo} alt={brand.name} className="w-full h-full object-cover" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-foreground mb-2">
+                  <h3 className="text-base md:text-xl font-bold text-foreground mb-1 md:mb-2">
                     {brand.name}
                     {brand.href && <span className="ml-2 text-xs text-accent-blue font-normal">→ Ver mais</span>}
                   </h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed text-justify">{brand.description}</p>
+                  <p className="text-xs md:text-sm text-muted-foreground leading-relaxed text-justify line-clamp-3 md:line-clamp-none">{brand.description}</p>
                 </div>
               </div>;
 

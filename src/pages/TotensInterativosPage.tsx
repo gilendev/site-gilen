@@ -82,7 +82,7 @@ const TotensInterativosPage = () => {
       />
 
       {/* Hero */}
-      <section id="hero" className="relative min-h-[80vh] md:min-h-[90vh] flex items-center overflow-hidden pt-20 md:pt-36 bg-graphite">
+      <section id="hero" className="relative min-h-[60vh] md:min-h-[90vh] flex items-center overflow-hidden pt-16 md:pt-36 bg-graphite">
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60" />
         <div className="container mx-auto px-4 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -99,7 +99,7 @@ const TotensInterativosPage = () => {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
-                className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.05] mb-6"
+                className="text-3xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.05] mb-4 md:mb-6"
               >
                 TOTENS <br />
                 <span className="text-accent-blue">INTERATIVOS</span>
@@ -108,7 +108,7 @@ const TotensInterativosPage = () => {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="text-lg text-white/60 leading-relaxed mb-8 max-w-lg text-justify"
+                className="hidden md:block text-lg text-white/60 leading-relaxed mb-8 max-w-lg text-justify"
               >
                 Estruturas para totens interativos com design profissional para pontos de venda, recepções, feiras, eventos corporativos, clínicas, hospitais e muito mais.
               </motion.p>
