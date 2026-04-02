@@ -410,7 +410,7 @@ const BrandProductsLayout = ({
             {/* Brand Hero in Sidebar */}
             <div className="mb-6 p-4 rounded-xl bg-gradient-to-br from-graphite to-graphite/80 relative overflow-hidden">
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_hsl(var(--accent-blue)/0.15),transparent_70%)]" />
-              <div className="relative z-10">
+              <div className="relative z-10 flex flex-col items-center text-center">
                 <div className={cn("w-12 h-12 rounded-xl overflow-hidden mb-3 ring-2 ring-white/10", !logoBgColor && "bg-white")}
                   style={logoBgColor ? { backgroundColor: logoBgColor } : undefined}>
                   <img src={logoSrc} alt={brandName} className="w-full h-full object-contain p-1" />
