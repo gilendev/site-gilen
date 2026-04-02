@@ -1,6 +1,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Gauge, ScanLine, Cog, Monitor, ArrowRight, Cpu, Wrench, Paintbrush, Scissors, Ruler, CheckCircle, Factory, Zap } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import imgTecnologia from "@/assets/img-tecnologia.jpg";
 
