@@ -3,6 +3,7 @@ import { useRef } from "react";
 import SEOHead from "@/components/SEOHead";
 import { Link } from "react-router-dom";
 import { ArrowRight, ArrowLeft, Shield, Box, Truck, Wrench, Monitor, Package } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 import BrandNavbar from "@/components/layout/BrandNavbar";
 import { Button } from "@/components/ui/button";
 import imgHero from "@/assets/img-gilcase-hero.jpg";
