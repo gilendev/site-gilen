@@ -98,7 +98,7 @@ const HeroSection = () => {
             >
               <a href="https://wa.me/5511968756430?text=Falar%20com%20a%20Gilen%20Industrial" target="_blank" rel="noopener noreferrer">
                 <FaWhatsapp className="mr-2" size={18} />
-                Fale com nossa engenharia
+                Fale com o comercial da Gilen
               </a>
             </Button>
           </motion.div>
