@@ -12,50 +12,36 @@ import imgTotens from "@/assets/img-gilcase-totens.jpg";
 import imgFabricacao from "@/assets/img-gilcase-fabricacao.jpg";
 import BrandCarousel from "@/components/BrandCarousel";
 import WhatsAppButton from "@/components/WhatsAppButton";
-import imgCarousel1 from "@/assets/gilcase-carousel-1.png";
-import imgCarousel2 from "@/assets/gilcase-carousel-2.png";
-import imgCarousel3 from "@/assets/gilcase-carousel-3.png";
-import imgCarousel4 from "@/assets/gilcase-carousel-4.png";
-import imgCarousel5 from "@/assets/gilcase-carousel-5.png";
-import imgCarousel6 from "@/assets/gilcase-carousel-6.png";
-import imgCarousel7 from "@/assets/gilcase-carousel-7.png";
-import imgCarousel8 from "@/assets/gilcase-carousel-8.png";
-import imgCarousel9 from "@/assets/gilcase-carousel-9.png";
-import imgCarousel10 from "@/assets/gilcase-carousel-10.png";
-import imgNew1 from "@/assets/gilcase-new-1.png";
-import imgNew2 from "@/assets/gilcase-new-2.png";
-import imgNew3 from "@/assets/gilcase-new-3.png";
-import imgNew4 from "@/assets/gilcase-new-4.png";
-import imgNew5 from "@/assets/gilcase-new-5.png";
-import imgNew6 from "@/assets/gilcase-new-6.png";
-import imgNew7 from "@/assets/gilcase-new-7.png";
-import imgNew8 from "@/assets/gilcase-new-8.png";
-import imgNew9 from "@/assets/gilcase-new-9.png";
-import imgNew10 from "@/assets/gilcase-new-10.png";
-import imgExtra1 from "@/assets/gilcase-extra-1.png";
-import imgExtra2 from "@/assets/gilcase-extra-2.png";
-import imgExtra3 from "@/assets/gilcase-extra-3.png";
-import imgExtra4 from "@/assets/gilcase-extra-4.png";
-import imgExtra5 from "@/assets/gilcase-extra-5.png";
-import imgExtra6 from "@/assets/gilcase-extra-6.png";
-import imgExtra7 from "@/assets/gilcase-extra-7.png";
-import imgExtra8 from "@/assets/gilcase-extra-8.png";
-import imgExtra9 from "@/assets/gilcase-extra-9.png";
-import imgExtra10 from "@/assets/gilcase-extra-10.png";
-import imgExtra11 from "@/assets/gilcase-extra-11.png";
-import imgExtra12 from "@/assets/gilcase-extra-12.png";
-import imgExtra13 from "@/assets/gilcase-extra-13.png";
-import imgExtra14 from "@/assets/gilcase-extra-14.png";
-import imgExtra15 from "@/assets/gilcase-extra-15.png";
-import imgExtra16 from "@/assets/gilcase-extra-16.png";
-import imgExtra17 from "@/assets/gilcase-extra-17.png";
-import imgExtra18 from "@/assets/gilcase-extra-18.png";
-import imgExtra19 from "@/assets/gilcase-extra-19.png";
-import imgExtra20 from "@/assets/gilcase-extra-20.png";
-import imgExtra21 from "@/assets/gilcase-extra-21.png";
-import imgExtra22 from "@/assets/gilcase-extra-22.png";
-import imgExtra23 from "@/assets/gilcase-extra-23.png";
-import imgExtra24 from "@/assets/gilcase-extra-24.png";
+// Cases
+import imgCaseAzulConjunto from "@/assets/cases/case-azul-conjunto.png";
+import imgCaseAmareloKit from "@/assets/cases/case-amarelo-kit.png";
+import imgCaseFirmaLed from "@/assets/cases/case-firma-led.png";
+import imgCaseRackGavetas1 from "@/assets/cases/case-rack-gavetas-1.png";
+import imgCasePainelLed1 from "@/assets/cases/case-painel-led-1.png";
+import imgCaseProjetorCinema1 from "@/assets/cases/case-projetor-cinema-1.png";
+import imgCaseSerralheria1 from "@/assets/cases/case-serralheria-1.png";
+import imgCaseVerticalEquip1 from "@/assets/cases/case-vertical-equip-1.png";
+import imgCaseIgrejaAdventista1 from "@/assets/cases/case-igreja-adventista-1.png";
+import imgCaseFirmaEspuma from "@/assets/cases/case-firma-espuma.png";
+// Suportes
+import imgSup1 from "@/assets/gilcase-suporte-1.png";
+import imgSup3 from "@/assets/gilcase-suporte-3.png";
+import imgSup5 from "@/assets/gilcase-suporte-5.png";
+import imgSup7 from "@/assets/gilcase-suporte-7.png";
+import imgSup9 from "@/assets/gilcase-suporte-9.png";
+import imgSup11 from "@/assets/gilcase-suporte-11.png";
+// Totens
+import imgTotemDrogal from "@/assets/totens/totem-drogal.png";
+import imgTotemNissan from "@/assets/totens/totem-nissan.png";
+import imgTotemEletroposto from "@/assets/totens/totem-eletroposto.png";
+import imgTotemVarejo from "@/assets/totens/totem-varejo.png";
+// Estruturas
+import imgFachadaByd from "@/assets/estruturas/fachada-concessionaria-byd-1.jpg";
+import imgGeodesica from "@/assets/estruturas/geodesica-led-1.jpg";
+import imgPainelClube from "@/assets/estruturas/painel-led-clube-1.jpg";
+import imgCilindroLed from "@/assets/estruturas/cilindro-led-evento-1.png";
+import imgPainelAeroporto from "@/assets/estruturas/painel-led-aeroporto-1.jpeg";
+import imgTruckLed from "@/assets/estruturas/truck-led-1.jpg";
 
 const logoGilCase = "/lovable-uploads/logo-gilcase.jpeg";
 
@@ -245,50 +231,36 @@ const GilCasesPage = () => {
         accentColor="bg-accent-blue"
         linkTo="/gil-cases/produtos"
         images={[
-          { src: imgCarousel1, alt: "Cases amarelos profissionais" },
-          { src: imgCarousel2, alt: "Case para painel vertical" },
-          { src: imgCarousel3, alt: "Case para TV com rodízios" },
-          { src: imgCarousel4, alt: "Cases azuis empilhados" },
-          { src: imgCarousel5, alt: "Case aberto com espuma" },
-          { src: imgCarousel6, alt: "Case aberto para equipamentos" },
-          { src: imgCarousel7, alt: "Case para suporte de LED" },
-          { src: imgCarousel8, alt: "Case com compartimentos internos" },
-          { src: imgCarousel9, alt: "Cases com divisórias" },
-          { src: imgCarousel10, alt: "Case aberto preto profissional" },
-          { src: imgNew1, alt: "Cases azuis com cantoneiras" },
-          { src: imgNew2, alt: "Case personalizado com logotipo" },
-          { src: imgNew3, alt: "Kit de bags e cases para equipamentos" },
-          { src: imgNew4, alt: "Case para painel WorldSkills" },
-          { src: imgNew5, alt: "Case para teclado e periféricos" },
-          { src: imgNew6, alt: "Case aberto com espuma interna" },
-          { src: imgNew7, alt: "Case para projetor profissional" },
-          { src: imgNew8, alt: "Cases LED & CIA personalizados" },
-          
-          { src: imgNew10, alt: "Cases azuis Crialec empilhados" },
-          { src: imgExtra1, alt: "Case aberto compensado branco" },
-          { src: imgExtra2, alt: "Case para teclado musical" },
-          { src: imgExtra3, alt: "Cases empilháveis grande porte" },
-          { src: imgExtra4, alt: "Case com rodízio GilCase Serralheria" },
-          { src: imgExtra5, alt: "Case para painel Phygital Solutions" },
-          { src: imgExtra6, alt: "Case para TV grande formato" },
-          { src: imgExtra7, alt: "Cases modulares com espuma" },
-          { src: imgExtra8, alt: "Case personalizado Firma Prop" },
-          { src: imgExtra9, alt: "Case rack com gavetas" },
-          { src: imgExtra10, alt: "Case personalizado com logo V" },
-          { src: imgExtra11, alt: "Case para TV monitor profissional" },
-          { src: imgExtra12, alt: "Case rack com equipamentos de rede" },
-          { src: imgExtra13, alt: "Case armário com rodízios" },
-          { src: imgExtra14, alt: "Case grande com compartimentos internos" },
-          { src: imgExtra15, alt: "Case para ferramentas profissionais" },
-          { src: imgExtra16, alt: "Case personalizado com logo marca" },
-          { src: imgExtra17, alt: "Case rack compacto profissional" },
-          { src: imgExtra18, alt: "Cases grandes formato letra BIS" },
-          { src: imgExtra19, alt: "Case com alça retrátil e prateleiras" },
-          { src: imgExtra20, alt: "Case para equipamento Daston" },
-          { src: imgExtra21, alt: "Cases Firma Prod personalizados" },
-          { src: imgExtra22, alt: "Kit cases International School" },
-          { src: imgExtra23, alt: "Case gaveteiro vertical com rodízios" },
-          { src: imgExtra24, alt: "Cases empilháveis pretos profissionais" },
+          // Cases
+          { src: imgCaseAzulConjunto, alt: "Cases azuis profissionais empilhados" },
+          { src: imgCaseAmareloKit, alt: "Kit de cases amarelos" },
+          { src: imgCaseFirmaLed, alt: "Case para painel LED" },
+          { src: imgCaseRackGavetas1, alt: "Case rack com gavetas" },
+          { src: imgCasePainelLed1, alt: "Case para painel LED grande formato" },
+          { src: imgCaseProjetorCinema1, alt: "Case para projetor de cinema" },
+          { src: imgCaseSerralheria1, alt: "Case serralheria profissional" },
+          { src: imgCaseVerticalEquip1, alt: "Case vertical para equipamentos" },
+          { src: imgCaseIgrejaAdventista1, alt: "Case Igreja Adventista" },
+          { src: imgCaseFirmaEspuma, alt: "Case com espuma interna personalizada" },
+          // Suportes
+          { src: imgSup1, alt: "Suporte profissional para equipamentos" },
+          { src: imgSup3, alt: "Suporte técnico sob medida" },
+          { src: imgSup5, alt: "Suporte para monitor profissional" },
+          { src: imgSup7, alt: "Suporte industrial personalizado" },
+          { src: imgSup9, alt: "Suporte para painel LED" },
+          { src: imgSup11, alt: "Suporte técnico especial" },
+          // Totens
+          { src: imgTotemDrogal, alt: "Totem interativo Drogal" },
+          { src: imgTotemNissan, alt: "Totem interativo Nissan" },
+          { src: imgTotemEletroposto, alt: "Totem para eletroposto" },
+          { src: imgTotemVarejo, alt: "Totem interativo para varejo" },
+          // Estruturas Metálicas
+          { src: imgFachadaByd, alt: "Fachada LED concessionária BYD" },
+          { src: imgGeodesica, alt: "Estrutura geodésica LED" },
+          { src: imgPainelClube, alt: "Painel LED para clube esportivo" },
+          { src: imgCilindroLed, alt: "Cilindro LED para evento" },
+          { src: imgPainelAeroporto, alt: "Painel LED aeroporto" },
+          { src: imgTruckLed, alt: "Truck LED mídia exterior" },
         ]}
       />
       </div>
