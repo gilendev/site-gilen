@@ -114,7 +114,7 @@ const ParametrizzePage = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-lg md:text-xl text-white/60 leading-relaxed mb-8 max-w-xl"
+              className="hidden md:block text-lg md:text-xl text-white/60 leading-relaxed mb-8 max-w-xl"
             >
               Design paramétrico aplicado à arquitetura, mobiliário e soluções industriais. Cada peça é única, fabricada com tecnologia CNC de alta precisão.
             </motion.p>

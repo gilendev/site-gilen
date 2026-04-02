@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="technical-line w-full" />
 
       <div className="container mx-auto px-4 lg:px-8 py-8">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {/* Brand */}
           <div>
             <img src={logoGilen} alt="GILEN Industrial" className="h-9 w-auto brightness-0 invert mb-3" />

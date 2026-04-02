@@ -108,7 +108,7 @@ const MarcasSection = () => {
                     {brand.name}
                     {brand.href && <span className="ml-2 text-xs text-accent-blue font-normal">→ Ver mais</span>}
                   </h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed text-justify">{brand.description}</p>
+                  <p className="text-xs md:text-sm text-muted-foreground leading-relaxed text-justify line-clamp-3 md:line-clamp-none">{brand.description}</p>
                 </div>
               </div>;
 
