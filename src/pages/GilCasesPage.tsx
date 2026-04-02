@@ -328,7 +328,7 @@ const GilCasesPage = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
                   <h3 className="text-xl font-bold text-white mb-2">{product.title}</h3>
-                  <p className="text-white/60 text-sm leading-relaxed">{product.description}</p>
+                  <p className="text-white/60 text-sm leading-relaxed text-justify">{product.description}</p>
                 </div>
                 <div className="absolute top-0 left-0 w-0 h-1 bg-accent-blue group-hover:w-full transition-all duration-500" />
               </motion.div>
