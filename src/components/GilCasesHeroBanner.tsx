@@ -1,7 +1,7 @@
 import BrandHeroBanner from "@/components/BrandHeroBanner";
 import bannerShow from "@/assets/banner-case-show.jpg";
 import bannerHospitalar from "@/assets/banner-case-hospitalar.jpg";
-import bannerBelico from "@/assets/banner-case-belico.jpg";
+import bannerBelico from "@/assets/banner-case-belico-new.png";
 import bannerCorporativo from "@/assets/banner-case-corporativo-new.png";
 import bannerIndustrial from "@/assets/banner-case-industrial.jpg";
 
