@@ -155,7 +155,7 @@ const GilCasesPage = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="hidden md:block text-lg md:text-xl text-white/60 leading-relaxed mb-8 max-w-xl text-justify rounded-md px-4 py-3 transition-colors duration-300 hover:bg-white/10"
+              className="hidden md:block text-lg md:text-xl text-white/60 leading-relaxed mb-8 max-w-xl text-justify rounded-md px-4 py-3 transition-colors duration-300 hover:bg-white/[0.13]"
             >
               Fabricamos cases personalizados para transporte e proteção, em compensado de 6, 10 e 15 mm, conforme o peso. Podem incluir espuma interna, cantoneiras, perfis de alumínio, fechos, dobradiças, alças, rodízios e divisórias, garantindo segurança e durabilidade.
             </motion.p>
