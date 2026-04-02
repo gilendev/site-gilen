@@ -103,7 +103,28 @@ const suportesSlides = [
   },
 ];
 
-const allSlides = [...casesSlides, ...suportesSlides];
+const totensSlides = [
+  {
+    image: bannerTotem1,
+    title: "Totens Interativos para Varejo e Corporativo",
+    subtitle: "Soluções digitais de autoatendimento, informação e carregamento para pontos de venda",
+    tag: "TOTENS · VAREJO",
+  },
+  {
+    image: bannerTotem2,
+    title: "Totens LED e Digital Signage",
+    subtitle: "Painéis verticais de alta resolução para comunicação visual e mídia indoor",
+    tag: "TOTENS · LED · SIGNAGE",
+  },
+  {
+    image: bannerTotem3,
+    title: "Totens Personalizados para Grandes Marcas",
+    subtitle: "Projetos sob medida para concessionárias, redes de varejo e eventos corporativos",
+    tag: "TOTENS · SOB MEDIDA",
+  },
+];
+
+const allSlides = [...casesSlides, ...suportesSlides, ...totensSlides];
 
 const GilCasesHeroBanner = () => {
   const { categoria } = useParams<{ categoria?: string }>();
@@ -111,6 +132,7 @@ const GilCasesHeroBanner = () => {
   const slides = useMemo(() => {
     if (categoria === "cases") return casesSlides;
     if (categoria === "suportes") return suportesSlides;
+    if (categoria === "totens") return totensSlides;
     return allSlides;
   }, [categoria]);
 
