@@ -204,13 +204,13 @@ const GilCasesPage = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
                 Especialistas em <span className="text-steel">cases e suportes</span>
               </h2>
-              <p className="text-muted-foreground leading-relaxed mb-4">
+              <p className="text-muted-foreground leading-relaxed mb-4 text-justify">
                 Com experiência de mais de 13 anos, a GilCase vem se especializando na fabricação de cases e suportes. Todos os produtos possuem acabamento de alta qualidade.
               </p>
-              <p className="text-muted-foreground leading-relaxed mb-4">
+              <p className="text-muted-foreground leading-relaxed mb-4 text-justify">
                 Contamos com uma equipe de funcionários altamente treinados e qualificados para oferecer produtos com qualidade e excelente custo-benefício.
               </p>
-              <p className="text-muted-foreground leading-relaxed mb-8">
+              <p className="text-muted-foreground leading-relaxed mb-8 text-justify">
                 Pensando na praticidade e comodidade dos nossos clientes, criamos produtos exclusivos e executamos projetos sob medida e projetos especiais, com os melhores fornecedores de matérias-primas nacionais e importadas.
               </p>
               <div className="grid grid-cols-3 gap-6">
