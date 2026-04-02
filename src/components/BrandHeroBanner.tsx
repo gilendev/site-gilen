@@ -45,6 +45,9 @@ const BrandHeroBanner = ({ slides, interval = 5000 }: BrandHeroBannerProps) => {
     exit: (d: number) => ({ x: d > 0 ? "-100%" : "100%", opacity: 0 }),
   };
 
+  const slide = slides[current] || slides[0];
+  if (!slide) return null;
+
   return (
     <div className="relative w-full h-[240px] sm:h-[320px] md:h-[400px] overflow-hidden rounded-xl">
       <AnimatePresence initial={false} custom={direction} mode="popLayout">
