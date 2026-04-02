@@ -1,6 +1,29 @@
 import BrandHeroBanner from "@/components/BrandHeroBanner";
 
-const slides: { image: string; title: string; subtitle: string; tag: string }[] = [];
+import bannerShow1 from "@/assets/banner-case-show1.png";
+import bannerShow2 from "@/assets/banner-case-show2.png";
+import bannerShow3 from "@/assets/banner-case-show3.png";
+
+const slides = [
+  {
+    image: bannerShow1,
+    title: "Cases para Equipamentos de Som, Luz e Imagem",
+    subtitle: "Proteção profissional para seus equipamentos de palco e estúdio",
+    tag: "SOM · LUZ · IMAGEM",
+  },
+  {
+    image: bannerShow2,
+    title: "Cases para Equipamentos de Som, Luz e Imagem",
+    subtitle: "Soluções robustas para turnês, shows e produções ao vivo",
+    tag: "SOM · LUZ · IMAGEM",
+  },
+  {
+    image: bannerShow3,
+    title: "Cases para Equipamentos de Som, Luz e Imagem",
+    subtitle: "Fabricação sob medida com qualidade GilCase",
+    tag: "SOM · LUZ · IMAGEM",
+  },
+];
 
 const GilCasesHeroBanner = () => {
   if (slides.length === 0) {
