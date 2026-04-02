@@ -1,5 +1,4 @@
 import BrandHeroBanner from "@/components/BrandHeroBanner";
-import bannerShow from "@/assets/banner-case-show-new.png";
 import bannerHenko1 from "@/assets/banner-case-show-henko1.png";
 import bannerHenko2 from "@/assets/banner-case-show-henko2.png";
 import bannerHenko3 from "@/assets/banner-case-show-henko3.png";
