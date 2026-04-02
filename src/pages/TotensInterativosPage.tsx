@@ -18,7 +18,7 @@ import imgTotemPainel from "@/assets/totens/totem-painel-led.png";
 import imgTotemVarejo from "@/assets/totens/totem-varejo.png";
 import imgTotemNissan from "@/assets/totens/totem-nissan.png";
 
-const logoGilCase = "/lovable-uploads/fde14585-385d-48d8-9f44-2ffefc9b0e0c.png";
+const logoGilCase = "/lovable-uploads/logo-gilcase.jpeg";
 
 const gallery = [
   { image: imgTotemDrogal, title: "Totem Digital Drogal", desc: "Totem de sinalização digital vertical para redes de farmácias com tela LED de alta resolução e estrutura em aço." },
