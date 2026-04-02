@@ -126,11 +126,12 @@ const ParametrizzePage = () => {
               <Button
                 asChild
                 size="lg"
-                className="bg-accent-blue hover:bg-accent-blue/90 text-accent-blue-foreground px-8 h-12 text-sm uppercase tracking-wider font-semibold"
+                className="whatsapp-hover bg-accent-blue hover:bg-accent-blue/90 text-accent-blue-foreground px-8 h-12 text-sm uppercase tracking-wider font-semibold"
               >
                 <Link to="/contato">
+                  <FaWhatsapp className="whatsapp-icon" size={18} />
                   Solicitar Projeto
-                  <ArrowRight className="ml-2" size={16} />
+                  <ArrowRight className="default-icon ml-2" size={16} />
                 </Link>
               </Button>
               <Button
