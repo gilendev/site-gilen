@@ -53,7 +53,7 @@ const products = [
     link: "/gil-cases/produtos/cases",
   },
   {
-    image: imgSuportes,
+    image: imgSup1,
     title: "Linha de Suportes",
     description: "Pedestais e suportes para TVs, monitores e painéis de LED. Modelos unitários, duplos, triplos e articulados para eventos, videowall e instalações permanentes.",
     link: "/gil-cases/produtos/suportes",
