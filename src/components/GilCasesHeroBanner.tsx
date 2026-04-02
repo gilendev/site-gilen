@@ -1,3 +1,5 @@
+import { useMemo } from "react";
+import { useParams } from "react-router-dom";
 import BrandHeroBanner from "@/components/BrandHeroBanner";
 
 import bannerShow1 from "@/assets/banner-case-show1.png";
@@ -10,8 +12,11 @@ import bannerBelico4 from "@/assets/banner-case-belico4.png";
 import bannerHospitalar1 from "@/assets/banner-case-hospitalar1.png";
 import bannerHospitalar2 from "@/assets/banner-case-hospitalar2.png";
 import bannerHospitalar3 from "@/assets/banner-case-hospitalar3.png";
+import bannerSuporte1 from "@/assets/banner-suporte1.png";
+import bannerSuporte2 from "@/assets/banner-suporte2.png";
+import bannerSuporte3 from "@/assets/banner-suporte3.png";
 
-const slides = [
+const casesSlides = [
   {
     image: bannerShow1,
     title: "Cases para Equipamentos de Som, Luz e Imagem",
@@ -74,7 +79,38 @@ const slides = [
   },
 ];
 
+const suportesSlides = [
+  {
+    image: bannerSuporte1,
+    title: "Suportes Técnicos para Monitores e Painéis",
+    subtitle: "Pedestais, suportes de teto e articulados para instalações profissionais",
+    tag: "SUPORTES · PEDESTAIS",
+  },
+  {
+    image: bannerSuporte2,
+    title: "Suportes Industriais e Corporativos",
+    subtitle: "Soluções VESA, suportes de parede e mesa para ambientes de alta performance",
+    tag: "SUPORTES · VESA",
+  },
+  {
+    image: bannerSuporte3,
+    title: "Suportes para Videowall e Digital Signage",
+    subtitle: "Estruturas robustas para montagem de painéis de grande formato",
+    tag: "SUPORTES · VIDEOWALL",
+  },
+];
+
+const allSlides = [...casesSlides, ...suportesSlides];
+
 const GilCasesHeroBanner = () => {
+  const { categoria } = useParams<{ categoria?: string }>();
+
+  const slides = useMemo(() => {
+    if (categoria === "cases") return casesSlides;
+    if (categoria === "suportes") return suportesSlides;
+    return allSlides;
+  }, [categoria]);
+
   if (slides.length === 0) {
     return (
       <div className="w-full h-[240px] sm:h-[320px] md:h-[400px] rounded-xl bg-muted flex items-center justify-center">
