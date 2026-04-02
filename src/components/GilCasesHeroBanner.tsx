@@ -54,6 +54,24 @@ const slides = [
     subtitle: "Proteção balística e logística para forças de segurança",
     tag: "MILITAR · BÉLICO",
   },
+  {
+    image: bannerHospitalar1,
+    title: "Cases para o Segmento Hospitalar",
+    subtitle: "Transporte seguro e rastreável de equipamentos médicos e materiais biológicos",
+    tag: "HOSPITALAR · SAÚDE",
+  },
+  {
+    image: bannerHospitalar2,
+    title: "Cases para o Segmento Hospitalar",
+    subtitle: "Cases sob medida para salas de cirurgia, UTIs e unidades de urgência",
+    tag: "HOSPITALAR · SAÚDE",
+  },
+  {
+    image: bannerHospitalar3,
+    title: "Cases para o Segmento Hospitalar",
+    subtitle: "Proteção profissional para equipamentos hospitalares de alta complexidade",
+    tag: "HOSPITALAR · SAÚDE",
+  },
 ];
 
 const GilCasesHeroBanner = () => {
