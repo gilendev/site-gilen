@@ -45,7 +45,7 @@ import imgCilindroLed from "@/assets/estruturas/cilindro-led-evento-1.png";
 import imgPainelAeroporto from "@/assets/estruturas/painel-led-aeroporto-1.jpeg";
 import imgTruckLed from "@/assets/estruturas/truck-led-1.jpg";
 
-import logoGilCase from "@/assets/logo-gilcase-transparent.png";
+const logoGilCase = "/lovable-uploads/logo-gilcase.jpeg";
 
 const products = [
   {

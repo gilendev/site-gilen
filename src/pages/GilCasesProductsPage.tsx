@@ -107,7 +107,7 @@ import imgLedClubeLinear1 from "@/assets/estruturas/painel-led-clube-linear-1.jp
 import imgLedClubeLinear2 from "@/assets/estruturas/painel-led-clube-linear-2.jpg";
 import imgLedClubeLinear3 from "@/assets/estruturas/painel-led-clube-linear-3.jpg";
 
-import logoGilCase from "@/assets/logo-gilcase-transparent.png";
+const logoGilCase = "/lovable-uploads/logo-gilcase.jpeg";
 
 const categories = [
   { id: "cases", title: "Linha de Cases" },

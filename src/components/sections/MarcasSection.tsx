@@ -5,7 +5,7 @@ const logoParametrizze = "/lovable-uploads/ea1780e5-8545-48a9-aaa9-051f623724db.
 const logoGourmetizze = "/lovable-uploads/40176074-eed2-4555-94a3-940b9c014213.png";
 const logoComicpets = "/lovable-uploads/868a8eaf-cc9a-4482-9f91-ff11d7873809.png";
 const logoDesignkids = "/lovable-uploads/16ad92e4-d27b-4d97-a111-5d128e486b17.png";
-import logoGilen from "@/assets/logo-gilcase-transparent.png";
+const logoGilen = "/lovable-uploads/logo-gilcase.jpeg";
 
 const gilCases = {
   logo: logoGilen,
