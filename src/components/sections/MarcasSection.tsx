@@ -81,7 +81,7 @@ const MarcasSection = () => {
           
           <Link to={gilCases.href} className="block">
             <div className="flex items-start gap-5">
-              <div className="w-28 h-28 rounded-sm flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform overflow-hidden" style={{ backgroundColor: '#8B7355' }}>
+              <div className="w-16 h-16 md:w-28 md:h-28 rounded-sm flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform overflow-hidden" style={{ backgroundColor: '#8B7355' }}>
                 <img src={gilCases.logo} alt={gilCases.name} className="w-full h-full object-cover" />
               </div>
               <div>
