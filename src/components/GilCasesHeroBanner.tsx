@@ -1,5 +1,4 @@
 import BrandHeroBanner from "@/components/BrandHeroBanner";
-import bannerShow from "@/assets/banner-case-show-new.png";
 import bannerHenko1 from "@/assets/banner-case-show-henko1.png";
 import bannerHenko2 from "@/assets/banner-case-show-henko2.png";
 import bannerHenko3 from "@/assets/banner-case-show-henko3.png";
@@ -11,7 +10,7 @@ import bannerCorporativo from "@/assets/banner-case-corporativo-new.png";
 import bannerIndustrial from "@/assets/banner-case-industrial.jpg";
 
 const slides = [
-  { image: bannerShow, title: "Cases para Shows e Eventos", subtitle: "Proteção profissional para equipamentos de palco, áudio e iluminação", tag: "ENTRETENIMENTO" },
+  { image: bannerHenko1, title: "Cases para Produções Musicais", subtitle: "Cases profissionais em ação nos bastidores de grandes shows", tag: "SHOWS" },
   { image: bannerHenko1, title: "Cases para Produções Musicais", subtitle: "Cases profissionais em ação nos bastidores de grandes shows", tag: "SHOWS" },
   { image: bannerHenko2, title: "Cases para Backstage", subtitle: "Robustez e organização para montagem e desmontagem de palcos", tag: "BACKSTAGE" },
   { image: bannerHenko3, title: "Cases para Turnês", subtitle: "Equipamentos protegidos e prontos para rodar o país", tag: "TURNÊS" },
