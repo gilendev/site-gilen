@@ -6,7 +6,7 @@ import { ArrowRight, ArrowLeft, Shield, Box, Truck, Wrench, Monitor, Package } f
 import { FaWhatsapp } from "react-icons/fa";
 import BrandNavbar from "@/components/layout/BrandNavbar";
 import { Button } from "@/components/ui/button";
-import imgHero from "@/assets/img-gilcase-hero.jpg";
+
 import imgCases from "@/assets/img-gilcase-cases.jpg";
 import imgSuportes from "@/assets/img-gilcase-suportes.jpg";
 import imgTotens from "@/assets/img-gilcase-totens.jpg";
