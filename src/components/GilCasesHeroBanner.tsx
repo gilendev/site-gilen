@@ -15,6 +15,9 @@ import bannerHospitalar3 from "@/assets/banner-case-hospitalar3.png";
 import bannerSuporte1 from "@/assets/banner-suporte1.png";
 import bannerSuporte2 from "@/assets/banner-suporte2.png";
 import bannerSuporte3 from "@/assets/banner-suporte3.png";
+import bannerTotem1 from "@/assets/banner-totem1.png";
+import bannerTotem2 from "@/assets/banner-totem2.png";
+import bannerTotem3 from "@/assets/banner-totem3.png";
 
 const casesSlides = [
   {
