@@ -157,7 +157,7 @@ const GilCasesPage = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="hidden md:block text-lg md:text-xl text-white/60 leading-relaxed mb-8 max-w-xl text-justify"
             >
-              Fabricamos cases personalizados para soluções em transporte e segurança de todos os modelos de materiais, com matéria-prima em compensado de 6 e 10mm para materiais de leve e médio peso e de 15mm para materiais pesados.
+              Fabricamos cases personalizados para transporte e proteção, em compensado de 6, 10 e 15 mm, conforme o peso. Podem incluir espuma interna, cantoneiras, perfis de alumínio, fechos, dobradiças, alças, rodízios e divisórias, garantindo segurança e durabilidade.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 30 }}
