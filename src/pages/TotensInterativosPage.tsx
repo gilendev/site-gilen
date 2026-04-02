@@ -236,10 +236,11 @@ const TotensInterativosPage = () => {
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Link
                 to="/contato"
-                className="inline-flex items-center gap-2 px-8 py-3 bg-accent-blue text-accent-blue-foreground font-semibold text-sm uppercase tracking-wider rounded-sm hover:bg-accent-blue/90 transition-colors"
+                className="whatsapp-hover inline-flex items-center gap-2 px-8 py-3 bg-accent-blue text-accent-blue-foreground font-semibold text-sm uppercase tracking-wider rounded-sm hover:bg-accent-blue/90 transition-colors"
               >
+                <FaWhatsapp className="whatsapp-icon" size={18} />
                 Solicitar Orçamento
-                <ArrowRight size={16} />
+                <ArrowRight className="default-icon" size={16} />
               </Link>
               <Link
                 to="/gil-cases"
