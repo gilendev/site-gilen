@@ -143,7 +143,7 @@ const ProductCard = ({ product, index, viewMode, brandName, categories, onSelect
       exit={{ opacity: 0, scale: 0.95 }}
       transition={{ duration: 0.3, delay: index * 0.03 }}
       onClick={onSelect}
-      className="group relative bg-card rounded-xl overflow-hidden border border-border/50 hover:border-accent-blue/30 hover:shadow-xl hover:shadow-accent-blue/5 transition-all duration-500 cursor-pointer"
+      className="group relative bg-card rounded-xl overflow-hidden border border-border/50 hover:border-accent-blue/30 hover:shadow-xl hover:shadow-accent-blue/5 transition-all duration-500 cursor-pointer h-full flex flex-col"
     >
       <div className={cn(
         "relative overflow-hidden bg-gradient-to-br from-muted to-muted/50",
