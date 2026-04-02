@@ -19,6 +19,11 @@ const BrandHeroBanner = ({ slides, interval = 5000 }: BrandHeroBannerProps) => {
   const [current, setCurrent] = useState(0);
   const [direction, setDirection] = useState(1);
 
+  // Reset current index when slides change to prevent out-of-bounds access
+  useEffect(() => {
+    setCurrent(0);
+  }, [slides]);
+
   const next = useCallback(() => {
     setDirection(1);
     setCurrent((prev) => (prev + 1) % slides.length);
@@ -40,6 +45,9 @@ const BrandHeroBanner = ({ slides, interval = 5000 }: BrandHeroBannerProps) => {
     exit: (d: number) => ({ x: d > 0 ? "-100%" : "100%", opacity: 0 }),
   };
 
+  const slide = slides[current] || slides[0];
+  if (!slide) return null;
+
   return (
     <div className="relative w-full h-[240px] sm:h-[320px] md:h-[400px] overflow-hidden rounded-xl">
       <AnimatePresence initial={false} custom={direction} mode="popLayout">
@@ -54,8 +62,8 @@ const BrandHeroBanner = ({ slides, interval = 5000 }: BrandHeroBannerProps) => {
           className="absolute inset-0"
         >
           <img
-            src={slides[current].image}
-            alt={slides[current].title}
+            src={slide.image}
+            alt={slide.title}
             className="w-full h-full object-cover"
             width={1920}
             height={800}
@@ -75,13 +83,13 @@ const BrandHeroBanner = ({ slides, interval = 5000 }: BrandHeroBannerProps) => {
             transition={{ duration: 0.4, delay: 0.15 }}
           >
             <span className="inline-block px-2.5 py-1 text-[10px] sm:text-xs font-bold tracking-[0.2em] text-white bg-accent-blue/80 backdrop-blur-sm rounded-sm mb-2 sm:mb-3">
-              {slides[current].tag}
+              {slide.tag}
             </span>
             <h2 className="text-xl sm:text-2xl md:text-4xl font-black text-white leading-tight mb-1 sm:mb-2">
-              {slides[current].title}
+              {slide.title}
             </h2>
             <p className="text-white/70 text-xs sm:text-sm md:text-base max-w-lg">
-              {slides[current].subtitle}
+              {slide.subtitle}
             </p>
           </motion.div>
         </AnimatePresence>
