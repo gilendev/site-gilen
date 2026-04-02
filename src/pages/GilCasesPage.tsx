@@ -65,7 +65,7 @@ const products = [
     link: "/gil-cases/produtos/totens",
   },
   {
-    image: imgFabricacao,
+    image: imgFachadaByd,
     title: "Estruturas Metálicas",
     description: "Desenvolvemos cases e estruturas especiais sob medida para necessidades específicas, com acabamento de alta qualidade e materiais nacionais e importados.",
     link: "/gil-cases/produtos/estruturas-metalicas",
