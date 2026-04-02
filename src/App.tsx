@@ -6,6 +6,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import ChatBot from "@/components/ChatBot";
+import ScrollToTop from "@/components/ScrollToTop";
 import Index from "./pages/Index";
 import EmpresaPage from "./pages/EmpresaPage";
 import SolucoesPage from "./pages/SolucoesPage";
