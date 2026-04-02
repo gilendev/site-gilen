@@ -97,7 +97,12 @@ const ModalGallery = ({ product, brandName, categories, whatsappUrl, onClose }: 
             <div className="flex-1">
               <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-accent-blue">{brandName}</span>
               <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-foreground mt-2 leading-tight">{product.name}</h2>
-              <p className="text-muted-foreground text-sm leading-relaxed mt-3 sm:mt-4 text-justify">{product.description}</p>
+              <p
+                className="text-muted-foreground text-sm leading-relaxed mt-3 sm:mt-4"
+                style={{ textAlign: "justify", textJustify: "inter-word" }}
+              >
+                {product.description}
+              </p>
               <div className="mt-4 sm:mt-6 space-y-2 sm:space-y-3">
                 <div className="flex items-center gap-3 text-sm"><div className="w-1.5 h-1.5 rounded-full bg-accent-blue shrink-0" /><span className="text-muted-foreground">Fabricação sob medida</span></div>
                 <div className="flex items-center gap-3 text-sm"><div className="w-1.5 h-1.5 rounded-full bg-accent-blue shrink-0" /><span className="text-muted-foreground">Materiais de alta qualidade</span></div>
@@ -138,7 +143,7 @@ const ProductCard = ({ product, index, viewMode, brandName, categories, onSelect
       exit={{ opacity: 0, scale: 0.95 }}
       transition={{ duration: 0.3, delay: index * 0.03 }}
       onClick={onSelect}
-      className="group relative bg-card rounded-xl overflow-hidden border border-border/50 hover:border-accent-blue/30 hover:shadow-xl hover:shadow-accent-blue/5 transition-all duration-500 cursor-pointer"
+      className="group relative bg-card rounded-xl overflow-hidden border border-border/50 hover:border-accent-blue/30 hover:shadow-xl hover:shadow-accent-blue/5 transition-all duration-500 cursor-pointer h-full flex flex-col"
     >
       <div className={cn(
         "relative overflow-hidden bg-gradient-to-br from-muted to-muted/50",
@@ -206,14 +211,17 @@ const ProductCard = ({ product, index, viewMode, brandName, categories, onSelect
         </div>
       </div>
 
-      <div className="p-3 sm:p-4">
+      <div className="p-3 sm:p-4 flex flex-1 flex-col">
         <h3 className="text-xs sm:text-sm font-bold text-foreground line-clamp-2 group-hover:text-accent-blue transition-colors">
           {product.name}
         </h3>
-        <p className="text-[10px] sm:text-xs text-muted-foreground mt-1 sm:mt-2 line-clamp-2 leading-relaxed hidden sm:block text-justify">
+        <p
+          className="text-[10px] sm:text-xs text-muted-foreground mt-1 sm:mt-2 line-clamp-2 leading-relaxed hidden sm:block"
+          style={{ textAlign: "justify", textJustify: "inter-word" }}
+        >
           {product.description}
         </p>
-        <div className="mt-2 sm:mt-3 pt-2 sm:pt-3 border-t border-border/50 flex items-center justify-between">
+        <div className="mt-auto pt-2 sm:pt-3 border-t border-border/50 flex items-center justify-between">
           <span className="text-[9px] sm:text-[10px] font-semibold text-accent-blue uppercase tracking-wider">
             Sob consulta
           </span>
