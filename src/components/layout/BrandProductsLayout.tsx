@@ -97,7 +97,7 @@ const ModalGallery = ({ product, brandName, categories, whatsappUrl, onClose }: 
             <div className="flex-1">
               <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-accent-blue">{brandName}</span>
               <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-foreground mt-2 leading-tight">{product.name}</h2>
-              <p className="text-muted-foreground text-sm leading-relaxed mt-3 sm:mt-4">{product.description}</p>
+              <p className="text-muted-foreground text-sm leading-relaxed mt-3 sm:mt-4 text-justify">{product.description}</p>
               <div className="mt-4 sm:mt-6 space-y-2 sm:space-y-3">
                 <div className="flex items-center gap-3 text-sm"><div className="w-1.5 h-1.5 rounded-full bg-accent-blue shrink-0" /><span className="text-muted-foreground">Fabricação sob medida</span></div>
                 <div className="flex items-center gap-3 text-sm"><div className="w-1.5 h-1.5 rounded-full bg-accent-blue shrink-0" /><span className="text-muted-foreground">Materiais de alta qualidade</span></div>
