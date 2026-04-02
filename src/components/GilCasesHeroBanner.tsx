@@ -127,7 +127,28 @@ const totensSlides = [
   },
 ];
 
-const allSlides = [...casesSlides, ...suportesSlides, ...totensSlides];
+const estruturasSlides = [
+  {
+    image: bannerEstrutura1,
+    title: "Estruturas Metálicas para Painéis LED",
+    subtitle: "Fachadas, painéis suspensos e domos geodésicos com engenharia sob medida",
+    tag: "ESTRUTURAS · FACHADAS · LED",
+  },
+  {
+    image: bannerEstrutura2,
+    title: "Estruturas para Lazer, Esporte e Eventos",
+    subtitle: "Painéis LED para piscinas, clubes esportivos e instalações cilíndricas 360°",
+    tag: "ESTRUTURAS · ESPORTE · LAZER",
+  },
+  {
+    image: bannerEstrutura3,
+    title: "Mídia Exterior e Videowalls Curvos",
+    subtitle: "Truck LED, vitrines de luxo e videowalls curvos para concessionárias e varejo",
+    tag: "ESTRUTURAS · MÍDIA · VIDEOWALL",
+  },
+];
+
+const allSlides = [...casesSlides, ...suportesSlides, ...totensSlides, ...estruturasSlides];
 
 const GilCasesHeroBanner = () => {
   const { categoria } = useParams<{ categoria?: string }>();
@@ -136,6 +157,7 @@ const GilCasesHeroBanner = () => {
     if (categoria === "cases") return casesSlides;
     if (categoria === "suportes") return suportesSlides;
     if (categoria === "totens") return totensSlides;
+    if (categoria === "estruturas-metalicas") return estruturasSlides;
     return allSlides;
   }, [categoria]);
 
