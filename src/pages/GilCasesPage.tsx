@@ -10,7 +10,7 @@ import imgCases from "@/assets/img-gilcase-cases.jpg";
 import imgSuportes from "@/assets/img-gilcase-suportes.jpg";
 import imgTotens from "@/assets/img-gilcase-totens.jpg";
  import imgFabricacao from "@/assets/img-gilcase-fabricacao-new.png";
-import heroVideo from "@/assets/gilcase-hero-video.mp4.asset.json";
+
 import BrandCarousel from "@/components/BrandCarousel";
 import WhatsAppButton from "@/components/WhatsAppButton";
 // Cases
