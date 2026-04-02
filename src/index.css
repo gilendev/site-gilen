@@ -151,4 +151,28 @@
   .scrollbar-hide::-webkit-scrollbar {
     display: none;
   }
+
+  /* WhatsApp hover effect for CTA buttons */
+  .whatsapp-hover {
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  .whatsapp-hover:hover {
+    background-color: #25D366 !important;
+    border-color: #25D366 !important;
+    color: white !important;
+  }
+  .whatsapp-hover .whatsapp-icon {
+    display: none;
+    margin-right: 0.5rem;
+  }
+  .whatsapp-hover:hover .whatsapp-icon {
+    display: inline-flex;
+  }
+  .whatsapp-hover .default-icon {
+    display: inline-flex;
+  }
+  .whatsapp-hover:hover .default-icon {
+    display: none;
+  }
 }
