@@ -160,7 +160,7 @@ const GilCasesPage = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-lg md:text-xl text-white/60 leading-relaxed mb-8 max-w-xl"
+              className="text-lg md:text-xl text-white/60 leading-relaxed mb-8 max-w-xl text-justify"
             >
               Fabricamos cases personalizados para soluções em transporte e segurança de todos os modelos de materiais, com matéria-prima em compensado de 6 e 10mm para materiais de leve e médio peso e de 15mm para materiais pesados.
             </motion.p>
