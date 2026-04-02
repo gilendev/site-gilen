@@ -18,6 +18,9 @@ import bannerSuporte3 from "@/assets/banner-suporte3.png";
 import bannerTotem1 from "@/assets/banner-totem1.png";
 import bannerTotem2 from "@/assets/banner-totem2.png";
 import bannerTotem3 from "@/assets/banner-totem3.png";
+import bannerEstrutura1 from "@/assets/banner-estrutura1.png";
+import bannerEstrutura2 from "@/assets/banner-estrutura2.png";
+import bannerEstrutura3 from "@/assets/banner-estrutura3.png";
 
 const casesSlides = [
   {
@@ -124,7 +127,28 @@ const totensSlides = [
   },
 ];
 
-const allSlides = [...casesSlides, ...suportesSlides, ...totensSlides];
+const estruturasSlides = [
+  {
+    image: bannerEstrutura1,
+    title: "Estruturas Metálicas para Painéis LED",
+    subtitle: "Fachadas, painéis suspensos e domos geodésicos com engenharia sob medida",
+    tag: "ESTRUTURAS · FACHADAS · LED",
+  },
+  {
+    image: bannerEstrutura2,
+    title: "Estruturas para Lazer, Esporte e Eventos",
+    subtitle: "Painéis LED para piscinas, clubes esportivos e instalações cilíndricas 360°",
+    tag: "ESTRUTURAS · ESPORTE · LAZER",
+  },
+  {
+    image: bannerEstrutura3,
+    title: "Mídia Exterior e Videowalls Curvos",
+    subtitle: "Truck LED, vitrines de luxo e videowalls curvos para concessionárias e varejo",
+    tag: "ESTRUTURAS · MÍDIA · VIDEOWALL",
+  },
+];
+
+const allSlides = [...casesSlides, ...suportesSlides, ...totensSlides, ...estruturasSlides];
 
 const GilCasesHeroBanner = () => {
   const { categoria } = useParams<{ categoria?: string }>();
@@ -133,6 +157,7 @@ const GilCasesHeroBanner = () => {
     if (categoria === "cases") return casesSlides;
     if (categoria === "suportes") return suportesSlides;
     if (categoria === "totens") return totensSlides;
+    if (categoria === "estruturas-metalicas") return estruturasSlides;
     return allSlides;
   }, [categoria]);
 
