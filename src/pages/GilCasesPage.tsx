@@ -10,7 +10,7 @@ import imgCases from "@/assets/img-gilcase-cases.jpg";
 import imgSuportes from "@/assets/img-gilcase-suportes.jpg";
 import imgTotens from "@/assets/img-gilcase-totens.jpg";
  import imgFabricacao from "@/assets/img-gilcase-fabricacao-new.png";
-import heroVideo from "@/assets/gilcase-hero-video.mp4.asset.json";
+
 import BrandCarousel from "@/components/BrandCarousel";
 import WhatsAppButton from "@/components/WhatsAppButton";
 // Cases
@@ -124,7 +124,7 @@ const GilCasesPage = () => {
       {/* Hero */}
       <section id="hero" className="relative min-h-[80vh] md:min-h-[90vh] flex items-center overflow-hidden pt-20 md:pt-36">
         <video
-          src={heroVideo.url}
+          src="/gilcase-hero-video.mp4"
           autoPlay
           loop
           muted
