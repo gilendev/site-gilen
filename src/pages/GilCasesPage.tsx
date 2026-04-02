@@ -303,7 +303,7 @@ const GilCasesPage = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-foreground">
               Linhas de <span className="text-steel">Produtos</span>
             </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto mt-4">
+            <p className="text-muted-foreground max-w-2xl mx-auto mt-4 text-justify">
               Cases, suportes, totens interativos e estruturas para todos os segmentos profissionais.
             </p>
           </SectionBlock>
