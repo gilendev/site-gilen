@@ -104,7 +104,7 @@ const MarcasSection = () => {
                   <img src={brand.logo} alt={brand.name} className="w-full h-full object-cover" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-foreground mb-2">
+                  <h3 className="text-base md:text-xl font-bold text-foreground mb-1 md:mb-2">
                     {brand.name}
                     {brand.href && <span className="ml-2 text-xs text-accent-blue font-normal">→ Ver mais</span>}
                   </h3>
