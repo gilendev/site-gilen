@@ -19,6 +19,11 @@ const BrandHeroBanner = ({ slides, interval = 5000 }: BrandHeroBannerProps) => {
   const [current, setCurrent] = useState(0);
   const [direction, setDirection] = useState(1);
 
+  // Reset current index when slides change to prevent out-of-bounds access
+  useEffect(() => {
+    setCurrent(0);
+  }, [slides]);
+
   const next = useCallback(() => {
     setDirection(1);
     setCurrent((prev) => (prev + 1) % slides.length);
