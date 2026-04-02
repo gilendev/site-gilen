@@ -180,10 +180,11 @@ const QuoteCalculator = () => {
                 href="https://wa.me/5511968756430?text=Olá!%20Gostaria%20de%20um%20orçamento%20detalhado."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 mt-4 px-6 py-2.5 bg-accent-blue text-accent-blue-foreground font-semibold text-xs uppercase tracking-wider rounded-sm hover:bg-accent-blue/90 transition-colors"
+                className="whatsapp-hover inline-flex items-center gap-2 mt-4 px-6 py-2.5 bg-accent-blue text-accent-blue-foreground font-semibold text-xs uppercase tracking-wider rounded-sm hover:bg-accent-blue/90 transition-colors"
               >
+                <FaWhatsapp className="whatsapp-icon" size={16} />
                 Solicitar Orçamento Detalhado
-                <ArrowRight size={14} />
+                <ArrowRight className="default-icon" size={14} />
               </a>
             </motion.div>
           )}

@@ -258,8 +258,8 @@ const DesignKidsPage = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">Crie um mundo especial para seu filho</h2>
             <p className="text-muted-foreground max-w-xl mx-auto mb-8">Entre em contato e solicite um projeto personalizado para o quarto infantil.</p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <Link to="/contato" className="inline-flex items-center gap-2 px-8 py-3 bg-steel text-steel-foreground font-semibold text-sm uppercase tracking-wider rounded-sm hover:bg-steel/90 transition-colors">
-                Solicitar Orçamento <ArrowRight size={16} />
+              <Link to="/contato" className="whatsapp-hover inline-flex items-center gap-2 px-8 py-3 bg-steel text-steel-foreground font-semibold text-sm uppercase tracking-wider rounded-sm hover:bg-steel/90 transition-colors">
+                <FaWhatsapp className="whatsapp-icon" size={18} />Solicitar Orçamento <ArrowRight className="default-icon" size={16} />
               </Link>
               <Link to="/marcas" className="inline-flex items-center gap-2 px-8 py-3 border border-border text-foreground font-semibold text-sm uppercase tracking-wider rounded-sm hover:bg-muted transition-colors">
                 <ArrowLeft size={16} /> Voltar para GILEN
