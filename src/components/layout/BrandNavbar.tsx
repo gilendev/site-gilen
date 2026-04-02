@@ -139,9 +139,10 @@ const BrandNavbar = ({ brandName, logoSrc, logoBgColor, backTo, backLabel, secti
               ))}
               <Link
                 to="/contato"
-                className="flex items-center justify-center gap-2 w-full mt-2 px-4 py-3 bg-accent-blue text-accent-blue-foreground text-xs font-semibold uppercase tracking-wider rounded-lg"
+                className="whatsapp-hover flex items-center justify-center gap-2 w-full mt-2 px-4 py-3 bg-accent-blue text-accent-blue-foreground text-xs font-semibold uppercase tracking-wider rounded-lg"
                 onClick={() => setMobileMenuOpen(false)}
               >
+                <FaWhatsapp className="whatsapp-icon" size={16} />
                 Solicitar Orçamento
               </Link>
             </div>
