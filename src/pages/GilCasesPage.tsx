@@ -197,7 +197,7 @@ const GilCasesPage = () => {
       <section id="sobre" className="py-16 md:py-24 lg:py-32 bg-background">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-            <SectionBlock>
+            <SectionBlock className="text-justify">
               <span className="text-xs font-semibold uppercase tracking-[0.2em] text-accent-blue mb-4 block">
                 Sobre a Marca
               </span>
