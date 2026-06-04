@@ -75,7 +75,7 @@ const DesignKidsPage = () => {
           { id: "hero", label: "Início" },
           { id: "sobre", label: "Sobre" },
           { id: "galeria", label: "Galeria" },
-          { id: "produtos", label: "Produtos", href: "/design-kids/produtos" },
+          { id: "produtos-links", label: "Produtos", href: "/design-kids/produtos" },
           { id: "diferenciais", label: "Diferenciais" },
           { id: "processo", label: "Processo" },
           { id: "contato-cta", label: "Contato" },
