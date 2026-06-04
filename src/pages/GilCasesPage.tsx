@@ -115,7 +115,7 @@ const GilCasesPage = () => {
           { id: "hero", label: "Início" },
           { id: "sobre", label: "Sobre" },
           { id: "galeria", label: "Galeria" },
-          { id: "produtos", label: "Produtos", href: "/gil-cases/produtos" },
+          { id: "produtos-links", label: "Produtos", href: "/gil-cases/produtos" },
           { id: "diferenciais", label: "Diferenciais" },
           { id: "processo", label: "Processo" },
           { id: "contato-cta", label: "Contato" },
