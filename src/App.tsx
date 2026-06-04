@@ -63,11 +63,15 @@ const App = () => (
               <Route path="/comicpets/produtos/:categoria" element={<ComicpetsProductsPage />} />
               <Route path="/design-kids/produtos" element={<DesignKidsProductsPage />} />
               <Route path="/design-kids/produtos/:categoria" element={<DesignKidsProductsPage />} />
-              {/* Legacy and domain redirects */}
+              {/* Redirecionamentos para links antigos e domínios incorretos no caminho */}
               <Route path="/totens-interativos" element={<Navigate to="/gil-cases/produtos/totens" replace />} />
-              <Route path="/gil-cases/produtos/totens" element={<Navigate to="/gil-cases/produtos/totens" replace />} />
               <Route path="/gil.com.br/gil-cases/produtos/totens" element={<Navigate to="/gil-cases/produtos/totens" replace />} />
               <Route path="/gil.com.br/*" element={<Navigate to="/" replace />} />
+              
+              {/* Captura de rotas que começam com o domínio no path */}
+              <Route path="/gilenindustrial.com.br/*" element={<Navigate to="/" replace />} />
+              <Route path="/gilen.com.br/*" element={<Navigate to="/" replace />} />
+
               <Route path="*" element={<NotFound />} />
             </Routes>
             <ChatBot />
