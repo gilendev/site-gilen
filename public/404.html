@@ -4,14 +4,12 @@
   <meta charset="utf-8">
   <title>GILEN Industrial | Redirecionando...</title>
   <script>
-    // SPA redirect for hosts that serve 404.html (like GitHub Pages or others)
-    // It stores the current URL and redirects to the home page, where index.html
-    // will pick up the path and restore it in the router.
+    // SPA redirect for hosts that serve 404.html
     var path = location.pathname;
     var search = location.search;
     var hash = location.hash;
     
-    // Support for domain-in-path URLs
+    // Support for domain-in-path URLs (cleaning malformed links)
     var domains = ["gilen.com.br", "gil.com.br", "gilenindustrial.com.br", "www.gilen.com.br"];
     for (var i = 0; i < domains.length; i++) {
       var domain = domains[i];
@@ -21,8 +19,13 @@
       }
     }
     
-    sessionStorage.redirect = path + search + hash;
-    location.replace('/');
+    // Check if we are already at root to avoid infinite loops
+    if (path === "/" && !search && !hash) {
+      location.replace('/');
+    } else {
+      sessionStorage.redirect = path + search + hash;
+      location.replace('/');
+    }
   </script>
 </head>
 <body>

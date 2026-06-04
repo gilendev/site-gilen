@@ -68,6 +68,8 @@ const App = () => (
               <Route path="/gilen.com.br/*" element={<NotFound />} />
               <Route path="/gil.com.br/*" element={<NotFound />} />
               <Route path="/gilenindustrial.com.br/*" element={<NotFound />} />
+              <Route path="/gil-cases/www.gilen.com.br/*" element={<NotFound />} />
+              <Route path="/gil-cases/gilen.com.br/*" element={<NotFound />} />
               
               <Route path="/totens-interativos" element={<Navigate to="/gil-cases/produtos/totens" replace />} />
               <Route path="*" element={<NotFound />} />
