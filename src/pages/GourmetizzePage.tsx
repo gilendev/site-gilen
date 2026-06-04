@@ -75,7 +75,7 @@ const GourmetizzePage = () => {
           { id: "hero", label: "Início" },
           { id: "sobre", label: "Sobre" },
           { id: "galeria", label: "Galeria" },
-          { id: "produtos-links", label: "Produtos", href: "/gourmetizze/produtos" },
+          { id: "produtos", label: "Produtos", href: "/gourmetizze/produtos" },
           { id: "diferenciais", label: "Diferenciais" },
           { id: "processo", label: "Processo" },
           { id: "contato-cta", label: "Contato" },

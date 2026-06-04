@@ -65,7 +65,7 @@ const TotensInterativosPage = () => {
       <SEOHead
         title="Totens Interativos | Gil Cases & Suportes"
         description="Totens interativos, painéis digitais e pedestais para pontos de venda, eventos, clínicas e varejo. Fabricação sob medida com acabamento premium."
-        path="/totens-interativos"
+        path="/gil-cases/produtos/totens"
       />
 
       <BrandNavbar

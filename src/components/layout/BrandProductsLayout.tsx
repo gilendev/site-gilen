@@ -329,7 +329,7 @@ const BrandProductsLayout = ({
       />
 
       {/* Search Bar */}
-      <div className="fixed top-[56px] md:top-[128px] left-0 right-0 z-[105] bg-background/95 backdrop-blur-md border-b border-border">
+      <div id="todos" className="fixed top-[56px] md:top-[128px] left-0 right-0 z-[105] bg-background/95 backdrop-blur-md border-b border-border">
         <div className="container mx-auto px-3 sm:px-4 lg:px-8 py-2 flex items-center gap-2 sm:gap-3">
           <div className="relative flex-1">
             <Search size={14} className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground" />

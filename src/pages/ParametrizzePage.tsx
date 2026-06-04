@@ -81,7 +81,7 @@ const ParametrizzePage = () => {
           { id: "hero", label: "Início" },
           { id: "sobre", label: "Sobre" },
           { id: "galeria", label: "Galeria" },
-          { id: "produtos-links", label: "Produtos", href: "/parametrizze/produtos" },
+          { id: "produtos", label: "Produtos", href: "/parametrizze/produtos" },
           { id: "diferenciais", label: "Diferenciais" },
           { id: "processo", label: "Processo" },
           { id: "contato-cta", label: "Contato" },
