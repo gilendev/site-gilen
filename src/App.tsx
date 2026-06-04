@@ -65,6 +65,7 @@ const App = () => (
               <Route path="/design-kids/produtos/:categoria" element={<DesignKidsProductsPage />} />
               {/* Redirect legacy /totens-interativos to /gil-cases/produtos/totens */}
               <Route path="/totens-interativos" element={<Navigate to="/gil-cases/produtos/totens" replace />} />
+              <Route path="/gil.com.br/gil-cases/produtos/totens" element={<Navigate to="/gil-cases/produtos/totens" replace />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
             <ChatBot />
