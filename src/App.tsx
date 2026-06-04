@@ -63,8 +63,10 @@ const App = () => (
               <Route path="/comicpets/produtos/:categoria" element={<ComicpetsProductsPage />} />
               <Route path="/design-kids/produtos" element={<DesignKidsProductsPage />} />
               <Route path="/design-kids/produtos/:categoria" element={<DesignKidsProductsPage />} />
-              {/* Redirect legacy /totens-interativos to /gil-cases/produtos/totens */}
+              {/* Legacy and domain redirects */}
               <Route path="/totens-interativos" element={<Navigate to="/gil-cases/produtos/totens" replace />} />
+              <Route path="/gil-cases/produtos/totens" element={<Navigate to="/gil-cases/produtos/totens" replace />} />
+              <Route path="/gil.com.br/gil-cases/produtos/totens" element={<Navigate to="/gil-cases/produtos/totens" replace />} />
               <Route path="/gil.com.br/*" element={<Navigate to="/" replace />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
