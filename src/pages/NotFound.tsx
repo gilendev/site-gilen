@@ -6,16 +6,22 @@ const NotFound = () => {
   const [redirectPath, setRedirectPath] = useState<string | null>(null);
 
   useEffect(() => {
-    // Lógica para detectar se o domínio está dentro do path (ex: /gilen.com.br/...)
     const path = location.pathname;
-    const domains = ["gilen.com.br", "gil.com.br", "gilenindustrial.com.br"];
+    
+    // Lista de domínios ou padrões que podem aparecer no path devido a compartilhamento de links
+    const domains = ["gilen.com.br", "gil.com.br", "gilenindustrial.com.br", "www.gilen.com.br"];
     
     for (const domain of domains) {
       if (path.includes(domain)) {
-        // Remove o domínio e tudo o que vem antes dele do path
-        const newPath = path.split(domain)[1] || "/";
-        setRedirectPath(newPath);
-        return;
+        // Extrai tudo o que vem depois do domínio
+        // Ex: /www.gilen.com.br/gil-cases/produtos -> /gil-cases/produtos
+        const parts = path.split(domain);
+        const afterDomain = parts[parts.length - 1];
+        
+        if (afterDomain && afterDomain !== path) {
+          setRedirectPath(afterDomain.startsWith("/") ? afterDomain : "/" + afterDomain);
+          return;
+        }
       }
     }
 
