@@ -59,7 +59,7 @@ const BrandNavbar = ({ brandName, logoSrc, logoBgColor, backTo, backLabel, secti
 
   return (
     <>
-      <div className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
+      <div className="fixed top-0 left-0 right-0 z-[110] bg-background/95 backdrop-blur-md border-b border-border">
         {/* Top bar */}
         <div className="container mx-auto px-3 sm:px-4 lg:px-8 flex items-center justify-between h-14 md:h-20">
           <Link to={backTo} className="flex items-center gap-1.5 text-muted-foreground hover:text-foreground transition-colors text-xs sm:text-sm shrink-0">

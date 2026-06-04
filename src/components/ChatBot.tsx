@@ -118,7 +118,7 @@ const ChatBot = () => {
             initial={{ opacity: 0, y: 20, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
-            className="fixed bottom-24 right-6 z-40 w-[360px] max-w-[calc(100vw-2rem)] h-[480px] bg-card border border-border rounded-lg shadow-2xl flex flex-col overflow-hidden"
+            className="fixed bottom-24 right-6 z-[200] w-[360px] max-w-[calc(100vw-2rem)] h-[480px] bg-card border border-border rounded-lg shadow-2xl flex flex-col overflow-hidden"
           >
             {/* Header */}
             <div className="bg-graphite px-4 py-3 flex items-center justify-between shrink-0">
