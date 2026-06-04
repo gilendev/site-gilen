@@ -37,8 +37,8 @@ const Footer = () => {
           <div>
             <h4 className="text-xs font-semibold uppercase tracking-wider mb-3 text-primary-foreground/80">Nossas Marcas</h4>
             <div className="flex flex-col gap-1.5">
-              {["PARAMETRIZZE", "GOURMETIZZE", "COMICPETS", "DESIGN KIDS"].map((brand) => (
-                <span key={brand} className="text-xs text-primary-foreground/50">{brand}</span>
+              {[{label: "GIL CASES", href: "/gil-cases"}, {label: "PARAMETRIZZE", href: "/parametrizze"}, {label: "GOURMETIZZE", href: "/gourmetizze"}, {label: "COMICPETS", href: "/comicpets"}, {label: "DESIGN KIDS", href: "/design-kids"}].map((brand) => (
+                <Link key={brand.label} to={brand.href} className="text-xs text-primary-foreground/50 hover:text-primary-foreground transition-colors">{brand.label}</Link>
               ))}
             </div>
           </div>
