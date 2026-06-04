@@ -36,7 +36,7 @@ const App = () => (
         <TooltipProvider>
           <Toaster />
           <Sonner />
-          <BrowserRouter basename="/">
+          <BrowserRouter>
             <ScrollToTop />
             <Routes>
               <Route path="/" element={<Index />} />
@@ -63,15 +63,13 @@ const App = () => (
               <Route path="/comicpets/produtos/:categoria" element={<ComicpetsProductsPage />} />
               <Route path="/design-kids/produtos" element={<DesignKidsProductsPage />} />
               <Route path="/design-kids/produtos/:categoria" element={<DesignKidsProductsPage />} />
-              {/* Redirecionamentos para links antigos e domínios incorretos no caminho */}
-              <Route path="/totens-interativos" element={<Navigate to="/gil-cases/produtos/totens" replace />} />
-              <Route path="/gil.com.br/gil-cases/produtos/totens" element={<Navigate to="/gil-cases/produtos/totens" replace />} />
-              <Route path="/gil.com.br/*" element={<Navigate to="/" replace />} />
+              {/* Fallback para links com o domínio no path (ex: gilen.com.br/gil-cases/produtos) */}
+              <Route path="/www.gilen.com.br/*" element={<NotFound />} />
+              <Route path="/gilen.com.br/*" element={<NotFound />} />
+              <Route path="/gil.com.br/*" element={<NotFound />} />
+              <Route path="/gilenindustrial.com.br/*" element={<NotFound />} />
               
-              {/* Captura de rotas que começam com o domínio no path */}
-              <Route path="/gilenindustrial.com.br/*" element={<Navigate to="/" replace />} />
-              <Route path="/gilen.com.br/*" element={<Navigate to="/" replace />} />
-
+              <Route path="/totens-interativos" element={<Navigate to="/gil-cases/produtos/totens" replace />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
             <ChatBot />
