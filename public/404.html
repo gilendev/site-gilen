@@ -1,34 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
   <meta charset="utf-8">
-  <title>GILEN Industrial</title>
-  <script>
-    // SPA redirect for hosts that serve 404.html
-    var path = location.pathname;
-    var search = location.search;
-    var hash = location.hash;
-    
-    // Support for domain-in-path URLs (cleaning malformed links)
+  <title>GILEN Industrial | Redirecionando...</title>
+  <script type="text/javascript">
+    // SPA redirect logic
+    var path = window.location.pathname;
+    var search = window.location.search;
+    var hash = window.location.hash;
+
+    // Clean malformed links containing domain names in the path
     var domains = ["gilen.com.br", "gil.com.br", "gilenindustrial.com.br", "www.gilen.com.br"];
     for (var i = 0; i < domains.length; i++) {
-      var domain = domains[i];
-      if (path.indexOf(domain) !== -1) {
-        path = path.split(domain)[1] || "/";
+      if (path.indexOf(domains[i]) !== -1) {
+        path = path.split(domains[i])[1] || "/";
         break;
       }
     }
-    
-    // Ensure path starts with /
-    if (!path.startsWith('/')) path = '/' + path;
 
-    // Use a hash-based redirect if we are on a static server without proper routing
-    // This is more reliable for Hostinger and similar shared hosting
+    // Ensure path starts with /
+    if (!path || path === "") path = "/";
+    if (path.charAt(0) !== "/") path = "/" + path;
+
+    // Save intended path and redirect to home
     sessionStorage.redirect = path + search + hash;
-    location.replace('/');
+    window.location.replace('/');
   </script>
 </head>
 <body>
-  <p>Redirecionando...</p>
+  <p>Redirecionando para a página solicitada...</p>
 </body>
 </html>

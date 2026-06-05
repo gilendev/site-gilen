@@ -63,13 +63,7 @@ const App = () => (
               <Route path="/comicpets/produtos/:categoria" element={<ComicpetsProductsPage />} />
               <Route path="/design-kids/produtos" element={<DesignKidsProductsPage />} />
               <Route path="/design-kids/produtos/:categoria" element={<DesignKidsProductsPage />} />
-              {/* Fallback para links com o domínio no path (ex: gilen.com.br/gil-cases/produtos) */}
-              <Route path="/www.gilen.com.br/*" element={<NotFound />} />
-              <Route path="/gilen.com.br/*" element={<NotFound />} />
-              <Route path="/gil.com.br/*" element={<NotFound />} />
-              <Route path="/gilenindustrial.com.br/*" element={<NotFound />} />
-              <Route path="/gil-cases/www.gilen.com.br/*" element={<NotFound />} />
-              <Route path="/gil-cases/gilen.com.br/*" element={<NotFound />} />
+              {/* Rotas de fallback removidas para evitar conflitos com o roteamento do servidor */}
               
               <Route path="/totens-interativos" element={<Navigate to="/gil-cases/produtos/totens" replace />} />
               <Route path="*" element={<NotFound />} />
