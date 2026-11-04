@@ -79,7 +79,7 @@ const BrandNavbar = ({ brandName, logoSrc, logoBgColor, backTo, backLabel, secti
           </div>
           <div className="flex items-center gap-2">
             <a
-              href={whatsappUrl ?? "https://wa.me/5511968756430?text=Falar%20com%20a%20Gilen%20Industrial"}
+              href={whatsappUrl ?? "https://wa.me/5511971927920?text=Falar%20com%20a%20Gilen%20Industrial"}
               target="_blank"
               rel="noopener noreferrer"
               className="whatsapp-hover hidden sm:inline-flex items-center gap-2 px-4 md:px-5 py-2 md:py-2.5 bg-accent-blue text-accent-blue-foreground text-xs font-semibold uppercase tracking-wider rounded-sm hover:bg-accent-blue/90 transition-colors shrink-0"

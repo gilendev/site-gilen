@@ -32,8 +32,8 @@ const ParametrizzePage = () => (
           <a href="#sobre" className="mt-12 inline-flex items-center gap-3 text-xs text-white/60 hover:text-white w-fit"><ArrowDown size={14} /> Conheça a divisão</a>
         </div>
         <figure className="relative min-h-[300px] sm:min-h-[420px] lg:min-h-[660px]">
-          <img src={media.hero} alt="Ambiente do portfólio Parametrizze com painel ondulado, espelho, poltrona e mesa de formas orgânicas" loading="eager" width="1344" height="768" className="absolute inset-0 w-full h-full object-cover object-center" />
-          <figcaption className="absolute bottom-4 right-4 bg-black/60 text-white/90 px-3 py-1.5 text-[10px] tracking-wider uppercase">Design paramétrico / Portfólio</figcaption>
+          <img src={media.hero} alt="Ambiente com painel ondulado, espelho, poltrona e mesa de formas orgânicas" loading="eager" width="1344" height="768" className="absolute inset-0 w-full h-full object-cover object-center" />
+          <figcaption className="absolute bottom-4 right-4 bg-black/60 text-white/90 px-3 py-1.5 text-[10px] tracking-wider uppercase">Design paramétrico</figcaption>
         </figure>
       </section>
       <section id="sobre" className="container mx-auto px-6 lg:px-8 py-16 md:py-24 scroll-mt-24 md:scroll-mt-36">
@@ -69,13 +69,13 @@ const ParametrizzePage = () => (
               </Link>
             ))}
           </div>
-          <p className="text-xs text-muted-foreground mt-10 pt-5 border-t border-border">Referências visuais do portfólio. Cada solução é desenvolvida sob medida para o projeto.</p>
+          <p className="text-xs text-muted-foreground mt-10 pt-5 border-t border-border">Cada solução é desenvolvida sob medida para o seu projeto.</p>
         </div>
       </section>
       <section id="processo" className="py-16 md:py-24 scroll-mt-24 md:scroll-mt-36">
         <div className="container mx-auto px-6 lg:px-8 grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           <figure>
-            <img src={media.cnc} alt="Equipamento de usinagem CNC apresentado no portfólio Parametrizze" width="1800" height="1200" loading="lazy" decoding="async" className="w-full aspect-[4/3] object-cover" />
+            <img src={media.cnc} alt="Router CNC para usinagem de painéis e peças de madeira" width="1448" height="1086" loading="lazy" decoding="async" className="w-full aspect-[4/3] object-cover" />
             <figcaption className="text-xs text-muted-foreground mt-3">Fabricação CNC / Do modelo digital à forma física.</figcaption>
           </figure>
           <div>
@@ -103,7 +103,6 @@ const ParametrizzePage = () => (
           </div>
           <div className="lg:justify-self-end space-y-5">
             <a href={brand.whatsappUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-3 bg-[#e5d2ba] text-[#24221f] px-6 py-4 text-sm font-semibold hover:bg-white transition-colors"><FaWhatsapp size={19} /> Iniciar um projeto <ArrowRight size={16} /></a>
-            <a href={`tel:+${brand.phone}`} className="block text-white/80 hover:text-white text-sm">{brand.phoneDisplay}</a>
             <a href={`mailto:${brand.email}`} className="flex items-center gap-2 text-white/80 hover:text-white text-sm break-all"><Mail size={16} className="shrink-0" />{brand.email}</a>
           </div>
         </div>

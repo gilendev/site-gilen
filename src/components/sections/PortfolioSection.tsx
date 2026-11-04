@@ -138,7 +138,7 @@ const PortfolioSection = () => {
                 </Link>
               ) : (
                 <a
-                  href="https://wa.me/5511968756430?text=Olá!%20Vi%20o%20projeto%20e%20gostaria%20de%20saber%20mais."
+                  href="https://wa.me/5511971927920?text=Olá!%20Vi%20o%20projeto%20e%20gostaria%20de%20saber%20mais."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 mt-4 px-5 py-2.5 bg-accent-blue text-accent-blue-foreground font-semibold text-xs uppercase tracking-wider rounded-sm hover:bg-accent-blue/90 transition-colors"

@@ -48,8 +48,8 @@ const Footer = () => {
             <h4 className="text-xs font-semibold uppercase tracking-wider mb-3 text-primary-foreground/80">Contato</h4>
             <div className="flex flex-col gap-1 text-xs text-primary-foreground/50">
               <Link to="/contato" className="hover:text-primary-foreground transition-colors">Fale Conosco</Link>
-              <a href="tel:01122413047" className="hover:text-primary-foreground transition-colors">(11) 2241-3047</a>
-              <a href="https://wa.me/5511968756430" target="_blank" rel="noopener noreferrer" className="hover:text-primary-foreground transition-colors">(11) 96875-6430</a>
+              <a href="tel:01122413047" className="hover:text-primary-foreground transition-colors">Atendimento por telefone</a>
+              <a href="https://wa.me/5511971927920" target="_blank" rel="noopener noreferrer" className="hover:text-primary-foreground transition-colors">Solicitar orçamento</a>
               <span>contato@gilenindustrial.com.br</span>
               <p className="mt-1 text-primary-foreground/40 text-[10px]">R. Cirene de Oliveira Laet, 815 – Vila Nilo, SP</p>
             </div>

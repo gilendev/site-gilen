@@ -1,6 +1,6 @@
 {
   "source": "Parametrizze_Gilen_industrial_Portfolio (1).pdf",
-  "note": "Imagens extraídas do portfólio fornecido pelo cliente; conversão para WebP sem geração de imagens. Referências visuais, sem alegação de obra executada.",
+  "note": "Conteúdo visual baseado no portfólio fornecido pelo cliente. A imagem cnc-new.webp é uma ilustração de Router CNC criada com IA para a seção de fabricação; não documenta uma instalação específica.",
   "images": [
     {
       "file": "hero.webp",
@@ -134,6 +134,14 @@
       "imageIndex": 1,
       "width": 1210,
       "height": 692
+    },
+    {
+      "file": "cnc-new.webp",
+      "source": "AI-generated illustrative CNC router",
+      "tool": "built-in image_gen",
+      "date": "2026-11-04",
+      "width": 1448,
+      "height": 1086
     }
   ]
 }

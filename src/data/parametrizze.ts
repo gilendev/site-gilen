@@ -4,7 +4,7 @@ const asset = (name: string) => `/brand-assets/parametrizze/${name}.webp`;
 
 export const parametrizzeMedia = {
   hero: asset("hero"),
-  cnc: asset("cnc"),
+  cnc: asset("cnc-new"),
   paineis: asset("paineis"),
   painelDecorativo: asset("painel-decorativo"),
   espelho: asset("espelho"),
@@ -54,7 +54,7 @@ export const parametrizzeSolutions: ParametrizzeSolution[] = [
     description: "Superfícies tridimensionais, formas orgânicas e padrões desenvolvidos por modelagem computacional. Os painéis paramétricos integram arquitetura, matemática e tecnologia digital em soluções personalizadas para fachadas, interiores e ambientes corporativos.",
     items: ["Painéis", "Divisórias", "Cabeceiras", "Espelhos"],
     image: parametrizzeMedia.paineis,
-    alt: "Painel de madeira com superfície ondulada no portfólio Parametrizze",
+    alt: "Painel paramétrico de madeira com superfície ondulada",
     gallery: [
       { src: parametrizzeMedia.paineis, alt: "Superfície paramétrica com lâminas de madeira e iluminação" },
       { src: parametrizzeMedia.painelDecorativo, alt: "Painel decorativo de formas orgânicas em uma sala" },
@@ -70,7 +70,7 @@ export const parametrizzeSolutions: ParametrizzeSolution[] = [
     description: "Mobiliário desenvolvido com design computacional e fabricação CNC. Geometrias inteligentes e variações controladas dão forma a peças que unem estética contemporânea, funcionalidade e engenharia, com personalização sob medida.",
     items: ["Mesas", "Cadeiras", "Aparadores", "Bancos", "Linha alta", "Mobiliário sob medida"],
     image: parametrizzeMedia.mobiliario,
-    alt: "Ambiente com poltronas, mesa e painel paramétricos do portfólio",
+    alt: "Ambiente com poltronas, mesa e painel paramétricos",
     gallery: [
       { src: parametrizzeMedia.mobiliario, alt: "Composição de móveis paramétricos em uma sala" },
       { src: parametrizzeMedia.mesa, alt: "Mesa paramétrica com base de lâminas curvas" },
@@ -85,11 +85,11 @@ export const parametrizzeSolutions: ParametrizzeSolution[] = [
     description: "Soluções que combinam design computacional, engenharia acústica e fabricação CNC. Superfícies tridimensionais projetadas para controlar reflexões sonoras e criar presença estética em ambientes corporativos, auditórios e espaços contemporâneos.",
     items: ["Difusores", "Absorvedores", "Baffles", "Acoustic C."],
     image: parametrizzeMedia.acustica,
-    alt: "Referência de estúdio com tratamento acústico paramétrico em paredes e teto",
+    alt: "Estúdio com tratamento acústico paramétrico em paredes e teto",
     gallery: [
       { src: parametrizzeMedia.acustica, alt: "Soluções acústicas integradas às paredes e ao teto de um estúdio" },
       { src: parametrizzeMedia.difusores, alt: "Painel de geometria tridimensional em ambiente de áudio" },
-      { src: parametrizzeMedia.baffles, alt: "Referência de aplicação acústica em teto e paredes" },
+      { src: parametrizzeMedia.baffles, alt: "Aplicação acústica em teto e paredes" },
     ],
   },
   {
@@ -99,7 +99,7 @@ export const parametrizzeSolutions: ParametrizzeSolution[] = [
     description: "Estruturas modulares e formas arquitetônicas para feiras e eventos. Design paramétrico, engenharia e fabricação CNC permitem variações inteligentes, adaptação a diferentes espaços e personalização, com eficiência construtiva e forte presença visual.",
     items: ["Stands", "Cenografia paramétrica"],
     image: parametrizzeMedia.cenografia,
-    alt: "Referência de stand com estrutura paramétrica curva para exposição",
+    alt: "Stand com estrutura paramétrica curva para exposição",
     gallery: [
       { src: parametrizzeMedia.cenografia, alt: "Estrutura paramétrica envolvendo uma área de exposição" },
       { src: parametrizzeMedia.stand, alt: "Stand com balcão e painéis paramétricos" },
@@ -113,10 +113,10 @@ export const parametrizzeSolutions: ParametrizzeSolution[] = [
     description: "Soluções desenvolvidas a partir da demanda específica de cada cliente. Design paramétrico e modelagem computacional transformam ideias, conceitos arquitetônicos e necessidades técnicas em peças únicas, superfícies complexas e estruturas para arquitetura, interiores, eventos e aplicações especiais.",
     items: ["Peças únicas", "Superfícies complexas", "Estruturas personalizadas"],
     image: parametrizzeMedia.especial,
-    alt: "Composição do portfólio com móveis, painel e divisória de geometrias distintas",
+    alt: "Composição com móveis, painel e divisória de geometrias distintas",
     gallery: [
       { src: parametrizzeMedia.especial, alt: "Integração de mobiliário, painel e divisória em um ambiente" },
-      { src: parametrizzeMedia.mobiliario, alt: "Referência de projeto com peças e superfícies paramétricas sob medida" },
+      { src: parametrizzeMedia.mobiliario, alt: "Ambiente com peças e superfícies paramétricas sob medida" },
     ],
   },
 ];

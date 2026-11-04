@@ -112,7 +112,7 @@ const ModalGallery = ({ product, brandName, categories, whatsappUrl, onClose }: 
             <div className="mt-5 sm:mt-6 pt-4 sm:pt-6 border-t border-border/50 space-y-3">
               <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 w-full py-3 sm:py-3.5 bg-[#25D366] text-white text-xs font-semibold uppercase tracking-wider rounded-xl hover:bg-[#20bd5a] transition-all hover:shadow-lg hover:shadow-[#25D366]/20">
                 <FaWhatsapp size={16} />
-                Solicitar Orçamento via WhatsApp
+                Solicitar orçamento
               </a>
               <button onClick={onClose} className="w-full py-2.5 text-xs font-semibold text-muted-foreground hover:text-foreground uppercase tracking-wider transition-colors">Voltar ao catálogo</button>
             </div>
@@ -193,7 +193,7 @@ const ProductCard = ({ product, index, viewMode, brandName, categories, onSelect
             Detalhes
           </button>
           <a
-            href={`https://wa.me/5511968756430?text=${encodeURIComponent(`Olá! Gostaria de um orçamento para: ${product.name} (${brandName})`)}`}
+            href={`https://wa.me/5511971927920?text=${encodeURIComponent(`Olá! Gostaria de um orçamento para: ${product.name} (${brandName})`)}`}
             target="_blank"
             rel="noopener noreferrer"
             onClick={(e) => e.stopPropagation()}
@@ -309,7 +309,7 @@ const BrandProductsLayout = ({
   });
 
   const whatsappMessage = `Olá! Gostaria de saber mais sobre os produtos ${brandName}.`;
-  const whatsappUrl = `https://wa.me/5511968756430?text=${encodeURIComponent(whatsappMessage)}`;
+  const whatsappUrl = `https://wa.me/5511971927920?text=${encodeURIComponent(whatsappMessage)}`;
 
   // Mobile: navbar is ~88px (h-14 + h-10), Desktop: ~128px (h-20 + h-12)
   const topOffsetMobile = "88px";
@@ -480,7 +480,7 @@ const BrandProductsLayout = ({
                 className="flex items-center justify-center gap-2 w-full px-4 py-2.5 text-[11px] font-semibold uppercase tracking-wider rounded-lg text-white bg-[#25D366] hover:bg-[#20bd5a] transition-all hover:shadow-lg hover:shadow-[#25D366]/20"
               >
                 <FaWhatsapp size={14} />
-                WhatsApp
+                Fale conosco
               </a>
             </div>
           </div>
@@ -550,7 +550,7 @@ const BrandProductsLayout = ({
             product={selectedProduct}
             brandName={brandName}
             categories={categories}
-            whatsappUrl={`https://wa.me/5511968756430?text=${encodeURIComponent(`Olá! Gostaria de um orçamento para: ${selectedProduct.name} (${brandName})`)}`}
+            whatsappUrl={`https://wa.me/5511971927920?text=${encodeURIComponent(`Olá! Gostaria de um orçamento para: ${selectedProduct.name} (${brandName})`)}`}
             onClose={handleCloseProduct}
           />
         )}

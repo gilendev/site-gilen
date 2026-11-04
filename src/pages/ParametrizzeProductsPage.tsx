@@ -91,14 +91,14 @@ const SolutionGallery = ({ solution, onClose }: { solution: Solution; onClose: (
                 </>
               )}
             </div>
-            <p aria-live="polite" className="my-3 text-center text-xs text-muted-foreground">Referência {imageIndex + 1} de {images.length}</p>
+            <p aria-live="polite" className="my-3 text-center text-xs text-muted-foreground">Imagem {imageIndex + 1} de {images.length}</p>
             {images.length > 1 && (
-              <div className="flex gap-2 overflow-x-auto pb-2" aria-label="Referências desta linha">
+              <div className="flex gap-2 overflow-x-auto pb-2" aria-label="Galeria desta linha">
                 {images.map((image, index) => (
                   <button
                     key={image.src}
                     type="button"
-                    aria-label={`Ver referência ${index + 1} de ${solution.title}`}
+                    aria-label={`Ver imagem ${index + 1} de ${solution.title}`}
                     aria-pressed={index === imageIndex}
                     onClick={() => setImageIndex(index)}
                     className={cn("h-16 w-20 shrink-0 overflow-hidden rounded-sm border-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-blue", index === imageIndex ? "border-accent-blue" : "border-transparent opacity-65 hover:opacity-100")}
@@ -115,7 +115,7 @@ const SolutionGallery = ({ solution, onClose }: { solution: Solution; onClose: (
             <ul className="space-y-2 text-sm text-muted-foreground">
               {solution.items.map((item) => <li key={item} className="flex gap-2"><span aria-hidden="true" className="text-accent-blue">—</span>{item}</li>)}
             </ul>
-            <p className="mb-6 mt-6 text-xs leading-relaxed text-muted-foreground">Referências visuais do portfólio. Soluções desenvolvidas sob medida.</p>
+            <p className="mb-6 mt-6 text-xs leading-relaxed text-muted-foreground">Soluções desenvolvidas sob medida para o seu projeto.</p>
             <a href={parametrizzeBrand.whatsappUrl} target="_blank" rel="noopener noreferrer" className="mt-auto inline-flex min-h-12 items-center justify-center gap-2 rounded-sm bg-accent-blue px-4 py-3 text-sm font-semibold text-accent-blue-foreground transition-colors hover:bg-accent-blue/90">
               <FaWhatsapp size={18} /> Conversar sobre esta solução
             </a>
@@ -203,7 +203,7 @@ const ParametrizzeProductsPage = () => {
             </div>
             <div className="mb-8 flex flex-wrap items-center justify-between gap-3 text-xs text-muted-foreground">
               <p aria-live="polite">{filteredSolutions.length} {filteredSolutions.length === 1 ? "linha encontrada" : "linhas encontradas"}</p>
-              <p>Referências visuais do portfólio. Soluções desenvolvidas sob medida.</p>
+              <p>Soluções desenvolvidas sob medida para o seu projeto.</p>
             </div>
 
             {filteredSolutions.length ? (
@@ -212,7 +212,7 @@ const ParametrizzeProductsPage = () => {
                   <article key={solution.id} className="group flex min-w-0 flex-col overflow-hidden rounded-sm border border-border bg-card">
                     <button type="button" aria-label={`Ver galeria de ${solution.title}`} onClick={() => setSelectedSolution(solution)} className="relative block aspect-[16/10] w-full overflow-hidden bg-muted focus-visible:outline focus-visible:outline-4 focus-visible:-outline-offset-4 focus-visible:outline-accent-blue">
                       <img src={solution.image} alt={solution.alt} loading="lazy" decoding="async" className="h-full w-full object-cover transition-transform duration-700 motion-safe:group-hover:scale-[1.03]" />
-                      <span className="absolute bottom-4 right-4 inline-flex items-center gap-2 rounded-sm bg-black/70 px-3 py-2 text-xs font-medium text-white">Explorar referências <ArrowRight size={14} /></span>
+                      <span className="absolute bottom-4 right-4 inline-flex items-center gap-2 rounded-sm bg-black/70 px-3 py-2 text-xs font-medium text-white">Explorar galeria <ArrowRight size={14} /></span>
                     </button>
                     <div className="flex flex-1 flex-col p-5 md:p-7">
                       <p className="mb-2 text-[10px] font-semibold uppercase tracking-[0.18em] text-accent-blue">{solution.subtitle}</p>
@@ -245,7 +245,7 @@ const ParametrizzeProductsPage = () => {
               <p className="mt-4 max-w-xl text-sm leading-relaxed text-muted-foreground">Conte o que você imagina para o ambiente, a peça ou a estrutura. A Parametrizze desenvolve soluções a partir das necessidades de cada projeto.</p>
             </div>
             <div className="flex flex-col items-start gap-4 lg:items-end">
-              <a href={parametrizzeBrand.whatsappUrl} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-12 items-center justify-center gap-3 rounded-sm bg-accent-blue px-6 py-3 text-sm font-semibold text-accent-blue-foreground transition-colors hover:bg-accent-blue/90"><FaWhatsapp size={19} /> Solicitar projeto · {parametrizzeBrand.phoneDisplay}</a>
+              <a href={parametrizzeBrand.whatsappUrl} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-12 items-center justify-center gap-3 rounded-sm bg-accent-blue px-6 py-3 text-sm font-semibold text-accent-blue-foreground transition-colors hover:bg-accent-blue/90"><FaWhatsapp size={19} /> Solicitar projeto</a>
               <a href={`mailto:${parametrizzeBrand.email}`} className="inline-flex items-center gap-2 break-all text-sm text-muted-foreground hover:text-foreground"><Mail size={16} className="shrink-0" />{parametrizzeBrand.email}</a>
             </div>
           </div>

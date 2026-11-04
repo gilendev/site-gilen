@@ -118,18 +118,18 @@ const ContatoSection = () => {
                 <div>
                   <p className="font-semibold text-foreground mb-1">Central de Atendimento</p>
                   <a href="tel:01122413047" className="text-muted-foreground hover:text-foreground transition-colors block">
-                    (11) 2241-3047
+                    Ligar para nossa equipe
                   </a>
                   <a href="tel:01121437721" className="text-muted-foreground hover:text-foreground transition-colors block">
-                    (11) 2143-7721
+                    Ligar pelo canal alternativo
                   </a>
                   <a
-                    href="https://wa.me/5511968756430?text=Falar%20com%20a%20Gilen%20Industrial"
+                    href="https://wa.me/5511971927920?text=Falar%20com%20a%20Gilen%20Industrial"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-muted-foreground hover:text-foreground transition-colors block"
                   >
-                    (11) 96875-6430 (WhatsApp)
+                    Fale conosco
                   </a>
                 </div>
               </div>
