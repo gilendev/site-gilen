@@ -9,9 +9,7 @@ import imgGilcaseTotens from "@/assets/img-gilcase-totens.jpg";
 
 import { parametrizzeBrand, parametrizzeMedia } from "@/data/parametrizze";
 
-import imgGourmetizzeChurrasqueira from "@/assets/img-gourmetizze-churrasqueira.jpg";
-import imgGourmetizzeUtensilios from "@/assets/img-gourmetizze-utensilios.jpg";
-import imgGourmetizzeEstrutura from "@/assets/img-gourmetizze-estrutura.jpg";
+import { gourmetizzeBrand, gourmetizzeMedia } from "@/data/gourmetizze";
 
 import imgComicpetsCasinha from "@/assets/img-comicpets-casinha.jpg";
 import imgComicpetsComedouro from "@/assets/img-comicpets-comedouro.jpg";
@@ -22,7 +20,6 @@ import imgDesignkidsEstante from "@/assets/img-designkids-estante.jpg";
 import imgDesignkidsBrinquedo from "@/assets/img-designkids-brinquedo.jpg";
 
 const logoGilCase = "/brand-assets/logo-gil-cases.jpeg";
-const logoGourmetizze = "/brand-assets/logo-gourmetizze.png";
 const logoComicpets = "/brand-assets/logo-comicpets.png";
 const logoDesignkids = "/brand-assets/logo-design-kids.png";
 
@@ -50,11 +47,11 @@ const brands: Brand[] = [
     images: [parametrizzeMedia.paineis, parametrizzeMedia.mobiliario, parametrizzeMedia.acustica],
   },
   {
-    name: "Gourmetizze",
-    logo: logoGourmetizze,
+    name: gourmetizzeBrand.name,
+    logo: gourmetizzeBrand.logo,
     href: "/gourmetizze",
-    tagline: "Produtos gourmet em corte a laser",
-    images: [imgGourmetizzeChurrasqueira, imgGourmetizzeUtensilios, imgGourmetizzeEstrutura],
+    tagline: "Churrasqueiras, braseiros e fogareiros em chapa cortada a laser",
+    images: [gourmetizzeMedia.quadrada, gourmetizzeMedia.meiaLua, gourmetizzeMedia.fogareiro],
   },
   {
     name: "Comicpets",

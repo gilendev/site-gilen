@@ -7,9 +7,7 @@ import imgStatsBg from "@/assets/img-stats-bg.jpg";
 import imgCtaBg from "@/assets/img-cta-bg.jpg";
 import BrandCarousel from "@/components/BrandCarousel";
 import { parametrizzeMedia } from "@/data/parametrizze";
-import imgGourmetizzeChurrasqueira from "@/assets/img-gourmetizze-churrasqueira.jpg";
-import imgGourmetizzeUtensilios from "@/assets/img-gourmetizze-utensilios.jpg";
-import imgGourmetizzeEstrutura from "@/assets/img-gourmetizze-estrutura.jpg";
+import { gourmetizzeMedia } from "@/data/gourmetizze";
 import imgComicpetsGato from "@/assets/img-comicpets-gato.jpg";
 import imgComicpetsComedouro from "@/assets/img-comicpets-comedouro.jpg";
 import imgDesignkidsMesa from "@/assets/img-designkids-mesa.jpg";
@@ -151,17 +149,17 @@ const EmpresaSection = () => {
         titleAccent="Produtos"
         images={[
           { src: parametrizzeMedia.cnc, alt: "Fabricação CNC — Parametrizze" },
-          { src: imgGourmetizzeChurrasqueira, alt: "Gourmetizze - Churrasqueira artesanal" },
+          { src: gourmetizzeMedia.quadrada, alt: "Churrasqueira dobrável de chapa da Gourmetizze" },
           { src: imgComicpetsGato, alt: "Comicpets - Produtos para gatos" },
           { src: imgDesignkidsMesa, alt: "Design Kids - Mesa infantil" },
           { src: imgGilcaseCases, alt: "Gil Cases - Cases sob medida" },
           { src: parametrizzeMedia.paineis, alt: "Painéis paramétricos — Parametrizze" },
-          { src: imgGourmetizzeUtensilios, alt: "Gourmetizze - Utensílios gourmet" },
+          { src: gourmetizzeMedia.meiaLua, alt: "Braseiro meia-lua com grelha da Gourmetizze" },
           { src: imgComicpetsComedouro, alt: "Comicpets - Comedouro personalizado" },
           { src: imgDesignkidsEstante, alt: "Design Kids - Estante infantil" },
           { src: imgGilcaseSuportes, alt: "Gil Cases - Suportes técnicos" },
           { src: parametrizzeMedia.mobiliario, alt: "Mobiliário paramétrico — Parametrizze" },
-          { src: imgGourmetizzeEstrutura, alt: "Gourmetizze - Estrutura gourmet" },
+          { src: gourmetizzeMedia.fogareiro, alt: "Fogareiro de chapa de encaixe da Gourmetizze" },
         ]}
         accentColor="bg-accent-blue"
       />

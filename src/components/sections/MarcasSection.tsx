@@ -2,7 +2,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Link } from "react-router-dom";
 import { parametrizzeBrand } from "@/data/parametrizze";
-const logoGourmetizze = "/brand-assets/logo-gourmetizze.png";
+import { gourmetizzeBrand } from "@/data/gourmetizze";
 const logoComicpets = "/brand-assets/logo-comicpets.png";
 const logoDesignkids = "/brand-assets/logo-design-kids.png";
 const logoGilen = "/brand-assets/logo-gil-cases.jpeg";
@@ -24,9 +24,9 @@ const brands = [
   href: "/parametrizze"
 },
 {
-  logo: logoGourmetizze,
-  name: "GOURMETIZZE",
-  description: "Linha de produtos para o setor gourmet fabricados em corte a laser em metal, incluindo churrasqueiras modulares, utensílios e estruturas para áreas externas.",
+  logo: gourmetizzeBrand.logo,
+  name: gourmetizzeBrand.name.toUpperCase(),
+  description: gourmetizzeBrand.description,
   accent: "accent",
   href: "/gourmetizze"
 },

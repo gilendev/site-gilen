@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import imgProjeto1 from "@/assets/img-projeto1.jpg";
 import imgProjeto2 from "@/assets/img-projeto2.jpg";
 import imgProjeto3 from "@/assets/img-projeto3.jpg";
-import imgProjeto4 from "@/assets/img-projeto4.jpg";
+import { gourmetizzeMedia } from "@/data/gourmetizze";
 import { parametrizzeMedia } from "@/data/parametrizze";
 
 const portfolioCategories = [
@@ -16,7 +16,7 @@ const portfolioItems = [
   { id: 1, title: "Flight Case 12U Profissional", category: "Cases", image: imgProjeto2, client: "TechSound", year: "2024", desc: "Case profissional para rack 12U com sistema de amortecimento e rodízios." },
   { id: 2, title: "Estrutura Modular para Eventos", category: "Estruturas", image: imgProjeto1, client: "EventoPro", year: "2024", desc: "Sistema modular em aço carbono para montagem rápida de palcos." },
   { id: 3, title: "Painéis Parametrizze", category: "Paramétrico", image: parametrizzeMedia.paineis, reference: "Portfólio Parametrizze", desc: "Referência de painel paramétrico com formas orgânicas. A linha inclui painéis, divisórias, cabeceiras e espelhos desenvolvidos com modelagem computacional e fabricação CNC.", href: "/parametrizze/produtos/paineis" },
-  { id: 4, title: "Churrasqueira Premium Inox", category: "Gourmet", image: imgProjeto4, client: "Grill Master", year: "2024", desc: "Churrasqueira profissional em aço inox 304 com sistema rotativo." },
+  { id: 4, title: "Churrasqueira dobrável Gourmetizze", category: "Gourmet", image: gourmetizzeMedia.quadrada, reference: "Linha Gourmetizze", desc: "Referência visual de uma churrasqueira dobrável em chapa cortada a laser. A linha inclui também modelos para espetos, com peças de encaixe.", href: "/gourmetizze/produtos/churrasqueiras" },
   { id: 5, title: "Arranhador Gato Torre Premium", category: "Pet", image: imgProjeto1, client: "Pet House", year: "2023", desc: "Torre para gatos com acabamento premium e design moderno." },
   { id: 6, title: "Case para Pedalboard Custom", category: "Cases", image: imgProjeto2, client: "MusicPro", year: "2024", desc: "Case sob medida para pedalboard com espuma injetada." },
   { id: 7, title: "Mesa Infantil Montessoriana", category: "Infantil", image: imgProjeto3, client: "Escola Nova Era", year: "2023", desc: "Mesa educativa seguindo princípios Montessori com madeira certificada." },

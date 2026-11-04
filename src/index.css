@@ -139,6 +139,25 @@
   --accent-blue-foreground: var(--gilcase-red-foreground);
 }
 
+.gourmetizze-brand {
+  --accent-blue: 23 42% 32%;
+  --accent-blue-foreground: 0 0% 100%;
+}
+
+.dark .gourmetizze-brand {
+  --accent-blue: 27 47% 69%;
+  --accent-blue-foreground: 22 30% 12%;
+}
+
+.gourmetizze-brand .text-gourmet-tone {
+  color: hsl(var(--accent-blue));
+}
+
+.gourmetizze-brand :focus-visible {
+  outline: 2px solid hsl(var(--accent-blue));
+  outline-offset: 3px;
+}
+
 /* Parametrizze: warm neutrals drawn from the supplied portfolio. */
 .parametrizze-brand {
   --background: 40 25% 97%;
