@@ -4,10 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-#lovable-badge {
-  display: none !important;
-}
-
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -141,6 +137,26 @@
 .gilcase-brand {
   --accent-blue: var(--gilcase-red);
   --accent-blue-foreground: var(--gilcase-red-foreground);
+}
+
+/* Parametrizze: warm neutrals drawn from the supplied portfolio. */
+.parametrizze-brand {
+  --background: 40 25% 97%;
+  --foreground: 36 8% 14%;
+  --card: 40 30% 99%;
+  --card-foreground: 36 8% 14%;
+  --muted: 36 20% 92%;
+  --muted-foreground: 32 7% 38%;
+  --accent-blue: 28 36% 34%;
+  --accent-blue-foreground: 0 0% 100%;
+  --border: 35 15% 81%;
+  --ring: 28 36% 34%;
+  color-scheme: light;
+}
+
+.parametrizze-brand :focus-visible {
+  outline: 2px solid hsl(var(--accent-blue));
+  outline-offset: 4px;
 }
 
 @layer utilities {

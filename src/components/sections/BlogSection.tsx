@@ -4,7 +4,7 @@ import { ArrowRight, Calendar, Clock } from "lucide-react";
 import { Link } from "react-router-dom";
 import imgProjeto1 from "@/assets/img-projeto1.jpg";
 import imgProjeto2 from "@/assets/img-projeto2.jpg";
-import imgProjeto3 from "@/assets/img-projeto3.jpg";
+import { parametrizzeMedia } from "@/data/parametrizze";
 
 const posts = [
   {
@@ -27,12 +27,11 @@ const posts = [
   },
   {
     id: 3,
-    title: "Design Paramétrico: A Fronteira entre Arte e Engenharia",
-    excerpt: "Descubra como o design computacional está redefinindo fachadas, mobiliário e revestimentos arquitetônicos.",
-    image: imgProjeto3,
-    date: "01 Mar 2026",
-    readTime: "6 min",
-    category: "Design",
+    title: "Parametrizze: cinco frentes para transformar espaços",
+    excerpt: "Painéis, móveis, acústica, stands e projetos especiais: conheça o portfólio de design computacional e fabricação CNC da Parametrizze.",
+    image: parametrizzeMedia.especial,
+    category: "Portfólio Parametrizze",
+    href: "/parametrizze",
   },
 ];
 
@@ -83,12 +82,16 @@ const BlogSection = () => {
               </div>
               <div className="p-6">
                 <div className="flex items-center gap-4 text-xs text-muted-foreground mb-3">
-                  <span className="flex items-center gap-1">
-                    <Calendar size={12} /> {post.date}
-                  </span>
-                  <span className="flex items-center gap-1">
-                    <Clock size={12} /> {post.readTime}
-                  </span>
+                  {post.date ? (
+                    <span className="flex items-center gap-1">
+                      <Calendar size={12} /> {post.date}
+                    </span>
+                  ) : null}
+                  {post.readTime ? (
+                    <span className="flex items-center gap-1">
+                      <Clock size={12} /> {post.readTime}
+                    </span>
+                  ) : null}
                   <span className="text-accent-blue font-semibold uppercase tracking-wider">
                     {post.category}
                   </span>
@@ -99,6 +102,11 @@ const BlogSection = () => {
                 <p className="text-muted-foreground text-sm leading-relaxed line-clamp-2">
                   {post.excerpt}
                 </p>
+                {post.href ? (
+                  <Link to={post.href} className="inline-flex items-center gap-1 mt-4 text-sm font-semibold text-accent-blue hover:text-accent-blue/80">
+                    Conhecer o portfólio <ArrowRight size={14} />
+                  </Link>
+                ) : null}
               </div>
             </motion.article>
           ))}

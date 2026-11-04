@@ -14,7 +14,7 @@ import imgCasinha from "@/assets/img-comicpets-casinha.jpg";
 import BrandCarousel from "@/components/BrandCarousel";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
-const logoComicpets = "/lovable-uploads/868a8eaf-cc9a-4482-9f91-ff11d7873809.png";
+const logoComicpets = "/brand-assets/logo-comicpets.png";
 
 const products = [
   {

@@ -8,7 +8,7 @@ import imgUtensilios from "@/assets/img-gourmetizze-utensilios.jpg";
 import imgEstrutura from "@/assets/img-gourmetizze-estrutura.jpg";
 import imgFabricacao from "@/assets/img-gourmetizze-fabricacao.jpg";
 
-const logoGourmetizze = "/lovable-uploads/40176074-eed2-4555-94a3-940b9c014213.png";
+const logoGourmetizze = "/brand-assets/logo-gourmetizze.png";
 
 const categories = [
   { id: "churrasqueiras", title: "Churrasqueiras Modulares" },

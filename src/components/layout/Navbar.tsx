@@ -46,7 +46,7 @@ const Navbar = () => {
             <img
               alt="GILEN Industrial"
               className="h-14 md:h-20 lg:h-28 w-auto"
-              src="/lovable-uploads/ba64c10e-131c-48be-9806-e216873226af.png"
+              src="/brand-assets/logo-gilen.png"
             />
           </Link>
 

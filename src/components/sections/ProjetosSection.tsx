@@ -2,8 +2,8 @@ import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import imgProjeto1 from "@/assets/img-projeto1.jpg";
 import imgProjeto2 from "@/assets/img-projeto2.jpg";
-import imgProjeto3 from "@/assets/img-projeto3.jpg";
 import imgProjeto4 from "@/assets/img-projeto4.jpg";
+import { parametrizzeMedia } from "@/data/parametrizze";
 
 const categories = [
   "Todos",
@@ -16,18 +16,17 @@ const categories = [
 const projectImages: Record<string, string> = {
   "Estruturas Técnicas": imgProjeto1,
   "Cases Industriais": imgProjeto2,
-  "Projetos Paramétricos": imgProjeto3,
   "Projetos Especiais": imgProjeto4,
 };
 
 const projects = [
   { title: "Estrutura Modular CNC", category: "Estruturas Técnicas", year: "2024" },
   { title: "Case Técnico Industrial", category: "Cases Industriais", year: "2024" },
-  { title: "Painel Paramétrico", category: "Projetos Paramétricos", year: "2023" },
+  { title: "Painel Paramétrico", category: "Projetos Paramétricos", image: parametrizzeMedia.paineis, reference: "Referência Parametrizze" },
   { title: "Sistema de Suporte Custom", category: "Projetos Especiais", year: "2023" },
   { title: "Rack Industrial Modular", category: "Estruturas Técnicas", year: "2023" },
   { title: "Case para Equipamento de Precisão", category: "Cases Industriais", year: "2022" },
-  { title: "Revestimento Paramétrico", category: "Projetos Paramétricos", year: "2022" },
+  { title: "Espelho com Painel Paramétrico", category: "Projetos Paramétricos", image: parametrizzeMedia.espelho, reference: "Referência Parametrizze" },
   { title: "Protótipo Funcional", category: "Projetos Especiais", year: "2024" },
 ];
 
@@ -91,13 +90,13 @@ const ProjetosSection = () => {
               className="group relative aspect-[4/3] rounded-sm overflow-hidden cursor-pointer"
             >
               <img
-                src={projectImages[project.category]}
+                src={project.image ?? projectImages[project.category]}
                 alt={project.title}
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-5">
-                <span className="text-xs text-primary-foreground/40 uppercase tracking-wider">{project.year} · {project.category}</span>
+                <span className="text-xs text-primary-foreground/40 uppercase tracking-wider">{project.reference ?? project.year} · {project.category}</span>
                 <h3 className="text-sm font-semibold text-primary-foreground mt-1 group-hover:text-accent transition-colors">
                   {project.title}
                 </h3>

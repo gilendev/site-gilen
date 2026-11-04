@@ -56,7 +56,6 @@ const ContatoSection = () => {
         body.append("arquivo", arquivo);
       }
 
-      const projectId = import.meta.env.VITE_SUPABASE_PROJECT_ID;
       const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
       const functionUrl = `${supabaseUrl}/functions/v1/send-contact-email`;
 

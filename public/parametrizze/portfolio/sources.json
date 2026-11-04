@@ -1,0 +1,139 @@
+{
+  "source": "Parametrizze_Gilen_industrial_Portfolio (1).pdf",
+  "note": "Imagens extraídas do portfólio fornecido pelo cliente; conversão para WebP sem geração de imagens. Referências visuais, sem alegação de obra executada.",
+  "images": [
+    {
+      "file": "hero.webp",
+      "page": 1,
+      "imageIndex": 0,
+      "width": 1344,
+      "height": 768
+    },
+    {
+      "file": "cnc.webp",
+      "page": 2,
+      "imageIndex": 0,
+      "width": 1800,
+      "height": 1200
+    },
+    {
+      "file": "logo.webp",
+      "page": 2,
+      "imageIndex": 1,
+      "width": 615,
+      "height": 615
+    },
+    {
+      "file": "paineis.webp",
+      "page": 3,
+      "imageIndex": 0,
+      "width": 1344,
+      "height": 768
+    },
+    {
+      "file": "painel-decorativo.webp",
+      "page": 3,
+      "imageIndex": 1,
+      "width": 589,
+      "height": 589
+    },
+    {
+      "file": "espelho.webp",
+      "page": 4,
+      "imageIndex": 0,
+      "width": 1344,
+      "height": 768
+    },
+    {
+      "file": "divisoria.webp",
+      "page": 5,
+      "imageIndex": 0,
+      "width": 1200,
+      "height": 1200
+    },
+    {
+      "file": "divisoria-detalhe.webp",
+      "page": 5,
+      "imageIndex": 1,
+      "width": 768,
+      "height": 1151
+    },
+    {
+      "file": "mobiliario.webp",
+      "page": 6,
+      "imageIndex": 0,
+      "width": 1344,
+      "height": 768
+    },
+    {
+      "file": "mesa.webp",
+      "page": 7,
+      "imageIndex": 0,
+      "width": 1344,
+      "height": 768
+    },
+    {
+      "file": "banco.webp",
+      "page": 7,
+      "imageIndex": 1,
+      "width": 1210,
+      "height": 692
+    },
+    {
+      "file": "poltrona.webp",
+      "page": 7,
+      "imageIndex": 2,
+      "width": 1210,
+      "height": 692
+    },
+    {
+      "file": "acustica.webp",
+      "page": 8,
+      "imageIndex": 0,
+      "width": 1344,
+      "height": 768
+    },
+    {
+      "file": "difusores.webp",
+      "page": 9,
+      "imageIndex": 0,
+      "width": 768,
+      "height": 1344
+    },
+    {
+      "file": "baffles.webp",
+      "page": 9,
+      "imageIndex": 2,
+      "width": 1210,
+      "height": 692
+    },
+    {
+      "file": "stand.webp",
+      "page": 11,
+      "imageIndex": 2,
+      "width": 1210,
+      "height": 692
+    },
+    {
+      "file": "cenografia.webp",
+      "page": 11,
+      "imageIndex": 1,
+      "width": 1210,
+      "height": 692
+    },
+    {
+      "file": "estrutura.webp",
+      "page": 11,
+      "imageIndex": 0,
+      "width": 768,
+      "height": 1344
+    },
+    {
+      "file": "especial.webp",
+      "page": 13,
+      "imageIndex": 1,
+      "width": 1210,
+      "height": 692
+    }
+  ]
+}

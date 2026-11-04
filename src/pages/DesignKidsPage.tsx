@@ -14,7 +14,7 @@ import imgDecoracao from "@/assets/img-designkids-decoracao.jpg";
 import BrandCarousel from "@/components/BrandCarousel";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
-const logoDesignkids = "/lovable-uploads/16ad92e4-d27b-4d97-a111-5d128e486b17.png";
+const logoDesignkids = "/brand-assets/logo-design-kids.png";
 
 const products = [
   {

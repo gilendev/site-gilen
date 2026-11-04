@@ -1,10 +1,12 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import { ExternalLink, X } from "lucide-react";
+import { Link } from "react-router-dom";
 import imgProjeto1 from "@/assets/img-projeto1.jpg";
 import imgProjeto2 from "@/assets/img-projeto2.jpg";
 import imgProjeto3 from "@/assets/img-projeto3.jpg";
 import imgProjeto4 from "@/assets/img-projeto4.jpg";
+import { parametrizzeMedia } from "@/data/parametrizze";
 
 const portfolioCategories = [
   "Todos", "Cases", "Estruturas", "Paramétrico", "Gourmet", "Pet", "Infantil"
@@ -13,12 +15,12 @@ const portfolioCategories = [
 const portfolioItems = [
   { id: 1, title: "Flight Case 12U Profissional", category: "Cases", image: imgProjeto2, client: "TechSound", year: "2024", desc: "Case profissional para rack 12U com sistema de amortecimento e rodízios." },
   { id: 2, title: "Estrutura Modular para Eventos", category: "Estruturas", image: imgProjeto1, client: "EventoPro", year: "2024", desc: "Sistema modular em aço carbono para montagem rápida de palcos." },
-  { id: 3, title: "Fachada Paramétrica Corporativa", category: "Paramétrico", image: imgProjeto3, client: "Studio FO", year: "2023", desc: "Revestimento paramétrico em alumínio com design computacional." },
+  { id: 3, title: "Painéis Parametrizze", category: "Paramétrico", image: parametrizzeMedia.paineis, reference: "Portfólio Parametrizze", desc: "Referência de painel paramétrico com formas orgânicas. A linha inclui painéis, divisórias, cabeceiras e espelhos desenvolvidos com modelagem computacional e fabricação CNC.", href: "/parametrizze/produtos/paineis" },
   { id: 4, title: "Churrasqueira Premium Inox", category: "Gourmet", image: imgProjeto4, client: "Grill Master", year: "2024", desc: "Churrasqueira profissional em aço inox 304 com sistema rotativo." },
   { id: 5, title: "Arranhador Gato Torre Premium", category: "Pet", image: imgProjeto1, client: "Pet House", year: "2023", desc: "Torre para gatos com acabamento premium e design moderno." },
   { id: 6, title: "Case para Pedalboard Custom", category: "Cases", image: imgProjeto2, client: "MusicPro", year: "2024", desc: "Case sob medida para pedalboard com espuma injetada." },
   { id: 7, title: "Mesa Infantil Montessoriana", category: "Infantil", image: imgProjeto3, client: "Escola Nova Era", year: "2023", desc: "Mesa educativa seguindo princípios Montessori com madeira certificada." },
-  { id: 8, title: "Painel Acústico Paramétrico", category: "Paramétrico", image: imgProjeto4, client: "AcousticLab", year: "2024", desc: "Painel acústico com geometria paramétrica para estúdio de gravação." },
+  { id: 8, title: "Acústica Parametrizze", category: "Paramétrico", image: parametrizzeMedia.acustica, reference: "Portfólio Parametrizze", desc: "Referência da linha de acústica paramétrica, que reúne painéis, difusores e baffles com geometrias desenvolvidas para integrar o tratamento acústico à arquitetura.", href: "/parametrizze/produtos/acustica" },
 ];
 
 const PortfolioSection = () => {
@@ -84,7 +86,7 @@ const PortfolioSection = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                <p className="text-white/60 text-xs uppercase tracking-wider">{item.category} · {item.year}</p>
+                <p className="text-white/60 text-xs uppercase tracking-wider">{item.reference ?? item.category}{item.year ? ` · ${item.year}` : null}</p>
                 <h3 className="text-white font-semibold text-sm mt-1">{item.title}</h3>
               </div>
               <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -121,22 +123,29 @@ const PortfolioSection = () => {
             </div>
             <div className="p-6">
               <div className="flex items-center gap-3 text-xs text-muted-foreground mb-2">
-                <span className="text-accent-blue font-semibold uppercase">{selectedItem.category}</span>
-                <span>·</span>
-                <span>{selectedItem.year}</span>
-                <span>·</span>
-                <span>{selectedItem.client}</span>
+                <span className="text-accent-blue font-semibold uppercase">{selectedItem.reference ?? selectedItem.category}</span>
+                {selectedItem.year ? <><span>·</span><span>{selectedItem.year}</span></> : null}
+                {selectedItem.client ? <><span>·</span><span>{selectedItem.client}</span></> : null}
               </div>
               <h3 className="text-xl font-bold text-foreground mb-3">{selectedItem.title}</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">{selectedItem.desc}</p>
-              <a
-                href="https://wa.me/5511968756430?text=Olá!%20Vi%20o%20projeto%20e%20gostaria%20de%20saber%20mais."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 mt-4 px-5 py-2.5 bg-accent-blue text-accent-blue-foreground font-semibold text-xs uppercase tracking-wider rounded-sm hover:bg-accent-blue/90 transition-colors"
-              >
-                Quero um projeto similar
-              </a>
+              {selectedItem.href ? (
+                <Link
+                  to={selectedItem.href}
+                  className="inline-flex items-center gap-2 mt-4 px-5 py-2.5 bg-accent-blue text-accent-blue-foreground font-semibold text-xs uppercase tracking-wider rounded-sm hover:bg-accent-blue/90 transition-colors"
+                >
+                  Conhecer a linha
+                </Link>
+              ) : (
+                <a
+                  href="https://wa.me/5511968756430?text=Olá!%20Vi%20o%20projeto%20e%20gostaria%20de%20saber%20mais."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 mt-4 px-5 py-2.5 bg-accent-blue text-accent-blue-foreground font-semibold text-xs uppercase tracking-wider rounded-sm hover:bg-accent-blue/90 transition-colors"
+                >
+                  Quero um projeto similar
+                </a>
+              )}
             </div>
           </motion.div>
         </motion.div>

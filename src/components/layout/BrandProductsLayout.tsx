@@ -289,7 +289,7 @@ const BrandProductsLayout = ({
         setSelectedProduct(found);
       }
     }
-  }, []);
+  }, [products, searchParams]);
 
   const handleSelectProduct = useCallback((product: ProductItem) => {
     setSelectedProduct(product);

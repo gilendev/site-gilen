@@ -1,73 +1,60 @@
-# Welcome to your Lovable project
+# GILEN Industrial
 
-## Project info
+Site institucional e catálogo de marcas da GILEN Industrial.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## Tecnologias
 
-## How can I edit this code?
+- React 18
+- TypeScript
+- Vite
+- Tailwind CSS
+- shadcn/ui
+- Framer Motion
+- Supabase Edge Functions
 
-There are several ways of editing your application.
+## Desenvolvimento local
 
-**Use Lovable**
+Requisitos:
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+- Bun 1.3 ou superior
 
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+Instale as dependências e inicie o servidor:
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+bun install --frozen-lockfile
+bun run dev
 ```
 
-**Edit a file directly in GitHub**
+O site ficará disponível em `http://localhost:8080`.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Comandos
 
-**Use GitHub Codespaces**
+```sh
+bun run dev       # servidor de desenvolvimento
+bun run build     # build de produção
+bun run preview   # prévia do build
+bun run test      # testes unitários
+bun run lint      # análise estática
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Configuração
 
-## What technologies are used for this project?
+O frontend utiliza as seguintes variáveis:
 
-This project is built with:
+```env
+VITE_SUPABASE_URL=
+VITE_SUPABASE_PUBLISHABLE_KEY=
+```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+O Supabase é usado somente para a Edge Function do formulário de contato. O
+projeto não utiliza tabelas, autenticação, storage ou consultas ao banco de
+dados.
 
-## How can I deploy this project?
+A função `send-contact-email` exige `RESEND_API_KEY` configurada como segredo no
+projeto Supabase.
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+## Publicação
 
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+O repositório está conectado à aplicação `gilenindustrial.com.br` na Hostinger.
+Pushes na branch `main` iniciam automaticamente um novo build Vite com Node.js
+22.x e publicam o resultado.

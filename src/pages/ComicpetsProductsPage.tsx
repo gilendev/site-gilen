@@ -7,7 +7,7 @@ import imgComedouro from "@/assets/img-comicpets-comedouro.jpg";
 import imgBrinquedo from "@/assets/img-comicpets-brinquedo.jpg";
 import imgCasinha from "@/assets/img-comicpets-casinha.jpg";
 
-const logoComicpets = "/lovable-uploads/868a8eaf-cc9a-4482-9f91-ff11d7873809.png";
+const logoComicpets = "/brand-assets/logo-comicpets.png";
 
 const categories = [
   { id: "arranhadores", title: "Arranhadores & Torres" },

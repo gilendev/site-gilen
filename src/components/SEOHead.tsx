@@ -8,7 +8,7 @@ interface SEOHeadProps {
 }
 
 const BASE_URL = "https://gilenindustrial.com.br";
-const DEFAULT_IMAGE = "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/fe2ece24-82cc-471d-b8d6-93a4cb2c8163/id-preview-3da5d6f9--46b727cb-8a3e-4213-8f14-17e8f9c5c12f.lovable.app-1773420971904.png";
+const DEFAULT_IMAGE = `${BASE_URL}/og-image.jpg`;
 
 const SEOHead = ({ title, description, path = "/", ogImage }: SEOHeadProps) => {
   const fullTitle = path === "/" ? title : `${title} | GILEN Industrial`;

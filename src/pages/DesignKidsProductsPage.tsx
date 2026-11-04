@@ -7,7 +7,7 @@ import imgEstante from "@/assets/img-designkids-estante.jpg";
 import imgBrinquedo from "@/assets/img-designkids-brinquedo.jpg";
 import imgDecoracao from "@/assets/img-designkids-decoracao.jpg";
 
-const logoDesignkids = "/lovable-uploads/16ad92e4-d27b-4d97-a111-5d128e486b17.png";
+const logoDesignkids = "/brand-assets/logo-design-kids.png";
 
 const categories = [
   { id: "mesas-cadeiras", title: "Mesas & Cadeiras" },

@@ -1,7 +1,7 @@
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { ArrowLeft, Menu, X } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useId } from "react";
 import { cn } from "@/lib/utils";
 
 export interface BrandNavSection {
@@ -17,11 +17,13 @@ interface BrandNavbarProps {
   backTo: string;
   backLabel: string;
   sections: BrandNavSection[];
+  whatsappUrl?: string;
 }
 
-const BrandNavbar = ({ brandName, logoSrc, logoBgColor, backTo, backLabel, sections }: BrandNavbarProps) => {
+const BrandNavbar = ({ brandName, logoSrc, logoBgColor, backTo, backLabel, sections, whatsappUrl }: BrandNavbarProps) => {
   const [activeSection, setActiveSection] = useState("");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const mobileMenuId = useId();
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -62,7 +64,7 @@ const BrandNavbar = ({ brandName, logoSrc, logoBgColor, backTo, backLabel, secti
       <div className="fixed top-0 left-0 right-0 z-[110] bg-background/95 backdrop-blur-md border-b border-border">
         {/* Top bar */}
         <div className="container mx-auto px-3 sm:px-4 lg:px-8 flex items-center justify-between h-14 md:h-20">
-          <Link to={backTo} className="flex items-center gap-1.5 text-muted-foreground hover:text-foreground transition-colors text-xs sm:text-sm shrink-0">
+          <Link to={backTo} aria-label={backLabel} className="flex items-center gap-1.5 text-muted-foreground hover:text-foreground transition-colors text-xs sm:text-sm shrink-0">
             <ArrowLeft size={16} />
             <span className="hidden sm:inline">{backLabel}</span>
           </Link>
@@ -77,7 +79,7 @@ const BrandNavbar = ({ brandName, logoSrc, logoBgColor, backTo, backLabel, secti
           </div>
           <div className="flex items-center gap-2">
             <a
-              href="https://wa.me/5511968756430?text=Falar%20com%20a%20Gilen%20Industrial"
+              href={whatsappUrl ?? "https://wa.me/5511968756430?text=Falar%20com%20a%20Gilen%20Industrial"}
               target="_blank"
               rel="noopener noreferrer"
               className="whatsapp-hover hidden sm:inline-flex items-center gap-2 px-4 md:px-5 py-2 md:py-2.5 bg-accent-blue text-accent-blue-foreground text-xs font-semibold uppercase tracking-wider rounded-sm hover:bg-accent-blue/90 transition-colors shrink-0"
@@ -88,6 +90,9 @@ const BrandNavbar = ({ brandName, logoSrc, logoBgColor, backTo, backLabel, secti
             {/* Mobile menu toggle */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label={mobileMenuOpen ? "Fechar menu" : "Abrir menu"}
+              aria-expanded={mobileMenuOpen}
+              aria-controls={mobileMenuId}
               className="md:hidden w-9 h-9 flex items-center justify-center text-foreground"
             >
               {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
@@ -119,8 +124,9 @@ const BrandNavbar = ({ brandName, logoSrc, logoBgColor, backTo, backLabel, secti
 
       {/* Mobile dropdown menu overlay */}
       {mobileMenuOpen && (
-        <div className="fixed inset-0 z-[45] bg-black/50 md:hidden" onClick={() => setMobileMenuOpen(false)}>
+        <div className="fixed inset-0 z-[109] bg-black/50 md:hidden" onClick={() => setMobileMenuOpen(false)}>
           <div
+            id={mobileMenuId}
             className="absolute top-[56px] left-0 right-0 bg-background border-b border-border shadow-xl"
             onClick={(e) => e.stopPropagation()}
           >
@@ -139,14 +145,27 @@ const BrandNavbar = ({ brandName, logoSrc, logoBgColor, backTo, backLabel, secti
                   {section.label}
                 </button>
               ))}
-              <Link
-                to="/contato"
-                className="whatsapp-hover flex items-center justify-center gap-2 w-full mt-2 px-4 py-3 bg-accent-blue text-accent-blue-foreground text-xs font-semibold uppercase tracking-wider rounded-lg"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                <FaWhatsapp className="whatsapp-icon" size={16} />
-                Solicitar Orçamento
-              </Link>
+              {whatsappUrl ? (
+                <a
+                  href={whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="whatsapp-hover flex items-center justify-center gap-2 w-full mt-2 px-4 py-3 bg-accent-blue text-accent-blue-foreground text-xs font-semibold uppercase tracking-wider rounded-lg"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  <FaWhatsapp className="whatsapp-icon" size={16} />
+                  Solicitar Orçamento
+                </a>
+              ) : (
+                <Link
+                  to="/contato"
+                  className="whatsapp-hover flex items-center justify-center gap-2 w-full mt-2 px-4 py-3 bg-accent-blue text-accent-blue-foreground text-xs font-semibold uppercase tracking-wider rounded-lg"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  <FaWhatsapp className="whatsapp-icon" size={16} />
+                  Solicitar Orçamento
+                </Link>
+              )}
             </div>
           </div>
         </div>

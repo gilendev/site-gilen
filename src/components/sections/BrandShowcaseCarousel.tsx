@@ -7,9 +7,7 @@ import imgGilcaseCases from "@/assets/img-gilcase-cases.jpg";
 import imgGilcaseSuportes from "@/assets/img-gilcase-suportes.jpg";
 import imgGilcaseTotens from "@/assets/img-gilcase-totens.jpg";
 
-import imgParametrizzeFachada from "@/assets/img-parametrizze-fachada.jpg";
-import imgParametrizzeMobiliario from "@/assets/img-parametrizze-mobiliario.jpg";
-import imgParametrizzeDivisoria from "@/assets/img-parametrizze-divisoria.jpg";
+import { parametrizzeBrand, parametrizzeMedia } from "@/data/parametrizze";
 
 import imgGourmetizzeChurrasqueira from "@/assets/img-gourmetizze-churrasqueira.jpg";
 import imgGourmetizzeUtensilios from "@/assets/img-gourmetizze-utensilios.jpg";
@@ -23,11 +21,10 @@ import imgDesignkidsMesa from "@/assets/img-designkids-mesa.jpg";
 import imgDesignkidsEstante from "@/assets/img-designkids-estante.jpg";
 import imgDesignkidsBrinquedo from "@/assets/img-designkids-brinquedo.jpg";
 
-const logoGilCase = "/lovable-uploads/logo-gilcase.jpeg";
-const logoParametrizze = "/lovable-uploads/ea1780e5-8545-48a9-aaa9-051f623724db.png";
-const logoGourmetizze = "/lovable-uploads/40176074-eed2-4555-94a3-940b9c014213.png";
-const logoComicpets = "/lovable-uploads/868a8eaf-cc9a-4482-9f91-ff11d7873809.png";
-const logoDesignkids = "/lovable-uploads/16ad92e4-d27b-4d97-a111-5d128e486b17.png";
+const logoGilCase = "/brand-assets/logo-gil-cases.jpeg";
+const logoGourmetizze = "/brand-assets/logo-gourmetizze.png";
+const logoComicpets = "/brand-assets/logo-comicpets.png";
+const logoDesignkids = "/brand-assets/logo-design-kids.png";
 
 interface Brand {
   name: string;
@@ -46,11 +43,11 @@ const brands: Brand[] = [
     images: [imgGilcaseCases, imgGilcaseSuportes, imgGilcaseTotens],
   },
   {
-    name: "Parametrizze",
-    logo: logoParametrizze,
+    name: parametrizzeBrand.name,
+    logo: parametrizzeBrand.logo,
     href: "/parametrizze",
-    tagline: "Design paramétrico e fabricação CNC",
-    images: [imgParametrizzeFachada, imgParametrizzeMobiliario, imgParametrizzeDivisoria],
+    tagline: parametrizzeBrand.tagline,
+    images: [parametrizzeMedia.paineis, parametrizzeMedia.mobiliario, parametrizzeMedia.acustica],
   },
   {
     name: "Gourmetizze",
