@@ -1,6 +1,6 @@
 // Content and media from the client-supplied Parametrizze portfolio (November 2026).
-// Image provenance is recorded in public/parametrizze/portfolio/sources.json.
-const asset = (name: string) => `/parametrizze/portfolio/${name}.webp`;
+// Image provenance is recorded in public/brand-assets/parametrizze/sources.json.
+const asset = (name: string) => `/brand-assets/parametrizze/${name}.webp`;
 
 export const parametrizzeMedia = {
   hero: asset("hero"),
@@ -32,7 +32,7 @@ export const parametrizzeBrand = {
   phoneDisplay: "(11) 97192-7920",
   email: "contato@gilenindustrial.com.br",
   whatsappUrl: `https://wa.me/5511971927920?text=${encodeURIComponent("Olá! Gostaria de conversar sobre um projeto da Parametrizze.")}`,
-  ogImage: "https://gilenindustrial.com.br/parametrizze/portfolio/hero.webp",
+  ogImage: "https://gilenindustrial.com.br/brand-assets/parametrizze/hero.webp",
 };
 
 export interface ParametrizzeSolution {
