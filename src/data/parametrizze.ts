@@ -4,7 +4,7 @@ const asset = (name: string) => `/brand-assets/parametrizze/${name}.webp`;
 
 export const parametrizzeMedia = {
   hero: asset("hero"),
-  cnc: asset("cnc-new"),
+  cnc: asset("router-cnc"),
   paineis: asset("paineis"),
   painelDecorativo: asset("painel-decorativo"),
   espelho: asset("espelho"),

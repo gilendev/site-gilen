@@ -1,6 +1,6 @@
 {
   "source": "Parametrizze_Gilen_industrial_Portfolio (1).pdf",
-  "note": "Conteúdo visual baseado no portfólio fornecido pelo cliente. A imagem cnc-new.webp é uma ilustração de Router CNC criada com IA para a seção de fabricação; não documenta uma instalação específica.",
+  "note": "Imagens do portfólio Parametrizze. A origem e o tratamento de cada variante estão registrados abaixo.",
   "images": [
     {
       "file": "hero.webp",
@@ -142,6 +142,15 @@
       "date": "2026-11-04",
       "width": 1448,
       "height": 1086
+    },
+    {
+      "file": "router-cnc.webp",
+      "page": 2,
+      "imageIndex": 0,
+      "source": "Retouch of the original CNC photograph (cnc.webp)",
+      "treatment": "AI-assisted surface cleaning, paint restoration and white balance",
+      "width": 1536,
+      "height": 1024
     }
   ]
 }

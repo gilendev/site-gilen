@@ -75,7 +75,7 @@ const ParametrizzePage = () => (
       <section id="processo" className="py-16 md:py-24 scroll-mt-24 md:scroll-mt-36">
         <div className="container mx-auto px-6 lg:px-8 grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           <figure>
-            <img src={media.cnc} alt="Router CNC para usinagem de painéis e peças de madeira" width="1448" height="1086" loading="lazy" decoding="async" className="w-full aspect-[4/3] object-cover" />
+            <img src={media.cnc} alt="Cabeçote da Router CNC durante a usinagem de uma chapa de madeira" width="1536" height="1024" loading="lazy" decoding="async" className="w-full aspect-[4/3] object-cover" />
             <figcaption className="text-xs text-muted-foreground mt-3">Fabricação CNC / Do modelo digital à forma física.</figcaption>
           </figure>
           <div>
