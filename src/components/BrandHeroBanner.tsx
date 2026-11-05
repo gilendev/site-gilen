@@ -110,7 +110,7 @@ const BrandHeroBanner = ({ slides, interval = 5000 }: BrandHeroBannerProps) => {
         <ChevronRight size={18} />
       </button>
 
-      <div className="absolute bottom-3 sm:bottom-5 right-3 sm:right-6 z-20 flex items-center gap-1.5 sm:gap-2">
+      <div className="absolute top-3 right-3 z-20 flex items-center sm:top-auto sm:bottom-5 sm:right-6 gap-1.5 sm:gap-2">
         {slides.map((slide, i) => (
           <button
             key={i}
