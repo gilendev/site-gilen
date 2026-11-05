@@ -1,10 +1,12 @@
 import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import BrandBannerPhoto from "@/components/BrandBannerPhoto";
 import { cn } from "@/lib/utils";
 
 export interface BannerSlide {
   image: string;
+  backdrop?: string;
   title: string;
   subtitle: string;
   tag: string;
@@ -61,13 +63,11 @@ const BrandHeroBanner = ({ slides, interval = 5000 }: BrandHeroBannerProps) => {
           transition={{ duration: 0.5, ease: "easeInOut" }}
           className="absolute inset-0"
         >
-          <img
-            src={slide.image}
-            alt={slide.title}
-            className="w-full h-full object-cover"
-            width={1920}
-            height={800}
-          />
+          {slide.backdrop ? (
+            <BrandBannerPhoto src={slide.image} alt={slide.title} backdrop={slide.backdrop} priority={current === 0} />
+          ) : (
+            <img src={slide.image} alt={slide.title} className="w-full h-full object-cover" width={1920} height={800} />
+          )}
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-transparent to-transparent" />
         </motion.div>

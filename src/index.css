@@ -139,6 +139,50 @@
   --accent-blue-foreground: var(--gilcase-red-foreground);
 }
 
+.brand-banner-photo {
+  container: banner-photo / size;
+  background-size: 100% 100%;
+}
+
+/* On wide banners the complete 3:2 photo sits to the right of the headline. */
+@container banner-photo (min-aspect-ratio: 3/2) {
+  .brand-banner-photo > img {
+    width: auto;
+    max-width: none;
+    mask-image: linear-gradient(to right, transparent, black 22%);
+  }
+}
+
+/* Keep the suspended grate above the stacked mobile actions. */
+@media (max-width: 639px) {
+  .gourmetizze-hero-photo .brand-banner-photo {
+    position: relative;
+    background-position: center bottom;
+    background-size: auto 245%;
+  }
+
+  .gourmetizze-hero-photo .brand-banner-photo::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto;
+    height: 49%;
+    background-image: inherit;
+    background-size: 100% 100%;
+    mask-image: linear-gradient(black 91%, transparent);
+  }
+
+  .gourmetizze-hero-photo img {
+    position: absolute;
+    top: 0;
+    right: -12%;
+    width: auto;
+    max-width: none;
+    height: 49%;
+    mask-image: linear-gradient(to right, transparent, black 22%), linear-gradient(black 97%, transparent);
+    mask-composite: intersect;
+  }
+}
+
 .gourmetizze-brand {
   --accent-blue: var(--accent);
   --accent-blue-foreground: var(--accent-foreground);

@@ -20,8 +20,8 @@ const products = gourmetizzeLines.flatMap((line) => line.products.map((product) 
   whatsappUrl: gourmetizzeProductWhatsApp(product.name),
 })));
 const slides = [
-  { image: gourmetizzeMedia.hero, title: "Churrasqueiras", subtitle: "Modelos em chapa de aço para preparar na grelha ou no espeto.", tag: "GOURMETIZZE" },
-  { image: gourmetizzeMedia.meiaLua, title: "Braseiros de jardim", subtitle: "Conheça os desenhos de fogo aberto da linha Gourmetizze.", tag: "BRASEIROS" },
+  { image: gourmetizzeMedia.hero, backdrop: gourmetizzeMedia.heroBackdrop, title: "Braseiro meia-lua com grelha", subtitle: "Grelha suspensa por correntes sobre o fogo a lenha.", tag: "BRASEIROS" },
+  { image: gourmetizzeMedia.bannerChurrasqueira, title: "Churrasqueiras", subtitle: "Modelos em chapa de aço para preparar na grelha ou no espeto.", tag: "GOURMETIZZE" },
 ];
 const navSections = [
   { id: "hero", label: "Início", href: brandPath },

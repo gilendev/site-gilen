@@ -1,11 +1,14 @@
 const mediaPath = "/brand-assets/gourmetizze";
+const meiaLua = `${mediaPath}/meia-lua.webp`;
 const quadrada = `${mediaPath}/quadrada.webp`;
 
 export const gourmetizzeMedia = {
-  hero: `${mediaPath}/banner-churrasqueira.webp`,
+  hero: meiaLua,
+  heroBackdrop: `${mediaPath}/jardim-banner.webp`,
+  bannerChurrasqueira: `${mediaPath}/banner-churrasqueira.webp`,
   quadrada,
   espetos: `${mediaPath}/espetos.webp`,
-  meiaLua: `${mediaPath}/meia-lua.webp`,
+  meiaLua,
   fogareiro: `${mediaPath}/fogareiro-de-encaixe.webp`,
   portaLenha: `${mediaPath}/porta-lenha.webp`,
 };

@@ -6,6 +6,7 @@ import { ArrowRight, ArrowLeft, Flame, Utensils, PanelsTopLeft, Ruler, Scissors,
 import { FaWhatsapp } from "react-icons/fa";
 import BrandNavbar from "@/components/layout/BrandNavbar";
 import { Button } from "@/components/ui/button";
+import BrandBannerPhoto from "@/components/BrandBannerPhoto";
 import BrandCarousel from "@/components/BrandCarousel";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { gourmetizzeBrand, gourmetizzeLines, gourmetizzeMedia } from "@/data/gourmetizze";
@@ -70,11 +71,13 @@ const GourmetizzePage = () => {
       <main>
       {/* Hero */}
       <section id="hero" className="relative min-h-[60vh] md:min-h-[90vh] flex items-center overflow-hidden pt-16 md:pt-36">
-        <img src={gourmetizzeMedia.hero} alt={gourmetizzeLines[0].products[0].alt} fetchPriority="high" className="absolute inset-0 w-full h-full object-cover object-[72%_center] md:object-center" />
+        <div className="gourmetizze-hero-photo absolute inset-x-0 bottom-0 top-14 md:top-32">
+          <BrandBannerPhoto src={gourmetizzeMedia.hero} backdrop={gourmetizzeMedia.heroBackdrop} alt="Braseiro meia-lua com grelha suspensa por correntes sobre a lenha acesa" priority />
+        </div>
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
         <div className="container mx-auto px-4 lg:px-8 relative z-10">
           <div className="max-w-2xl">
-            <motion.span initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="text-xs font-semibold uppercase tracking-[0.3em] text-accent mb-4 block">
+            <motion.span initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="text-xs font-semibold uppercase tracking-[0.3em] text-white mb-4 block">
               Por GILEN Industrial
             </motion.span>
             <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }} className="text-3xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.05] mb-4 md:mb-6">
