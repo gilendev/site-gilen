@@ -561,18 +561,16 @@ const BrandProductsLayout = ({
       </div>
 
       {/* Product Detail Modal */}
-      <AnimatePresence>
-        {selectedProduct && (
-          <ModalGallery
-            key={selectedProduct.id}
-            product={selectedProduct}
-            brandName={brandName}
-            categories={categories}
-            whatsappUrl={productContact(selectedProduct, brandName)}
-            onClose={() => updateSelectedProduct()}
-          />
-        )}
-      </AnimatePresence>
+      {selectedProduct && (
+        <ModalGallery
+          key={selectedProduct.id}
+          product={selectedProduct}
+          brandName={brandName}
+          categories={categories}
+          whatsappUrl={productContact(selectedProduct, brandName)}
+          onClose={() => updateSelectedProduct()}
+        />
+      )}
 
       <WhatsAppButton whatsappUrl={brandContact} />
     </div>
