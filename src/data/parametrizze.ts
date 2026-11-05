@@ -1,9 +1,13 @@
 // Content and media from the client-supplied Parametrizze portfolio (November 2026).
 // Image provenance is recorded in public/brand-assets/parametrizze/sources.json.
 const asset = (name: string) => `/brand-assets/parametrizze/${name}.webp`;
+const hero = asset("ambiente-parametrico-1672");
+const heroHd = asset("ambiente-parametrico-hd");
 
 export const parametrizzeMedia = {
-  hero: asset("hero"),
+  hero,
+  heroAlt: "Sala com painel ondulado de madeira, espelho circular, poltrona e mesa em lâminas curvas",
+  heroSrcSet: `${hero} 1672w, ${heroHd} 2560w`,
   cnc: asset("router-cnc"),
   paineis: asset("paineis"),
   painelDecorativo: asset("painel-decorativo"),
@@ -32,7 +36,7 @@ export const parametrizzeBrand = {
   phoneDisplay: "(11) 97192-7920",
   email: "contato@gilenindustrial.com.br",
   whatsappUrl: `https://wa.me/5511971927920?text=${encodeURIComponent("Olá! Gostaria de conversar sobre um projeto da Parametrizze.")}`,
-  ogImage: "https://gilenindustrial.com.br/brand-assets/parametrizze/hero.webp",
+  ogImage: `https://gilenindustrial.com.br${heroHd}`,
 };
 
 export interface ParametrizzeSolution {

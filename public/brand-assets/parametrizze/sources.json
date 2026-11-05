@@ -10,6 +10,20 @@
       "height": 768
     },
     {
+      "file": "ambiente-parametrico-1672.webp",
+      "source": "hero.webp",
+      "treatment": "Recriação do ambiente da capa por IA, usando a fotografia original como referência.",
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "file": "ambiente-parametrico-hd.webp",
+      "source": "Mesma imagem gerada para ambiente-parametrico-1672.webp, antes da compressão.",
+      "treatment": "Super-resolução espacial 2× com Apple VideoToolbox, seguida de redução para QHD e exportação em WebP.",
+      "width": 2560,
+      "height": 1440
+    },
+    {
       "file": "cnc.webp",
       "page": 2,
       "imageIndex": 0,

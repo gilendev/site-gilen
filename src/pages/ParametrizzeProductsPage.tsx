@@ -19,7 +19,15 @@ const products = solutions.map((solution) => ({
   whatsappUrl: `https://wa.me/${brand.phone}?text=${encodeURIComponent(`Olá! Gostaria de conversar sobre um projeto de ${solution.title.toLocaleLowerCase("pt-BR")} da Parametrizze.`)}`,
 }));
 const slides = [
-  { image: media.hero, title: "Design paramétrico", subtitle: brand.tagline, tag: "PARAMETRIZZE" },
+  {
+    image: media.hero,
+    imageAlt: media.heroAlt,
+    srcSet: media.heroSrcSet,
+    objectPosition: "60% 84%",
+    title: "Design paramétrico",
+    subtitle: brand.tagline,
+    tag: "PARAMETRIZZE",
+  },
   { image: media.cnc, title: "Fabricação CNC", subtitle: "Da modelagem computacional à usinagem dos componentes sob medida.", tag: "TECNOLOGIA" },
 ];
 const navSections = [

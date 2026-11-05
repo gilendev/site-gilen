@@ -6,6 +6,9 @@ import { cn } from "@/lib/utils";
 
 export interface BannerSlide {
   image: string;
+  imageAlt?: string;
+  objectPosition?: string;
+  srcSet?: string;
   backdrop?: string;
   title: string;
   subtitle: string;
@@ -16,6 +19,8 @@ interface BrandHeroBannerProps {
   slides: BannerSlide[];
   interval?: number;
 }
+
+const catalogBannerSizes = "(min-width: 1024px) calc(100vw - 352px), 100vw";
 
 const BrandHeroBanner = ({ slides, interval = 5000 }: BrandHeroBannerProps) => {
   const [current, setCurrent] = useState(0);
@@ -64,9 +69,18 @@ const BrandHeroBanner = ({ slides, interval = 5000 }: BrandHeroBannerProps) => {
           className="absolute inset-0"
         >
           {slide.backdrop ? (
-            <BrandBannerPhoto src={slide.image} alt={slide.title} backdrop={slide.backdrop} priority={current === 0} />
+            <BrandBannerPhoto src={slide.image} alt={slide.imageAlt ?? slide.title} backdrop={slide.backdrop} priority={current === 0} />
           ) : (
-            <img src={slide.image} alt={slide.title} className="w-full h-full object-cover" width={1920} height={800} />
+            <img
+              src={slide.image}
+              srcSet={slide.srcSet}
+              sizes={slide.srcSet ? catalogBannerSizes : undefined}
+              alt={slide.imageAlt ?? slide.title}
+              className="w-full h-full object-cover"
+              style={{ objectPosition: slide.objectPosition }}
+              width={1920}
+              height={800}
+            />
           )}
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-transparent to-transparent" />
@@ -127,7 +141,7 @@ const BrandHeroBanner = ({ slides, interval = 5000 }: BrandHeroBannerProps) => {
                 : "w-6 h-4 sm:w-8 sm:h-5 border-transparent opacity-50 hover:opacity-80"
             )}
           >
-            <img src={slide.image} alt="" className="w-full h-full object-cover" />
+            <img src={slide.image} srcSet={slide.srcSet} sizes={slide.srcSet ? catalogBannerSizes : undefined} alt="" className="w-full h-full object-cover" />
           </button>
         ))}
       </div>

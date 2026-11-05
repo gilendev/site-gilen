@@ -59,7 +59,14 @@ const ParametrizzePage = () => {
       <main>
       {/* Hero */}
       <section id="hero" className="relative min-h-[60vh] md:min-h-[90vh] flex items-center overflow-hidden pt-16 md:pt-36">
-        <img src={media.hero} alt="Ambiente com painel ondulado, espelho, poltrona e mesa de formas orgânicas" fetchPriority="high" className="absolute inset-0 w-full h-full object-cover" />
+        <img
+          src={media.hero}
+          srcSet={media.heroSrcSet}
+          sizes="(min-width: 768px) max(100vw, 160vh), max(100vw, 107vh)"
+          alt={media.heroAlt}
+          fetchPriority="high"
+          className="absolute inset-0 w-full h-full object-cover object-[68%_center] md:object-center"
+        />
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
         <div className="container mx-auto px-4 lg:px-8 relative z-10">
           <div className="max-w-2xl">
