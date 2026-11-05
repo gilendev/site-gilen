@@ -1,119 +1,253 @@
-import { Link } from "react-router-dom";
-import { ArrowDown, ArrowLeft, ArrowRight, Mail, MoveUpRight } from "lucide-react";
-import { FaWhatsapp } from "react-icons/fa";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 import SEOHead from "@/components/SEOHead";
+import { Link } from "react-router-dom";
+import { ArrowRight, ArrowLeft, Cpu, Ruler, Layers, AudioLines, Blocks, Settings } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 import BrandNavbar from "@/components/layout/BrandNavbar";
+import { Button } from "@/components/ui/button";
+import BrandCarousel from "@/components/BrandCarousel";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { parametrizzeBrand as brand, parametrizzeMedia as media, parametrizzeSolutions as solutions } from "@/data/parametrizze";
 
-const sections = [
-  { id: "hero", label: "Início" },
-  { id: "sobre", label: "A divisão" },
-  { id: "produtos", label: "Linhas" },
-  { id: "portfolio", label: "Portfólio", href: "/parametrizze/produtos" },
-  { id: "processo", label: "Fabricação" },
-  { id: "contato-cta", label: "Contato" },
+const catalogPath = "/parametrizze/produtos";
+const gallery = Array.from(new Map(solutions.flatMap((solution) => solution.gallery).map((image) => [image.src, image])).values());
+const features = [
+  { icon: Cpu, title: "Design computacional", desc: "A modelagem define a geometria da peça e permite variar suas formas de maneira controlada." },
+  { icon: Ruler, title: "Sob medida", desc: "O espaço, as medidas e o uso de cada ambiente orientam as decisões de projeto." },
+  { icon: Layers, title: "Superfícies tridimensionais", desc: "A sequência de perfis dá relevo a painéis, mobiliário e elementos arquitetônicos." },
+  { icon: AudioLines, title: "Desempenho acústico", desc: "Na linha acústica, a geometria das superfícies ajuda a controlar as reflexões sonoras." },
+  { icon: Blocks, title: "Estruturas modulares", desc: "Nos stands, os módulos se adaptam às necessidades de exposição de cada marca." },
+  { icon: Settings, title: "Fabricação CNC", desc: "O modelo digital orienta a usinagem dos componentes que dão forma ao conjunto." },
 ];
 
-const ParametrizzePage = () => (
-  <div className="parametrizze-brand min-h-screen bg-background text-foreground">
-    <SEOHead title="Parametrizze — Design e produtos paramétricos" description={brand.description} path="/parametrizze" ogImage={brand.ogImage} />
-    <BrandNavbar brandName={brand.name} logoSrc={brand.logo} logoBgColor="#090909" backTo="/marcas" backLabel="Voltar para GILEN" sections={sections} whatsappUrl={brand.whatsappUrl} />
-    <main className="pt-14 md:pt-32">
-      <section id="hero" className="relative grid lg:grid-cols-[0.9fr_1.1fr] bg-[#24221f] text-white scroll-mt-14 md:scroll-mt-32">
-        <div className="flex flex-col justify-center px-6 py-14 sm:px-10 lg:pl-[max(2rem,calc((100vw-1280px)/2+2rem))] lg:pr-12 lg:py-20">
-          <p className="text-[10px] sm:text-xs uppercase tracking-[0.23em] text-[#d8b995] mb-7">Parametrizze / GILEN Industrial</p>
-          <h1 className="text-4xl sm:text-5xl xl:text-6xl font-medium leading-[1.08] tracking-tight max-w-lg">Geometria que<br />transforma<br /><span className="text-[#d8b995]">espaços.</span></h1>
-          <p className="mt-6 max-w-md text-sm sm:text-base leading-relaxed text-white/75">Design paramétrico, engenharia e fabricação CNC. Desenvolvemos painéis, móveis, soluções acústicas, stands e projetos especiais sob medida.</p>
-          <div className="mt-9 flex flex-col sm:flex-row lg:flex-col xl:flex-row items-start gap-4">
-            <Link to="/parametrizze/produtos" className="inline-flex items-center justify-center gap-4 px-6 py-3.5 bg-[#e5d2ba] text-[#24221f] font-semibold text-sm hover:bg-white transition-colors">Explorar o portfólio <ArrowRight size={17} /></Link>
-            <a href={brand.whatsappUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 py-3.5 text-sm text-white border-b border-white/40 hover:border-white transition-colors">Conversar sobre um projeto <MoveUpRight size={15} /></a>
+const SectionBlock = ({ children, className = "" }: { children: React.ReactNode; className?: string }) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-80px" });
+  return (
+    <motion.div ref={ref} initial={{ opacity: 0, y: 40 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6 }} className={className}>
+      {children}
+    </motion.div>
+  );
+};
+
+const ParametrizzePage = () => {
+  const galleryRef = useRef(null);
+  const galleryInView = useInView(galleryRef, { once: true, margin: "-100px" });
+
+  return (
+    <div className="min-h-screen bg-background">
+      <SEOHead title="Parametrizze — Design e produtos paramétricos" description={brand.description} path="/parametrizze" ogImage={brand.ogImage} />
+      <BrandNavbar
+        brandName={brand.name}
+        logoSrc={brand.logo}
+        logoBgColor="#090909"
+        whatsappUrl={brand.whatsappUrl}
+        backTo="/marcas"
+        backLabel="Voltar para GILEN"
+        sections={[
+          { id: "hero", label: "Início" },
+          { id: "sobre", label: "Sobre" },
+          { id: "galeria", label: "Galeria" },
+          { id: "produtos", label: "Produtos", href: catalogPath },
+          { id: "diferenciais", label: "Diferenciais" },
+          { id: "processo", label: "Processo" },
+          { id: "contato-cta", label: "Contato" },
+        ]}
+      />
+
+      <main>
+      {/* Hero */}
+      <section id="hero" className="relative min-h-[60vh] md:min-h-[90vh] flex items-center overflow-hidden pt-16 md:pt-36">
+        <img src={media.hero} alt="Ambiente com painel ondulado, espelho, poltrona e mesa de formas orgânicas" fetchPriority="high" className="absolute inset-0 w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
+        <div className="container mx-auto px-4 lg:px-8 relative z-10">
+          <div className="max-w-2xl">
+            <motion.span initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="text-xs font-semibold uppercase tracking-[0.3em] text-accent-blue mb-4 block">
+              Por GILEN Industrial
+            </motion.span>
+            <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }} className="text-3xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.05] mb-4 md:mb-6">
+              {brand.name}
+            </motion.h1>
+            <motion.p initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }} className="hidden md:block text-lg md:text-xl text-white/60 leading-relaxed mb-8 max-w-xl">
+              Design paramétrico, engenharia e fabricação CNC. Desenvolvemos painéis, móveis, soluções acústicas, stands e projetos especiais sob medida.
+            </motion.p>
+            <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }} className="flex flex-col sm:flex-row gap-3">
+              <Button asChild size="lg" className="whatsapp-hover bg-accent-blue hover:bg-accent-blue/90 text-accent-blue-foreground px-8 h-12 text-sm uppercase tracking-wider font-semibold">
+                <a href={brand.whatsappUrl} target="_blank" rel="noopener noreferrer"><FaWhatsapp className="whatsapp-icon" size={18} />Solicitar Projeto <ArrowRight className="default-icon ml-2" size={16} /></a>
+              </Button>
+              <Button asChild variant="outline" size="lg" className="bg-transparent border-white/20 text-white hover:bg-white/10 px-8 h-12 text-sm uppercase tracking-wider font-semibold">
+                <a href="#produtos">Ver Produtos</a>
+              </Button>
+            </motion.div>
           </div>
-          <a href="#sobre" className="mt-12 inline-flex items-center gap-3 text-xs text-white/60 hover:text-white w-fit"><ArrowDown size={14} /> Conheça a divisão</a>
         </div>
-        <figure className="relative min-h-[300px] sm:min-h-[420px] lg:min-h-[660px]">
-          <img src={media.hero} alt="Ambiente com painel ondulado, espelho, poltrona e mesa de formas orgânicas" loading="eager" width="1344" height="768" className="absolute inset-0 w-full h-full object-cover object-center" />
-          <figcaption className="absolute bottom-4 right-4 bg-black/60 text-white/90 px-3 py-1.5 text-[10px] tracking-wider uppercase">Design paramétrico</figcaption>
-        </figure>
       </section>
-      <section id="sobre" className="container mx-auto px-6 lg:px-8 py-16 md:py-24 scroll-mt-24 md:scroll-mt-36">
-        <div className="grid md:grid-cols-2 gap-8 lg:gap-20">
-          <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent-blue mb-5">Divisão de produtos paramétricos</p>
-            <h2 className="text-3xl md:text-4xl font-medium tracking-tight leading-tight">Engenharia, estética<br />e desempenho funcional.</h2>
-          </div>
-          <div className="text-muted-foreground leading-relaxed space-y-4">
-            <p>A Parametrizze desenvolve e fabrica produtos com design paramétrico. A modelagem computacional permite gerar formas inteligentes, variações controladas e alta eficiência produtiva.</p>
-            <p>Essa abordagem une personalização sob medida, otimização estrutural e fabricação CNC com precisão industrial. Da superfície de um painel à estrutura de um stand, a geometria dá forma a cada solução.</p>
-            <p className="text-foreground font-medium pt-2">{brand.tagline}</p>
-          </div>
-        </div>
-      </section>
-      <section id="produtos" className="bg-muted py-16 md:py-24 scroll-mt-24 md:scroll-mt-36">
-        <div className="container mx-auto px-6 lg:px-8">
-          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-5 mb-10">
-            <div><p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent-blue mb-4">O que desenvolvemos</p><h2 className="text-3xl md:text-4xl font-medium tracking-tight">Cinco formas de transformar.</h2></div>
-            <Link to="/parametrizze/produtos" className="inline-flex items-center gap-3 text-sm font-medium text-accent-blue hover:underline">Ver portfólio completo <ArrowRight size={16} /></Link>
-          </div>
-          <div className="grid md:grid-cols-6 gap-x-6 gap-y-10">
-            {solutions.map((solution, index) => (
-              <Link key={solution.id} to={`/parametrizze/produtos/${solution.id}`} className={`group block ${index < 2 ? "md:col-span-3" : "md:col-span-2"}`}>
-                <div className="relative overflow-hidden aspect-[4/3] bg-border">
-                  <img src={solution.image} alt={solution.alt} loading="lazy" decoding="async" width="1344" height="768" className="w-full h-full object-cover transition-transform duration-500 motion-reduce:transition-none group-hover:scale-[1.03]" />
-                  <span className="absolute top-4 left-4 text-white text-xs bg-black/55 px-2.5 py-1">0{index + 1}</span>
-                  <span className="absolute bottom-4 right-4 p-2.5 bg-background text-foreground group-hover:bg-accent-blue group-hover:text-white transition-colors"><MoveUpRight size={18} /></span>
+
+      {/* About */}
+      <section id="sobre" className="scroll-mt-14 md:scroll-mt-32 py-16 md:py-24 lg:py-32 bg-background">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            <SectionBlock>
+              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-accent-blue mb-4 block">Sobre a Marca</span>
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+                Engenharia, estética e <span className="text-steel">desempenho funcional</span>
+              </h2>
+              <p className="text-muted-foreground leading-relaxed mb-4">
+                A Parametrizze desenvolve e fabrica produtos com design paramétrico. A modelagem computacional permite gerar formas inteligentes, variações controladas e alta eficiência produtiva.
+              </p>
+              <p className="text-muted-foreground leading-relaxed mb-8">
+                Da superfície de um painel à estrutura de um stand, cada solução parte de uma necessidade. A divisão integra personalização sob medida, otimização estrutural e fabricação CNC com precisão industrial.
+              </p>
+              <div className="grid grid-cols-3 gap-6">
+                {[
+                  { value: solutions.length, label: "Linhas" },
+                  { value: "3D", label: "Geometria" },
+                  { value: "CNC", label: "Fabricação" },
+                ].map((stat) => (
+                  <div key={stat.label}>
+                    <div className="text-2xl font-bold text-accent-blue">{stat.value}</div>
+                    <div className="text-xs text-muted-foreground mt-1 uppercase tracking-wider">{stat.label}</div>
+                  </div>
+                ))}
+              </div>
+            </SectionBlock>
+            <SectionBlock>
+              <div className="relative rounded-sm overflow-hidden">
+                <img src={media.cnc} loading="lazy" decoding="async" alt="Cabeçote da Router CNC durante a usinagem de uma chapa de madeira" className="w-full h-80 lg:h-[450px] object-cover" />
+                <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/60 to-transparent">
+                  <span className="text-xs text-white/60 uppercase tracking-wider">Fabricação</span>
+                  <p className="text-white font-semibold mt-1">Do modelo digital à usinagem CNC</p>
                 </div>
-                <h3 className="text-2xl font-medium mt-5 mb-2 group-hover:text-accent-blue transition-colors">{solution.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{solution.subtitle}</p>
-                <p className="text-xs text-muted-foreground mt-3 leading-relaxed">{solution.items.join(" · ")}</p>
-              </Link>
+              </div>
+            </SectionBlock>
+          </div>
+        </div>
+      </section>
+
+      {/* Carousel */}
+      <div id="galeria" className="scroll-mt-14 md:scroll-mt-32">
+      <BrandCarousel
+        accentColor="bg-accent-blue"
+        linkTo={catalogPath}
+        title="Galeria de"
+        titleAccent="soluções"
+        images={gallery}
+      />
+      </div>
+
+      {/* Products */}
+      <section id="produtos" ref={galleryRef} className="scroll-mt-14 md:scroll-mt-32 py-16 md:py-24 lg:py-32 bg-muted">
+        <div className="container mx-auto px-4 lg:px-8">
+          <SectionBlock className="text-center mb-16">
+            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-accent-blue mb-4 block">Produtos</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground">Linhas de <span className="text-steel">Produtos</span></h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto mt-4">{brand.tagline}</p>
+          </SectionBlock>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {solutions.map((solution, index) => (
+              <motion.div key={solution.id} initial={{ opacity: 0, y: 30 }} animate={galleryInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.5, delay: index * 0.1 }} className="group relative rounded-sm overflow-hidden cursor-pointer">
+                <Link to={`${catalogPath}/${solution.id}`} className="block focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-2">
+                  <img src={solution.image} alt={solution.alt} loading="lazy" decoding="async" className="w-full h-72 md:h-80 object-cover transition-transform duration-500 group-hover:scale-105" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                  <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
+                    <h3 className="text-xl font-bold text-white mb-2">{solution.title}</h3>
+                    <p className="text-white/60 text-sm leading-relaxed">{solution.subtitle}</p>
+                  </div>
+                  <div className="absolute top-0 left-0 w-0 h-1 bg-accent-blue group-hover:w-full transition-all duration-500" />
+                </Link>
+              </motion.div>
             ))}
           </div>
-          <p className="text-xs text-muted-foreground mt-10 pt-5 border-t border-border">Cada solução é desenvolvida sob medida para o seu projeto.</p>
-        </div>
-      </section>
-      <section id="processo" className="py-16 md:py-24 scroll-mt-24 md:scroll-mt-36">
-        <div className="container mx-auto px-6 lg:px-8 grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-          <figure>
-            <img src={media.cnc} alt="Cabeçote da Router CNC durante a usinagem de uma chapa de madeira" width="1536" height="1024" loading="lazy" decoding="async" className="w-full aspect-[4/3] object-cover" />
-            <figcaption className="text-xs text-muted-foreground mt-3">Fabricação CNC / Do modelo digital à forma física.</figcaption>
-          </figure>
-          <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent-blue mb-5">Design + tecnologia</p>
-            <h2 className="text-3xl md:text-4xl font-medium tracking-tight leading-tight mb-6">Da ideia à<br />geometria fabricável.</h2>
-            <p className="text-muted-foreground leading-relaxed mb-8">Cada projeto parte de uma necessidade. Integramos design computacional, engenharia e fabricação para transformar conceitos arquitetônicos e demandas técnicas em soluções paramétricas.</p>
-            <ol className="divide-y divide-border border-y border-border">
-              {[
-                { title: "Demanda e personalização", text: "O espaço, o conceito e as necessidades do cliente orientam o desenvolvimento." },
-                { title: "Modelagem computacional", text: "Geometrias e variações são desenvolvidas para unir estética e funcionalidade." },
-                { title: "Fabricação CNC", text: "O desenho ganha forma com precisão industrial e eficiência produtiva." },
-              ].map((step, index) => (
-                <li key={step.title} className="flex gap-5 py-5"><span className="text-sm text-accent-blue pt-0.5">0{index + 1}</span><div><h3 className="font-medium mb-1">{step.title}</h3><p className="text-sm text-muted-foreground leading-relaxed">{step.text}</p></div></li>
-              ))}
-            </ol>
+          <div className="text-center mt-10">
+            <Link to={catalogPath} className="inline-flex items-center gap-2 px-8 py-3 bg-accent-blue text-white font-semibold text-sm uppercase tracking-wider rounded-sm hover:bg-accent-blue/90 transition-colors">
+              Ver Todos os Produtos <ArrowRight size={16} />
+            </Link>
           </div>
         </div>
       </section>
-      <section id="contato-cta" className="bg-[#24221f] text-white py-16 md:py-24 scroll-mt-24 md:scroll-mt-36">
-        <div className="container mx-auto px-6 lg:px-8 grid lg:grid-cols-[1.2fr_1fr] gap-10 items-end">
-          <div>
-            <p className="text-xs uppercase tracking-[0.2em] text-[#d8b995] mb-5">Vamos criar juntos</p>
-            <h2 className="text-3xl md:text-5xl leading-tight font-medium tracking-tight max-w-xl">Seu próximo espaço<br />começa com uma ideia.</h2>
-            <p className="text-white/65 mt-6 max-w-lg leading-relaxed">Conte o que você imagina para seu ambiente, mobiliário ou evento. Vamos conversar sobre uma solução Parametrizze sob medida.</p>
-          </div>
-          <div className="lg:justify-self-end space-y-5">
-            <a href={brand.whatsappUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-3 bg-[#e5d2ba] text-[#24221f] px-6 py-4 text-sm font-semibold hover:bg-white transition-colors"><FaWhatsapp size={19} /> Iniciar um projeto <ArrowRight size={16} /></a>
-            <a href={`mailto:${brand.email}`} className="flex items-center gap-2 text-white/80 hover:text-white text-sm break-all"><Mail size={16} className="shrink-0" />{brand.email}</a>
+
+      {/* Features */}
+      <section id="diferenciais" className="scroll-mt-14 md:scroll-mt-32 py-16 md:py-24 lg:py-32 bg-background">
+        <div className="container mx-auto px-4 lg:px-8">
+          <SectionBlock className="text-center mb-16">
+            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-accent-blue mb-4 block">Diferenciais</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground">Por que <span className="text-steel">Parametrizze</span></h2>
+          </SectionBlock>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {features.map((feature) => (
+              <SectionBlock key={feature.title}>
+                <div className="p-6 md:p-8 rounded-sm border border-border bg-card hover:border-accent-blue/30 transition-colors h-full">
+                  <div className="w-12 h-12 rounded-sm bg-accent-blue/10 flex items-center justify-center mb-6">
+                    <feature.icon className="text-accent-blue" size={24} />
+                  </div>
+                  <h3 className="text-lg font-semibold text-foreground mb-3">{feature.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{feature.desc}</p>
+                </div>
+              </SectionBlock>
+            ))}
           </div>
         </div>
       </section>
-    </main>
-    <footer className="container mx-auto px-6 lg:px-8 py-8 pb-24 md:pb-8 flex flex-col sm:flex-row justify-between gap-4 text-xs text-muted-foreground">
-      <p>PARAMETRIZZE · Divisão de produtos paramétricos da GILEN Industrial</p>
-      <Link to="/marcas" className="inline-flex items-center gap-2 hover:text-foreground"><ArrowLeft size={14} /> Conheça as marcas GILEN</Link>
-    </footer>
-    <WhatsAppButton whatsappUrl={brand.whatsappUrl} />
-  </div>
-);
+
+      {/* Process */}
+      <section id="processo" className="scroll-mt-14 md:scroll-mt-32 py-16 md:py-24 lg:py-32 bg-graphite">
+        <div className="container mx-auto px-4 lg:px-8">
+          <SectionBlock className="text-center mb-16">
+            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-accent-blue mb-4 block">Processo</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground">Como <span className="text-accent-blue">funciona</span></h2>
+          </SectionBlock>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+            {[
+              { step: "01", title: "Demanda", desc: "O espaço, o conceito e as necessidades do cliente orientam o desenvolvimento." },
+              { step: "02", title: "Modelagem", desc: "A modelagem computacional gera as formas e permite estudar suas variações." },
+              { step: "03", title: "Engenharia", desc: "A geometria é ajustada para conciliar desempenho, estética e fabricação." },
+              { step: "04", title: "Fabricação CNC", desc: "O modelo digital orienta o corte e a usinagem das peças da solução." },
+            ].map((item) => (
+              <SectionBlock key={item.step}>
+                <div className="text-center">
+                  <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-accent-blue/10 flex items-center justify-center">
+                    <span className="text-accent-blue font-bold text-lg">{item.step}</span>
+                  </div>
+                  <h3 className="text-lg font-semibold text-primary-foreground mb-3">{item.title}</h3>
+                  <p className="text-primary-foreground/60 text-sm leading-relaxed">{item.desc}</p>
+                </div>
+              </SectionBlock>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section id="contato-cta" className="scroll-mt-14 md:scroll-mt-32 py-24 bg-background relative overflow-hidden">
+        <div className="technical-line w-full absolute top-0" />
+        <div className="container mx-auto px-4 lg:px-8 relative z-10 text-center">
+          <SectionBlock>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">Seu próximo espaço começa com uma ideia.</h2>
+            <p className="text-muted-foreground max-w-xl mx-auto mb-8">Conte o que você imagina para seu ambiente, mobiliário ou evento. Vamos conversar sobre uma solução Parametrizze sob medida.</p>
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <a href={brand.whatsappUrl} target="_blank" rel="noopener noreferrer" className="whatsapp-hover inline-flex items-center gap-2 px-8 py-3 bg-accent-blue text-accent-blue-foreground font-semibold text-sm uppercase tracking-wider rounded-sm hover:bg-accent-blue/90 transition-colors">
+                <FaWhatsapp className="whatsapp-icon" size={18} />Solicitar Orçamento <ArrowRight className="default-icon" size={16} />
+              </a>
+              <Link to="/marcas" className="inline-flex items-center gap-2 px-8 py-3 border border-border text-foreground font-semibold text-sm uppercase tracking-wider rounded-sm hover:bg-muted transition-colors">
+                <ArrowLeft size={16} /> Voltar para GILEN
+              </Link>
+            </div>
+            <a href={`mailto:${brand.email}`} className="inline-block mt-5 text-sm text-muted-foreground hover:underline">{brand.email}</a>
+          </SectionBlock>
+        </div>
+      </section>
+
+      </main>
+
+      <footer className="py-8 bg-graphite border-t border-border">
+        <div className="container mx-auto px-4 lg:px-8 text-center">
+          <p className="text-primary-foreground/40 text-sm">PARAMETRIZZE — Uma marca <Link to="/" className="text-accent-blue hover:underline">GILEN Industrial</Link></p>
+        </div>
+      </footer>
+      <WhatsAppButton whatsappUrl={brand.whatsappUrl} />
+    </div>
+  );
+};
 
 export default ParametrizzePage;

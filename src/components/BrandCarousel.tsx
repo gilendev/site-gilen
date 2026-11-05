@@ -87,6 +87,8 @@ const BrandCarousel = ({ images, accentColor = "bg-accent-blue", subtitle = "Gal
                   >
                     <div className="aspect-[4/3] rounded-sm overflow-hidden">
                       <img
+                        loading="lazy"
+                        decoding="async"
                         src={image.src}
                         alt={image.alt}
                         className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
@@ -98,6 +100,7 @@ const BrandCarousel = ({ images, accentColor = "bg-accent-blue", subtitle = "Gal
             </div>
 
             <button
+              aria-label="Fotos anteriores"
               onClick={scrollPrev}
               className={cn(
                 "absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-background/90 border border-border flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity shadow-md hover:bg-background",
@@ -107,6 +110,7 @@ const BrandCarousel = ({ images, accentColor = "bg-accent-blue", subtitle = "Gal
               <ChevronLeft size={20} className="text-foreground" />
             </button>
             <button
+              aria-label="Próximas fotos"
               onClick={scrollNext}
               className={cn(
                 "absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-background/90 border border-border flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity shadow-md hover:bg-background",
@@ -121,6 +125,8 @@ const BrandCarousel = ({ images, accentColor = "bg-accent-blue", subtitle = "Gal
             {images.map((_, index) => (
               <button
                 key={index}
+                aria-label={`Ir para foto ${index + 1}`}
+                aria-pressed={index === selectedIndex}
                 onClick={() => emblaApi?.scrollTo(index)}
                 className={cn(
                   "w-2 h-2 rounded-full transition-all duration-300",

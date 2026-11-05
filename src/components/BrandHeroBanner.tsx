@@ -96,12 +96,14 @@ const BrandHeroBanner = ({ slides, interval = 5000 }: BrandHeroBannerProps) => {
       </div>
 
       <button
+        aria-label="Banner anterior"
         onClick={prev}
         className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 z-20 w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-full bg-black/40 backdrop-blur-sm text-white/80 hover:bg-black/60 hover:text-white transition-all"
       >
         <ChevronLeft size={18} />
       </button>
       <button
+        aria-label="Próximo banner"
         onClick={next}
         className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 z-20 w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-full bg-black/40 backdrop-blur-sm text-white/80 hover:bg-black/60 hover:text-white transition-all"
       >
@@ -112,6 +114,8 @@ const BrandHeroBanner = ({ slides, interval = 5000 }: BrandHeroBannerProps) => {
         {slides.map((slide, i) => (
           <button
             key={i}
+            aria-label={`Mostrar banner: ${slide.title}`}
+            aria-pressed={i === current}
             onClick={() => {
               setDirection(i > current ? 1 : -1);
               setCurrent(i);

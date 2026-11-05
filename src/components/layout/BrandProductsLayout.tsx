@@ -1,4 +1,4 @@
-import { useState, useRef, useMemo, useEffect, useCallback } from "react";
+import { useState, useRef, useId, useEffect, useCallback } from "react";
 import { Link, useSearchParams, useParams, useNavigate } from "react-router-dom";
 import { ArrowRight, Search, X, ShoppingBag, Grid3X3, LayoutGrid, SlidersHorizontal, Eye, Filter, ChevronLeft, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -13,6 +13,10 @@ export interface ProductItem {
   name: string;
   image: string;
   images?: string[];
+  imageAlt?: string;
+  imageAlts?: string[];
+  details?: string[];
+  whatsappUrl?: string;
   description: string;
   category: string;
 }
@@ -32,6 +36,11 @@ interface BrandProductsLayoutProps {
   seoTitle: string;
   seoDescription: string;
   seoPath: string;
+  canonicalPath?: string;
+  ogImage?: string;
+  whatsappUrl?: string;
+  catalogCountLabel?: string;
+  allProductsLabel?: string;
   accentColorClass: string;
   wrapperClassName?: string;
   categories: ProductCategory[];
@@ -39,6 +48,11 @@ interface BrandProductsLayoutProps {
   navSections: BrandNavSection[];
   heroBanner?: React.ReactNode;
 }
+
+const normalizeSearch = (text: string) => text.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase("pt-BR");
+const defaultDetails = ["Fabricação sob medida", "Materiais de alta qualidade", "Garantia de fábrica"];
+const productContact = (product: ProductItem, brand: string) =>
+  product.whatsappUrl ?? `https://wa.me/5511971927920?text=${encodeURIComponent(`Olá! Gostaria de um orçamento para: ${product.name} (${brand})`)}`;
 
 const ModalGallery = ({ product, brandName, categories, whatsappUrl, onClose }: {
   product: ProductItem;
@@ -49,14 +63,37 @@ const ModalGallery = ({ product, brandName, categories, whatsappUrl, onClose }: 
 }) => {
   const allImages = product.images && product.images.length > 0 ? product.images : [product.image];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const dialogRef = useRef<HTMLDialogElement>(null);
+  const titleId = useId();
+  const openerRef = useRef<HTMLElement | null>(null);
+  const closeGallery = () => {
+    dialogRef.current?.close();
+    const opener = openerRef.current;
+    const fallback = document.getElementById(`product-details-${product.id}`);
+    (opener?.isConnected && opener !== document.body ? opener : fallback)?.focus({ preventScroll: true });
+    onClose();
+  };
+
+  useEffect(() => {
+    const dialog = dialogRef.current;
+    const previous = document.body.style.overflow;
+    openerRef.current = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+    dialog?.showModal();
+    document.body.style.overflow = "hidden";
+    return () => {
+      dialog?.close();
+      document.body.style.overflow = previous;
+    };
+  }, []);
 
   return (
+    <dialog ref={dialogRef} aria-labelledby={titleId} onCancel={(event) => { event.preventDefault(); closeGallery(); }} className="fixed inset-0 m-0 h-full max-h-none w-full max-w-none border-0 bg-transparent p-0 text-foreground backdrop:bg-transparent">
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       className="fixed inset-0 z-[60] bg-black/80 backdrop-blur-sm flex items-end sm:items-center justify-center sm:p-4"
-      onClick={onClose}
+      onClick={closeGallery}
     >
       <motion.div
         initial={{ scale: 0.95, opacity: 0, y: 40 }}
@@ -68,8 +105,8 @@ const ModalGallery = ({ product, brandName, categories, whatsappUrl, onClose }: 
       >
         <div className="grid grid-cols-1 sm:grid-cols-2">
           <div className="relative aspect-[4/3] sm:aspect-auto sm:min-h-[300px] bg-muted">
-            <img src={allImages[currentImageIndex]} alt={product.name} className="w-full h-full object-cover" />
-            <button onClick={onClose} className="absolute top-3 right-3 w-8 h-8 sm:w-9 sm:h-9 bg-black/50 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-black/70 transition-colors">
+            <img src={allImages[currentImageIndex]} alt={product.imageAlts?.[currentImageIndex] ?? product.imageAlt ?? product.name} className={cn("w-full h-full", product.imageAlt ? "object-contain" : "object-cover")} />
+            <button onClick={closeGallery} aria-label="Fechar detalhes" className="absolute top-3 right-3 w-8 h-8 sm:w-9 sm:h-9 bg-black/50 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-black/70 transition-colors">
               <X size={16} />
             </button>
             <div className="absolute bottom-3 left-3">
@@ -79,15 +116,15 @@ const ModalGallery = ({ product, brandName, categories, whatsappUrl, onClose }: 
             </div>
             {allImages.length > 1 && (
               <>
-                <button onClick={() => setCurrentImageIndex((prev) => (prev - 1 + allImages.length) % allImages.length)} className="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-black/50 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-black/70 transition-colors">
+                <button aria-label="Imagem anterior" onClick={() => setCurrentImageIndex((prev) => (prev - 1 + allImages.length) % allImages.length)} className="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-black/50 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-black/70 transition-colors">
                   <ChevronLeft size={16} />
                 </button>
-                <button onClick={() => setCurrentImageIndex((prev) => (prev + 1) % allImages.length)} className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-black/50 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-black/70 transition-colors">
+                <button aria-label="Próxima imagem" onClick={() => setCurrentImageIndex((prev) => (prev + 1) % allImages.length)} className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-black/50 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-black/70 transition-colors">
                   <ChevronRight size={16} />
                 </button>
                 <div className="absolute bottom-3 right-3 flex gap-1.5">
                   {allImages.map((_, i) => (
-                    <button key={i} onClick={() => setCurrentImageIndex(i)} className={cn("w-2 h-2 rounded-full transition-all", i === currentImageIndex ? "bg-white scale-110" : "bg-white/50")} />
+                    <button key={i} aria-label={`Ver imagem ${i + 1}`} aria-pressed={i === currentImageIndex} onClick={() => setCurrentImageIndex(i)} className={cn("w-2 h-2 rounded-full transition-all", i === currentImageIndex ? "bg-white scale-110" : "bg-white/50")} />
                   ))}
                 </div>
               </>
@@ -96,7 +133,7 @@ const ModalGallery = ({ product, brandName, categories, whatsappUrl, onClose }: 
           <div className="p-5 sm:p-6 md:p-8 flex flex-col">
             <div className="flex-1">
               <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-accent-blue">{brandName}</span>
-              <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-foreground mt-2 leading-tight">{product.name}</h2>
+              <h2 id={titleId} className="text-lg sm:text-xl md:text-2xl font-bold text-foreground mt-2 leading-tight">{product.name}</h2>
               <p
                 className="text-muted-foreground text-sm leading-relaxed mt-3 sm:mt-4"
                 style={{ textAlign: "justify", textJustify: "inter-word" }}
@@ -104,9 +141,9 @@ const ModalGallery = ({ product, brandName, categories, whatsappUrl, onClose }: 
                 {product.description}
               </p>
               <div className="mt-4 sm:mt-6 space-y-2 sm:space-y-3">
-                <div className="flex items-center gap-3 text-sm"><div className="w-1.5 h-1.5 rounded-full bg-accent-blue shrink-0" /><span className="text-muted-foreground">Fabricação sob medida</span></div>
-                <div className="flex items-center gap-3 text-sm"><div className="w-1.5 h-1.5 rounded-full bg-accent-blue shrink-0" /><span className="text-muted-foreground">Materiais de alta qualidade</span></div>
-                <div className="flex items-center gap-3 text-sm"><div className="w-1.5 h-1.5 rounded-full bg-accent-blue shrink-0" /><span className="text-muted-foreground">Garantia de fábrica</span></div>
+                {(product.details ?? defaultDetails).map((detail) => (
+                  <div className="flex items-center gap-3 text-sm" key={detail}><div className="w-1.5 h-1.5 rounded-full bg-accent-blue shrink-0" /><span className="text-muted-foreground">{detail}</span></div>
+                ))}
               </div>
             </div>
             <div className="mt-5 sm:mt-6 pt-4 sm:pt-6 border-t border-border/50 space-y-3">
@@ -114,12 +151,13 @@ const ModalGallery = ({ product, brandName, categories, whatsappUrl, onClose }: 
                 <FaWhatsapp size={16} />
                 Solicitar orçamento
               </a>
-              <button onClick={onClose} className="w-full py-2.5 text-xs font-semibold text-muted-foreground hover:text-foreground uppercase tracking-wider transition-colors">Voltar ao catálogo</button>
+              <button onClick={closeGallery} className="w-full py-2.5 text-xs font-semibold text-muted-foreground hover:text-foreground uppercase tracking-wider transition-colors">Voltar ao catálogo</button>
             </div>
           </div>
         </div>
       </motion.div>
     </motion.div>
+    </dialog>
   );
 };
 
@@ -150,8 +188,10 @@ const ProductCard = ({ product, index, viewMode, brandName, categories, onSelect
         viewMode === "large" ? "aspect-[4/3]" : "aspect-square"
       )}>
         <img
+          loading={index < 4 ? "eager" : "lazy"}
+          decoding="async"
           src={allImages[imgIndex]}
-          alt={product.name}
+          alt={product.imageAlts?.[imgIndex] ?? product.imageAlt ?? product.name}
           className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -193,7 +233,8 @@ const ProductCard = ({ product, index, viewMode, brandName, categories, onSelect
             Detalhes
           </button>
           <a
-            href={`https://wa.me/5511971927920?text=${encodeURIComponent(`Olá! Gostaria de um orçamento para: ${product.name} (${brandName})`)}`}
+            href={productContact(product, brandName)}
+            aria-label={`Solicitar orçamento de ${product.name}`}
             target="_blank"
             rel="noopener noreferrer"
             onClick={(e) => e.stopPropagation()}
@@ -213,7 +254,7 @@ const ProductCard = ({ product, index, viewMode, brandName, categories, onSelect
 
       <div className="p-3 sm:p-4 flex flex-1 flex-col">
         <h3 className="text-xs sm:text-sm font-bold text-foreground line-clamp-2 group-hover:text-accent-blue transition-colors">
-          {product.name}
+          <button type="button" id={`product-details-${product.id}`} onClick={(event) => { event.stopPropagation(); onSelect(); }} aria-label={`Ver detalhes: ${product.name}`} aria-haspopup="dialog" className="text-left">{product.name}</button>
         </h3>
         <p
           className="text-[10px] sm:text-xs text-muted-foreground mt-1 sm:mt-2 line-clamp-2 leading-relaxed hidden sm:block"
@@ -243,6 +284,11 @@ const BrandProductsLayout = ({
   seoTitle,
   seoDescription,
   seoPath,
+  canonicalPath,
+  ogImage,
+  whatsappUrl: brandContact,
+  catalogCountLabel = "produtos disponíveis",
+  allProductsLabel = "Todos os Produtos",
   accentColorClass,
   wrapperClassName,
   categories,
@@ -253,71 +299,39 @@ const BrandProductsLayout = ({
   const [searchParams, setSearchParams] = useSearchParams();
   const { categoria } = useParams<{ categoria?: string }>();
   const navigate = useNavigate();
-  const [activeCategory, setActiveCategory] = useState<string>("todos");
+  const activeCategory = categories.some((category) => category.id === categoria) ? categoria : "todos";
   const [searchQuery, setSearchQuery] = useState("");
   const [viewMode, setViewMode] = useState<"grid" | "large">("grid");
-  const [selectedProduct, setSelectedProduct] = useState<ProductItem | null>(null);
   const [mobileFilterOpen, setMobileFilterOpen] = useState(false);
+  const selectedProduct = products.find((product) => product.id === searchParams.get("produto"));
 
-  const handleCategoryChange = useCallback((catId: string) => {
-    setActiveCategory(catId);
-    if (catId === "todos") {
-      navigate(seoPath);
-    } else {
-      navigate(`${seoPath}/${catId}`);
-    }
-  }, [navigate, seoPath]);
+  const handleCategoryChange = (id: string) => {
+    setSearchQuery("");
+    navigate(id === "todos" ? seoPath : `${seoPath}/${id}`);
+  };
 
-  // Sync category from URL param
-  useEffect(() => {
-    if (categoria) {
-      const found = categories.find(c => c.id === categoria);
-      if (found) {
-        setActiveCategory(categoria);
-      }
-    } else {
-      setActiveCategory("todos");
-    }
-  }, [categoria, categories]);
-
-  // Deep link: open product from URL param on mount
-  useEffect(() => {
-    const productId = searchParams.get("produto");
-    if (productId) {
-      const found = products.find((p) => p.id === productId);
-      if (found) {
-        setSelectedProduct(found);
-      }
-    }
-  }, [products, searchParams]);
-
-  const handleSelectProduct = useCallback((product: ProductItem) => {
-    setSelectedProduct(product);
-    setSearchParams({ produto: product.id }, { replace: true });
+  const updateSelectedProduct = useCallback((id?: string) => {
+    setSearchParams((current) => {
+      const next = new URLSearchParams(current);
+      if (id) next.set("produto", id);
+      else next.delete("produto");
+      return next;
+    }, { replace: true });
   }, [setSearchParams]);
 
-  const handleCloseProduct = useCallback(() => {
-    setSelectedProduct(null);
-    setSearchParams({}, { replace: true });
-  }, [setSearchParams]);
-
-  const filteredProducts = products.filter((p) => {
-    const matchesCategory = activeCategory === "todos" || p.category === activeCategory;
-    const matchesSearch = p.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      p.description.toLowerCase().includes(searchQuery.toLowerCase());
-    return matchesCategory && matchesSearch;
+  const terms = normalizeSearch(searchQuery).trim().split(/\s+/).filter(Boolean);
+  const filteredProducts = products.filter((product) => {
+    const category = categories.find((item) => item.id === product.category);
+    const searchable = normalizeSearch([product.name, product.description, category?.title, ...(product.details ?? [])].join(" "));
+    return (activeCategory === "todos" || product.category === activeCategory) && terms.every((term) => searchable.includes(term));
   });
 
   const whatsappMessage = `Olá! Gostaria de saber mais sobre os produtos ${brandName}.`;
-  const whatsappUrl = `https://wa.me/5511971927920?text=${encodeURIComponent(whatsappMessage)}`;
-
-  // Mobile: navbar is ~88px (h-14 + h-10), Desktop: ~128px (h-20 + h-12)
-  const topOffsetMobile = "88px";
-  const topOffsetDesktop = "128px";
+  const whatsappUrl = brandContact ?? `https://wa.me/5511971927920?text=${encodeURIComponent(whatsappMessage)}`;
 
   return (
     <div className={cn("min-h-screen bg-background", wrapperClassName)}>
-      <SEOHead title={seoTitle} description={seoDescription} path={seoPath} />
+      <SEOHead title={seoTitle} description={seoDescription} path={canonicalPath ?? seoPath} ogImage={ogImage} />
 
       <BrandNavbar
         brandName={brandName}
@@ -325,6 +339,7 @@ const BrandProductsLayout = ({
         logoBgColor={logoBgColor}
         backTo={backTo}
         backLabel={backLabel}
+        whatsappUrl={brandContact}
         sections={navSections}
       />
 
@@ -334,20 +349,22 @@ const BrandProductsLayout = ({
           <div className="relative flex-1">
             <Search size={14} className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground" />
             <input
-              type="text"
+              type="search"
+              aria-label="Buscar produtos"
               placeholder="Buscar produtos..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full pl-9 pr-9 py-2 bg-muted border border-border rounded-sm text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent-blue/50 focus:border-transparent transition-all"
             />
             {searchQuery && (
-              <button onClick={() => setSearchQuery("")} className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground">
+              <button aria-label="Limpar busca" onClick={() => setSearchQuery("")} className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground">
                 <X size={14} />
               </button>
             )}
           </div>
           {/* Mobile filter button */}
           <button
+            aria-label="Filtrar por categoria" aria-expanded={mobileFilterOpen}
             onClick={() => setMobileFilterOpen(!mobileFilterOpen)}
             className={cn(
               "lg:hidden w-9 h-9 flex items-center justify-center rounded-sm border transition-colors",
@@ -357,10 +374,10 @@ const BrandProductsLayout = ({
             <Filter size={14} />
           </button>
           <div className="hidden sm:flex items-center gap-2">
-            <button onClick={() => setViewMode("grid")} className={cn("w-8 h-8 flex items-center justify-center rounded-sm transition-colors", viewMode === "grid" ? "bg-accent-blue text-accent-blue-foreground" : "text-muted-foreground hover:text-foreground hover:bg-muted")}>
+            <button aria-label="Grade compacta" onClick={() => setViewMode("grid")} className={cn("w-8 h-8 flex items-center justify-center rounded-sm transition-colors", viewMode === "grid" ? "bg-accent-blue text-accent-blue-foreground" : "text-muted-foreground hover:text-foreground hover:bg-muted")}>
               <Grid3X3 size={14} />
             </button>
-            <button onClick={() => setViewMode("large")} className={cn("w-8 h-8 flex items-center justify-center rounded-sm transition-colors", viewMode === "large" ? "bg-accent-blue text-accent-blue-foreground" : "text-muted-foreground hover:text-foreground hover:bg-muted")}>
+            <button aria-label="Grade ampliada" onClick={() => setViewMode("large")} className={cn("w-8 h-8 flex items-center justify-center rounded-sm transition-colors", viewMode === "large" ? "bg-accent-blue text-accent-blue-foreground" : "text-muted-foreground hover:text-foreground hover:bg-muted")}>
               <LayoutGrid size={14} />
             </button>
           </div>
@@ -416,7 +433,7 @@ const BrandProductsLayout = ({
                   <img src={logoSrc} alt={brandName} className="w-full h-full object-contain p-1" />
                 </div>
                 <h2 className="text-primary-foreground font-bold text-sm">{brandName}</h2>
-                <p className="text-primary-foreground/40 text-xs mt-1">{products.length} produtos disponíveis</p>
+                <p className="text-primary-foreground/40 text-xs mt-1">{products.length} {catalogCountLabel}</p>
               </div>
             </div>
 
@@ -498,7 +515,7 @@ const BrandProductsLayout = ({
           <div className="px-3 sm:px-4 lg:px-8 py-3 sm:py-5 border-b border-border/50 bg-background sticky top-[100px] md:top-[172px] md:top-[172px] z-30">
             <h1 className="text-base sm:text-lg font-bold text-foreground flex items-center gap-2">
               {activeCategory === "todos"
-                ? "Todos os Produtos"
+                ? allProductsLabel
                 : categories.find(c => c.id === activeCategory)?.title || "Produtos"}
               <span className="text-xs font-normal text-muted-foreground bg-muted px-2 py-0.5 rounded-full">
                 {filteredProducts.length}
@@ -533,7 +550,7 @@ const BrandProductsLayout = ({
                       viewMode={viewMode}
                       brandName={brandName}
                       categories={categories}
-                      onSelect={() => handleSelectProduct(product)}
+                      onSelect={() => updateSelectedProduct(product.id)}
                     />
                   ))}
                 </AnimatePresence>
@@ -547,16 +564,17 @@ const BrandProductsLayout = ({
       <AnimatePresence>
         {selectedProduct && (
           <ModalGallery
+            key={selectedProduct.id}
             product={selectedProduct}
             brandName={brandName}
             categories={categories}
-            whatsappUrl={`https://wa.me/5511971927920?text=${encodeURIComponent(`Olá! Gostaria de um orçamento para: ${selectedProduct.name} (${brandName})`)}`}
-            onClose={handleCloseProduct}
+            whatsappUrl={productContact(selectedProduct, brandName)}
+            onClose={() => updateSelectedProduct()}
           />
         )}
       </AnimatePresence>
 
-      <WhatsAppButton />
+      <WhatsAppButton whatsappUrl={brandContact} />
     </div>
   );
 };
